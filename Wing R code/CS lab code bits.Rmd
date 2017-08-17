@@ -1,0 +1,131 @@
+---
+title: "Quick cs lab wings"
+author: "Virginia Chu"
+date: "August 11, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+setwd("C:/Users/vmc04/Desktop/Quick wings for meeting")
+quickie<-read.csv("Wing lab cs length 13.csv", header=TRUE)
+quickie$Locality=factor(quickie$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+require(ggplot2)
+require(mvoutlier)
+library(agricolae)
+library(plyr)
+library(multcompView)
+
+bartlett.test(Wing.length..mm.~Latitude, data=quickie)
+
+wing.mod2=aov(Wing.length..mm.~Latitude, data=quickie)
+summary(wing.mod2)
+
+bartlett.test(CS.scaled.13~Latitude, data=quickie)
+
+wing.mod3=aov(CS.scaled.13~Latitude, data=quickie)
+summary(wing.mod3)
+
+
+wing.mod3=aov(Wing.length..mm.~Locality+Sex+Temp.Num, data=quickie)
+summary(wing.mod3)
+
+wing.mod4=aov(CS.scaled.13~Locality+Sex+Temp.Num, data=quickie)
+summary(wing.mod4)
+
+wing.mod5=aov(Wing.length..mm.~Locality+Sex+Temp.Num, data=quickie)
+summary(wing.mod3)
+
+wing.mod6=aov(CS.scaled.13~Locality+Sex+Temp.Num, data=quickie)
+summary(wing.mod4)
+
+
+wingtuk<-TukeyHSD(wing.mod2)
+plot(wingtuk)
+
+print(HSD.test(wing.mod2, 'Locality'))
+
+
+generate_label_df<- function(HSD, fwing){
+    Tukey.levels <- HSD[[fwing]][,3]
+    Tukey.labels <- multcompLetters(Tukey.levels)['Letters']
+    plot.labels <- names(Tukey.labels[['Letters']])
+    boxplot.df<- ddply(fwinglength, fwing, function (x) max(fivenum(x$y))+ 0.2)
+    
+    plot.levels<-data.frame (plot.labels, labels= Tukey.labels[['Letters']], stringsAsFactors=FALSE)
+    
+    labels.df<-merge(plot.levels, boxplot.df, by.x = 'plot.labels', by.y = fwing, sort = FALSE)
+return(labels.df)
+}
+
+#all of them
+setwd("C:/Users/virgc/Dropbox/Wing project/Summary wing excel files")
+
+quickie<-read.csv("Wing lab cs length 13 18.csv", header=TRUE)
+quickie$Locality=factor(quickie$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+wing.mod5=aov(Wing.length..mm.~Locality+Sex+Temp.Num, data=quickie)
+summary(wing.mod3)
+
+wing.mod7=aov(CS.scaled.18~Locality+Sex+Temp.Num, data=quickie)
+summary(wing.mod7)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+#descriptive statistics
+x1<- aggregate(quickie$CS.scaled.13, list(temp=quickie$Temp.Num, loc=quickie$Locality, sex=quickie$Sex),sd, na.rm=TRUE)
+write.table(x1, "clipboard", sep='\t', row.names=FALSE)
+
+
+x2<- aggregate(quickie$CS.scaled.13, list(temp=quickie$Temp.Num, loc=quickie$Locality, sex=quickie$Sex),mean, na.rm=TRUE)
+write.table(x2, "clipboard", sep='\t', row.names=FALSE)
+
+#boxplots
+boxplot(CS.scaled.13 ~ Temp.Num+, data = quickie,
+  xlab = "Month", ylab = "Maximum Temperature",
+  main = "Temperature at Southampton Weather Station (1950-1999)"
+)
+with(quickie, boxplot(CS.scaled.13~Temp.Num+Sex+Locality))
+#works but hard to read
+
+#poop ggplot(quickie) + boxplot(aes(x=as.factor(Sex),y=CS.scaled.13)) + facet_wrap(~as.factor(Locality), nrow=5)
+
+#split
+CSF<-subset(quickie, Sex=="F")
+
+with(CSF, boxplot(CS.scaled.13~Temp.Num+Locality, col=(c("blue","yellow", "red")),main="Lab reared F wings-13 landmarks CS measure", xlab="Grouping", ylab="Centroid Size (mm)"))
+CSM<-subset(quickie, Sex=="M")
+with(CSM, boxplot(CS.scaled.13~Temp.Num+Locality,col=(c("blue","yellow", "red")),main="Lab reared M wings-13 landmarks CS measure", xlab="Grouping", ylab="Centroid Size (mm)"))
+head()
+#plots with wing lengths
+
+
+with(CSF, boxplot(Wing.length..mm.~Temp.Num+Locality, col=(c("blue","yellow", "red")),main="Lab reared F wings-13 landmarks CS measure", xlab="Grouping", ylab="Wing length (mm)"))
+CSM<-subset(quickie, Sex=="M")
+with(CSM, boxplot(Wing.length..mm.~Temp.Num+Locality,col=(c("blue","yellow", "red")),main="Lab reared M wings-13 landmarks CS measure", xlab="Grouping", ylab="Wing length (mm)"))
+
+CSF<-subset(quickie, Sex=="F")
+
+with(CSF, boxplot(CS.scaled.18~Temp.Num+Locality, col=(c("blue","yellow", "red")),main="Lab reared F wings-18 landmarks CS measure", xlab="Grouping", ylab="Centroid Size (mm)"))
+CSM<-subset(quickie, Sex=="M")
+with(CSM, boxplot(CS.scaled.18~Temp.Num+Locality,col=(c("blue","yellow", "red")),main="Lab reared M wings-18 landmarks CS measure", xlab="Grouping", ylab="Centroid Size (mm)"))
+head()
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
