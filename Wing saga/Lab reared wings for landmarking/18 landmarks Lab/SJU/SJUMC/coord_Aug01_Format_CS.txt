@@ -1,0 +1,9 @@
+F:/Lab desktop files copy for sorting/Wing saga/Lab reared wings for landmarking/18/SJU/SJUMC/coord_Aug01_Format  - Centroid sizes -  1 8 36 0	from C:/Users/vmc04/Desktop/Lab reared wings for landmarking/18/SJU/SJUMC/coord_Aug01.txt - TPS like internal (simplified) format - can be converted to other format by using TET	
+670.03598576660215
+727.46049911852788
+795.93386799546488
+727.77728583528744
+787.46400270460344
+759.98790195049241
+734.17364733722525
+701.00598349007612

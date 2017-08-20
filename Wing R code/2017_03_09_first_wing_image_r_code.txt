@@ -1,0 +1,22 @@
+setwd("C:/Users/Virginia/Desktop/R practice")
+require(ggplot2)
+fwinglength<- read.csv("Wing field collected practice data file 030717.csv", header=TRUE)
+summary(fwinglength)
+
+ggplot(fwinglength, aes(x = Locality, y = Length..mm., fill=Biome)) +
+	geom_boxplot() +
+	scale_x_discrete() + xlab("Locality") +
+	ylab("Wing length(mm)")+
+	ggtitle("Field collected An. darlingi wing lengths by locality")
+
+
+# if you don't care about color #+geom_boxplot(fill = "grey80", colour = "blue")
+
+wing.mod2=aov(Length..mm. ~ Locality, data=fwinglength)
+summary(wing.mod2)
+TukeyHSD(wing.mod2)
+plot(TukeyHSD(wing.mod2))
+
+#copy and paste tukeyhsd
+tuk2<-as.data.frame(tuk1$Locality)
+write.table(tuk2, "clipboard", sep= '\t', row.names= TRUE)

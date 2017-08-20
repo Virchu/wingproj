@@ -1,0 +1,18 @@
+C:/Users/vmc04/Desktop/Wing saga/Wing field landmark repeat/13 landmarks field repeat/TPN Field fix/coord_Aug10_Format  - Centroid sizes -  1 17 26 0	from C:/Users/vmc04/Desktop/Wing saga/Wing field landmark repeat/13 landmarks field repeat/TPN Field fix/coord_Aug10.txt - TPS like internal (simplified) format - can be converted to other format by using TET	
+1027.1347001769984
+986.05648145295652
+1023.455008217828
+1013.9265638709135
+981.26017878111145
+825.56721759601805
+1003.6373080719181
+967.58652962290273
+1025.1382645957872
+1027.4703065146123
+1037.2447971577244
+1004.4592115622752
+979.71667804052913
+1015.7951035064564
+979.2592962187133
+953.63264980244401
+933.38284667200662

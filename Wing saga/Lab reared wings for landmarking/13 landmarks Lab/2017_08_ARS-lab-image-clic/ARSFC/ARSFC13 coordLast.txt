@@ -1,0 +1,21 @@
+
+ARS 057-1.gif : 13 LM, 	Day: Jul21  Hour: 20:00
+ARS 100-1.gif : 13 LM, 	Day: Jul21  Hour: 20:00
+ARS 108-1.gif : 13 LM, 	Day: Jul21  Hour: 20:01
+ARS 142.gif : 13 LM, 	Day: Jul21  Hour: 20:02
+ARS 188.gif : 13 LM, 	Day: Jul21  Hour: 20:02
+ARS 196.gif : 13 LM, 	Day: Jul21  Hour: 20:03
+ARS 276.gif : 13 LM, 	Day: Jul21  Hour: 20:04
+ARS 282-1.gif : 13 LM, 	Day: Jul21  Hour: 20:04
+ARS 325.gif : 13 LM, 	Day: Jul21  Hour: 20:05
+ARS 369.gif : 13 LM, 	Day: Jul21  Hour: 20:06
+ARS 372.gif : 13 LM, 	Day: Jul21  Hour: 20:07
+ARS 373.gif : 13 LM, 	Day: Jul21  Hour: 20:08
+ARS 378.gif : 13 LM, 	Day: Jul21  Hour: 20:09
+ARS 417.gif : 13 LM, 	Day: Jul21  Hour: 20:10
+ARS 459-1.gif : 13 LM, 	Day: Jul21  Hour: 20:10
+ARS 462-1.gif : 13 LM, 	Day: Jul21  Hour: 20:11
+ARS 470.gif : 13 LM, 	Day: Jul21  Hour: 20:12
+ARS 556-1.gif : 13 LM, 	Day: Jul21  Hour: 20:12
+ARS 559-1.gif : 13 LM, 	Day: Jul21  Hour: 20:13
+ARS 560.gif : 13 LM, 	Day: Jul21  Hour: 20:14

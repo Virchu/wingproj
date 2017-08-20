@@ -1,0 +1,871 @@
+Code	Info	Biome	Locality	Temp	Sex
+ARS 024	Y	Amazon	ARS	A	F
+ARS 029	Y	Amazon	ARS	A	F
+ARS 076	Y	Amazon	ARS	A	F
+ARS 116	Y	Amazon	ARS	A	F
+ARS 119	Y	Amazon	ARS	A	F
+ARS 124	Y	Amazon	ARS	A	F
+ARS 156	Y	Amazon	ARS	A	F
+ARS 163	Y	Amazon	ARS	A	F
+ARS 166	Y	Amazon	ARS	A	F
+ARS 246	Y	Amazon	ARS	A	F
+ARS 254	Y-RIGHT SIDE	Amazon	ARS	A	F
+ARS 255	Y	Amazon	ARS	A	F
+ARS 303	Y	Amazon	ARS	A	F
+ARS 343	Y	Amazon	ARS	A	F
+ARS 391	Y	Amazon	ARS	A	F
+ARS 393	Y	Amazon	ARS	A	F
+ARS 438	Y	Amazon	ARS	A	F
+ARS 523	Y	Amazon	ARS	A	F
+ARS 524	Y	Amazon	ARS	A	F
+ARS 525	Y	Amazon	ARS	A	F
+ARS 023	Y	Amazon	ARS	A	M
+ARS 032	Y	Amazon	ARS	A	M
+ARS 074	Y	Amazon	ARS	A	M
+ARS 078	Y	Amazon	ARS	A	M
+ARS 113	Y	Amazon	ARS	A	M
+ARS 118	Y	Amazon	ARS	A	M
+ARS 120	Y	Amazon	ARS	A	M
+ARS 164	Y	Amazon	ARS	A	M
+ARS 165	Y	Amazon	ARS	A	M
+ARS 247	Y	Amazon	ARS	A	M
+ARS 251	Y	Amazon	ARS	A	M
+ARS 259	Y	Amazon	ARS	A	M
+ARS 294	Y	Amazon	ARS	A	M
+ARS 300	Y	Amazon	ARS	A	M
+ARS 384	Y	Amazon	ARS	A	M
+ARS 390	Y	Amazon	ARS	A	M
+ARS 434	Y	Amazon	ARS	A	M
+ARS 436	Y	Amazon	ARS	A	M
+ARS 516	Y	Amazon	ARS	A	M
+ARS 521	Y	Amazon	ARS	A	M
+ARS 037	Y	Amazon	ARS	B	F
+ARS 039	Y	Amazon	ARS	B	F
+ARS 089	Y	Amazon	ARS	B	F
+ARS 093	Y	Amazon	ARS	B	F
+ARS 139	Y	Amazon	ARS	B	F
+ARS 174	Y	Amazon	ARS	B	F
+ARS 182	Y	Amazon	ARS	B	F
+ARS 264	Y	Amazon	ARS	B	F
+ARS 265	Y	Amazon	ARS	B	F
+ARS 272	Y	Amazon	ARS	B	F
+ARS 306	Y	Amazon	ARS	B	F
+ARS 353	Y	Amazon	ARS	B	F
+ARS 362	Y	Amazon	ARS	B	F
+ARS 404	Y	Amazon	ARS	B	F
+ARS 449	Y	Amazon	ARS	B	F
+ARS 454	Y	Amazon	ARS	B	F
+ARS 531	Y	Amazon	ARS	B	F
+ARS 533	Y	Amazon	ARS	B	F
+ARS 537	Y	Amazon	ARS	B	F
+ARS 545	Y	Amazon	ARS	B	F
+ARS 036	Y	Amazon	ARS	B	M
+ARS 038	Y	Amazon	ARS	B	M
+ARS 040	Y	Amazon	ARS	B	M
+ARS 042	Y	Amazon	ARS	B	M
+ARS 045	Y	Amazon	ARS	B	M
+ARS 048	Y	Amazon	ARS	B	M
+ARS 082	Y	Amazon	ARS	B	M
+ARS 128	Y	Amazon	ARS	B	M
+ARS 136	Y	Amazon	ARS	B	M
+ARS 178	Y	Amazon	ARS	B	M
+ARS 180	Y	Amazon	ARS	B	M
+ARS 181	Y	Amazon	ARS	B	M
+ARS 261	Y	Amazon	ARS	B	M
+ARS 268	Y	Amazon	ARS	B	M
+ARS 269	Y	Amazon	ARS	B	M
+ARS 313	Y	Amazon	ARS	B	M
+ARS 351	Y	Amazon	ARS	B	M
+ARS 356	Y	Amazon	ARS	B	M
+ARS 364	Y	Amazon	ARS	B	M
+ARS 400	Y	Amazon	ARS	B	M
+ARS 057	Y	Amazon	ARS	C	F
+ARS 100	Y	Amazon	ARS	C	F
+ARS 108	Y	Amazon	ARS	C	F
+ARS 142	Y	Amazon	ARS	C	F
+ARS 188	Y	Amazon	ARS	C	F
+ARS 196	Y	Amazon	ARS	C	F
+ARS 276	Y	Amazon	ARS	C	F
+ARS 282	Y	Amazon	ARS	C	F
+ARS 325	Y	Amazon	ARS	C	F
+ARS 369	Y	Amazon	ARS	C	F
+ARS 372	Y	Amazon	ARS	C	F
+ARS 373	Y	Amazon	ARS	C	F
+ARS 378	Y	Amazon	ARS	C	F
+ARS 417	Y	Amazon	ARS	C	F
+ARS 470	Y	Amazon	ARS	C	F
+ARS 459	Y	Amazon	ARS	C	F
+ARS 462	Y	Amazon	ARS	C	F
+ARS 556	Y	Amazon	ARS	C	F
+ARS 559	Y	Amazon	ARS	C	F
+ARS 560	Y	Amazon	ARS	C	F
+ARS 56	Y	Amazon	ARS	C	M
+ARS 59	Y	Amazon	ARS	C	M
+ARS 61	Y	Amazon	ARS	C	M
+ARS 103	Y	Amazon	ARS	C	M
+ARS 104	Y	Amazon	ARS	C	M
+ARS 147	Y	Amazon	ARS	C	M
+ARS 186	Y	Amazon	ARS	C	M
+ARS 278	Y	Amazon	ARS	C	M
+ARS 287	Y	Amazon	ARS	C	M
+ARS 322	Y	Amazon	ARS	C	M
+ARS 335	Y	Amazon	ARS	C	M
+ARS 326	Y	Amazon	ARS	C	M
+ARS 379	Y	Amazon	ARS	C	M
+ARS 371	Y	Amazon	ARS	C	M
+ARS 413	Y	Amazon	ARS	C	M
+ARS 416	Y	Amazon	ARS	C	M
+ARS 421	Y	Amazon	ARS	C	M
+ARS 332	Y	Amazon	ARS	C	M
+ARS 422	Y	Amazon	ARS	C	M
+ARS 456	Y	Amazon	ARS	C	M
+APR 102		Amazon	APR	A	F
+APR 144		Amazon	APR	A	F
+APR 146		Amazon	APR	A	F
+APR 203		Amazon	APR	A	F
+APR 239		Amazon	APR	A	F
+APR 280		Amazon	APR	A	F
+APR 331		Amazon	APR	A	F
+APR 332		Amazon	APR	A	F
+APR 378		Amazon	APR	A	F
+APR 415		Amazon	APR	A	F
+APR 419		Amazon	APR	A	F
+APR 472		Amazon	APR	A	F
+APR 504		Amazon	APR	A	F
+APR 509		Amazon	APR	A	F
+APR 562		Amazon	APR	A	F
+APR 605		Amazon	APR	A	F
+APR 639		Amazon	APR	A	F
+APR 641		Amazon	APR	A	F
+APR 643		Amazon	APR	A	F
+APR 675		Amazon	APR	A	F
+APR 677		Amazon	APR	A	F
+APR 678		Amazon	APR	A	F
+APR 105		Amazon	APR	A	M
+APR 106		Amazon	APR	A	M
+APR 112		Amazon	APR	A	M
+APR 153		Amazon	APR	A	M
+APR 157		Amazon	APR	A	M
+APR 189		Amazon	APR	A	M
+APR 192		Amazon	APR	A	M
+APR 197		Amazon	APR	A	M
+APR 235		Amazon	APR	A	M
+APR 243		Amazon	APR	A	M
+APR 244		Amazon	APR	A	M
+APR 248		Amazon	APR	A	M
+APR 285		Amazon	APR	A	M
+APR 291		Amazon	APR	A	M
+APR 293		Amazon	APR	A	M
+APR 333		Amazon	APR	A	M
+APR 370		Amazon	APR	A	M
+APR 382		Amazon	APR	A	M
+APR 418		Amazon	APR	A	M
+APR 421		Amazon	APR	A	M
+APR 426		Amazon	APR	A	M
+APR 464		Amazon	APR	A	M
+APR 506		Amazon	APR	A	M
+APR 515		Amazon	APR	A	M
+APR 606		Amazon	APR	A	M
+APR 074		Amazon	APR	B	F
+APR 068		Amazon	APR	B	F
+APR 081		Amazon	APR	B	F
+APR 100		Amazon	APR	B	F
+APR 122		Amazon	APR	B	F
+APR 172		Amazon	APR	B	F
+APR 208		Amazon	APR	B	F
+APR 253		Amazon	APR	B	F
+APR 256		Amazon	APR	B	F
+APR 259		Amazon	APR	B	F
+APR 262		Amazon	APR	B	F
+APR 295		Amazon	APR	B	F
+APR 297		Amazon	APR	B	F
+APR 353		Amazon	APR	B	F
+APR 388		Amazon	APR	B	F
+APR 392		Amazon	APR	B	F
+APR 433		Amazon	APR	B	F
+APR 474		Amazon	APR	B	F
+APR 483		Amazon	APR	B	F
+APR 531		Amazon	APR	B	F
+APR 567		Amazon	APR	B	F
+APR 569		Amazon	APR	B	F
+APR 573		Amazon	APR	B	F
+APR 657		Amazon	APR	B	F
+APR 677		Amazon	APR	B	F
+APR 069		Amazon	APR	B	M
+APR 072		Amazon	APR	B	M
+APR 080		Amazon	APR	B	M
+APR 082		Amazon	APR	B	M
+APR 116		Amazon	APR	B	M
+APR 128		Amazon	APR	B	M
+APR 159		Amazon	APR	B	M
+APR 163		Amazon	APR	B	M
+APR 209		Amazon	APR	B	M
+APR 254		Amazon	APR	B	M
+APR 261		Amazon	APR	B	M
+APR 263		Amazon	APR	B	M
+APR 308		Amazon	APR	B	M
+APR 439		Amazon	APR	B	M
+APR 475		Amazon	APR	B	M
+APR 477		Amazon	APR	B	M
+APR 478		Amazon	APR	B	M
+APR 480		Amazon	APR	B	M
+APR 523		Amazon	APR	B	M
+APR 527		Amazon	APR	B	M
+APR 571		Amazon	APR	B	M
+APR 575		Amazon	APR	B	M
+APR 702		Amazon	APR	B	M
+APR 087		Amazon	APR	C	F
+APR 130		Amazon	APR	C	F
+APR 132		Amazon	APR	C	F
+APR 175		Amazon	APR	C	F
+APR 265		Amazon	APR	C	F
+APR 315		Amazon	APR	C	F
+APR 359		Amazon	APR	C	F
+APR 363		Amazon	APR	C	F
+APR 399		Amazon	APR	C	F
+APR 447		Amazon	APR	C	F
+APR 450		Amazon	APR	C	F
+APR 457		Amazon	APR	C	F
+APR 492		Amazon	APR	C	F
+APR 501		Amazon	APR	C	F
+APR 585		Amazon	APR	C	F
+APR 591		Amazon	APR	C	F
+APR 593		Amazon	APR	C	F
+APR 624		Amazon	APR	C	F
+APR 670		Amazon	APR	C	F
+APR 709		Amazon	APR	C	F
+APR 714		Amazon	APR	C	F
+APR 097		Amazon	APR	C	M
+APR 142		Amazon	APR	C	M
+APR 143		Amazon	APR	C	M
+APR 178		Amazon	APR	C	M
+APR 186		Amazon	APR	C	M
+APR 231		Amazon	APR	C	M
+APR 266		Amazon	APR	C	M
+APR 312		Amazon	APR	C	M
+APR 400		Amazon	APR	C	M
+APR 402		Amazon	APR	C	M
+APR 407		Amazon	APR	C	M
+APR 452		Amazon	APR	C	M
+APR 496		Amazon	APR	C	M
+APR 500		Amazon	APR	C	M
+APR 534		Amazon	APR	C	M
+APR 542		Amazon	APR	C	M
+APR 544		Amazon	APR	C	M
+APR 546		Amazon	APR	C	M
+APR 589		Amazon	APR	C	M
+APR 627		Amazon	APR	C	M
+APR 631		Amazon	APR	C	M
+APR 664		Amazon	APR	C	M
+APR 712		Amazon	APR	C	M
+RPV 103		Amazon	RPV	A	F
+RPV 185		Amazon	RPV	A	F
+RPV 191		Amazon	RPV	A	F
+RPV 195		Amazon	RPV	A	F
+RPV 280		Amazon	RPV	A	F
+RPV 281		Amazon	RPV	A	F
+RPV 366		Amazon	RPV	A	F
+RPV 372		Amazon	RPV	A	F
+RPV 374		Amazon	RPV	A	F
+RPV 461		Amazon	RPV	A	F
+RPV 462		Amazon	RPV	A	F
+RPV 502		Amazon	RPV	A	F
+RPV 503		Amazon	RPV	A	F
+RPV 545		Amazon	RPV	A	F
+RPV 549		Amazon	RPV	A	F
+RPV 591		Amazon	RPV	A	F
+RPV 602		Amazon	RPV	A	F
+RPV 635		Amazon	RPV	A	F
+RPV 649		Amazon	RPV	A	F
+RPV 688		Amazon	RPV	A	F
+RPV 693		Amazon	RPV	A	F
+RPV 728		Amazon	RPV	A	F
+RPV 095		Amazon	RPV	A	M
+RPV 142		Amazon	RPV	A	M
+RPV 147		Amazon	RPV	A	M
+RPV 243		Amazon	RPV	A	M
+RPV 244		Amazon	RPV	A	M
+RPV 329		Amazon	RPV	A	M
+RPV 330		Amazon	RPV	A	M
+RPV 371		Amazon	RPV	A	M
+RPV 375		Amazon	RPV	A	M
+RPV 418		Amazon	RPV	A	M
+RPV 455		Amazon	RPV	A	M
+RPV 422		Amazon	RPV	A	M
+RPV 463		Amazon	RPV	A	M
+RPV 550		Amazon	RPV	A	M
+RPV 551		Amazon	RPV	A	M
+RPV 556		Amazon	RPV	A	M
+RPV 594		Amazon	RPV	A	M
+RPV 603		Amazon	RPV	A	M
+RPV 604		Amazon	RPV	A	M
+RPV 690		Amazon	RPV	A	M
+RPV 691		Amazon	RPV	A	M
+RPV 726		Amazon	RPV	A	M
+RPV 729		Amazon	RPV	A	M
+RPV 119		Amazon	RPV	B	F
+RPV 123		Amazon	RPV	B	F
+RPV 254		Amazon	RPV	B	F
+RPV 258		Amazon	RPV	B	F
+RPV 259		Amazon	RPV	B	F
+RPV 290		Amazon	RPV	B	F
+RPV 297		Amazon	RPV	B	F
+RPV 300		Amazon	RPV	B	F
+RPV 432		Amazon	RPV	B	F
+RPV 434		Amazon	RPV	B	F
+RPV 435		Amazon	RPV	B	F
+RPV 470		Amazon	RPV	B	F
+RPV 474		Amazon	RPV	B	F
+RPV 475		Amazon	RPV	B	F
+RPV 479		Amazon	RPV	B	F
+RPV 480		Amazon	RPV	B	F
+RPV 483		Amazon	RPV	B	F
+RPV 520		Amazon	RPV	B	F
+RPV 566		Amazon	RPV	B	F
+RPV 574		Amazon	RPV	B	F
+RPV 662		Amazon	RPV	B	F
+RPV 664		Amazon	RPV	B	F
+RPV 706		Amazon	RPV	B	F
+RPV 709		Amazon	RPV	B	F
+RPV 116		Amazon	RPV	B	M
+RPV 156		Amazon	RPV	B	M
+RPV 159		Amazon	RPV	B	M
+RPV 167		Amazon	RPV	B	M
+RPV 246		Amazon	RPV	B	M
+RPV 252		Amazon	RPV	B	M
+RPV 337		Amazon	RPV	B	M
+RPV 339		Amazon	RPV	B	M
+RPV 344		Amazon	RPV	B	M
+RPV 346		Amazon	RPV	B	M
+RPV 391		Amazon	RPV	B	M
+RPV 425		Amazon	RPV	B	M
+RPV 439		Amazon	RPV	B	M
+RPV 472		Amazon	RPV	B	M
+RPV 562		Amazon	RPV	B	M
+RPV 570		Amazon	RPV	B	M
+RPV 613		Amazon	RPV	B	M
+RPV 614		Amazon	RPV	B	M
+RPV 652		Amazon	RPV	B	M
+RPV 653		Amazon	RPV	B	M
+RPV 658		Amazon	RPV	B	M
+RPV 177		Amazon	RPV	C	F
+RPV 220		Amazon	RPV	C	F
+RPV 273		Amazon	RPV	C	F
+RPV 310		Amazon	RPV	C	F
+RPV 312		Amazon	RPV	C	F
+RPV 315		Amazon	RPV	C	F
+RPV 399		Amazon	RPV	C	F
+RPV 440		Amazon	RPV	C	F
+RPV 441		Amazon	RPV	C	F
+RPV 445		Amazon	RPV	C	F
+RPV 495		Amazon	RPV	C	F
+RPV 497		Amazon	RPV	C	F
+RPV 543		Amazon	RPV	C	F
+RPV 578		Amazon	RPV	C	F
+RPV 582		Amazon	RPV	C	F
+RPV 669		Amazon	RPV	C	F
+RPV 711		Amazon	RPV	C	F
+RPV 717		Amazon	RPV	C	F
+RPV 722		Amazon	RPV	C	F
+RPV 755		Amazon	RPV	C	F
+RPV 125		Amazon	RPV	C	M
+RPV 174		Amazon	RPV	C	M
+RPV 176		Amazon	RPV	C	M
+RPV 181		Amazon	RPV	C	M
+RPV 263		Amazon	RPV	C	M
+RPV 350		Amazon	RPV	C	M
+RPV 395		Amazon	RPV	C	M
+RPV 405		Amazon	RPV	C	M
+RPV 407		Amazon	RPV	C	M
+RPV 487		Amazon	RPV	C	M
+RPV 499		Amazon	RPV	C	M
+RPV 540		Amazon	RPV	C	M
+RPV 542		Amazon	RPV	C	M
+RPV 580		Amazon	RPV	C	M
+RPV 621		Amazon	RPV	C	M
+RPV 665		Amazon	RPV	C	M
+RPV 670		Amazon	RPV	C	M
+RPV 677		Amazon	RPV	C	M
+RPV 714		Amazon	RPV	C	M
+RPV 766		Amazon	RPV	C	M
+RMO 059		Amazon	RMO	A	F
+RMO 098		Amazon	RMO	A	F
+RMO 099		Amazon	RMO	A	F
+RMO 148		Amazon	RMO	A	F
+RMO 181		Amazon	RMO	A	F
+RMO 187		Amazon	RMO	A	F
+RMO 227		Amazon	RMO	A	F
+RMO 231		Amazon	RMO	A	F
+RMO 284		Amazon	RMO	A	F
+RMO 322		Amazon	RMO	A	F
+RMO 324		Amazon	RMO	A	F
+RMO 328		Amazon	RMO	A	F
+RMO 369		Amazon	RMO	A	F
+RMO 417		Amazon	RMO	A	F
+RMO 459		Amazon	RMO	A	F
+RMO 499		Amazon	RMO	A	F
+RMO 503		Amazon	RMO	A	F
+RMO 505		Amazon	RMO	A	F
+RMO 507		Amazon	RMO	A	F
+RMO 542		Amazon	RMO	A	F
+RMO 543		Amazon	RMO	A	F
+RMO 554		Amazon	RMO	A	F
+RMO 598		Amazon	RMO	A	F
+RMO 641		Amazon	RMO	A	F
+RMO 682		Amazon	RMO	A	F
+RMO 056		Amazon	RMO	A	M
+RMO 093		Amazon	RMO	A	M
+RMO 101		Amazon	RMO	A	M
+RMO 192		Amazon	RMO	A	M
+RMO 194		Amazon	RMO	A	M
+RMO 226		Amazon	RMO	A	M
+RMO 233		Amazon	RMO	A	M
+RMO 273		Amazon	RMO	A	M
+RMO 316		Amazon	RMO	A	M
+RMO 327		Amazon	RMO	A	M
+RMO 364		Amazon	RMO	A	M
+RMO 368		Amazon	RMO	A	M
+RMO 411		Amazon	RMO	A	M
+RMO 413		Amazon	RMO	A	M
+RMO 414		Amazon	RMO	A	M
+RMO 458		Amazon	RMO	A	M
+RMO 501		Amazon	RMO	A	M
+RMO 504		Amazon	RMO	A	M
+RMO 541		Amazon	RMO	A	M
+RMO 546		Amazon	RMO	A	M
+RMO 596		Amazon	RMO	A	M
+RMO 639		Amazon	RMO	A	M
+RMO 062		Amazon	RMO	B	F
+RMO 063		Amazon	RMO	B	F
+RMO 118		Amazon	RMO	B	F
+RMO 205		Amazon	RMO	B	F
+RMO 241		Amazon	RMO	B	F
+RMO 247		Amazon	RMO	B	F
+RMO 288		Amazon	RMO	B	F
+RMO 336		Amazon	RMO	B	F
+RMO 344		Amazon	RMO	B	F
+RMO 432		Amazon	RMO	B	F
+RMO 513		Amazon	RMO	B	F
+RMO 520		Amazon	RMO	B	F
+RMO 557		Amazon	RMO	B	F
+RMO 561		Amazon	RMO	B	F
+RMO 602		Amazon	RMO	B	F
+RMO 603		Amazon	RMO	B	F
+RMO 605		Amazon	RMO	B	F
+RMO 611		Amazon	RMO	B	F
+RMO 659		Amazon	RMO	B	F
+RMO 691		Amazon	RMO	B	F
+RMO 694		Amazon	RMO	B	F
+RMO 696		Amazon	RMO	B	F
+RMO 701		Amazon	RMO	B	F
+RMO 702		Amazon	RMO	B	F
+RMO 071		Amazon	RMO	B	M
+RMO 106		Amazon	RMO	B	M
+RMO 114		Amazon	RMO	B	M
+RMO 197		Amazon	RMO	B	M
+RMO 198		Amazon	RMO	B	M
+RMO 199		Amazon	RMO	B	M
+RMO 286		Amazon	RMO	B	M
+RMO 331		Amazon	RMO	B	M
+RMO 333		Amazon	RMO	B	M
+RMO 335		Amazon	RMO	B	M
+RMO 338		Amazon	RMO	B	M
+RMO 341		Amazon	RMO	B	M
+RMO 345		Amazon	RMO	B	M
+RMO 423		Amazon	RMO	B	M
+RMO 472		Amazon	RMO	B	M
+RMO 475		Amazon	RMO	B	M
+RMO 476		Amazon	RMO	B	M
+RMO 518		Amazon	RMO	B	M
+RMO 521		Amazon	RMO	B	M
+RMO 562		Amazon	RMO	B	M
+RMO 646		Amazon	RMO	B	M
+RMO 653		Amazon	RMO	B	M
+RMO 656		Amazon	RMO	B	M
+RMO 657		Amazon	RMO	B	M
+RMO 700		Amazon	RMO	B	M
+RMO 084		Amazon	RMO	C	F
+RMO 122		Amazon	RMO	C	F
+RMO 171		Amazon	RMO	C	F
+RMO 178		Amazon	RMO	C	F
+RMO 217		Amazon	RMO	C	F
+RMO 258		Amazon	RMO	C	F
+RMO 266		Amazon	RMO	C	F
+RMO 308		Amazon	RMO	C	F
+RMO 348		Amazon	RMO	C	F
+RMO 391		Amazon	RMO	C	F
+RMO 396		Amazon	RMO	C	F
+RMO 449		Amazon	RMO	C	F
+RMO 537		Amazon	RMO	C	F
+RMO 538		Amazon	RMO	C	F
+RMO 571		Amazon	RMO	C	F
+RMO 573		Amazon	RMO	C	F
+RMO 629		Amazon	RMO	C	F
+RMO 663		Amazon	RMO	C	F
+RMO 674		Amazon	RMO	C	F
+RMO 716		Amazon	RMO	C	F
+RMO 080		Amazon	RMO	C	M
+RMO 085		Amazon	RMO	C	M
+RMO 211		Amazon	RMO	C	M
+RMO 216		Amazon	RMO	C	M
+RMO 219		Amazon	RMO	C	M
+RMO 221		Amazon	RMO	C	M
+RMO 311		Amazon	RMO	C	M
+RMO 312		Amazon	RMO	C	M
+RMO 403		Amazon	RMO	C	M
+RMO 404		Amazon	RMO	C	M
+RMO 442		Amazon	RMO	C	M
+RMO 491		Amazon	RMO	C	M
+RMO 536		Amazon	RMO	C	M
+RMO 539		Amazon	RMO	C	M
+RMO 625		Amazon	RMO	C	M
+RMO 671		Amazon	RMO	C	M
+RMO 707		Amazon	RMO	C	M
+RMO 708		Amazon	RMO	C	M
+RMO 709		Amazon	RMO	C	M
+RMO 712		Amazon	RMO	C	M
+TLC 105		Cerrado	TLC	A	F
+TLC 150		Cerrado	TLC	A	F
+TLC 151		Cerrado	TLC	A	F
+TLC 162		Cerrado	TLC	A	F
+TLC 198		Cerrado	TLC	A	F
+TLC 207		Cerrado	TLC	A	F
+TLC 244		Cerrado	TLC	A	F
+TLC 248		Cerrado	TLC	A	F
+TLC 249		Cerrado	TLC	A	F
+TLC 285		Cerrado	TLC	A	F
+TLC 286		Cerrado	TLC	A	F
+TLC 332		Cerrado	TLC	A	F
+TLC 335		Cerrado	TLC	A	F
+TLC 336		Cerrado	TLC	A	F
+TLC 342		Cerrado	TLC	A	F
+TLC 379		Cerrado	TLC	A	F
+TLC 384		Cerrado	TLC	A	F
+TLC 427		Cerrado	TLC	A	F
+TLC 428		Cerrado	TLC	A	F
+TLC 431		Cerrado	TLC	A	F
+TLC 104		Cerrado	TLC	A	M
+TLC 114		Cerrado	TLC	A	M
+TLC 163		Cerrado	TLC	A	M
+TLC 194		Cerrado	TLC	A	M
+TLC 206		Cerrado	TLC	A	M
+TLC 239		Cerrado	TLC	A	M
+TLC 242		Cerrado	TLC	A	M
+TLC 245		Cerrado	TLC	A	M
+TLC 253		Cerrado	TLC	A	M
+TLC 284		Cerrado	TLC	A	M
+TLC 295		Cerrado	TLC	A	M
+TLC 296		Cerrado	TLC	A	M
+TLC333		Cerrado	TLC	A	M
+TLC 334		Cerrado	TLC	A	M
+TLC 338		Cerrado	TLC	A	M
+TLC 341		Cerrado	TLC	A	M
+TLC 381		Cerrado	TLC	A	M
+TLC 382		Cerrado	TLC	A	M
+TLC 383		Cerrado	TLC	A	M
+TLC 426		Cerrado	TLC	A	M
+TLC 130		Cerrado	TLC	B	F
+TLC 132		Cerrado	TLC	B	F
+TLC 166		Cerrado	TLC	B	F
+TLC 176		Cerrado	TLC	B	F
+TLC 178		Cerrado	TLC	B	F
+TLC 210		Cerrado	TLC	B	F
+TLC 215		Cerrado	TLC	B	F
+TLC 218		Cerrado	TLC	B	F
+TLC 256		Cerrado	TLC	B	F
+TLC 267		Cerrado	TLC	B	F
+TLC 302		Cerrado	TLC	B	F
+TLC 307		Cerrado	TLC	B	F
+TLC 347		Cerrado	TLC	B	F
+TLC 349		Cerrado	TLC	B	F
+TLC 352		Cerrado	TLC	B	F
+TLC 391		Cerrado	TLC	B	F
+TLC 394		Cerrado	TLC	B	F
+TLC 396		Cerrado	TLC	B	F
+TLC 443		Cerrado	TLC	B	F
+TLC 444		Cerrado	TLC	B	F
+TLC 119		Cerrado	TLC	B	M
+TLC 120		Cerrado	TLC	B	M
+TLC 121		Cerrado	TLC	B	M
+TLC 125		Cerrado	TLC	B	M
+TLC 129		Cerrado	TLC	B	M
+TLC 209		Cerrado	TLC	B	M
+TLC 214		Cerrado	TLC	B	M
+TLC 219		Cerrado	TLC	B	M
+TLC 257		Cerrado	TLC	B	M
+TLC 260		Cerrado	TLC	B	M
+TLC 262		Cerrado	TLC	B	M
+TLC 304		Cerrado	TLC	B	M
+TLC 311		Cerrado	TLC	B	M
+TLC 346		Cerrado	TLC	B	M
+TLC 348		Cerrado	TLC	B	M
+TLC 356		Cerrado	TLC	B	M
+TLC 393		Cerrado	TLC	B	M
+TLC 399		Cerrado	TLC	B	M
+TLC 440		Cerrado	TLC	B	M
+TLC 441		Cerrado	TLC	B	M
+TLC 136		Cerrado	TLC	C	F
+TLC 137		Cerrado	TLC	C	F
+TLC 139		Cerrado	TLC	C	F
+TLC 145		Cerrado	TLC	C	F
+TLC 146		Cerrado	TLC	C	F
+TLC 184		Cerrado	TLC	C	F
+TLC 226		Cerrado	TLC	C	F
+TLC 229		Cerrado	TLC	C	F
+TLC 231		Cerrado	TLC	C	F
+TLC 234		Cerrado	TLC	C	F
+TLC 237		Cerrado	TLC	C	F
+TLC 271		Cerrado	TLC	C	F
+TLC 276		Cerrado	TLC	C	F
+TLC 283		Cerrado	TLC	C	F
+TLC 404		Cerrado	TLC	C	F
+TLC 405		Cerrado	TLC	C	F
+TLC 409		Cerrado	TLC	C	F
+TLC 457		Cerrado	TLC	C	F
+TLC 459		Cerrado	TLC	C	F
+TLC 462		Cerrado	TLC	C	F
+TLC 185		Cerrado	TLC	C	M
+TLC 189		Cerrado	TLC	C	M
+TLC 275		Cerrado	TLC	C	M
+TLC 281		Cerrado	TLC	C	M
+TLC 316		Cerrado	TLC	C	M
+TLC 324		Cerrado	TLC	C	M
+TLC 327		Cerrado	TLC	C	M
+TLC 359		Cerrado	TLC	C	M
+TLC 360		Cerrado	TLC	C	M
+TLC 406		Cerrado	TLC	C	M
+TLC 407		Cerrado	TLC	C	M
+TLC 410		Cerrado	TLC	C	M
+TLC 413		Cerrado	TLC	C	M
+TLC 415		Cerrado	TLC	C	M
+TLC 450		Cerrado	TLC	C	M
+TLC 451		Cerrado	TLC	C	M
+TLC 454		Cerrado	TLC	C	M
+TLC 456		Cerrado	TLC	C	M
+TLC 460		Cerrado	TLC	C	M
+TLC 461		Cerrado	TLC	C	M
+TPN 021		Cerrado	TPN	A	F
+TPN 022		Cerrado	TPN	A	F
+TPN 026		Cerrado	TPN	A	F
+TPN 027		Cerrado	TPN	A	F
+TPN 028		Cerrado	TPN	A	F
+TPN 032		Cerrado	TPN	A	F
+TPN 034		Cerrado	TPN	A	F
+TPN 067		Cerrado	TPN	A	F
+TPN 069		Cerrado	TPN	A	F
+TPN 111		Cerrado	TPN	A	F
+TPN 121		Cerrado	TPN	A	F
+TPN 156		Cerrado	TPN	A	F
+TPN 167		Cerrado	TPN	A	F
+TPN 168		Cerrado	TPN	A	F
+TPN 197		Cerrado	TPN	A	F
+TPN 198		Cerrado	TPN	A	F
+TPN 199		Cerrado	TPN	A	F
+TPN 202		Cerrado	TPN	A	F
+TPN 203		Cerrado	TPN	A	F
+TPN 205		Cerrado	TPN	A	F
+TPN 023		Cerrado	TPN	A	M
+TPN 033		Cerrado	TPN	A	M
+TPN 066		Cerrado	TPN	A	M
+TPN 068		Cerrado	TPN	A	M
+TPN 076		Cerrado	TPN	A	M
+TPN 077		Cerrado	TPN	A	M
+TPN 079		Cerrado	TPN	A	M
+TPN 116		Cerrado	TPN	A	M
+TPN 122		Cerrado	TPN	A	M
+TPN 157		Cerrado	TPN	A	M
+TPN 158		Cerrado	TPN	A	M
+TPN 161		Cerrado	TPN	A	M
+TPN 166		Cerrado	TPN	A	M
+TPN 201		Cerrado	TPN	A	M
+TPN 206		Cerrado	TPN	A	M
+TPN 207		Cerrado	TPN	A	M
+TPN 208		Cerrado	TPN	A	M
+TPN 209		Cerrado	TPN	A	M
+TPN 210		Cerrado	TPN	A	M
+TPN 040		Cerrado	TPN	B	F
+TPN 043		Cerrado	TPN	B	F
+TPN 046		Cerrado	TPN	B	F
+TPN 082		Cerrado	TPN	B	F
+TPN 088		Cerrado	TPN	B	F
+TPN 089		Cerrado	TPN	B	F
+TPN 091		Cerrado	TPN	B	F
+TPN 092		Cerrado	TPN	B	F
+TPN 126	Y-RIGHT	Cerrado	TPN	B	F
+TPN 131	Y	Cerrado	TPN	B	F
+TPN 171	Y	Cerrado	TPN	B	F
+TPN 178	Y	Cerrado	TPN	B	F
+TPN 212	Y	Cerrado	TPN	B	F
+TPN 213	Y	Cerrado	TPN	B	F
+TPN 214	Y	Cerrado	TPN	B	F
+TPN 215	Y	Cerrado	TPN	B	F
+TPN 216	Y	Cerrado	TPN	B	F
+TPN 224	Y	Cerrado	TPN	B	F
+TPN 225	Y	Cerrado	TPN	B	F
+TPN 036	Y	Cerrado	TPN	B	M
+TPN 038	Y	Cerrado	TPN	B	M
+TPN 041	Y	Cerrado	TPN	B	M
+TPN 042	Y	Cerrado	TPN	B	M
+TPN 044	Y	Cerrado	TPN	B	M
+TPN 049	Y	Cerrado	TPN	B	M
+TPN 086	Y	Cerrado	TPN	B	M
+TPN 087	Y	Cerrado	TPN	B	M
+TPN 090	Y	Cerrado	TPN	B	M
+TPN 093	Y	Cerrado	TPN	B	M
+TPN 136	Y	Cerrado	TPN	B	M
+TPN 137	Y	Cerrado	TPN	B	M
+TPN 138	Y	Cerrado	TPN	B	M
+TPN 172	Y-RIGHT	Cerrado	TPN	B	M
+TPN 173	Y	Cerrado	TPN	B	M
+TPN 174	Y	Cerrado	TPN	B	M
+TPN 176	Y	Cerrado	TPN	B	M
+TPN 211	Y	Cerrado	TPN	B	M
+TPN 217	Y	Cerrado	TPN	B	M
+TPN 222	Y	Cerrado	TPN	B	M
+TPN 096	Y	Cerrado	TPN	C	F
+TPN 097	Y	Cerrado	TPN	C	F
+TPN 099	Y	Cerrado	TPN	C	F
+TPN 102	Y	Cerrado	TPN	C	F
+TPN 107	Y	Cerrado	TPN	C	F
+TPN 108	Y	Cerrado	TPN	C	F
+TPN 147	Y-RIGHT	Cerrado	TPN	C	F
+TPN 148	Y	Cerrado	TPN	C	F
+TPN 183	Y	Cerrado	TPN	C	F
+TPN 188	Y	Cerrado	TPN	C	F
+TPN 227	Y	Cerrado	TPN	C	F
+TPN 229	Y	Cerrado	TPN	C	F
+TPN 230	Y	Cerrado	TPN	C	F
+TPN 231	Y	Cerrado	TPN	C	F
+TPN 236	Y	Cerrado	TPN	C	F
+TPN 240	Y	Cerrado	TPN	C	F
+TPN 051	Y	Cerrado	TPN	C	M
+TPN 053	Y	Cerrado	TPN	C	M
+TPN 059	Y	Cerrado	TPN	C	M
+TPN 060	Y	Cerrado	TPN	C	M
+TPN 100	Y	Cerrado	TPN	C	M
+TPN 101	Y	Cerrado	TPN	C	M
+TPN 103	Y	Cerrado	TPN	C	M
+TPN 106	Y	Cerrado	TPN	C	M
+TPN 146	Y	Cerrado	TPN	C	M
+TPN 182	Y	Cerrado	TPN	C	M
+TPN187	Y	Cerrado	TPN	C	M
+TPN 191	Y	Cerrado	TPN	C	M
+TPN 226	Y	Cerrado	TPN	C	M
+TPN 232	Y	Cerrado	TPN	C	M
+TPN 234	Y-RIGHT	Cerrado	TPN	C	M
+TPN 235	Y	Cerrado	TPN	C	M
+TPN 237	Y	Cerrado	TPN	C	M
+TPN 238	Y	Cerrado	TPN	C	M
+TPN 239	Y	Cerrado	TPN	C	M
+SJU 014	Y	Mata Atlantica	SJU	A	F
+SJU 022	Y	Mata Atlantica	SJU	A	F
+SJU 060	Y	Mata Atlantica	SJU	A	F
+SJU 062	Y	Mata Atlantica	SJU	A	F
+SJU 104	Y	Mata Atlantica	SJU	A	F
+SJU 111	Y	Mata Atlantica	SJU	A	F
+SJU 150	Y	Mata Atlantica	SJU	A	F
+SJU 152	Y	Mata Atlantica	SJU	A	F
+SJU 206	Y	Mata Atlantica	SJU	A	F
+SJU 250	Y	Mata Atlantica	SJU	A	F
+SJU 252	Y	Mata Atlantica	SJU	A	F
+SJU 289	Y	Mata Atlantica	SJU	A	F
+SJU 291	Y	Mata Atlantica	SJU	A	F
+SJU 321	Y	Mata Atlantica	SJU	A	F
+SJU 325	Y	Mata Atlantica	SJU	A	F
+SJU 376	Y	Mata Atlantica	SJU	A	F
+SJU 422	Y-RIGHT	Mata Atlantica	SJU	A	F
+SJU 423	Y	Mata Atlantica	SJU	A	F
+SJU 461	Y	Mata Atlantica	SJU	A	F
+SJU 465	Y	Mata Atlantica	SJU	A	F
+SJU 26	Y	Mata Atlantica	SJU	A	M
+SJU 68	Y	Mata Atlantica	SJU	A	M
+SJU 105	Y	Mata Atlantica	SJU	A	M
+SJU 154	Y	Mata Atlantica	SJU	A	M
+SJU 196	Y	Mata Atlantica	SJU	A	M
+SJU 201	Y	Mata Atlantica	SJU	A	M
+SJU 204	Y	Mata Atlantica	SJU	A	M
+SJU 207	Y	Mata Atlantica	SJU	A	M
+SJU 240	Y	Mata Atlantica	SJU	A	M
+SJU 245	Y	Mata Atlantica	SJU	A	M
+SJU 246	Y	Mata Atlantica	SJU	A	M
+SJU 319	Y	Mata Atlantica	SJU	A	M
+SJU 320	Y	Mata Atlantica	SJU	A	M
+SJU 364	Y	Mata Atlantica	SJU	A	M
+SJU 366	Y	Mata Atlantica	SJU	A	M
+SJU 370	Y	Mata Atlantica	SJU	A	M
+SJU 372	Y	Mata Atlantica	SJU	A	M
+SJU 411	Y	Mata Atlantica	SJU	A	M
+SJU 412	Y	Mata Atlantica	SJU	A	M
+SJU 419	Y	Mata Atlantica	SJU	A	M
+SJU 34	Y	Mata Atlantica	SJU	B	F
+SJU 40	Y	Mata Atlantica	SJU	B	F
+SJU 75	Y	Mata Atlantica	SJU	B	F
+SJU 80	Y	Mata Atlantica	SJU	B	F
+SJU 120	Y	Mata Atlantica	SJU	B	F
+SJU 123	Y	Mata Atlantica	SJU	B	F
+SJU 124	Y	Mata Atlantica	SJU	B	F
+SJU 131	Y	Mata Atlantica	SJU	B	F
+SJU 217	Y	Mata Atlantica	SJU	B	F
+SJU 222	Y	Mata Atlantica	SJU	B	F
+SJU 223	Y	Mata Atlantica	SJU	B	F
+SJU 265	Y	Mata Atlantica	SJU	B	F
+SJU 295	Y	Mata Atlantica	SJU	B	F
+SJU 379	Y	Mata Atlantica	SJU	B	F
+SJU 385	Y	Mata Atlantica	SJU	B	F
+SJU 390	Y	Mata Atlantica	SJU	B	F
+SJU 426	Y	Mata Atlantica	SJU	B	F
+SJU 431	Y	Mata Atlantica	SJU	B	F
+SJU 434	Y	Mata Atlantica	SJU	B	F
+SJU 472	Y	Mata Atlantica	SJU	B	F
+SJU 37	y	Mata Atlantica	SJU	B	M
+SJU 81	y	Mata Atlantica	SJU	B	M
+SJU 86	y	Mata Atlantica	SJU	B	M
+SJU 119	y	Mata Atlantica	SJU	B	M
+SJU 127	y	Mata Atlantica	SJU	B	M
+SJU 129	y	Mata Atlantica	SJU	B	M
+SJU 130	y	Mata Atlantica	SJU	B	M
+SJU 170	y	Mata Atlantica	SJU	B	M
+SJU 218	y	Mata Atlantica	SJU	B	M
+SJU 254	y	Mata Atlantica	SJU	B	M
+SJU 257	y	Mata Atlantica	SJU	B	M
+SJU 296	y	Mata Atlantica	SJU	B	M
+SJU 300	y	Mata Atlantica	SJU	B	M
+SJU 303	y	Mata Atlantica	SJU	B	M
+SJU 341	y	Mata Atlantica	SJU	B	M
+SJU 381	y	Mata Atlantica	SJU	B	M
+SJU 389	y	Mata Atlantica	SJU	B	M
+SJU 392	y	Mata Atlantica	SJU	B	M
+SJU 473	y	Mata Atlantica	SJU	B	M
+SJU 481	y	Mata Atlantica	SJU	B	M
+SJU 135	Y	Mata Atlantica	SJU	C	F
+SJU 136	Y	Mata Atlantica	SJU	C	F
+SJU 184	Y	Mata Atlantica	SJU	C	F
+SJU 185	Y	Mata Atlantica	SJU	C	F
+SJU 225	Y	Mata Atlantica	SJU	C	F
+SJU 227	Y	Mata Atlantica	SJU	C	F
+SJU 235	Y	Mata Atlantica	SJU	C	F
+SJU 269	Y	Mata Atlantica	SJU	C	F
+SJU 271	Y	Mata Atlantica	SJU	C	F
+SJU 279	Y	Mata Atlantica	SJU	C	F
+SJU 305	Y	Mata Atlantica	SJU	C	F
+SJU 309	Y	Mata Atlantica	SJU	C	F
+SJU 310	Y	Mata Atlantica	SJU	C	F
+SJU 314	Y	Mata Atlantica	SJU	C	F
+SJU 315	Y	Mata Atlantica	SJU	C	F
+SJU 439	Y	Mata Atlantica	SJU	C	F
+SJU050	Y	Mata Atlantica	SJU	C	M
+SJU051	Y	Mata Atlantica	SJU	C	M
+SJU055	Y	Mata Atlantica	SJU	C	M
+SJU137	Y	Mata Atlantica	SJU	C	M
+SJU139	Y	Mata Atlantica	SJU	C	M
+SJU189	Y	Mata Atlantica	SJU	C	M
+SJU190	Y	Mata Atlantica	SJU	C	M
+SJU229	Y	Mata Atlantica	SJU	C	M
+SJU270	Y	Mata Atlantica	SJU	C	M
+SJU304	Y	Mata Atlantica	SJU	C	M
+SJU317	Y	Mata Atlantica	SJU	C	M
+SJU395	Y	Mata Atlantica	SJU	C	M
+SJU397	Y	Mata Atlantica	SJU	C	M
+SJU440	Y	Mata Atlantica	SJU	C	M
+SJU444	Y	Mata Atlantica	SJU	C	M
+SJU485	Y	Mata Atlantica	SJU	C	M

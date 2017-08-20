@@ -1,0 +1,245 @@
+---
+title: "Lab reared wing GM"
+author: "Virginia Chu"
+date: "July 14, 2017"
+output: html_document
+---
+
+```
+#For random specimen for landmark selection
+#Set up data, read it in and factor based on locality (it's just by increasing latitude for copy paste ease)
+setwd("C:/Users/vmc04/Dropbox/Life history data")
+mydata<-read.csv("Life history data 07112017.csv", header=TRUE)
+lifedata<-mydata
+lifedata$Locality=factor(lifedata$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+#copy paste out
+x1<-aggregate(lifedata$Wing.length..mm.~lifedata$Temp+lifedata$Sex+lifedata$Locality,data=lifedata, sum)
+
+write.table(x1, "clipboard", sep='\t', row.names=FALSE)
+
+#create subsets based on identifying information
+APRFA<-subset(lifedata, lifedata$Locality=="APR"& lifedata$Sex=="F" &lifedata$Temp=="A")
+APRFB<-subset(lifedata, lifedata$Locality=="APR"& lifedata$Sex=="F" &lifedata$Temp=="B")
+APRFC<-subset(lifedata, lifedata$Locality=="APR"& lifedata$Sex=="F" &lifedata$Temp=="C")
+APRMA<-subset(lifedata, lifedata$Locality=="APR"& lifedata$Sex=="M" &lifedata$Temp=="A")
+APRMB<-subset(lifedata, lifedata$Locality=="APR"& lifedata$Sex=="M" &lifedata$Temp=="B")
+APRMC<-subset(lifedata, lifedata$Locality=="APR"& lifedata$Sex=="M" &lifedata$Temp=="C")
+
+#create data.frame with just the code information
+APRFAlist<-data.frame(APRFA$Code)
+APRFBlist<-data.frame(APRFB$Code)
+APRFClist<-data.frame(APRFC$Code)
+APRMAlist<-data.frame(APRMA$Code)
+APRMBlist<-data.frame(APRMB$Code)
+APRMClist<-data.frame(APRMC$Code)
+
+#randomly choose but gives me NA if I ask for 16 and there are only 16, for example?
+APRFa1<-APRFAlist[sample(nrow(APRFAlist),22),]
+write.table(APRFa1, "clipboard",sep='t', row.names=FALSE)
+APRFb1<-APRFBlist[sample(nrow(APRFAlist),25),]
+write.table(APRFb1, "clipboard",sep='t', row.names=FALSE)
+APRFc1<-APRFClist[sample(nrow(APRFAlist),21),]
+write.table(APRFc1, "clipboard",sep='t', row.names=FALSE)
+
+APRMa1<-APRMAlist[sample(nrow(APRFAlist),25),]
+write.table(APRMa1, "clipboard",sep='t', row.names=FALSE)
+APRMb1<-APRMBlist[sample(nrow(APRFAlist),23),]
+write.table(APRMb1, "clipboard",sep='t', row.names=FALSE)
+APRMc1<-APRMClist[sample(nrow(APRFAlist),23),]
+write.table(APRMc1, "clipboard",sep='t', row.names=FALSE)
+
+#ARS
+ARSFA<-subset(lifedata, lifedata$Locality=="ARS"& lifedata$Sex=="F" &lifedata$Temp=="A")
+ARSFB<-subset(lifedata, lifedata$Locality=="ARS"& lifedata$Sex=="F" &lifedata$Temp=="B")
+ARSFC<-subset(lifedata, lifedata$Locality=="ARS"& lifedata$Sex=="F" &lifedata$Temp=="C")
+ARSMA<-subset(lifedata, lifedata$Locality=="ARS"& lifedata$Sex=="M" &lifedata$Temp=="A")
+ARSMB<-subset(lifedata, lifedata$Locality=="ARS"& lifedata$Sex=="M" &lifedata$Temp=="B")
+ARSMC<-subset(lifedata, lifedata$Locality=="ARS"& lifedata$Sex=="M" &lifedata$Temp=="C")
+
+ARSFAlist<-data.frame(ARSFA$Code)
+ARSFBlist<-data.frame(ARSFB$Code)
+ARSFClist<-data.frame(ARSFC$Code)
+ARSMAlist<-data.frame(ARSMA$Code)
+ARSMBlist<-data.frame(ARSMB$Code)
+ARSMClist<-data.frame(ARSMC$Code)
+
+ARSFa1<-ARSFAlist[sample(nrow(ARSFAlist),20),]
+write.table(ARSFa1, "clipboard",sep='t', row.names=FALSE)
+ARSFb1<-ARSFBlist[sample(nrow(ARSFAlist),20),]
+write.table(ARSFb1, "clipboard",sep='t', row.names=FALSE)
+ARSFc1<-ARSFClist[sample(nrow(ARSFAlist),20),]
+write.table(ARSFc1, "clipboard",sep='t', row.names=FALSE)
+
+ARSMa1<-ARSMAlist[sample(nrow(ARSFAlist),20),]
+write.table(ARSMa1, "clipboard",sep='t', row.names=FALSE)
+ARSMb1<-ARSMBlist[sample(nrow(ARSFAlist),20),]
+write.table(ARSMb1, "clipboard",sep='t', row.names=FALSE)
+ARSMc1<-ARSMClist[sample(nrow(ARSFAlist),20),]
+write.table(ARSMc1, "clipboard",sep='t', row.names=FALSE)
+
+#RPV
+RPVFA<-subset(lifedata, lifedata$Locality=="RPV"& lifedata$Sex=="F" &lifedata$Temp=="A")
+RPVFB<-subset(lifedata, lifedata$Locality=="RPV"& lifedata$Sex=="F" &lifedata$Temp=="B")
+RPVFC<-subset(lifedata, lifedata$Locality=="RPV"& lifedata$Sex=="F" &lifedata$Temp=="C")
+RPVMA<-subset(lifedata, lifedata$Locality=="RPV"& lifedata$Sex=="M" &lifedata$Temp=="A")
+RPVMB<-subset(lifedata, lifedata$Locality=="RPV"& lifedata$Sex=="M" &lifedata$Temp=="B")
+RPVMC<-subset(lifedata, lifedata$Locality=="RPV"& lifedata$Sex=="M" &lifedata$Temp=="C")
+
+RPVFAlist<-data.frame(RPVFA$Code)
+RPVFBlist<-data.frame(RPVFB$Code)
+RPVFClist<-data.frame(RPVFC$Code)
+RPVMAlist<-data.frame(RPVMA$Code)
+RPVMBlist<-data.frame(RPVMB$Code)
+RPVMClist<-data.frame(RPVMC$Code)
+
+RPVFa1<-RPVFAlist[sample(nrow(RPVFAlist),22),]
+write.table(RPVFa1, "clipboard",sep='t', row.names=FALSE)
+RPVFb1<-RPVFBlist[sample(nrow(RPVFAlist),24),]
+write.table(RPVFb1, "clipboard",sep='t', row.names=FALSE)
+RPVFc1<-RPVFClist[sample(nrow(RPVFAlist),20),]
+write.table(RPVFc1, "clipboard",sep='t', row.names=FALSE)
+
+RPVMa1<-RPVMAlist[sample(nrow(RPVFAlist),23),]
+write.table(RPVMa1, "clipboard",sep='t', row.names=FALSE)
+RPVMb1<-RPVMBlist[sample(nrow(RPVFAlist),21),]
+write.table(RPVMb1, "clipboard",sep='t', row.names=FALSE)
+RPVMc1<-RPVMClist[sample(nrow(RPVFAlist),20),]
+write.table(RPVMc1, "clipboard",sep='t', row.names=FALSE)
+
+#RMO
+RMOFA<-subset(lifedata, lifedata$Locality=="RMO"& lifedata$Sex=="F" &lifedata$Temp=="A")
+RMOFB<-subset(lifedata, lifedata$Locality=="RMO"& lifedata$Sex=="F" &lifedata$Temp=="B")
+RMOFC<-subset(lifedata, lifedata$Locality=="RMO"& lifedata$Sex=="F" &lifedata$Temp=="C")
+RMOMA<-subset(lifedata, lifedata$Locality=="RMO"& lifedata$Sex=="M" &lifedata$Temp=="A")
+RMOMB<-subset(lifedata, lifedata$Locality=="RMO"& lifedata$Sex=="M" &lifedata$Temp=="B")
+RMOMC<-subset(lifedata, lifedata$Locality=="RMO"& lifedata$Sex=="M" &lifedata$Temp=="C")
+
+RMOFAlist<-data.frame(RMOFA$Code)
+RMOFBlist<-data.frame(RMOFB$Code)
+RMOFClist<-data.frame(RMOFC$Code)
+RMOMAlist<-data.frame(RMOMA$Code)
+RMOMBlist<-data.frame(RMOMB$Code)
+RMOMClist<-data.frame(RMOMC$Code)
+
+RMOFa1<-RMOFAlist[sample(nrow(RMOFAlist),25),]
+write.table(RMOFa1, "clipboard",sep='t', row.names=FALSE)
+RMOFb1<-RMOFBlist[sample(nrow(RMOFAlist),24),]
+write.table(RMOFb1, "clipboard",sep='t', row.names=FALSE)
+RMOFc1<-RMOFClist[sample(nrow(RMOFAlist),20),]
+write.table(RMOFc1, "clipboard",sep='t', row.names=FALSE)
+
+RMOMa1<-RMOMAlist[sample(nrow(RMOFAlist),22),]
+write.table(RMOMa1, "clipboard",sep='t', row.names=FALSE)
+RMOMb1<-RMOMBlist[sample(nrow(RMOFAlist),25),]
+write.table(RMOMb1, "clipboard",sep='t', row.names=FALSE)
+RMOMc1<-RMOMClist[sample(nrow(RMOFAlist),20),]
+write.table(RMOMc1, "clipboard",sep='t', row.names=FALSE)
+
+#TLC
+TLCFA<-subset(lifedata, lifedata$Locality=="TLC"& lifedata$Sex=="F" &lifedata$Temp=="A")
+TLCFB<-subset(lifedata, lifedata$Locality=="TLC"& lifedata$Sex=="F" &lifedata$Temp=="B")
+TLCFC<-subset(lifedata, lifedata$Locality=="TLC"& lifedata$Sex=="F" &lifedata$Temp=="C")
+TLCMA<-subset(lifedata, lifedata$Locality=="TLC"& lifedata$Sex=="M" &lifedata$Temp=="A")
+TLCMB<-subset(lifedata, lifedata$Locality=="TLC"& lifedata$Sex=="M" &lifedata$Temp=="B")
+TLCMC<-subset(lifedata, lifedata$Locality=="TLC"& lifedata$Sex=="M" &lifedata$Temp=="C")
+
+TLCFAlist<-data.frame(TLCFA$Code)
+TLCFBlist<-data.frame(TLCFB$Code)
+TLCFClist<-data.frame(TLCFC$Code)
+TLCMAlist<-data.frame(TLCMA$Code)
+TLCMBlist<-data.frame(TLCMB$Code)
+TLCMClist<-data.frame(TLCMC$Code)
+
+TLCFa1<-TLCFAlist[sample(nrow(TLCFAlist),20),]
+write.table(TLCFa1, "clipboard",sep='t', row.names=FALSE)
+TLCFb1<-TLCFBlist[sample(nrow(TLCFAlist),20),]
+write.table(TLCFb1, "clipboard",sep='t', row.names=FALSE)
+TLCFc1<-TLCFClist[sample(nrow(TLCFAlist),20),]
+write.table(TLCFc1, "clipboard",sep='t', row.names=FALSE)
+
+TLCMa1<-TLCMAlist[sample(nrow(TLCFAlist),20),]
+write.table(TLCMa1, "clipboard",sep='t', row.names=FALSE)
+TLCMb1<-TLCMBlist[sample(nrow(TLCFAlist),20),]
+write.table(TLCMb1, "clipboard",sep='t', row.names=FALSE)
+TLCMc1<-TLCMClist[sample(nrow(TLCFAlist),20),]
+write.table(TLCMc1, "clipboard",sep='t', row.names=FALSE)
+
+
+#TPN
+TPNFA<-subset(lifedata, lifedata$Locality=="TPN"& lifedata$Sex=="F" &lifedata$Temp=="A")
+TPNFB<-subset(lifedata, lifedata$Locality=="TPN"& lifedata$Sex=="F" &lifedata$Temp=="B")
+TPNFC<-subset(lifedata, lifedata$Locality=="TPN"& lifedata$Sex=="F" &lifedata$Temp=="C")
+TPNMA<-subset(lifedata, lifedata$Locality=="TPN"& lifedata$Sex=="M" &lifedata$Temp=="A")
+TPNMB<-subset(lifedata, lifedata$Locality=="TPN"& lifedata$Sex=="M" &lifedata$Temp=="B")
+TPNMC<-subset(lifedata, lifedata$Locality=="TPN"& lifedata$Sex=="M" &lifedata$Temp=="C")
+
+TPNFAlist<-data.frame(TPNFA$Code)
+TPNFBlist<-data.frame(TPNFB$Code)
+TPNFClist<-data.frame(TPNFC$Code)
+TPNMAlist<-data.frame(TPNMA$Code)
+TPNMBlist<-data.frame(TPNMB$Code)
+TPNMClist<-data.frame(TPNMC$Code)
+
+TPNFa1<-TPNFAlist[sample(nrow(TPNFAlist),20),]
+write.table(TPNFa1, "clipboard",sep='t', row.names=FALSE)
+TPNFb1<-TPNFBlist[sample(nrow(TPNFAlist),20),]
+write.table(TPNFb1, "clipboard",sep='t', row.names=FALSE)
+TPNFc1<-TPNFClist[sample(nrow(TPNFAlist),16),]
+write.table(TPNFc1, "clipboard",sep='t', row.names=FALSE)
+
+TPNMa1<-TPNMAlist[sample(nrow(TPNFAlist),20),]
+write.table(TPNMa1, "clipboard",sep='t', row.names=FALSE)
+TPNMb1<-TPNMBlist[sample(nrow(TPNFAlist),20),]
+write.table(TPNMb1, "clipboard",sep='t', row.names=FALSE)
+TPNMc1<-TPNMClist[sample(nrow(TPNFAlist),20),]
+write.table(TPNMc1, "clipboard",sep='t', row.names=FALSE)
+
+#SJU
+SJUFA<-subset(lifedata, lifedata$Locality=="SJU"& lifedata$Sex=="F" &lifedata$Temp=="A")
+SJUFB<-subset(lifedata, lifedata$Locality=="SJU"& lifedata$Sex=="F" &lifedata$Temp=="B")
+SJUFC<-subset(lifedata, lifedata$Locality=="SJU"& lifedata$Sex=="F" &lifedata$Temp=="C")
+SJUMA<-subset(lifedata, lifedata$Locality=="SJU"& lifedata$Sex=="M" &lifedata$Temp=="A")
+SJUMB<-subset(lifedata, lifedata$Locality=="SJU"& lifedata$Sex=="M" &lifedata$Temp=="B")
+SJUMC<-subset(lifedata, lifedata$Locality=="SJU"& lifedata$Sex=="M" &lifedata$Temp=="C")
+
+SJUFAlist<-data.frame(SJUFA$Code)
+SJUFBlist<-data.frame(SJUFB$Code)
+SJUFClist<-data.frame(SJUFC$Code)
+SJUMAlist<-data.frame(SJUMA$Code)
+SJUMBlist<-data.frame(SJUMB$Code)
+SJUMClist<-data.frame(SJUMC$Code)
+
+SJUFa1<-SJUFAlist[sample(nrow(SJUFAlist),22),]
+write.table(SJUFa1, "clipboard",sep='t', row.names=FALSE)
+SJUFb1<-SJUFBlist[sample(nrow(SJUFAlist),22),]
+write.table(SJUFb1, "clipboard",sep='t', row.names=FALSE)
+SJUFc1<-SJUFClist[sample(nrow(SJUFAlist),16),]
+write.table(SJUFc1, "clipboard",sep='t', row.names=FALSE)
+
+SJUMa1<-SJUMAlist[sample(nrow(SJUFAlist),20),]
+write.table(SJUMa1, "clipboard",sep='t', row.names=FALSE)
+SJUMb1<-SJUMBlist[sample(nrow(SJUFAlist),20),]
+write.table(SJUMb1, "clipboard",sep='t', row.names=FALSE)
+SJUMc1<-SJUMClist[sample(nrow(SJUFAlist),17),]
+write.table(SJUMc1, "clipboard",sep='t', row.names=FALSE)
+
+```
+
+## R Markdown
+
+
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

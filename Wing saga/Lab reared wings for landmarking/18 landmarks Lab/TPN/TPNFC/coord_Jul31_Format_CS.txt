@@ -1,0 +1,17 @@
+F:/Lab desktop files copy for sorting/Wing saga/Lab reared wings for landmarking/18/TPN/TPNFC/coord_Jul31_Format  - Centroid sizes -  1 16 36 0	from C:/Users/vmc04/Desktop/Lab reared wings for landmarking/18/TPN/TPNFC/coord_Jul31.txt - TPS like internal (simplified) format - can be converted to other format by using TET	
+791.45681429177716
+762.18213775390404
+772.80675319110537
+777.6873479176005
+756.99075291578038
+804.54942531691461
+736.94704317504682
+745.4815371437594
+803.72898279070262
+769.94805019559601
+691.40902832147367
+749.98540726544218
+727.92246229327975
+677.31040807659895
+694.62395901987463
+742.35511119080411

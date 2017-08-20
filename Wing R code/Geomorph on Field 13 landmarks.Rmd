@@ -1,0 +1,76 @@
+---
+title: "Geomorph on Field 13 landmarks"
+author: "Virginia Chu"
+date: "July 5, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(geomorph)
+setwd("C:/Users/vmc04/Desktop/Landmark txt files")
+#all landmarks are compiled in 1 .txt file with grouping of individuals data in a separate .csv
+# Field total 13 landmark.txt  contains 2D information
+# Specimen grouping.csv
+
+#read in data
+#made a .tps ish (really .txt) by cut and pasting from excel into Word and saving as plain text
+#Field 13 LM test1.txt has scale info
+mydata<-readland.tps("Field 13 LM test1.txt", specID = "ID")
+
+myAPRf13<-readland.tps("APR Field 13 landmarks.txt", specID = "ID")
+
+mydata1<-readland.tps("Field 18LM test.txt", specID = "ID")
+#1st item (APR001)
+mydata[,,1]
+#dimensions to determine 3d or 2d
+dim(mydata)
+#returns 13 2 241 therefore 3d (useful for analyses in R (PCA, MANOVA))
+a<-two.d.array(mydata)
+
+#making a factor
+classifier<- read.csv("Specimen grouping.csv", header=T)
+is.factor(classifier$Biome)
+is.factor(classifier$Latitude)
+is.factor(classifier$Locality)
+
+#add to array
+coords.f13<-tryit$coords
+csize.f13<-tryit$Csize
+
+id1.f13<-classifier$ï..ID
+biome.f13<-classifier$Biome
+local.f13<-classifier$Locality
+
+gdf.f13<-geomorph.data.frame(coords=coords.f13, cs)
+#quick procrustes
+tryit<-gpagen(mydata)
+
+tryit1<-gpagen(mydata1)
+
+#plot 13 landmarks
+plot(tryit)
+
+#concern-> are my landmarks not oriented correctly in space
+
+write.table(x1,"clipboard", sep='\t', row.names=FALSE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -1,0 +1,871 @@
+"","Code","Biome","State","Latitude","Locality","Family","Temp","Well","Sex","Wing.length..mm."
+"1","APR 068","Amazon","Amazonas",-3.028,"APR",2,"A","3","F",2.667
+"2","APR 069","Amazon","Amazonas",-3.028,"APR",2,"B","1","M",2.666
+"3","APR 072","Amazon","Amazonas",-3.028,"APR",2,"B","1","M",2.693
+"4","APR 074","Amazon","Amazonas",-3.028,"APR",2,"B","2","F",2.61
+"5","APR 080","Amazon","Amazonas",-3.028,"APR",2,"B","3","M",2.468
+"6","APR 081","Amazon","Amazonas",-3.028,"APR",2,"B","3","F",2.455
+"7","APR 082","Amazon","Amazonas",-3.028,"APR",2,"B","3","M",2.641
+"8","APR 087","Amazon","Amazonas",-3.028,"APR",2,"C","1","F",2.631
+"9","APR 097","Amazon","Amazonas",-3.028,"APR",2,"C","3","M",2.78
+"10","APR 100","Amazon","Amazonas",-3.028,"APR",3,"A","1","F",2.764
+"11","APR 102","Amazon","Amazonas",-3.028,"APR",3,"A","1","F",2.705
+"12","APR 105","Amazon","Amazonas",-3.028,"APR",3,"A","2","M",2.731
+"13","APR 106","Amazon","Amazonas",-3.028,"APR",3,"A","2","M",2.712
+"14","APR 112","Amazon","Amazonas",-3.028,"APR",3,"A","3","M",2.763
+"15","APR 116","Amazon","Amazonas",-3.028,"APR",3,"B","1","M",2.55
+"16","APR 122","Amazon","Amazonas",-3.028,"APR",3,"B","2","F",2.66
+"17","APR 128","Amazon","Amazonas",-3.028,"APR",3,"B","3","M",2.78
+"18","APR 130","Amazon","Amazonas",-3.028,"APR",3,"C","1","F",2.526
+"19","APR 132","Amazon","Amazonas",-3.028,"APR",3,"C","1","F",2.619
+"20","APR 142","Amazon","Amazonas",-3.028,"APR",3,"C","3","M",2.632
+"21","APR 143","Amazon","Amazonas",-3.028,"APR",3,"C","3","M",2.858
+"22","APR 144","Amazon","Amazonas",-3.028,"APR",4,"A","1","F",2.821
+"23","APR 146","Amazon","Amazonas",-3.028,"APR",4,"A","1","F",2.646
+"24","APR 153","Amazon","Amazonas",-3.028,"APR",4,"A","2","M",2.836
+"25","APR 157","Amazon","Amazonas",-3.028,"APR",4,"A","3","M",2.852
+"26","APR 159","Amazon","Amazonas",-3.028,"APR",4,"B","1","M",2.646
+"27","APR 163","Amazon","Amazonas",-3.028,"APR",4,"B","1","M",2.546
+"28","APR 172","Amazon","Amazonas",-3.028,"APR",4,"B","3","F",2.806
+"29","APR 175","Amazon","Amazonas",-3.028,"APR",4,"C","1","F",2.402
+"30","APR 178","Amazon","Amazonas",-3.028,"APR",4,"C","1","M",2.483
+"31","APR 186","Amazon","Amazonas",-3.028,"APR",4,"C","3","M",2.491
+"32","APR 189","Amazon","Amazonas",-3.028,"APR",7,"A","1","M",2.692
+"33","APR 192","Amazon","Amazonas",-3.028,"APR",7,"A","1","M",2.828
+"34","APR 197","Amazon","Amazonas",-3.028,"APR",7,"A","2","M",2.863
+"35","APR 203","Amazon","Amazonas",-3.028,"APR",7,"A","3","F",2.814
+"36","APR 208","Amazon","Amazonas",-3.028,"APR",7,"B","1","F",2.755
+"37","APR 209","Amazon","Amazonas",-3.028,"APR",7,"B","2","M",2.672
+"38","APR 231","Amazon","Amazonas",-3.028,"APR",7,"C","3","M",2.52
+"39","APR 235","Amazon","Amazonas",-3.028,"APR",8,"A","1","M",2.565
+"40","APR 239","Amazon","Amazonas",-3.028,"APR",8,"A","2","F",2.789
+"41","APR 243","Amazon","Amazonas",-3.028,"APR",8,"A","2","M",2.861
+"42","APR 244","Amazon","Amazonas",-3.028,"APR",8,"A","3","M",2.764
+"43","APR 248","Amazon","Amazonas",-3.028,"APR",8,"A","3","M",2.828
+"44","APR 253","Amazon","Amazonas",-3.028,"APR",8,"B","1","F",2.607
+"45","APR 254","Amazon","Amazonas",-3.028,"APR",8,"B","2","M",2.487
+"46","APR 256","Amazon","Amazonas",-3.028,"APR",8,"B","2","F",2.576
+"47","APR 259","Amazon","Amazonas",-3.028,"APR",8,"B","3","F",2.388
+"48","APR 261","Amazon","Amazonas",-3.028,"APR",8,"B","3","M",2.3
+"49","APR 262","Amazon","Amazonas",-3.028,"APR",8,"B","3","F",2.534
+"50","APR 263","Amazon","Amazonas",-3.028,"APR",8,"B","3","M",2.568
+"51","APR 265","Amazon","Amazonas",-3.028,"APR",8,"C","1","F",2.444
+"52","APR 266","Amazon","Amazonas",-3.028,"APR",8,"C","1","M",2.519
+"53","APR 280","Amazon","Amazonas",-3.028,"APR",10,"A","1","F",2.691
+"54","APR 285","Amazon","Amazonas",-3.028,"APR",10,"A","2","M",2.753
+"55","APR 291","Amazon","Amazonas",-3.028,"APR",10,"A","3","M",2.583
+"56","APR 293","Amazon","Amazonas",-3.028,"APR",10,"A","3","M",2.808
+"57","APR 295","Amazon","Amazonas",-3.028,"APR",10,"B","1","F",2.511
+"58","APR 297","Amazon","Amazonas",-3.028,"APR",10,"B","1","F",2.775
+"59","APR 308","Amazon","Amazonas",-3.028,"APR",10,"B","3","M",2.86
+"60","APR 312","Amazon","Amazonas",-3.028,"APR",10,"C","1","M",2.694
+"61","APR 315","Amazon","Amazonas",-3.028,"APR",10,"C","2","F",2.256
+"62","APR 331","Amazon","Amazonas",-3.028,"APR",14,"A","2","F",2.668
+"63","APR 332","Amazon","Amazonas",-3.028,"APR",14,"A","2","F",2.625
+"64","APR 333","Amazon","Amazonas",-3.028,"APR",14,"A","2","M",2.935
+"65","APR 353","Amazon","Amazonas",-3.028,"APR",14,"B","3","F",2.811
+"66","APR 359","Amazon","Amazonas",-3.028,"APR",14,"C","2","F",2.516
+"67","APR 363","Amazon","Amazonas",-3.028,"APR",14,"C","2","F",2.47
+"68","APR 370","Amazon","Amazonas",-3.028,"APR",19,"A","1","M",2.701
+"69","APR 378","Amazon","Amazonas",-3.028,"APR",19,"A","2","F",2.758
+"70","APR 382","Amazon","Amazonas",-3.028,"APR",19,"A","3","M",2.813
+"71","APR 388","Amazon","Amazonas",-3.028,"APR",19,"B","1","F",2.759
+"72","APR 392","Amazon","Amazonas",-3.028,"APR",19,"B","2","F",2.488
+"73","APR 399","Amazon","Amazonas",-3.028,"APR",19,"C","1","F",2.45
+"74","APR 400","Amazon","Amazonas",-3.028,"APR",19,"C","1","M",2.447
+"75","APR 402","Amazon","Amazonas",-3.028,"APR",19,"C","1","M",2.461
+"76","APR 407","Amazon","Amazonas",-3.028,"APR",19,"C","2","M",2.418
+"77","APR 415","Amazon","Amazonas",-3.028,"APR",18,"A","1","F",2.682
+"78","APR 418","Amazon","Amazonas",-3.028,"APR",18,"A","1","M",2.892
+"79","APR 419","Amazon","Amazonas",-3.028,"APR",18,"A","2","F",2.65
+"80","APR 421","Amazon","Amazonas",-3.028,"APR",18,"A","2","M",2.706
+"81","APR 426","Amazon","Amazonas",-3.028,"APR",18,"A","3","M",2.586
+"82","APR 433","Amazon","Amazonas",-3.028,"APR",18,"B","1","F",2.659
+"83","APR 439","Amazon","Amazonas",-3.028,"APR",18,"B","3","M",2.602
+"84","APR 447","Amazon","Amazonas",-3.028,"APR",18,"C","1","F",2.415
+"85","APR 450","Amazon","Amazonas",-3.028,"APR",18,"C","2","F",2.4563
+"86","APR 452","Amazon","Amazonas",-3.028,"APR",18,"C","2","M",2.648
+"87","APR 457","Amazon","Amazonas",-3.028,"APR",18,"C","3","F",2.433
+"88","APR 464","Amazon","Amazonas",-3.028,"APR",33,"A","2","M",2.803
+"89","APR 472","Amazon","Amazonas",-3.028,"APR",33,"A","3","F",2.72
+"90","APR 474","Amazon","Amazonas",-3.028,"APR",33,"B","1","F",2.566
+"91","APR 475","Amazon","Amazonas",-3.028,"APR",33,"B","1","M",2.535
+"92","APR 477","Amazon","Amazonas",-3.028,"APR",33,"B","1","M",2.604
+"93","APR 478","Amazon","Amazonas",-3.028,"APR",33,"B","1","M",2.477
+"94","APR 480","Amazon","Amazonas",-3.028,"APR",33,"B","2","M",2.601
+"95","APR 483","Amazon","Amazonas",-3.028,"APR",33,"B","2","F",2.68
+"96","APR 492","Amazon","Amazonas",-3.028,"APR",33,"C","1","F",2.55
+"97","APR 496","Amazon","Amazonas",-3.028,"APR",33,"C","2","M",2.458
+"98","APR 500","Amazon","Amazonas",-3.028,"APR",33,"C","3","M",2.384
+"99","APR 501","Amazon","Amazonas",-3.028,"APR",33,"C","3","F",2.402
+"100","APR 504","Amazon","Amazonas",-3.028,"APR",36,"A","1","F",2.792
+"101","APR 506","Amazon","Amazonas",-3.028,"APR",36,"A","1","M",2.719
+"102","APR 509","Amazon","Amazonas",-3.028,"APR",36,"A","2","F",2.926
+"103","APR 515","Amazon","Amazonas",-3.028,"APR",36,"A","3","M",2.845
+"104","APR 523","Amazon","Amazonas",-3.028,"APR",36,"B","1","M",2.526
+"105","APR 527","Amazon","Amazonas",-3.028,"APR",36,"B","2","M",2.771
+"106","APR 531","Amazon","Amazonas",-3.028,"APR",36,"B","3","F",2.51
+"107","APR 534","Amazon","Amazonas",-3.028,"APR",36,"C","1","M",2.592
+"108","APR 542","Amazon","Amazonas",-3.028,"APR",36,"C","2","M",2.801
+"109","APR 544","Amazon","Amazonas",-3.028,"APR",36,"C","3","M",2.646
+"110","APR 546","Amazon","Amazonas",-3.028,"APR",36,"C","3","M",2.46
+"111","APR 562","Amazon","Amazonas",-3.028,"APR",38,"A","3","F",2.705
+"112","APR 567","Amazon","Amazonas",-3.028,"APR",38,"B","1","F",2.459
+"113","APR 569","Amazon","Amazonas",-3.028,"APR",38,"B","2","F",2.397
+"114","APR 571","Amazon","Amazonas",-3.028,"APR",38,"B","2","M",2.572
+"115","APR 573","Amazon","Amazonas",-3.028,"APR",38,"B","2","F",2.723
+"116","APR 575","Amazon","Amazonas",-3.028,"APR",38,"B","3","M",2.529
+"117","APR 585","Amazon","Amazonas",-3.028,"APR",38,"C","2","F",2.626
+"118","APR 589","Amazon","Amazonas",-3.028,"APR",38,"C","3","M",2.514
+"119","APR 591","Amazon","Amazonas",-3.028,"APR",38,"C","3","F",2.426
+"120","APR 593","Amazon","Amazonas",-3.028,"APR",38,"C","3","F",2.554
+"121","APR 605","Amazon","Amazonas",-3.028,"APR",40,"A","3","F",2.685
+"122","APR 606","Amazon","Amazonas",-3.028,"APR",40,"A","3","M",2.827
+"123","APR 624","Amazon","Amazonas",-3.028,"APR",40,"C","1","F",2.327
+"124","APR 627","Amazon","Amazonas",-3.028,"APR",40,"C","1","M",2.673
+"125","APR 631","Amazon","Amazonas",-3.028,"APR",40,"C","2","M",2.506
+"126","APR 639","Amazon","Amazonas",-3.028,"APR",44,"A","1","F",2.766
+"127","APR 641","Amazon","Amazonas",-3.028,"APR",44,"A","1","F",2.646
+"128","APR 643","Amazon","Amazonas",-3.028,"APR",44,"A","1","F",2.979
+"129","APR 657","Amazon","Amazonas",-3.028,"APR",44,"B","1","F",2.66
+"130","APR 664","Amazon","Amazonas",-3.028,"APR",44,"C","1","M",2.643
+"131","APR 670","Amazon","Amazonas",-3.028,"APR",44,"C","2","F",2.547
+"132","APR 675","Amazon","Amazonas",-3.028,"APR",6,"A","1","F",2.759
+"133","APR 677","Amazon","Amazonas",-3.028,"APR",6,"A","1","F",2.82
+"134","APR 677","Amazon","Amazonas",-3.028,"APR",6,"A","1","F",2.82
+"135","APR 678","Amazon","Amazonas",-3.028,"APR",6,"A","1","F",2.898
+"136","APR 702","Amazon","Amazonas",-3.028,"APR",6,"B","3","M",2.831
+"137","APR 709","Amazon","Amazonas",-3.028,"APR",6,"C","2","F",2.319
+"138","APR 712","Amazon","Amazonas",-3.028,"APR",6,"C","2","M",2.766
+"139","APR 714","Amazon","Amazonas",-3.028,"APR",6,"C","3","F",2.443
+"140","ARS 023","Amazon","Amazonas",-2.864,"ARS",14,"A","1","M",2.758
+"141","ARS 024","Amazon","Amazonas",-2.864,"ARS",14,"A","1","F",2.671
+"142","ARS 029","Amazon","Amazonas",-2.864,"ARS",14,"A","2","F",2.685
+"143","ARS 032","Amazon","Amazonas",-2.864,"ARS",14,"A","3","M",2.788
+"144","ARS 036","Amazon","Amazonas",-2.864,"ARS",14,"B","1","M",2.648
+"145","ARS 037","Amazon","Amazonas",-2.864,"ARS",14,"B","1","F",2.639
+"146","ARS 038","Amazon","Amazonas",-2.864,"ARS",14,"B","1","M",2.694
+"147","ARS 039","Amazon","Amazonas",-2.864,"ARS",14,"B","1","F",2.713
+"148","ARS 040","Amazon","Amazonas",-2.864,"ARS",14,"B","1","M",2.771
+"149","ARS 042","Amazon","Amazonas",-2.864,"ARS",14,"B","2","M",2.526
+"150","ARS 045","Amazon","Amazonas",-2.864,"ARS",14,"B","2","M",2.705
+"151","ARS 048","Amazon","Amazonas",-2.864,"ARS",14,"B","3","M",2.665
+"152","ARS 056","Amazon","Amazonas",-2.864,"ARS",14,"C","2","M",2.536
+"153","ARS 057","Amazon","Amazonas",-2.864,"ARS",14,"C","2","F",2.356
+"154","ARS 059","Amazon","Amazonas",-2.864,"ARS",14,"C","2","M",2.699
+"155","ARS 061","Amazon","Amazonas",-2.864,"ARS",14,"C","3","M",2.533
+"156","ARS 074","Amazon","Amazonas",-2.864,"ARS",17,"A","2","M",2.651
+"157","ARS 076","Amazon","Amazonas",-2.864,"ARS",17,"A","3","F",2.465
+"158","ARS 078","Amazon","Amazonas",-2.864,"ARS",17,"A","3","M",2.82
+"159","ARS 082","Amazon","Amazonas",-2.864,"ARS",17,"B","1","M",2.549
+"160","ARS 089","Amazon","Amazonas",-2.864,"ARS",17,"B","2","F",2.741
+"161","ARS 093","Amazon","Amazonas",-2.864,"ARS",17,"B","3","F",2.389
+"162","ARS 100","Amazon","Amazonas",-2.864,"ARS",17,"C","1","F",2.771
+"163","ARS 103","Amazon","Amazonas",-2.864,"ARS",17,"C","2","M",2.588
+"164","ARS 104","Amazon","Amazonas",-2.864,"ARS",17,"C","2","M",2.861
+"165","ARS 108","Amazon","Amazonas",-2.864,"ARS",17,"C","3","F",2.449
+"166","ARS 113","Amazon","Amazonas",-2.864,"ARS",3,"A","1","M",2.93
+"167","ARS 116","Amazon","Amazonas",-2.864,"ARS",3,"A","2","F",2.755
+"168","ARS 118","Amazon","Amazonas",-2.864,"ARS",3,"A","2","M",3.004
+"169","ARS 119","Amazon","Amazonas",-2.864,"ARS",3,"A","2","F",2.934
+"170","ARS 120","Amazon","Amazonas",-2.864,"ARS",3,"A","2","M",2.638
+"171","ARS 124","Amazon","Amazonas",-2.864,"ARS",3,"A","3","F",2.765
+"172","ARS 128","Amazon","Amazonas",-2.864,"ARS",3,"B","1","M",2.636
+"173","ARS 136","Amazon","Amazonas",-2.864,"ARS",3,"B","3","M",2.694
+"174","ARS 139","Amazon","Amazonas",-2.864,"ARS",3,"B","3","F",2.781
+"175","ARS 142","Amazon","Amazonas",-2.864,"ARS",3,"C","1","F",2.461
+"176","ARS 147","Amazon","Amazonas",-2.864,"ARS",3,"C","2","M",2.468
+"177","ARS 156","Amazon","Amazonas",-2.864,"ARS",16,"A","1","F",2.609
+"178","ARS 163","Amazon","Amazonas",-2.864,"ARS",16,"A","2","F",2.843
+"179","ARS 164","Amazon","Amazonas",-2.864,"ARS",16,"A","2","M",2.944
+"180","ARS 165","Amazon","Amazonas",-2.864,"ARS",16,"A","2","M",2.917
+"181","ARS 166","Amazon","Amazonas",-2.864,"ARS",16,"A","3","F",2.704
+"182","ARS 174","Amazon","Amazonas",-2.864,"ARS",16,"B","1","F",2.814
+"183","ARS 178","Amazon","Amazonas",-2.864,"ARS",16,"B","2","M",2.512
+"184","ARS 180","Amazon","Amazonas",-2.864,"ARS",16,"B","2","M",2.724
+"185","ARS 181","Amazon","Amazonas",-2.864,"ARS",16,"B","3","M",2.509
+"186","ARS 182","Amazon","Amazonas",-2.864,"ARS",16,"B","3","F",2.575
+"187","ARS 186","Amazon","Amazonas",-2.864,"ARS",16,"C","1","M",2.456
+"188","ARS 188","Amazon","Amazonas",-2.864,"ARS",16,"C","1","F",2.385
+"189","ARS 196","Amazon","Amazonas",-2.864,"ARS",16,"C","3","F",2.355
+"190","ARS 246","Amazon","Amazonas",-2.864,"ARS",4,"A","1","F",2.766
+"191","ARS 247","Amazon","Amazonas",-2.864,"ARS",4,"A","1","M",2.621
+"192","ARS 251","Amazon","Amazonas",-2.864,"ARS",4,"A","2","M",2.692
+"193","ARS 254","Amazon","Amazonas",-2.864,"ARS",4,"A","2","F",2.745
+"194","ARS 255","Amazon","Amazonas",-2.864,"ARS",4,"A","2","F",2.659
+"195","ARS 259","Amazon","Amazonas",-2.864,"ARS",4,"A","3","M",2.725
+"196","ARS 261","Amazon","Amazonas",-2.864,"ARS",4,"B","1","M",2.576
+"197","ARS 264","Amazon","Amazonas",-2.864,"ARS",4,"B","1","F",2.785
+"198","ARS 265","Amazon","Amazonas",-2.864,"ARS",4,"B","1","F",2.547
+"199","ARS 268","Amazon","Amazonas",-2.864,"ARS",4,"B","2","M",2.856
+"200","ARS 269","Amazon","Amazonas",-2.864,"ARS",4,"B","2","M",2.836
+"201","ARS 272","Amazon","Amazonas",-2.864,"ARS",4,"B","3","F",2.483
+"202","ARS 276","Amazon","Amazonas",-2.864,"ARS",4,"C","1","F",2.345
+"203","ARS 278","Amazon","Amazonas",-2.864,"ARS",4,"C","1","M",2.593
+"204","ARS 282","Amazon","Amazonas",-2.864,"ARS",4,"C","2","F",2.439
+"205","ARS 287","Amazon","Amazonas",-2.864,"ARS",4,"C","3","M",2.478
+"206","ARS 294","Amazon","Amazonas",-2.864,"ARS",1,"A","1","M",2.787
+"207","ARS 300","Amazon","Amazonas",-2.864,"ARS",1,"A","2","M",2.999
+"208","ARS 303","Amazon","Amazonas",-2.864,"ARS",1,"A","3","F",2.715
+"209","ARS 306","Amazon","Amazonas",-2.864,"ARS",1,"B","1","F",2.724
+"210","ARS 313","Amazon","Amazonas",-2.864,"ARS",1,"B","2","M",2.495
+"211","ARS 322","Amazon","Amazonas",-2.864,"ARS",1,"C","1","M",2.759
+"212","ARS 325","Amazon","Amazonas",-2.864,"ARS",1,"C","1","F",2.551
+"213","ARS 326","Amazon","Amazonas",-2.864,"ARS",1,"C","2","M",2.563
+"214","ARS 332","Amazon","Amazonas",-2.864,"ARS",1,"C","3","M",2.417
+"215","ARS 335","Amazon","Amazonas",-2.864,"ARS",1,"C","3","M",2.965
+"216","ARS 343","Amazon","Amazonas",-2.864,"ARS",9,"A","2","F",2.779
+"217","ARS 351","Amazon","Amazonas",-2.864,"ARS",9,"B","1","M",2.696
+"218","ARS 353","Amazon","Amazonas",-2.864,"ARS",9,"B","1","F",2.697
+"219","ARS 356","Amazon","Amazonas",-2.864,"ARS",9,"B","2","M",2.682
+"220","ARS 362","Amazon","Amazonas",-2.864,"ARS",9,"B","3","F",2.319
+"221","ARS 364","Amazon","Amazonas",-2.864,"ARS",9,"B","3","M",2.454
+"222","ARS 369","Amazon","Amazonas",-2.864,"ARS",9,"C","1","F",2.537
+"223","ARS 371","Amazon","Amazonas",-2.864,"ARS",9,"C","2","M",2.519
+"224","ARS 372","Amazon","Amazonas",-2.864,"ARS",9,"C","2","F",2.443
+"225","ARS 373","Amazon","Amazonas",-2.864,"ARS",9,"C","2","F",2.483
+"226","ARS 378","Amazon","Amazonas",-2.864,"ARS",9,"C","3","F",2.321
+"227","ARS 379","Amazon","Amazonas",-2.864,"ARS",9,"C","3","M",2.396
+"228","ARS 384","Amazon","Amazonas",-2.864,"ARS",6,"A","1","M",2.725
+"229","ARS 390","Amazon","Amazonas",-2.864,"ARS",6,"A","2","M",2.896
+"230","ARS 391","Amazon","Amazonas",-2.864,"ARS",6,"A","3","F",2.725
+"231","ARS 393","Amazon","Amazonas",-2.864,"ARS",6,"A","3","F",2.599
+"232","ARS 400","Amazon","Amazonas",-2.864,"ARS",6,"B","1","M",2.681
+"233","ARS 404","Amazon","Amazonas",-2.864,"ARS",6,"B","2","F",2.559
+"234","ARS 413","Amazon","Amazonas",-2.864,"ARS",6,"C","1","M",2.566
+"235","ARS 416","Amazon","Amazonas",-2.864,"ARS",6,"C","2","M",2.483
+"236","ARS 417","Amazon","Amazonas",-2.864,"ARS",6,"C","2","F",2.523
+"237","ARS 421","Amazon","Amazonas",-2.864,"ARS",6,"C","3","M",2.592
+"238","ARS 422","Amazon","Amazonas",-2.864,"ARS",6,"C","3","M",2.576
+"239","ARS 434","Amazon","Amazonas",-2.864,"ARS",13,"A","2","M",2.747
+"240","ARS 436","Amazon","Amazonas",-2.864,"ARS",13,"A","3","M",2.76
+"241","ARS 438","Amazon","Amazonas",-2.864,"ARS",13,"A","3","F",2.63
+"242","ARS 449","Amazon","Amazonas",-2.864,"ARS",13,"B","2","F",2.663
+"243","ARS 454","Amazon","Amazonas",-2.864,"ARS",13,"B","3","F",2.638
+"244","ARS 456","Amazon","Amazonas",-2.864,"ARS",13,"C","1","M",2.397
+"245","ARS 459","Amazon","Amazonas",-2.864,"ARS",13,"C","1","F",2.614
+"246","ARS 462","Amazon","Amazonas",-2.864,"ARS",13,"C","2","F",2.269
+"247","ARS 470","Amazon","Amazonas",-2.864,"ARS",13,"C","3","F",2.4
+"248","ARS 516","Amazon","Amazonas",-2.864,"ARS",8,"A","1","M",2.709
+"249","ARS 521","Amazon","Amazonas",-2.864,"ARS",8,"A","2","M",2.744
+"250","ARS 523","Amazon","Amazonas",-2.864,"ARS",8,"A","2","F",2.703
+"251","ARS 524","Amazon","Amazonas",-2.864,"ARS",8,"A","2","F",2.653
+"252","ARS 525","Amazon","Amazonas",-2.864,"ARS",8,"A","2","F",2.892
+"253","ARS 531","Amazon","Amazonas",-2.864,"ARS",8,"B","1","F",2.64
+"254","ARS 533","Amazon","Amazonas",-2.864,"ARS",8,"B","1","F",2.746
+"255","ARS 537","Amazon","Amazonas",-2.864,"ARS",8,"B","2","F",2.593
+"256","ARS 545","Amazon","Amazonas",-2.864,"ARS",8,"B","3","F",2.708
+"257","ARS 556","Amazon","Amazonas",-2.864,"ARS",8,"C","3","F",2.459
+"258","ARS 559","Amazon","Amazonas",-2.864,"ARS",8,"C","3","F",2.57
+"259","ARS 560","Amazon","Amazonas",-2.864,"ARS",8,"C","3","F",2.346
+"260","RMO 056","Amazon","Rondonia",-9.223,"RMO",26,"A","3","M",2.732
+"261","RMO 059","Amazon","Rondonia",-9.223,"RMO",26,"A","3","F",2.965
+"262","RMO 062","Amazon","Rondonia",-9.223,"RMO",26,"B","1","F",2.656
+"263","RMO 063","Amazon","Rondonia",-9.223,"RMO",26,"B","1","F",3.011
+"264","RMO 071","Amazon","Rondonia",-9.223,"RMO",26,"B","3","M",2.683
+"265","RMO 080","Amazon","Rondonia",-9.223,"RMO",26,"C","1","M",2.486
+"266","RMO 084","Amazon","Rondonia",-9.223,"RMO",26,"C","2","F",2.751
+"267","RMO 085","Amazon","Rondonia",-9.223,"RMO",26,"C","2","M",2.612
+"268","RMO 093","Amazon","Rondonia",-9.223,"RMO",33,"A","1","M",2.834
+"269","RMO 098","Amazon","Rondonia",-9.223,"RMO",33,"A",". 2","F",2.781
+"270","RMO 099","Amazon","Rondonia",-9.223,"RMO",33,"A","2","F",2.85
+"271","RMO 101","Amazon","Rondonia",-9.223,"RMO",33,"A","3","M",2.709
+"272","RMO 106","Amazon","Rondonia",-9.223,"RMO",33,"B","1","M",2.708
+"273","RMO 114","Amazon","Rondonia",-9.223,"RMO",33,"B","2","M",2.795
+"274","RMO 118","Amazon","Rondonia",-9.223,"RMO",33,"B","3","F",2.496
+"275","RMO 122","Amazon","Rondonia",-9.223,"RMO",33,"C","1","F",2.376
+"276","RMO 148","Amazon","Rondonia",-9.223,"RMO",39,"A","3","F",2.624
+"277","RMO 171","Amazon","Rondonia",-9.223,"RMO",39,"C","2","F",2.548
+"278","RMO 178","Amazon","Rondonia",-9.223,"RMO",39,"C","3","F",2.392
+"279","RMO 181","Amazon","Rondonia",-9.223,"RMO",41,"A","1","F",2.881
+"280","RMO 187","Amazon","Rondonia",-9.223,"RMO",41,"A","2","F",2.896
+"281","RMO 192","Amazon","Rondonia",-9.223,"RMO",41,"A","3","M",2.703
+"282","RMO 194","Amazon","Rondonia",-9.223,"RMO",41,"A","3","M",2.62
+"283","RMO 197","Amazon","Rondonia",-9.223,"RMO",41,"B","1","M",2.566605836
+"284","RMO 198","Amazon","Rondonia",-9.223,"RMO",41,"B","1","M",2.773966318
+"285","RMO 199","Amazon","Rondonia",-9.223,"RMO",41,"B","1","M",2.734925705
+"286","RMO 205","Amazon","Rondonia",-9.223,"RMO",41,"B","2","F",2.623553374
+"287","RMO 211","Amazon","Rondonia",-9.223,"RMO",41,"C","1","M",2.701253257
+"288","RMO 216","Amazon","Rondonia",-9.223,"RMO",41,"C","2","M",2.46947039
+"289","RMO 217","Amazon","Rondonia",-9.223,"RMO",41,"C","2","F",2.557645856
+"290","RMO 219","Amazon","Rondonia",-9.223,"RMO",41,"C","2","M",2.747174379
+"291","RMO 221","Amazon","Rondonia",-9.223,"RMO",41,"C","3","M",2.512826396
+"292","RMO 226","Amazon","Rondonia",-9.223,"RMO",6,"A","1","M",2.969844075
+"293","RMO 227","Amazon","Rondonia",-9.223,"RMO",6,"A","1","F",2.823860601
+"294","RMO 231","Amazon","Rondonia",-9.223,"RMO",6,"A","2","F",2.775397177
+"295","RMO 233","Amazon","Rondonia",-9.223,"RMO",6,"A","2","M",2.800080311
+"296","RMO 241","Amazon","Rondonia",-9.223,"RMO",6,"B","1","F",2.721223355
+"297","RMO 247","Amazon","Rondonia",-9.223,"RMO",6,"B","2","F",2.684588149
+"298","RMO 258","Amazon","Rondonia",-9.223,"RMO",6,"C","1","F",2.61634041
+"299","RMO 266","Amazon","Rondonia",-9.223,"RMO",6,"C","3","F",2.454920607
+"300","RMO 273","Amazon","Rondonia",-9.223,"RMO",18,"A","1","M",2.955
+"301","RMO 284","Amazon","Rondonia",-9.223,"RMO",18,"A","3","F",2.83
+"302","RMO 286","Amazon","Rondonia",-9.223,"RMO",18,"B","1","M",2.753
+"303","RMO 288","Amazon","Rondonia",-9.223,"RMO",18,"B","1","F",2.74
+"304","RMO 308","Amazon","Rondonia",-9.223,"RMO",18,"C","2","F",2.528
+"305","RMO 311","Amazon","Rondonia",-9.223,"RMO",18,"C","3","M",2.504
+"306","RMO 312","Amazon","Rondonia",-9.223,"RMO",18,"C","3","M",2.497
+"307","RMO 316","Amazon","Rondonia",-9.223,"RMO",24,"A","1","M",2.755
+"308","RMO 322","Amazon","Rondonia",-9.223,"RMO",24,"A","2","F",2.916
+"309","RMO 324","Amazon","Rondonia",-9.223,"RMO",24,"A","2","F",2.972
+"310","RMO 327","Amazon","Rondonia",-9.223,"RMO",24,"A","3","M",2.871
+"311","RMO 328","Amazon","Rondonia",-9.223,"RMO",24,"A","3","F",2.866
+"312","RMO 331","Amazon","Rondonia",-9.223,"RMO",24,"B","1","M",2.75
+"313","RMO 333","Amazon","Rondonia",-9.223,"RMO",24,"B","1","M",2.747
+"314","RMO 335","Amazon","Rondonia",-9.223,"RMO",24,"B","1","M",3.038
+"315","RMO 336","Amazon","Rondonia",-9.223,"RMO",24,"B","2","F",2.561
+"316","RMO 338","Amazon","Rondonia",-9.223,"RMO",24,"B","2","M",2.686
+"317","RMO 341","Amazon","Rondonia",-9.223,"RMO",24,"B","3","M",2.781
+"318","RMO 344","Amazon","Rondonia",-9.223,"RMO",24,"B","3","F",2.632
+"319","RMO 345","Amazon","Rondonia",-9.223,"RMO",24,"B","3","M",2.871
+"320","RMO 348","Amazon","Rondonia",-9.223,"RMO",24,"C","1","F",2.473
+"321","RMO 364","Amazon","Rondonia",-9.223,"RMO",27,"A","1","M",2.818
+"322","RMO 368","Amazon","Rondonia",-9.223,"RMO",27,"A","2","M",2.72
+"323","RMO 369","Amazon","Rondonia",-9.223,"RMO",27,"A","2","F",2.627
+"324","RMO 391","Amazon","Rondonia",-9.223,"RMO",27,"C","1","F",2.531
+"325","RMO 396","Amazon","Rondonia",-9.223,"RMO",27,"C","2","F",2.389
+"326","RMO 403","Amazon","Rondonia",-9.223,"RMO",27,"C","3","M",2.591
+"327","RMO 404","Amazon","Rondonia",-9.223,"RMO",27,"C","3","M",2.348
+"328","RMO 411","Amazon","Rondonia",-9.223,"RMO",28,"A","2","M",2.687
+"329","RMO 413","Amazon","Rondonia",-9.223,"RMO",28,"A","2","M",2.734
+"330","RMO 414","Amazon","Rondonia",-9.223,"RMO",28,"A","2","M",2.825
+"331","RMO 417","Amazon","Rondonia",-9.223,"RMO",28,"A","3","F",2.667
+"332","RMO 423","Amazon","Rondonia",-9.223,"RMO",28,"B","1","M",2.426
+"333","RMO 432","Amazon","Rondonia",-9.223,"RMO",28,"B","3","F",2.409
+"334","RMO 442","Amazon","Rondonia",-9.223,"RMO",28,"C","2","M",2.595
+"335","RMO 449","Amazon","Rondonia",-9.223,"RMO",28,"C","3","F",2.546
+"336","RMO 458","Amazon","Rondonia",-9.223,"RMO",30,"A","2","M",2.85
+"337","RMO 459","Amazon","Rondonia",-9.223,"RMO",30,"A","2","F",2.608
+"338","RMO 472","Amazon","Rondonia",-9.223,"RMO",30,"B","2","M",2.615
+"339","RMO 475","Amazon","Rondonia",-9.223,"RMO",30,"B","2","M",2.705
+"340","RMO 476","Amazon","Rondonia",-9.223,"RMO",30,"B","3","M",2.615
+"341","RMO 491","Amazon","Rondonia",-9.223,"RMO",30,"C","3","M",2.591
+"342","RMO 499","Amazon","Rondonia",-9.223,"RMO",36,"A","1","F",2.9
+"343","RMO 501","Amazon","Rondonia",-9.223,"RMO",36,"A","2","M",2.607
+"344","RMO 503","Amazon","Rondonia",-9.223,"RMO",36,"A","2","F",2.576
+"345","RMO 504","Amazon","Rondonia",-9.223,"RMO",36,"A","2","M",2.565
+"346","RMO 505","Amazon","Rondonia",-9.223,"RMO",36,"A","2","F",2.682
+"347","RMO 507","Amazon","Rondonia",-9.223,"RMO",36,"A","3","F",2.739
+"348","RMO 513","Amazon","Rondonia",-9.223,"RMO",36,"B","1","F",2.59
+"349","RMO 518","Amazon","Rondonia",-9.223,"RMO",36,"B","2","M",2.444
+"350","RMO 520","Amazon","Rondonia",-9.223,"RMO",36,"B","2","F",2.664
+"351","RMO 521","Amazon","Rondonia",-9.223,"RMO",36,"B","3","M",2.562
+"352","RMO 536","Amazon","Rondonia",-9.223,"RMO",36,"C","3","M",2.627
+"353","RMO 537","Amazon","Rondonia",-9.223,"RMO",36,"C","3","F",2.496
+"354","RMO 538","Amazon","Rondonia",-9.223,"RMO",36,"C","3","F",2.423
+"355","RMO 539","Amazon","Rondonia",-9.223,"RMO",36,"C","3","M",2.772
+"356","RMO 541","Amazon","Rondonia",-9.223,"RMO",42,"A","1","M",2.813
+"357","RMO 542","Amazon","Rondonia",-9.223,"RMO",42,"A","1","F",2.657
+"358","RMO 543","Amazon","Rondonia",-9.223,"RMO",42,"A","1","F",2.594
+"359","RMO 546","Amazon","Rondonia",-9.223,"RMO",42,"A","2","M",2.941
+"360","RMO 554","Amazon","Rondonia",-9.223,"RMO",42,"A","3","F",2.801
+"361","RMO 557","Amazon","Rondonia",-9.223,"RMO",42,"B","1","F",2.602
+"362","RMO 561","Amazon","Rondonia",-9.223,"RMO",42,"B","2","F",2.717
+"363","RMO 562","Amazon","Rondonia",-9.223,"RMO",42,"B","2","M",2.621
+"364","RMO 571","Amazon","Rondonia",-9.223,"RMO",42,"C","1","F",2.521
+"365","RMO 573","Amazon","Rondonia",-9.223,"RMO",42,"C","1","F",2.556
+"366","RMO 596","Amazon","Rondonia",-9.223,"RMO",13,"A","3","M",2.79
+"367","RMO 598","Amazon","Rondonia",-9.223,"RMO",13,"A","3","F",2.625
+"368","RMO 602","Amazon","Rondonia",-9.223,"RMO",13,"B","1","F",2.593
+"369","RMO 603","Amazon","Rondonia",-9.223,"RMO",13,"B","1","F",2.532
+"370","RMO 605","Amazon","Rondonia",-9.223,"RMO",13,"B","1","F",2.64
+"371","RMO 611","Amazon","Rondonia",-9.223,"RMO",13,"B","3","F",2.407
+"372","RMO 625","Amazon","Rondonia",-9.223,"RMO",13,"C","2","M",2.811
+"373","RMO 629","Amazon","Rondonia",-9.223,"RMO",13,"C","3","F",2.551
+"374","RMO 639","Amazon","Rondonia",-9.223,"RMO",17,"A","2","M",2.892
+"375","RMO 641","Amazon","Rondonia",-9.223,"RMO",17,"A","3","F",2.938
+"376","RMO 646","Amazon","Rondonia",-9.223,"RMO",17,"B","1","M",2.714
+"377","RMO 653","Amazon","Rondonia",-9.223,"RMO",17,"B","2","M",2.664
+"378","RMO 656","Amazon","Rondonia",-9.223,"RMO",17,"B","3","M",2.618
+"379","RMO 657","Amazon","Rondonia",-9.223,"RMO",17,"B","3","M",2.407
+"380","RMO 659","Amazon","Rondonia",-9.223,"RMO",17,"B","3","F",2.674
+"381","RMO 663","Amazon","Rondonia",-9.223,"RMO",17,"C","1","F",2.549
+"382","RMO 671","Amazon","Rondonia",-9.223,"RMO",17,"C","3","M",2.443
+"383","RMO 674","Amazon","Rondonia",-9.223,"RMO",17,"C","3","F",2.45
+"384","RMO 682","Amazon","Rondonia",-9.223,"RMO",5,"A","2","F",2.731
+"385","RMO 691","Amazon","Rondonia",-9.223,"RMO",5,"B","1","F",2.615
+"386","RMO 694","Amazon","Rondonia",-9.223,"RMO",5,"B","1","F",2.425
+"387","RMO 696","Amazon","Rondonia",-9.223,"RMO",5,"B","2","F",2.655
+"388","RMO 700","Amazon","Rondonia",-9.223,"RMO",5,"B","2","M",2.794
+"389","RMO 701","Amazon","Rondonia",-9.223,"RMO",5,"B","3","F",2.524
+"390","RMO 702","Amazon","Rondonia",-9.223,"RMO",5,"B","3","F",2.56
+"391","RMO 707","Amazon","Rondonia",-9.223,"RMO",5,"C","1","M",2.548
+"392","RMO 708","Amazon","Rondonia",-9.223,"RMO",5,"C","1","M",2.516
+"393","RMO 709","Amazon","Rondonia",-9.223,"RMO",5,"C","1 .","M",2.707
+"394","RMO 712","Amazon","Rondonia",-9.223,"RMO",5,"C","2","M",2.41
+"395","RMO 716","Amazon","Rondonia",-9.223,"RMO",5,"C","3","F",2.256
+"396","RPV 095","Amazon","Rondonia",-8.742,"RPV",11,"A","1","M",2.892
+"397","RPV 103","Amazon","Rondonia",-8.742,"RPV",11,"A","2","F",2.865
+"398","RPV 116","Amazon","Rondonia",-8.742,"RPV",11,"B","2","M",2.612
+"399","RPV 119","Amazon","Rondonia",-8.742,"RPV",11,"B","2","F",2.522
+"400","RPV 123","Amazon","Rondonia",-8.742,"RPV",11,"B","3","F",2.73
+"401","RPV 125","Amazon","Rondonia",-8.742,"RPV",11,"C","1","M",2.328
+"402","RPV 142","Amazon","Rondonia",-8.742,"RPV",23,"A","1","M",2.703
+"403","RPV 147","Amazon","Rondonia",-8.742,"RPV",23,"A","2","M",3.038
+"404","RPV 156","Amazon","Rondonia",-8.742,"RPV",23,"B","1","M",2.611
+"405","RPV 159","Amazon","Rondonia",-8.742,"RPV",23,"B","1","M",2.816
+"406","RPV 167","Amazon","Rondonia",-8.742,"RPV",23,"B","3","M",2.736
+"407","RPV 174","Amazon","Rondonia",-8.742,"RPV",23,"C","1","M",2.524
+"408","RPV 176","Amazon","Rondonia",-8.742,"RPV",23,"C","2","M",2.528
+"409","RPV 177","Amazon","Rondonia",-8.742,"RPV",23,"C","2","F",2.237
+"410","RPV 181","Amazon","Rondonia",-8.742,"RPV",23,"C","3","M",2.602
+"411","RPV 185","Amazon","Rondonia",-8.742,"RPV",25,"A","1","F",2.752
+"412","RPV 191","Amazon","Rondonia",-8.742,"RPV",25,"A","2","F",2.778
+"413","RPV 195","Amazon","Rondonia",-8.742,"RPV",25,"A","3","F",2.765
+"414","RPV 220","Amazon","Rondonia",-8.742,"RPV",25,"C","2","F",2.373
+"415","RPV 243","Amazon","Rondonia",-8.742,"RPV",38,"A","3","M",2.81
+"416","RPV 244","Amazon","Rondonia",-8.742,"RPV",38,"A","3","M",3.053
+"417","RPV 246","Amazon","Rondonia",-8.742,"RPV",38,"B","1","M",2.59
+"418","RPV 252","Amazon","Rondonia",-8.742,"RPV",38,"B","2","M",2.789
+"419","RPV 254","Amazon","Rondonia",-8.742,"RPV",38,"B","2","F",2.577
+"420","RPV 258","Amazon","Rondonia",-8.742,"RPV",38,"B","3","F",2.668
+"421","RPV 259","Amazon","Rondonia",-8.742,"RPV",38,"B","3","F",2.622
+"422","RPV 263","Amazon","Rondonia",-8.742,"RPV",38,"C","1","M",2.587
+"423","RPV 273","Amazon","Rondonia",-8.742,"RPV",38,"C","3","F",2.174
+"424","RPV 280","Amazon","Rondonia",-8.742,"RPV",12,"A","2","F",2.643
+"425","RPV 281","Amazon","Rondonia",-8.742,"RPV",12,"A","2","F",2.604
+"426","RPV 290","Amazon","Rondonia",-8.742,"RPV",12,"B","1","F",2.73
+"427","RPV 297","Amazon","Rondonia",-8.742,"RPV",12,"B","2","F",2.609
+"428","RPV 300","Amazon","Rondonia",-8.742,"RPV",12,"B","3","F",2.577
+"429","RPV 310","Amazon","Rondonia",-8.742,"RPV",12,"C","2","F",2.439
+"430","RPV 312","Amazon","Rondonia",-8.742,"RPV",12,"C","2","F",2.594
+"431","RPV 315","Amazon","Rondonia",-8.742,"RPV",12,"C","3","F",2.594
+"432","RPV 329","Amazon","Rondonia",-8.742,"RPV",17,"A","2","M",2.997
+"433","RPV 330","Amazon","Rondonia",-8.742,"RPV",17,"A","3","M",2.9
+"434","RPV 337","Amazon","Rondonia",-8.742,"RPV",17,"B","1","M",2.426
+"435","RPV 339","Amazon","Rondonia",-8.742,"RPV",17,"B","1","M",2.721
+"436","RPV 344","Amazon","Rondonia",-8.742,"RPV",17,"B","2","M",3.034
+"437","RPV 346","Amazon","Rondonia",-8.742,"RPV",17,"B","3","M",2.503
+"438","RPV 350","Amazon","Rondonia",-8.742,"RPV",17,"C","1","M",2.603
+"439","RPV 366","Amazon","Rondonia",-8.742,"RPV",18,"A","1","F",2.799
+"440","RPV 371","Amazon","Rondonia",-8.742,"RPV",18,"A","2","M",2.862
+"441","RPV 372","Amazon","Rondonia",-8.742,"RPV",18,"A","2","F",2.851
+"442","RPV 374","Amazon","Rondonia",-8.742,"RPV",18,"A","2","F",2.887
+"443","RPV 375","Amazon","Rondonia",-8.742,"RPV",18,"A","3","M",2.963
+"444","RPV 391","Amazon","Rondonia",-8.742,"RPV",18,"B","3","M",2.749
+"445","RPV 395","Amazon","Rondonia",-8.742,"RPV",18,"C","1","F",2.506
+"446","RPV 399","Amazon","Rondonia",-8.742,"RPV",18,"C","1","F",2.601
+"447","RPV 405","Amazon","Rondonia",-8.742,"RPV",18,"C","3","M",2.388
+"448","RPV 407","Amazon","Rondonia",-8.742,"RPV",18,"C","3","M",2.449
+"449","RPV 418","Amazon","Rondonia",-8.742,"RPV",19,"A","2","M",2.939
+"450","RPV 425","Amazon","Rondonia",-8.742,"RPV",19,"B","1","M",2.742
+"451","RPV 432","Amazon","Rondonia",-8.742,"RPV",19,"B","2","F",2.549
+"452","RPV 434","Amazon","Rondonia",-8.742,"RPV",19,"B","2","F",2.775
+"453","RPV 435","Amazon","Rondonia",-8.742,"RPV",19,"B","3","F",2.589
+"454","RPV 439","Amazon","Rondonia",-8.742,"RPV",19,"B","3","M",2.641
+"455","RPV 440","Amazon","Rondonia",-8.742,"RPV",19,"C","1","F",2.574
+"456","RPV 441","Amazon","Rondonia",-8.742,"RPV",19,"C","1","F",2.421
+"457","RPV 445","Amazon","Rondonia",-8.742,"RPV",19,"C","2","F",2.334
+"458","RPV 455","Amazon","Rondonia",-8.742,"RPV",20,"A","1","M",2.702
+"459","RPV 461","Amazon","Rondonia",-8.742,"RPV",20,"A","2","F",2.463
+"460","RPV 461","Amazon","Rondonia",-8.742,"RPV",20,"A","2","F",2.463
+"461","RPV 462","Amazon","Rondonia",-8.742,"RPV",20,"A","2","F",2.485
+"462","RPV 463","Amazon","Rondonia",-8.742,"RPV",20,"A","2","M",2.598
+"463","RPV 470","Amazon","Rondonia",-8.742,"RPV",20,"B","1","F",2.608
+"464","RPV 472","Amazon","Rondonia",-8.742,"RPV",20,"B","1","M",2.505
+"465","RPV 474","Amazon","Rondonia",-8.742,"RPV",20,"B","1","F",2.601
+"466","RPV 475","Amazon","Rondonia",-8.742,"RPV",20,"B","2","F",2.602
+"467","RPV 479","Amazon","Rondonia",-8.742,"RPV",20,"B","2","F",2.651
+"468","RPV 480","Amazon","Rondonia",-8.742,"RPV",20,"B","3","F",2.713
+"469","RPV 483","Amazon","Rondonia",-8.742,"RPV",20,"B","3","F",2.717
+"470","RPV 487","Amazon","Rondonia",-8.742,"RPV",20,"C","1","M",2.756
+"471","RPV 495","Amazon","Rondonia",-8.742,"RPV",20,"C","3","F",2.197
+"472","RPV 497","Amazon","Rondonia",-8.742,"RPV",20,"C","3","F",2.369
+"473","RPV 499","Amazon","Rondonia",-8.742,"RPV",20,"C","3","M",2.551
+"474","RPV 502","Amazon","Rondonia",-8.742,"RPV",28,"A","1","F",2.922
+"475","RPV 503","Amazon","Rondonia",-8.742,"RPV",28,"A","1","F",2.671
+"476","RPV 520","Amazon","Rondonia",-8.742,"RPV",28,"B","2","F",2.537
+"477","RPV 540","Amazon","Rondonia",-8.742,"RPV",28,"C","3","M",2.308
+"478","RPV 542","Amazon","Rondonia",-8.742,"RPV",28,"C","3","M",2.481
+"479","RPV 543","Amazon","Rondonia",-8.742,"RPV",28,"C","3","F",2.561
+"480","RPV 545","Amazon","Rondonia",-8.742,"RPV",37,"A","1","F",2.379
+"481","RPV 549","Amazon","Rondonia",-8.742,"RPV",37,"A","1","F",2.808
+"482","RPV 550","Amazon","Rondonia",-8.742,"RPV",37,"A","2","M",2.946
+"483","RPV 551","Amazon","Rondonia",-8.742,"RPV",37,"A","2","M",2.838
+"484","RPV 556","Amazon","Rondonia",-8.742,"RPV",37,"A","3","M",2.883
+"485","RPV 562","Amazon","Rondonia",-8.742,"RPV",37,"B","1","M",2.596
+"486","RPV 566","Amazon","Rondonia",-8.742,"RPV",37,"B","2","F",2.483
+"487","RPV 570","Amazon","Rondonia",-8.742,"RPV",37,"B","3","M",2.59
+"488","RPV 574","Amazon","Rondonia",-8.742,"RPV",37,"B","3","F",2.629
+"489","RPV 578","Amazon","Rondonia",-8.742,"RPV",37,"C","1","F",2.405
+"490","RPV 580","Amazon","Rondonia",-8.742,"RPV",37,"C","2","M",2.631
+"491","RPV 582","Amazon","Rondonia",-8.742,"RPV",37,"C","2","F",2.307
+"492","RPV 591","Amazon","Rondonia",-8.742,"RPV",43,"A","1","F",2.802
+"493","RPV 594","Amazon","Rondonia",-8.742,"RPV",43,"A","1","M",3.068
+"494","RPV 602","Amazon","Rondonia",-8.742,"RPV",43,"A","3","F",3.029
+"495","RPV 603","Amazon","Rondonia",-8.742,"RPV",43,"A","3","M",2.923
+"496","RPV 604","Amazon","Rondonia",-8.742,"RPV",43,"A","3","M",3.05
+"497","RPV 613","Amazon","Rondonia",-8.742,"RPV",43,"B","2","M",2.656
+"498","RPV 614","Amazon","Rondonia",-8.742,"RPV",43,"B","2","M",2.935
+"499","RPV 621","Amazon","Rondonia",-8.742,"RPV",43,"C","1","M",2.545
+"500","RPV 635","Amazon","Rondonia",-8.742,"RPV",33,"A","1","F",2.674
+"501","RPV 649","Amazon","Rondonia",-8.742,"RPV",33,"A","3","F",2.802
+"502","RPV 652","Amazon","Rondonia",-8.742,"RPV",33,"B","1","M",2.484
+"503","RPV 653","Amazon","Rondonia",-8.742,"RPV",33,"B","1","M",2.665
+"504","RPV 658","Amazon","Rondonia",-8.742,"RPV",33,"B","2","M",2.84
+"505","RPV 662","Amazon","Rondonia",-8.742,"RPV",33,"B","3","F",2.557
+"506","RPV 664","Amazon","Rondonia",-8.742,"RPV",33,"B","3","F",2.474
+"507","RPV 665","Amazon","Rondonia",-8.742,"RPV",33,"C","1","M",2.455
+"508","RPV 669","Amazon","Rondonia",-8.742,"RPV",33,"C","1","F",2.271
+"509","RPV 670","Amazon","Rondonia",-8.742,"RPV",33,"C","2","M",2.462
+"510","RPV 677","Amazon","Rondonia",-8.742,"RPV",33,"C","3","M",2.42
+"511","RPV 688","Amazon","Rondonia",-8.742,"RPV",42,"A","2","F",2.717
+"512","RPV 690","Amazon","Rondonia",-8.742,"RPV",42,"A","3","M",2.586
+"513","RPV 691","Amazon","Rondonia",-8.742,"RPV",42,"A","3","M",2.68
+"514","RPV 693","Amazon","Rondonia",-8.742,"RPV",42,"A","3","F",2.767
+"515","RPV 706","Amazon","Rondonia",-8.742,"RPV",42,"B","3","F",2.538
+"516","RPV 709","Amazon","Rondonia",-8.742,"RPV",42,"B","3","F",2.485
+"517","RPV 711","Amazon","Rondonia",-8.742,"RPV",42,"C","1","F",2.305
+"518","RPV 714","Amazon","Rondonia",-8.742,"RPV",42,"C","1","M",2.568
+"519","RPV 717","Amazon","Rondonia",-8.742,"RPV",42,"C","2","F",2.459
+"520","RPV 722","Amazon","Rondonia",-8.742,"RPV",42,"C","3","F",2.343
+"521","RPV 726","Amazon","Rondonia",-8.742,"RPV",15,"A","1","M",2.838
+"522","RPV 728","Amazon","Rondonia",-8.742,"RPV",15,"A","1","F",2.977
+"523","RPV 729","Amazon","Rondonia",-8.742,"RPV",15,"A","1","M",3.122
+"524","RPV 755","Amazon","Rondonia",-8.742,"RPV",15,"C","1","F",2.436
+"525","RPV 766","Amazon","Rondonia",-8.742,"RPV",15,"C","3","M",2.479
+"526","SJU 014","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",6,"A","1","F",3.051
+"527","SJU 022","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",6,"A","2","F",2.853
+"528","SJU 026","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",6,"A","3","M",2.982
+"529","SJU 034","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",6,"B","2","F",2.53
+"530","SJU 037","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",6,"B","2","M",2.815
+"531","SJU 040","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",6,"B","3","F",2.748
+"532","SJU 050","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",6,"C","2","M",2.633
+"533","SJU 051","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",6,"C","2","M",2.702
+"534","SJU 055","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",6,"C","3","M",2.586
+"535","SJU 060","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",4,"A","1","F",3.114
+"536","SJU 062","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",4,"A","1","F",3.025
+"537","SJU 068","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",4,"A","2","M",2.838
+"538","SJU 075","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",4,"B","1","F",2.695
+"539","SJU 080","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",4,"B","2","F",2.651
+"540","SJU 081","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",4,"B","2","M",2.696
+"541","SJU 086","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",4,"B","3","M",2.723
+"542","SJU 104","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"A","1","F",2.84
+"543","SJU 105","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"A","1","M",2.613
+"544","SJU 111","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"A","2","F",2.918
+"545","SJU 119","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"B","1","M",2.742
+"546","SJU 120","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"B","1","F",2.734
+"547","SJU 123","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"B","1","F",2.776
+"548","SJU 124","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"B","2","F",2.617
+"549","SJU 127","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"B","2","M",2.665
+"550","SJU 129","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"B","3","M",2.591
+"551","SJU 130","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"B","3","M",2.767
+"552","SJU 131","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"B","3","F",2.723
+"553","SJU 135","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"C","1","F",2.629
+"554","SJU 136","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"C","1","F",2.628
+"555","SJU 137","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"C","1","M",2.792
+"556","SJU 139","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",1,"C","2","M",2.659
+"557","SJU 150","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",2,"A","1","F",3.052
+"558","SJU 152","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",2,"A","1","F",3.222
+"559","SJU 154","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",2,"A","2","M",3.025
+"560","SJU 170","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",2,"B","2","M",2.852
+"561","SJU 184","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",2,"C","2","F",2.75
+"562","SJU 185","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",2,"C","2","F",2.704
+"563","SJU 189","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",2,"C","3","M",2.548
+"564","SJU 190","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",2,"C","3","M",2.534
+"565","SJU 196","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"A","1","M",2.956
+"566","SJU 201","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"A","2","M",2.996
+"567","SJU 204","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"A","3","M",2.939
+"568","SJU 206","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"A","3","F",2.905
+"569","SJU 207","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"A","3","M",3.039
+"570","SJU 217","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"B","2","F",2.806
+"571","SJU 218","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"B","2","M",2.788
+"572","SJU 222","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"B","3","F",2.702
+"573","SJU 223","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"B","3","F",2.716
+"574","SJU 225","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"C","1","F",2.713
+"575","SJU 227","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"C","1","F",2.532
+"576","SJU 229","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"C","2","M",2.92
+"577","SJU 235","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",3,"C","3","F",2.662
+"578","SJU 240","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"A","1","M",2.781
+"579","SJU 245","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"A","2","M",2.905
+"580","SJU 246","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"A","2","M",2.814
+"581","SJU 250","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"A","3","F",2.97
+"582","SJU 252","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"A","3","F",2.933
+"583","SJU 254","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"B","1","M",2.871
+"584","SJU 257","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"B","1","M",2.966
+"585","SJU 265","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"B","3","F",2.734
+"586","SJU 269","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"C","1","F",2.601
+"587","SJU 270","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"C","1","M",2.502
+"588","SJU 271","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"C","1","F",2.657
+"589","SJU 279","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",5,"C","3","F",2.574
+"590","SJU 289","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"A","2","F",3.192
+"591","SJU 291","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"A","2","F",3.232
+"592","SJU 295","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"B","1","F",2.811
+"593","SJU 296","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"B","1","M",2.933
+"594","SJU 300","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"B","2","M",2.752
+"595","SJU 303","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"B","2","M",3.018
+"596","SJU 304","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"C","1","M",2.608
+"597","SJU 305","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"C","1","F",2.325
+"598","SJU 309","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"C","2","F",2.499
+"599","SJU 310","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"C","2","F",2.721
+"600","SJU 314","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"C","3","F",2.685
+"601","SJU 315","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"C","3","F",2.676
+"602","SJU 317","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",7,"C","3","M",2.903
+"603","SJU 319","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",9,"A","1","M",2.841
+"604","SJU 320","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",9,"A","1","M",2.876
+"605","SJU 321","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",9,"A","1","F",3.048
+"606","SJU 325","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",9,"A","2","F",2.936
+"607","SJU 341","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",9,"B","2","M",2.895
+"608","SJU 364","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"A","1","M",2.889
+"609","SJU 366","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"A","1","M",3.216
+"610","SJU 370","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"A","2","M",3.05
+"611","SJU 372","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"A","2","M",3.026
+"612","SJU 376","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"A","3","F",3.133
+"613","SJU 379","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"B","1","F",2.668
+"614","SJU 381","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"B","1","M",2.812
+"615","SJU 385","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"B","2","F",2.669
+"616","SJU 389","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"B","3","M",2.822
+"617","SJU 390","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"B","3","F",2.681
+"618","SJU 392","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"B","3","M",2.705
+"619","SJU 395","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"C","1","M",2.631
+"620","SJU 397","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",12,"C","1","M",2.815
+"621","SJU 411","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",10,"A","1","M",2.865
+"622","SJU 412","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",10,"A","1","M",2.647
+"623","SJU 419","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",10,"A","3","M",3.017
+"624","SJU 422","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",10,"A","3","F",3.01
+"625","SJU 423","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",10,"A","3","F",3.11
+"626","SJU 426","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",10,"B","1","F",3.04
+"627","SJU 431","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",10,"B","2","F",2.895
+"628","SJU 434","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",10,"B","3","F",2.774
+"629","SJU 439","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",10,"C","1","F",2.699
+"630","SJU 440","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",10,"C","1","M",2.778
+"631","SJU 444","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",10,"C","2","M",2.631
+"632","SJU 461","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",11,"A","2","F",3.137
+"633","SJU 465","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",11,"A","3","F",3.345
+"634","SJU 472","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",11,"B","1","F",2.783
+"635","SJU 473","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",11,"B","1","M",2.805
+"636","SJU 481","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",11,"B","3","M",2.76
+"637","SJU 485","Mata Atlantica","Rio de Janeiro",-22.611,"SJU",11,"C","1","M",2.53
+"638","TLC 104","Cerrado","Tocantins",-10.7,"TLC",74,"A","1","M",2.674
+"639","TLC 105","Cerrado","Tocantins",-10.7,"TLC",74,"A","1","F",2.786
+"640","TLC 114","Cerrado","Tocantins",-10.7,"TLC",74,"A","3","M",2.848
+"641","TLC 119","Cerrado","Tocantins",-10.7,"TLC",74,"B","1","M",2.665
+"642","TLC 120","Cerrado","Tocantins",-10.7,"TLC",74,"B","1","M",2.789
+"643","TLC 121","Cerrado","Tocantins",-10.7,"TLC",74,"B","1","M",2.82
+"644","TLC 125","Cerrado","Tocantins",-10.7,"TLC",74,"B","2","M",2.872
+"645","TLC 129","Cerrado","Tocantins",-10.7,"TLC",74,"B","3","M",2.694
+"646","TLC 130","Cerrado","Tocantins",-10.7,"TLC",74,"B","3","F",2.607
+"647","TLC 132","Cerrado","Tocantins",-10.7,"TLC",74,"B","3","F",2.725
+"648","TLC 136","Cerrado","Tocantins",-10.7,"TLC",74,"C","1","F",2.615
+"649","TLC 137","Cerrado","Tocantins",-10.7,"TLC",74,"C","1","F",2.593
+"650","TLC 139","Cerrado","Tocantins",-10.7,"TLC",74,"C","2","F",2.49
+"651","TLC 145","Cerrado","Tocantins",-10.7,"TLC",74,"C","3","F",2.515
+"652","TLC 146","Cerrado","Tocantins",-10.7,"TLC",74,"C","3","F",2.507
+"653","TLC 150","Cerrado","Tocantins",-10.7,"TLC",75,"A","1","F",2.726
+"654","TLC 151","Cerrado","Tocantins",-10.7,"TLC",75,"A","1","F",2.851
+"655","TLC 162","Cerrado","Tocantins",-10.7,"TLC",75,"A","3","F",2.746
+"656","TLC 163","Cerrado","Tocantins",-10.7,"TLC",75,"A","3","M",2.855
+"657","TLC 166","Cerrado","Tocantins",-10.7,"TLC",75,"B","1","F",2.75
+"658","TLC 176","Cerrado","Tocantins",-10.7,"TLC",75,"B","3","F",2.668
+"659","TLC 178","Cerrado","Tocantins",-10.7,"TLC",75,"B","3","F",2.798
+"660","TLC 184","Cerrado","Tocantins",-10.7,"TLC",75,"C","2","F",2.398
+"661","TLC 185","Cerrado","Tocantins",-10.7,"TLC",75,"C","2","M",2.49
+"662","TLC 189","Cerrado","Tocantins",-10.7,"TLC",75,"C","3","M",2.587
+"663","TLC 194","Cerrado","Tocantins",-10.7,"TLC",76,"A","1","M",2.487
+"664","TLC 198","Cerrado","Tocantins",-10.7,"TLC",76,"A","1","F",2.678
+"665","TLC 206","Cerrado","Tocantins",-10.7,"TLC",76,"A","3","M",2.768
+"666","TLC 207","Cerrado","Tocantins",-10.7,"TLC",76,"A","3","F",2.644
+"667","TLC 209","Cerrado","Tocantins",-10.7,"TLC",76,"B","1","M",2.779
+"668","TLC 210","Cerrado","Tocantins",-10.7,"TLC",76,"B","1","F",2.696
+"669","TLC 214","Cerrado","Tocantins",-10.7,"TLC",76,"B","2","M",2.676
+"670","TLC 215","Cerrado","Tocantins",-10.7,"TLC",76,"B","2","F",2.48
+"671","TLC 218","Cerrado","Tocantins",-10.7,"TLC",76,"B","2","F",2.62
+"672","TLC 219","Cerrado","Tocantins",-10.7,"TLC",76,"B","3","M",2.827
+"673","TLC 226","Cerrado","Tocantins",-10.7,"TLC",76,"C","1","F",2.689
+"674","TLC 229","Cerrado","Tocantins",-10.7,"TLC",76,"C","2","F",2.399
+"675","TLC 231","Cerrado","Tocantins",-10.7,"TLC",76,"C","2","F",2.464
+"676","TLC 234","Cerrado","Tocantins",-10.7,"TLC",76,"C","3","F",2.449
+"677","TLC 237","Cerrado","Tocantins",-10.7,"TLC",76,"C","3","F",2.507
+"678","TLC 239","Cerrado","Tocantins",-10.7,"TLC",82,"A","1","M",2.68
+"679","TLC 242","Cerrado","Tocantins",-10.7,"TLC",82,"A","1","M",2.924
+"680","TLC 244","Cerrado","Tocantins",-10.7,"TLC",82,"A","2","F",2.544
+"681","TLC 245","Cerrado","Tocantins",-10.7,"TLC",82,"A","2","M",2.594
+"682","TLC 248","Cerrado","Tocantins",-10.7,"TLC",82,"A","2","F",2.917
+"683","TLC 249","Cerrado","Tocantins",-10.7,"TLC",82,"A","3","F",2.572
+"684","TLC 253","Cerrado","Tocantins",-10.7,"TLC",82,"A","3","M",2.794
+"685","TLC 256","Cerrado","Tocantins",-10.7,"TLC",82,"B","1","F",2.599
+"686","TLC 257","Cerrado","Tocantins",-10.7,"TLC",82,"B","1","M",2.609
+"687","TLC 260","Cerrado","Tocantins",-10.7,"TLC",82,"B","2","M",2.536
+"688","TLC 262","Cerrado","Tocantins",-10.7,"TLC",82,"B","2","M",2.847
+"689","TLC 267","Cerrado","Tocantins",-10.7,"TLC",82,"B","3","F",2.617
+"690","TLC 271","Cerrado","Tocantins",-10.7,"TLC",82,"C","1","F",2.699
+"691","TLC 275","Cerrado","Tocantins",-10.7,"TLC",82,"C","2","M",2.305
+"692","TLC 276","Cerrado","Tocantins",-10.7,"TLC",82,"C","2","F",2.512
+"693","TLC 281","Cerrado","Tocantins",-10.7,"TLC",82,"C","3","M",2.475
+"694","TLC 283","Cerrado","Tocantins",-10.7,"TLC",82,"C","3","F",2.595
+"695","TLC 284","Cerrado","Tocantins",-10.7,"TLC",79,"A","1","M",3.104
+"696","TLC 285","Cerrado","Tocantins",-10.7,"TLC",79,"A","1","F",2.767
+"697","TLC 286","Cerrado","Tocantins",-10.7,"TLC",79,"A","1","F",2.82
+"698","TLC 295","Cerrado","Tocantins",-10.7,"TLC",79,"A","3","M",2.868
+"699","TLC 296","Cerrado","Tocantins",-10.7,"TLC",79,"A","3","M",2.865
+"700","TLC 302","Cerrado","Tocantins",-10.7,"TLC",79,"B","1","F",2.729
+"701","TLC 304","Cerrado","Tocantins",-10.7,"TLC",79,"B","2","M",2.703
+"702","TLC 307","Cerrado","Tocantins",-10.7,"TLC",79,"B","2","F",2.698
+"703","TLC 311","Cerrado","Tocantins",-10.7,"TLC",79,"B","3","M",3.004
+"704","TLC 316","Cerrado","Tocantins",-10.7,"TLC",79,"C","1","M",2.651
+"705","TLC 324","Cerrado","Tocantins",-10.7,"TLC",79,"C","3","M",2.495
+"706","TLC 327","Cerrado","Tocantins",-10.7,"TLC",79,"C","3","M",2.583
+"707","TLC 332","Cerrado","Tocantins",-10.7,"TLC",83,"A","1","F",2.733
+"708","TLC 333","Cerrado","Tocantins",-10.7,"TLC",83,"A","1","M",2.884
+"709","TLC 334","Cerrado","Tocantins",-10.7,"TLC",83,"A","2","M",2.759
+"710","TLC 335","Cerrado","Tocantins",-10.7,"TLC",83,"A","2","F",2.713
+"711","TLC 338","Cerrado","Tocantins",-10.7,"TLC",83,"A","2","M",3.059
+"712","TLC 340","Cerrado","Tocantins",-10.7,"TLC",83,"A","3","F",2.742
+"713","TLC 341","Cerrado","Tocantins",-10.7,"TLC",83,"A","3","M",2.663
+"714","TLC 342","Cerrado","Tocantins",-10.7,"TLC",83,"A","3","F",2.933
+"715","TLC 346","Cerrado","Tocantins",-10.7,"TLC",83,"B","1","M",2.837
+"716","TLC 347","Cerrado","Tocantins",-10.7,"TLC",83,"B","1","F",2.744
+"717","TLC 348","Cerrado","Tocantins",-10.7,"TLC",83,"B","1","M",2.891
+"718","TLC 349","Cerrado","Tocantins",-10.7,"TLC",83,"B","2","F",2.678
+"719","TLC 352","Cerrado","Tocantins",-10.7,"TLC",83,"B","2","F",2.72
+"720","TLC 356","Cerrado","Tocantins",-10.7,"TLC",83,"B","3","M",2.683
+"721","TLC 359","Cerrado","Tocantins",-10.7,"TLC",83,"C","1","M",2.532
+"722","TLC 360","Cerrado","Tocantins",-10.7,"TLC",83,"C","1","M",2.375
+"723","TLC 379","Cerrado","Tocantins",-10.7,"TLC",77,"A","2","F",2.731
+"724","TLC 381","Cerrado","Tocantins",-10.7,"TLC",77,"A","2","M",2.705
+"725","TLC 382","Cerrado","Tocantins",-10.7,"TLC",77,"A","2","M",2.696
+"726","TLC 383","Cerrado","Tocantins",-10.7,"TLC",77,"A","2","M",3.032
+"727","TLC 384","Cerrado","Tocantins",-10.7,"TLC",77,"A","3","F",2.678
+"728","TLC 391","Cerrado","Tocantins",-10.7,"TLC",77,"B","1","F",2.609
+"729","TLC 393","Cerrado","Tocantins",-10.7,"TLC",77,"B","1","M",2.84
+"730","TLC 394","Cerrado","Tocantins",-10.7,"TLC",77,"B","2","F",2.578
+"731","TLC 396","Cerrado","Tocantins",-10.7,"TLC",77,"B","2","F",2.645
+"732","TLC 399","Cerrado","Tocantins",-10.7,"TLC",77,"B","3","M",2.891
+"733","TLC 404","Cerrado","Tocantins",-10.7,"TLC",77,"C","1","F",2.427
+"734","TLC 405","Cerrado","Tocantins",-10.7,"TLC",77,"C","1","F",2.388
+"735","TLC 406","Cerrado","Tocantins",-10.7,"TLC",77,"C","1","M",2.553
+"736","TLC 407","Cerrado","Tocantins",-10.7,"TLC",77,"C","1","M",2.734
+"737","TLC 409","Cerrado","Tocantins",-10.7,"TLC",77,"C","2","F",2.409
+"738","TLC 410","Cerrado","Tocantins",-10.7,"TLC",77,"C","2","M",2.55
+"739","TLC 413","Cerrado","Tocantins",-10.7,"TLC",77,"C","2","M",2.881
+"740","TLC 415","Cerrado","Tocantins",-10.7,"TLC",77,"C","3","M",2.641
+"741","TLC 426","Cerrado","Tocantins",-10.7,"TLC",80,"A","2","M",2.738
+"742","TLC 427","Cerrado","Tocantins",-10.7,"TLC",80,"A","2","F",2.926
+"743","TLC 428","Cerrado","Tocantins",-10.7,"TLC",80,"A","2","F",2.86
+"744","TLC 431","Cerrado","Tocantins",-10.7,"TLC",80,"A","3","F",2.695
+"745","TLC 440","Cerrado","Tocantins",-10.7,"TLC",80,"B","2","M",2.609
+"746","TLC 441","Cerrado","Tocantins",-10.7,"TLC",80,"B","2","M",2.715
+"747","TLC 443","Cerrado","Tocantins",-10.7,"TLC",80,"B","2","F",2.668
+"748","TLC 444","Cerrado","Tocantins",-10.7,"TLC",80,"B","3","F",2.532
+"749","TLC 450","Cerrado","Tocantins",-10.7,"TLC",80,"C","1","M",2.586
+"750","TLC 451","Cerrado","Tocantins",-10.7,"TLC",80,"C","1","M",2.549
+"751","TLC 454","Cerrado","Tocantins",-10.7,"TLC",80,"C","2","M",2.519
+"752","TLC 456","Cerrado","Tocantins",-10.7,"TLC",80,"C","2","M",2.68
+"753","TLC 457","Cerrado","Tocantins",-10.7,"TLC",80,"C","2","F",2.691
+"754","TLC 459","Cerrado","Tocantins",-10.7,"TLC",80,"C","3","F",2.545
+"755","TLC 460","Cerrado","Tocantins",-10.7,"TLC",80,"C","3","M",2.641
+"756","TLC 461","Cerrado","Tocantins",-10.7,"TLC",80,"C","3","M",2.711
+"757","TLC 462","Cerrado","Tocantins",-10.7,"TLC",80,"C","3","F",2.607
+"758","TPN 021","Cerrado","Tocantins",-10.796,"TPN",11,"A","1","F",2.694
+"759","TPN 022","Cerrado","Tocantins",-10.796,"TPN",11,"A","1","F",2.558
+"760","TPN 023","Cerrado","Tocantins",-10.796,"TPN",11,"A","1","M",2.693
+"761","TPN 026","Cerrado","Tocantins",-10.796,"TPN",11,"A","2","F",2.899
+"762","TPN 027","Cerrado","Tocantins",-10.796,"TPN",11,"A","2","F",2.92
+"763","TPN 028","Cerrado","Tocantins",-10.796,"TPN",11,"A","2","F",2.815
+"764","TPN 032","Cerrado","Tocantins",-10.796,"TPN",11,"A","3","F",2.689
+"765","TPN 033","Cerrado","Tocantins",-10.796,"TPN",11,"A","3","M",2.746
+"766","TPN 034","Cerrado","Tocantins",-10.796,"TPN",11,"A","3","F",2.879
+"767","TPN 036","Cerrado","Tocantins",-10.796,"TPN",11,"B","1","M",2.759
+"768","TPN 038","Cerrado","Tocantins",-10.796,"TPN",11,"B","1","M",2.623
+"769","TPN 040","Cerrado","Tocantins",-10.796,"TPN",11,"B","1","F",2.681
+"770","TPN 041","Cerrado","Tocantins",-10.796,"TPN",11,"B","2","M",2.765
+"771","TPN 042","Cerrado","Tocantins",-10.796,"TPN",11,"B","2","M",2.702
+"772","TPN 043","Cerrado","Tocantins",-10.796,"TPN",11,"B","2","F",2.826
+"773","TPN 044","Cerrado","Tocantins",-10.796,"TPN",11,"B","2","M",2.921
+"774","TPN 046","Cerrado","Tocantins",-10.796,"TPN",11,"B","3","F",2.585
+"775","TPN 049","Cerrado","Tocantins",-10.796,"TPN",11,"B","3","M",3.007
+"776","TPN 051","Cerrado","Tocantins",-10.796,"TPN",11,"C","1","M",2.608
+"777","TPN 053","Cerrado","Tocantins",-10.796,"TPN",11,"C","1","M",2.951
+"778","TPN 059","Cerrado","Tocantins",-10.796,"TPN",11,"C","2","M",2.737
+"779","TPN 060","Cerrado","Tocantins",-10.796,"TPN",11,"C","2","M",2.907
+"780","TPN 066","Cerrado","Tocantins",-10.796,"TPN",12,"A","1","M",2.972
+"781","TPN 067","Cerrado","Tocantins",-10.796,"TPN",12,"A","1","F",2.888
+"782","TPN 068","Cerrado","Tocantins",-10.796,"TPN",12,"A","1","M",2.921
+"783","TPN 069","Cerrado","Tocantins",-10.796,"TPN",12,"A","1","F",3.034
+"784","TPN 076","Cerrado","Tocantins",-10.796,"TPN",12,"A","3","M",2.89
+"785","TPN 077","Cerrado","Tocantins",-10.796,"TPN",12,"A","3","M",2.734
+"786","TPN 079","Cerrado","Tocantins",-10.796,"TPN",12,"A","3","M",2.952
+"787","TPN 082","Cerrado","Tocantins",-10.796,"TPN",12,"B","1","F",2.846
+"788","TPN 086","Cerrado","Tocantins",-10.796,"TPN",12,"B","2","M",2.59
+"789","TPN 087","Cerrado","Tocantins",-10.796,"TPN",12,"B","2","M",2.802
+"790","TPN 088","Cerrado","Tocantins",-10.796,"TPN",12,"B","2","F",2.75
+"791","TPN 089","Cerrado","Tocantins",-10.796,"TPN",12,"B","2","F",2.743
+"792","TPN 090","Cerrado","Tocantins",-10.796,"TPN",12,"B","2","M",2.929
+"793","TPN 091","Cerrado","Tocantins",-10.796,"TPN",12,"B","3","F",2.769
+"794","TPN 092","Cerrado","Tocantins",-10.796,"TPN",12,"B","3","F",2.769
+"795","TPN 093","Cerrado","Tocantins",-10.796,"TPN",12,"B","3","M",2.842
+"796","TPN 096","Cerrado","Tocantins",-10.796,"TPN",12,"C","1","F",2.676
+"797","TPN 097","Cerrado","Tocantins",-10.796,"TPN",12,"C","1","F",2.594
+"798","TPN 099","Cerrado","Tocantins",-10.796,"TPN",12,"C","1","F",2.634
+"799","TPN 100","Cerrado","Tocantins",-10.796,"TPN",12,"C","1","M",2.672
+"800","TPN 101","Cerrado","Tocantins",-10.796,"TPN",12,"C","2","M",2.558
+"801","TPN 102","Cerrado","Tocantins",-10.796,"TPN",12,"C","2","F",2.654
+"802","TPN 103","Cerrado","Tocantins",-10.796,"TPN",12,"C","2","M",2.772
+"803","TPN 106","Cerrado","Tocantins",-10.796,"TPN",12,"C","3","M",2.597
+"804","TPN 107","Cerrado","Tocantins",-10.796,"TPN",12,"C","3","F",2.588
+"805","TPN 108","Cerrado","Tocantins",-10.796,"TPN",12,"C","3","F",2.785
+"806","TPN 111","Cerrado","Tocantins",-10.796,"TPN",9,"A","1","F",2.683
+"807","TPN 116","Cerrado","Tocantins",-10.796,"TPN",9,"A","2","M",3.091
+"808","TPN 121","Cerrado","Tocantins",-10.796,"TPN",9,"A","3","F",2.737
+"809","TPN 122","Cerrado","Tocantins",-10.796,"TPN",9,"A","3","M",2.889
+"810","TPN 126","Cerrado","Tocantins",-10.796,"TPN",9,"B","1","F",2.61
+"811","TPN 131","Cerrado","Tocantins",-10.796,"TPN",9,"B","2","F",2.734
+"812","TPN 136","Cerrado","Tocantins",-10.796,"TPN",9,"B","3","M",2.833
+"813","TPN 137","Cerrado","Tocantins",-10.796,"TPN",9,"B","3","M",2.772
+"814","TPN 138","Cerrado","Tocantins",-10.796,"TPN",9,"B","3","M",2.968
+"815","TPN 146","Cerrado","Tocantins",-10.796,"TPN",9,"C","2","M",2.753
+"816","TPN 147","Cerrado","Tocantins",-10.796,"TPN",9,"C","2","F",2.542
+"817","TPN 148","Cerrado","Tocantins",-10.796,"TPN",9,"C","2","F",2.519
+"818","TPN 156","Cerrado","Tocantins",-10.796,"TPN",14,"A","1","F",2.908
+"819","TPN 157","Cerrado","Tocantins",-10.796,"TPN",14,"A","1","M",2.807
+"820","TPN 158","Cerrado","Tocantins",-10.796,"TPN",14,"A","1","M",2.828
+"821","TPN 161","Cerrado","Tocantins",-10.796,"TPN",14,"A","2","M",3.195
+"822","TPN 166","Cerrado","Tocantins",-10.796,"TPN",14,"A","3","M",3.016
+"823","TPN 167","Cerrado","Tocantins",-10.796,"TPN",14,"A","3","F",2.776
+"824","TPN 168","Cerrado","Tocantins",-10.796,"TPN",14,"A","3","F",2.691
+"825","TPN 171","Cerrado","Tocantins",-10.796,"TPN",14,"B","1","F",2.682
+"826","TPN 172","Cerrado","Tocantins",-10.796,"TPN",14,"B","1","M",2.884
+"827","TPN 173","Cerrado","Tocantins",-10.796,"TPN",14,"B","1","M",2.986
+"828","TPN 174","Cerrado","Tocantins",-10.796,"TPN",14,"B","1","M",2.965
+"829","TPN 176","Cerrado","Tocantins",-10.796,"TPN",14,"B","2","M",2.61
+"830","TPN 178","Cerrado","Tocantins",-10.796,"TPN",14,"B","2","F",2.719
+"831","TPN 182","Cerrado","Tocantins",-10.796,"TPN",14,"C","1","M",2.673
+"832","TPN 183","Cerrado","Tocantins",-10.796,"TPN",14,"C","1","F",2.741
+"833","TPN 187","Cerrado","Tocantins",-10.796,"TPN",14,"C","2","M",2.785
+"834","TPN 188","Cerrado","Tocantins",-10.796,"TPN",14,"C","2","F",2.607
+"835","TPN 191","Cerrado","Tocantins",-10.796,"TPN",14,"C","3","M",2.546
+"836","TPN 197","Cerrado","Tocantins",-10.796,"TPN",7,"A","1","F",2.758
+"837","TPN 198","Cerrado","Tocantins",-10.796,"TPN",7,"A","1","F",2.801
+"838","TPN 199","Cerrado","Tocantins",-10.796,"TPN",7,"A","1","F",2.874
+"839","TPN 201","Cerrado","Tocantins",-10.796,"TPN",7,"A","2","M",2.79
+"840","TPN 202","Cerrado","Tocantins",-10.796,"TPN",7,"A","2","F",2.734
+"841","TPN 203","Cerrado","Tocantins",-10.796,"TPN",7,"A","2","F",2.733
+"842","TPN 205","Cerrado","Tocantins",-10.796,"TPN",7,"A","2","F",2.69
+"843","TPN 206","Cerrado","Tocantins",-10.796,"TPN",7,"A","3","M",2.75
+"844","TPN 207","Cerrado","Tocantins",-10.796,"TPN",7,"A","3","M",2.737
+"845","TPN 208","Cerrado","Tocantins",-10.796,"TPN",7,"A","3","M",2.729
+"846","TPN 209","Cerrado","Tocantins",-10.796,"TPN",7,"A","3","M",2.681
+"847","TPN 210","Cerrado","Tocantins",-10.796,"TPN",7,"A","3","M",2.978
+"848","TPN 211","Cerrado","Tocantins",-10.796,"TPN",7,"B","1","M",2.545
+"849","TPN 212","Cerrado","Tocantins",-10.796,"TPN",7,"B","1","F",2.559
+"850","TPN 213","Cerrado","Tocantins",-10.796,"TPN",7,"B","1","F",2.467
+"851","TPN 214","Cerrado","Tocantins",-10.796,"TPN",7,"B","1","F",2.569
+"852","TPN 215","Cerrado","Tocantins",-10.796,"TPN",7,"B","1","F",2.699
+"853","TPN 216","Cerrado","Tocantins",-10.796,"TPN",7,"B","2","F",2.441
+"854","TPN 217","Cerrado","Tocantins",-10.796,"TPN",7,"B","2","M",2.462
+"855","TPN 222","Cerrado","Tocantins",-10.796,"TPN",7,"B","3","M",2.447
+"856","TPN 224","Cerrado","Tocantins",-10.796,"TPN",7,"B","3","F",2.493
+"857","TPN 225","Cerrado","Tocantins",-10.796,"TPN",7,"B","3","F",2.505
+"858","TPN 226","Cerrado","Tocantins",-10.796,"TPN",7,"C","1","M",2.354
+"859","TPN 227","Cerrado","Tocantins",-10.796,"TPN",7,"C","1","F",2.254
+"860","TPN 229","Cerrado","Tocantins",-10.796,"TPN",7,"C","1","F",2.392
+"861","TPN 230","Cerrado","Tocantins",-10.796,"TPN",7,"C","1","F",2.407
+"862","TPN 231","Cerrado","Tocantins",-10.796,"TPN",7,"C","2","F",2.292
+"863","TPN 232","Cerrado","Tocantins",-10.796,"TPN",7,"C","2","M",2.329
+"864","TPN 234","Cerrado","Tocantins",-10.796,"TPN",7,"C","2","M",2.555
+"865","TPN 235","Cerrado","Tocantins",-10.796,"TPN",7,"C","2","M",2.497
+"866","TPN 236","Cerrado","Tocantins",-10.796,"TPN",7,"C","3","F",2.354
+"867","TPN 237","Cerrado","Tocantins",-10.796,"TPN",7,"C","3","M",2.449
+"868","TPN 238","Cerrado","Tocantins",-10.796,"TPN",7,"C","3","M",2.449
+"869","TPN 239","Cerrado","Tocantins",-10.796,"TPN",7,"C","3","M",2.59
+"870","TPN 240","Cerrado","Tocantins",-10.796,"TPN",7,"C","3","F",2.444

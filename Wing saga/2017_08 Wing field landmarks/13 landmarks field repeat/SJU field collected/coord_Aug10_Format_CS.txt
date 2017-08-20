@@ -1,0 +1,12 @@
+C:/Users/vmc04/Desktop/Wing saga/Wing field landmark repeat/13 landmarks field repeat/SJU field collected/coord_Aug10_Format  - Centroid sizes -  1 11 26 0	from C:/Users/vmc04/Desktop/Wing saga/Wing field landmark repeat/13 landmarks field repeat/SJU field collected/coord_Aug10.txt - TPS like internal (simplified) format - can be converted to other format by using TET	
+1184.7768371495767
+1169.0809013264027
+1120.780428643706
+1096.8141277213888
+1107.3406119027834
+1115.4844411561905
+1158.735982406293
+1104.6333189030508
+1135.2043530029839
+1096.0929213838085
+1156.9780265182885

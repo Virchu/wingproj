@@ -1,0 +1,871 @@
+Code	Biome	State	Latitude	Locality	Family	Temp	Well	Sex
+APR 068	Amazon	Amazonas	-3.028	APR	2	A	3	F
+APR 069	Amazon	Amazonas	-3.028	APR	2	B	1	M
+APR 072	Amazon	Amazonas	-3.028	APR	2	B	1	M
+APR 074	Amazon	Amazonas	-3.028	APR	2	B	2	F
+APR 080	Amazon	Amazonas	-3.028	APR	2	B	3	M
+APR 081	Amazon	Amazonas	-3.028	APR	2	B	3	F
+APR 082	Amazon	Amazonas	-3.028	APR	2	B	3	M
+APR 087	Amazon	Amazonas	-3.028	APR	2	C	1	F
+APR 097	Amazon	Amazonas	-3.028	APR	2	C	3	M
+APR 100	Amazon	Amazonas	-3.028	APR	3	A	1	F
+APR 102	Amazon	Amazonas	-3.028	APR	3	A	1	F
+APR 105	Amazon	Amazonas	-3.028	APR	3	A	2	M
+APR 106	Amazon	Amazonas	-3.028	APR	3	A	2	M
+APR 112	Amazon	Amazonas	-3.028	APR	3	A	3	M
+APR 116	Amazon	Amazonas	-3.028	APR	3	B	1	M
+APR 122	Amazon	Amazonas	-3.028	APR	3	B	2	F
+APR 128	Amazon	Amazonas	-3.028	APR	3	B	3	M
+APR 130	Amazon	Amazonas	-3.028	APR	3	C	1	F
+APR 132	Amazon	Amazonas	-3.028	APR	3	C	1	F
+APR 142	Amazon	Amazonas	-3.028	APR	3	C	3	M
+APR 143	Amazon	Amazonas	-3.028	APR	3	C	3	M
+APR 144	Amazon	Amazonas	-3.028	APR	4	A	1	F
+APR 146	Amazon	Amazonas	-3.028	APR	4	A	1	F
+APR 153	Amazon	Amazonas	-3.028	APR	4	A	2	M
+APR 157	Amazon	Amazonas	-3.028	APR	4	A	3	M
+APR 159	Amazon	Amazonas	-3.028	APR	4	B	1	M
+APR 163	Amazon	Amazonas	-3.028	APR	4	B	1	M
+APR 172	Amazon	Amazonas	-3.028	APR	4	B	3	F
+APR 175	Amazon	Amazonas	-3.028	APR	4	C	1	F
+APR 178	Amazon	Amazonas	-3.028	APR	4	C	1	M
+APR 186	Amazon	Amazonas	-3.028	APR	4	C	3	M
+APR 189	Amazon	Amazonas	-3.028	APR	7	A	1	M
+APR 192	Amazon	Amazonas	-3.028	APR	7	A	1	M
+APR 197	Amazon	Amazonas	-3.028	APR	7	A	2	M
+APR 203	Amazon	Amazonas	-3.028	APR	7	A	3	F
+APR 208	Amazon	Amazonas	-3.028	APR	7	B	1	F
+APR 209	Amazon	Amazonas	-3.028	APR	7	B	2	M
+APR 231	Amazon	Amazonas	-3.028	APR	7	C	3	M
+APR 235	Amazon	Amazonas	-3.028	APR	8	A	1	M
+APR 239	Amazon	Amazonas	-3.028	APR	8	A	2	F
+APR 243	Amazon	Amazonas	-3.028	APR	8	A	2	M
+APR 244	Amazon	Amazonas	-3.028	APR	8	A	3	M
+APR 248	Amazon	Amazonas	-3.028	APR	8	A	3	M
+APR 253	Amazon	Amazonas	-3.028	APR	8	B	1	F
+APR 254	Amazon	Amazonas	-3.028	APR	8	B	2	M
+APR 256	Amazon	Amazonas	-3.028	APR	8	B	2	F
+APR 259	Amazon	Amazonas	-3.028	APR	8	B	3	F
+APR 261	Amazon	Amazonas	-3.028	APR	8	B	3	M
+APR 262	Amazon	Amazonas	-3.028	APR	8	B	3	F
+APR 263	Amazon	Amazonas	-3.028	APR	8	B	3	M
+APR 265	Amazon	Amazonas	-3.028	APR	8	C	1	F
+APR 266	Amazon	Amazonas	-3.028	APR	8	C	1	M
+APR 280	Amazon	Amazonas	-3.028	APR	10	A	1	F
+APR 285	Amazon	Amazonas	-3.028	APR	10	A	2	M
+APR 291	Amazon	Amazonas	-3.028	APR	10	A	3	M
+APR 293	Amazon	Amazonas	-3.028	APR	10	A	3	M
+APR 295	Amazon	Amazonas	-3.028	APR	10	B	1	F
+APR 297	Amazon	Amazonas	-3.028	APR	10	B	1	F
+APR 308	Amazon	Amazonas	-3.028	APR	10	B	3	M
+APR 312	Amazon	Amazonas	-3.028	APR	10	C	1	M
+APR 315	Amazon	Amazonas	-3.028	APR	10	C	2	F
+APR 331	Amazon	Amazonas	-3.028	APR	14	A	2	F
+APR 332	Amazon	Amazonas	-3.028	APR	14	A	2	F
+APR 333	Amazon	Amazonas	-3.028	APR	14	A	2	M
+APR 353	Amazon	Amazonas	-3.028	APR	14	B	3	F
+APR 359	Amazon	Amazonas	-3.028	APR	14	C	2	F
+APR 363	Amazon	Amazonas	-3.028	APR	14	C	2	F
+APR 370	Amazon	Amazonas	-3.028	APR	19	A	1	M
+APR 378	Amazon	Amazonas	-3.028	APR	19	A	2	F
+APR 382	Amazon	Amazonas	-3.028	APR	19	A	3	M
+APR 388	Amazon	Amazonas	-3.028	APR	19	B	1	F
+APR 392	Amazon	Amazonas	-3.028	APR	19	B	2	F
+APR 399	Amazon	Amazonas	-3.028	APR	19	C	1	F
+APR 400	Amazon	Amazonas	-3.028	APR	19	C	1	M
+APR 402	Amazon	Amazonas	-3.028	APR	19	C	1	M
+APR 407	Amazon	Amazonas	-3.028	APR	19	C	2	M
+APR 415	Amazon	Amazonas	-3.028	APR	18	A	1	F
+APR 418	Amazon	Amazonas	-3.028	APR	18	A	1	M
+APR 419	Amazon	Amazonas	-3.028	APR	18	A	2	F
+APR 421	Amazon	Amazonas	-3.028	APR	18	A	2	M
+APR 426	Amazon	Amazonas	-3.028	APR	18	A	3	M
+APR 433	Amazon	Amazonas	-3.028	APR	18	B	1	F
+APR 439	Amazon	Amazonas	-3.028	APR	18	B	3	M
+APR 447	Amazon	Amazonas	-3.028	APR	18	C	1	F
+APR 450	Amazon	Amazonas	-3.028	APR	18	C	2	F
+APR 452	Amazon	Amazonas	-3.028	APR	18	C	2	M
+APR 457	Amazon	Amazonas	-3.028	APR	18	C	3	F
+APR 464	Amazon	Amazonas	-3.028	APR	33	A	2	M
+APR 472	Amazon	Amazonas	-3.028	APR	33	A	3	F
+APR 474	Amazon	Amazonas	-3.028	APR	33	B	1	F
+APR 475	Amazon	Amazonas	-3.028	APR	33	B	1	M
+APR 477	Amazon	Amazonas	-3.028	APR	33	B	1	M
+APR 478	Amazon	Amazonas	-3.028	APR	33	B	1	M
+APR 480	Amazon	Amazonas	-3.028	APR	33	B	2	M
+APR 483	Amazon	Amazonas	-3.028	APR	33	B	2	F
+APR 492	Amazon	Amazonas	-3.028	APR	33	C	1	F
+APR 496	Amazon	Amazonas	-3.028	APR	33	C	2	M
+APR 500	Amazon	Amazonas	-3.028	APR	33	C	3	M
+APR 501	Amazon	Amazonas	-3.028	APR	33	C	3	F
+APR 504	Amazon	Amazonas	-3.028	APR	36	A	1	F
+APR 506	Amazon	Amazonas	-3.028	APR	36	A	1	M
+APR 509	Amazon	Amazonas	-3.028	APR	36	A	2	F
+APR 515	Amazon	Amazonas	-3.028	APR	36	A	3	M
+APR 523	Amazon	Amazonas	-3.028	APR	36	B	1	M
+APR 527	Amazon	Amazonas	-3.028	APR	36	B	2	M
+APR 531	Amazon	Amazonas	-3.028	APR	36	B	3	F
+APR 534	Amazon	Amazonas	-3.028	APR	36	C	1	M
+APR 542	Amazon	Amazonas	-3.028	APR	36	C	2	M
+APR 544	Amazon	Amazonas	-3.028	APR	36	C	3	M
+APR 546	Amazon	Amazonas	-3.028	APR	36	C	3	M
+APR 562	Amazon	Amazonas	-3.028	APR	38	A	3	F
+APR 567	Amazon	Amazonas	-3.028	APR	38	B	1	F
+APR 569	Amazon	Amazonas	-3.028	APR	38	B	2	F
+APR 571	Amazon	Amazonas	-3.028	APR	38	B	2	M
+APR 573	Amazon	Amazonas	-3.028	APR	38	B	2	F
+APR 575	Amazon	Amazonas	-3.028	APR	38	B	3	M
+APR 585	Amazon	Amazonas	-3.028	APR	38	C	2	F
+APR 589	Amazon	Amazonas	-3.028	APR	38	C	3	M
+APR 591	Amazon	Amazonas	-3.028	APR	38	C	3	F
+APR 593	Amazon	Amazonas	-3.028	APR	38	C	3	F
+APR 605	Amazon	Amazonas	-3.028	APR	40	A	3	F
+APR 606	Amazon	Amazonas	-3.028	APR	40	A	3	M
+APR 624	Amazon	Amazonas	-3.028	APR	40	C	1	F
+APR 627	Amazon	Amazonas	-3.028	APR	40	C	1	M
+APR 631	Amazon	Amazonas	-3.028	APR	40	C	2	M
+APR 639	Amazon	Amazonas	-3.028	APR	44	A	1	F
+APR 641	Amazon	Amazonas	-3.028	APR	44	A	1	F
+APR 643	Amazon	Amazonas	-3.028	APR	44	A	1	F
+APR 657	Amazon	Amazonas	-3.028	APR	44	B	1	F
+APR 664	Amazon	Amazonas	-3.028	APR	44	C	1	M
+APR 670	Amazon	Amazonas	-3.028	APR	44	C	2	F
+APR 675	Amazon	Amazonas	-3.028	APR	6	A	1	F
+APR 677	Amazon	Amazonas	-3.028	APR	6	A	1	F
+APR 677	Amazon	Amazonas	-3.028	APR	6	A	1	F
+APR 678	Amazon	Amazonas	-3.028	APR	6	A	1	F
+APR 702	Amazon	Amazonas	-3.028	APR	6	B	3	M
+APR 709	Amazon	Amazonas	-3.028	APR	6	C	2	F
+APR 712	Amazon	Amazonas	-3.028	APR	6	C	2	M
+APR 714	Amazon	Amazonas	-3.028	APR	6	C	3	F
+ARS 023	Amazon	Amazonas	-2.864	ARS	14	A	1	M
+ARS 024	Amazon	Amazonas	-2.864	ARS	14	A	1	F
+ARS 029	Amazon	Amazonas	-2.864	ARS	14	A	2	F
+ARS 032	Amazon	Amazonas	-2.864	ARS	14	A	3	M
+ARS 036	Amazon	Amazonas	-2.864	ARS	14	B	1	M
+ARS 037	Amazon	Amazonas	-2.864	ARS	14	B	1	F
+ARS 038	Amazon	Amazonas	-2.864	ARS	14	B	1	M
+ARS 039	Amazon	Amazonas	-2.864	ARS	14	B	1	F
+ARS 040	Amazon	Amazonas	-2.864	ARS	14	B	1	M
+ARS 042	Amazon	Amazonas	-2.864	ARS	14	B	2	M
+ARS 045	Amazon	Amazonas	-2.864	ARS	14	B	2	M
+ARS 048	Amazon	Amazonas	-2.864	ARS	14	B	3	M
+ARS 056	Amazon	Amazonas	-2.864	ARS	14	C	2	M
+ARS 057	Amazon	Amazonas	-2.864	ARS	14	C	2	F
+ARS 059	Amazon	Amazonas	-2.864	ARS	14	C	2	M
+ARS 061	Amazon	Amazonas	-2.864	ARS	14	C	3	M
+ARS 074	Amazon	Amazonas	-2.864	ARS	17	A	2	M
+ARS 076	Amazon	Amazonas	-2.864	ARS	17	A	3	F
+ARS 078	Amazon	Amazonas	-2.864	ARS	17	A	3	M
+ARS 082	Amazon	Amazonas	-2.864	ARS	17	B	1	M
+ARS 089	Amazon	Amazonas	-2.864	ARS	17	B	2	F
+ARS 093	Amazon	Amazonas	-2.864	ARS	17	B	3	F
+ARS 100	Amazon	Amazonas	-2.864	ARS	17	C	1	F
+ARS 103	Amazon	Amazonas	-2.864	ARS	17	C	2	M
+ARS 104	Amazon	Amazonas	-2.864	ARS	17	C	2	M
+ARS 108	Amazon	Amazonas	-2.864	ARS	17	C	3	F
+ARS 113	Amazon	Amazonas	-2.864	ARS	3	A	1	M
+ARS 116	Amazon	Amazonas	-2.864	ARS	3	A	2	F
+ARS 118	Amazon	Amazonas	-2.864	ARS	3	A	2	M
+ARS 119	Amazon	Amazonas	-2.864	ARS	3	A	2	F
+ARS 120	Amazon	Amazonas	-2.864	ARS	3	A	2	M
+ARS 124	Amazon	Amazonas	-2.864	ARS	3	A	3	F
+ARS 128	Amazon	Amazonas	-2.864	ARS	3	B	1	M
+ARS 136	Amazon	Amazonas	-2.864	ARS	3	B	3	M
+ARS 139	Amazon	Amazonas	-2.864	ARS	3	B	3	F
+ARS 142	Amazon	Amazonas	-2.864	ARS	3	C	1	F
+ARS 147	Amazon	Amazonas	-2.864	ARS	3	C	2	M
+ARS 156	Amazon	Amazonas	-2.864	ARS	16	A	1	F
+ARS 163	Amazon	Amazonas	-2.864	ARS	16	A	2	F
+ARS 164	Amazon	Amazonas	-2.864	ARS	16	A	2	M
+ARS 165	Amazon	Amazonas	-2.864	ARS	16	A	2	M
+ARS 166	Amazon	Amazonas	-2.864	ARS	16	A	3	F
+ARS 174	Amazon	Amazonas	-2.864	ARS	16	B	1	F
+ARS 178	Amazon	Amazonas	-2.864	ARS	16	B	2	M
+ARS 180	Amazon	Amazonas	-2.864	ARS	16	B	2	M
+ARS 181	Amazon	Amazonas	-2.864	ARS	16	B	3	M
+ARS 182	Amazon	Amazonas	-2.864	ARS	16	B	3	F
+ARS 186	Amazon	Amazonas	-2.864	ARS	16	C	1	M
+ARS 188	Amazon	Amazonas	-2.864	ARS	16	C	1	F
+ARS 196	Amazon	Amazonas	-2.864	ARS	16	C	3	F
+ARS 246	Amazon	Amazonas	-2.864	ARS	4	A	1	F
+ARS 247	Amazon	Amazonas	-2.864	ARS	4	A	1	M
+ARS 251	Amazon	Amazonas	-2.864	ARS	4	A	2	M
+ARS 254	Amazon	Amazonas	-2.864	ARS	4	A	2	F
+ARS 255	Amazon	Amazonas	-2.864	ARS	4	A	2	F
+ARS 259	Amazon	Amazonas	-2.864	ARS	4	A	3	M
+ARS 261	Amazon	Amazonas	-2.864	ARS	4	B	1	M
+ARS 264	Amazon	Amazonas	-2.864	ARS	4	B	1	F
+ARS 265	Amazon	Amazonas	-2.864	ARS	4	B	1	F
+ARS 268	Amazon	Amazonas	-2.864	ARS	4	B	2	M
+ARS 269	Amazon	Amazonas	-2.864	ARS	4	B	2	M
+ARS 272	Amazon	Amazonas	-2.864	ARS	4	B	3	F
+ARS 276	Amazon	Amazonas	-2.864	ARS	4	C	1	F
+ARS 278	Amazon	Amazonas	-2.864	ARS	4	C	1	M
+ARS 282	Amazon	Amazonas	-2.864	ARS	4	C	2	F
+ARS 287	Amazon	Amazonas	-2.864	ARS	4	C	3	M
+ARS 294	Amazon	Amazonas	-2.864	ARS	1	A	1	M
+ARS 300	Amazon	Amazonas	-2.864	ARS	1	A	2	M
+ARS 303	Amazon	Amazonas	-2.864	ARS	1	A	3	F
+ARS 306	Amazon	Amazonas	-2.864	ARS	1	B	1	F
+ARS 313	Amazon	Amazonas	-2.864	ARS	1	B	2	M
+ARS 322	Amazon	Amazonas	-2.864	ARS	1	C	1	M
+ARS 325	Amazon	Amazonas	-2.864	ARS	1	C	1	F
+ARS 326	Amazon	Amazonas	-2.864	ARS	1	C	2	M
+ARS 332	Amazon	Amazonas	-2.864	ARS	1	C	3	M
+ARS 335	Amazon	Amazonas	-2.864	ARS	1	C	3	M
+ARS 343	Amazon	Amazonas	-2.864	ARS	9	A	2	F
+ARS 351	Amazon	Amazonas	-2.864	ARS	9	B	1	M
+ARS 353	Amazon	Amazonas	-2.864	ARS	9	B	1	F
+ARS 356	Amazon	Amazonas	-2.864	ARS	9	B	2	M
+ARS 362	Amazon	Amazonas	-2.864	ARS	9	B	3	F
+ARS 364	Amazon	Amazonas	-2.864	ARS	9	B	3	M
+ARS 369	Amazon	Amazonas	-2.864	ARS	9	C	1	F
+ARS 371	Amazon	Amazonas	-2.864	ARS	9	C	2	M
+ARS 372	Amazon	Amazonas	-2.864	ARS	9	C	2	F
+ARS 373	Amazon	Amazonas	-2.864	ARS	9	C	2	F
+ARS 378	Amazon	Amazonas	-2.864	ARS	9	C	3	F
+ARS 379	Amazon	Amazonas	-2.864	ARS	9	C	3	M
+ARS 384	Amazon	Amazonas	-2.864	ARS	6	A	1	M
+ARS 390	Amazon	Amazonas	-2.864	ARS	6	A	2	M
+ARS 391	Amazon	Amazonas	-2.864	ARS	6	A	3	F
+ARS 393	Amazon	Amazonas	-2.864	ARS	6	A	3	F
+ARS 400	Amazon	Amazonas	-2.864	ARS	6	B	1	M
+ARS 404	Amazon	Amazonas	-2.864	ARS	6	B	2	F
+ARS 413	Amazon	Amazonas	-2.864	ARS	6	C	1	M
+ARS 416	Amazon	Amazonas	-2.864	ARS	6	C	2	M
+ARS 417	Amazon	Amazonas	-2.864	ARS	6	C	2	F
+ARS 421	Amazon	Amazonas	-2.864	ARS	6	C	3	M
+ARS 422	Amazon	Amazonas	-2.864	ARS	6	C	3	M
+ARS 434	Amazon	Amazonas	-2.864	ARS	13	A	2	M
+ARS 436	Amazon	Amazonas	-2.864	ARS	13	A	3	M
+ARS 438	Amazon	Amazonas	-2.864	ARS	13	A	3	F
+ARS 449	Amazon	Amazonas	-2.864	ARS	13	B	2	F
+ARS 454	Amazon	Amazonas	-2.864	ARS	13	B	3	F
+ARS 456	Amazon	Amazonas	-2.864	ARS	13	C	1	M
+ARS 459	Amazon	Amazonas	-2.864	ARS	13	C	1	F
+ARS 462	Amazon	Amazonas	-2.864	ARS	13	C	2	F
+ARS 470	Amazon	Amazonas	-2.864	ARS	13	C	3	F
+ARS 516	Amazon	Amazonas	-2.864	ARS	8	A	1	M
+ARS 521	Amazon	Amazonas	-2.864	ARS	8	A	2	M
+ARS 523	Amazon	Amazonas	-2.864	ARS	8	A	2	F
+ARS 524	Amazon	Amazonas	-2.864	ARS	8	A	2	F
+ARS 525	Amazon	Amazonas	-2.864	ARS	8	A	2	F
+ARS 531	Amazon	Amazonas	-2.864	ARS	8	B	1	F
+ARS 533	Amazon	Amazonas	-2.864	ARS	8	B	1	F
+ARS 537	Amazon	Amazonas	-2.864	ARS	8	B	2	F
+ARS 545	Amazon	Amazonas	-2.864	ARS	8	B	3	F
+ARS 556	Amazon	Amazonas	-2.864	ARS	8	C	3	F
+ARS 559	Amazon	Amazonas	-2.864	ARS	8	C	3	F
+ARS 560	Amazon	Amazonas	-2.864	ARS	8	C	3	F
+RMO 056	Amazon	Rondonia	-9.223	RMO	26	A	3	M
+RMO 059	Amazon	Rondonia	-9.223	RMO	26	A	3	F
+RMO 062	Amazon	Rondonia	-9.223	RMO	26	B	1	F
+RMO 063	Amazon	Rondonia	-9.223	RMO	26	B	1	F
+RMO 071	Amazon	Rondonia	-9.223	RMO	26	B	3	M
+RMO 080	Amazon	Rondonia	-9.223	RMO	26	C	1	M
+RMO 084	Amazon	Rondonia	-9.223	RMO	26	C	2	F
+RMO 085	Amazon	Rondonia	-9.223	RMO	26	C	2	M
+RMO 093	Amazon	Rondonia	-9.223	RMO	33	A	1	M
+RMO 098	Amazon	Rondonia	-9.223	RMO	33	A	. 2	F
+RMO 099	Amazon	Rondonia	-9.223	RMO	33	A	2	F
+RMO 101	Amazon	Rondonia	-9.223	RMO	33	A	3	M
+RMO 106	Amazon	Rondonia	-9.223	RMO	33	B	1	M
+RMO 114	Amazon	Rondonia	-9.223	RMO	33	B	2	M
+RMO 118	Amazon	Rondonia	-9.223	RMO	33	B	3	F
+RMO 122	Amazon	Rondonia	-9.223	RMO	33	C	1	F
+RMO 148	Amazon	Rondonia	-9.223	RMO	39	A	3	F
+RMO 171	Amazon	Rondonia	-9.223	RMO	39	C	2	F
+RMO 178	Amazon	Rondonia	-9.223	RMO	39	C	3	F
+RMO 181	Amazon	Rondonia	-9.223	RMO	41	A	1	F
+RMO 187	Amazon	Rondonia	-9.223	RMO	41	A	2	F
+RMO 192	Amazon	Rondonia	-9.223	RMO	41	A	3	M
+RMO 194	Amazon	Rondonia	-9.223	RMO	41	A	3	M
+RMO 197	Amazon	Rondonia	-9.223	RMO	41	B	1	M
+RMO 198	Amazon	Rondonia	-9.223	RMO	41	B	1	M
+RMO 199	Amazon	Rondonia	-9.223	RMO	41	B	1	M
+RMO 205	Amazon	Rondonia	-9.223	RMO	41	B	2	F
+RMO 211	Amazon	Rondonia	-9.223	RMO	41	C	1	M
+RMO 216	Amazon	Rondonia	-9.223	RMO	41	C	2	M
+RMO 217	Amazon	Rondonia	-9.223	RMO	41	C	2	F
+RMO 219	Amazon	Rondonia	-9.223	RMO	41	C	2	M
+RMO 221	Amazon	Rondonia	-9.223	RMO	41	C	3	M
+RMO 226	Amazon	Rondonia	-9.223	RMO	6	A	1	M
+RMO 227	Amazon	Rondonia	-9.223	RMO	6	A	1	F
+RMO 231	Amazon	Rondonia	-9.223	RMO	6	A	2	F
+RMO 233	Amazon	Rondonia	-9.223	RMO	6	A	2	M
+RMO 241	Amazon	Rondonia	-9.223	RMO	6	B	1	F
+RMO 247	Amazon	Rondonia	-9.223	RMO	6	B	2	F
+RMO 258	Amazon	Rondonia	-9.223	RMO	6	C	1	F
+RMO 266	Amazon	Rondonia	-9.223	RMO	6	C	3	F
+RMO 273	Amazon	Rondonia	-9.223	RMO	18	A	1	M
+RMO 284	Amazon	Rondonia	-9.223	RMO	18	A	3	F
+RMO 286	Amazon	Rondonia	-9.223	RMO	18	B	1	M
+RMO 288	Amazon	Rondonia	-9.223	RMO	18	B	1	F
+RMO 308	Amazon	Rondonia	-9.223	RMO	18	C	2	F
+RMO 311	Amazon	Rondonia	-9.223	RMO	18	C	3	M
+RMO 312	Amazon	Rondonia	-9.223	RMO	18	C	3	M
+RMO 316	Amazon	Rondonia	-9.223	RMO	24	A	1	M
+RMO 322	Amazon	Rondonia	-9.223	RMO	24	A	2	F
+RMO 324	Amazon	Rondonia	-9.223	RMO	24	A	2	F
+RMO 327	Amazon	Rondonia	-9.223	RMO	24	A	3	M
+RMO 328	Amazon	Rondonia	-9.223	RMO	24	A	3	F
+RMO 331	Amazon	Rondonia	-9.223	RMO	24	B	1	M
+RMO 333	Amazon	Rondonia	-9.223	RMO	24	B	1	M
+RMO 335	Amazon	Rondonia	-9.223	RMO	24	B	1	M
+RMO 336	Amazon	Rondonia	-9.223	RMO	24	B	2	F
+RMO 338	Amazon	Rondonia	-9.223	RMO	24	B	2	M
+RMO 341	Amazon	Rondonia	-9.223	RMO	24	B	3	M
+RMO 344	Amazon	Rondonia	-9.223	RMO	24	B	3	F
+RMO 345	Amazon	Rondonia	-9.223	RMO	24	B	3	M
+RMO 348	Amazon	Rondonia	-9.223	RMO	24	C	1	F
+RMO 364	Amazon	Rondonia	-9.223	RMO	27	A	1	M
+RMO 368	Amazon	Rondonia	-9.223	RMO	27	A	2	M
+RMO 369	Amazon	Rondonia	-9.223	RMO	27	A	2	F
+RMO 391	Amazon	Rondonia	-9.223	RMO	27	C	1	F
+RMO 396	Amazon	Rondonia	-9.223	RMO	27	C	2	F
+RMO 403	Amazon	Rondonia	-9.223	RMO	27	C	3	M
+RMO 404	Amazon	Rondonia	-9.223	RMO	27	C	3	M
+RMO 411	Amazon	Rondonia	-9.223	RMO	28	A	2	M
+RMO 413	Amazon	Rondonia	-9.223	RMO	28	A	2	M
+RMO 414	Amazon	Rondonia	-9.223	RMO	28	A	2	M
+RMO 417	Amazon	Rondonia	-9.223	RMO	28	A	3	F
+RMO 423	Amazon	Rondonia	-9.223	RMO	28	B	1	M
+RMO 432	Amazon	Rondonia	-9.223	RMO	28	B	3	F
+RMO 442	Amazon	Rondonia	-9.223	RMO	28	C	2	M
+RMO 449	Amazon	Rondonia	-9.223	RMO	28	C	3	F
+RMO 458	Amazon	Rondonia	-9.223	RMO	30	A	2	M
+RMO 459	Amazon	Rondonia	-9.223	RMO	30	A	2	F
+RMO 472	Amazon	Rondonia	-9.223	RMO	30	B	2	M
+RMO 475	Amazon	Rondonia	-9.223	RMO	30	B	2	M
+RMO 476	Amazon	Rondonia	-9.223	RMO	30	B	3	M
+RMO 491	Amazon	Rondonia	-9.223	RMO	30	C	3	M
+RMO 499	Amazon	Rondonia	-9.223	RMO	36	A	1	F
+RMO 501	Amazon	Rondonia	-9.223	RMO	36	A	2	M
+RMO 503	Amazon	Rondonia	-9.223	RMO	36	A	2	F
+RMO 504	Amazon	Rondonia	-9.223	RMO	36	A	2	M
+RMO 505	Amazon	Rondonia	-9.223	RMO	36	A	2	F
+RMO 507	Amazon	Rondonia	-9.223	RMO	36	A	3	F
+RMO 513	Amazon	Rondonia	-9.223	RMO	36	B	1	F
+RMO 518	Amazon	Rondonia	-9.223	RMO	36	B	2	M
+RMO 520	Amazon	Rondonia	-9.223	RMO	36	B	2	F
+RMO 521	Amazon	Rondonia	-9.223	RMO	36	B	3	M
+RMO 536	Amazon	Rondonia	-9.223	RMO	36	C	3	M
+RMO 537	Amazon	Rondonia	-9.223	RMO	36	C	3	F
+RMO 538	Amazon	Rondonia	-9.223	RMO	36	C	3	F
+RMO 539	Amazon	Rondonia	-9.223	RMO	36	C	3	M
+RMO 541	Amazon	Rondonia	-9.223	RMO	42	A	1	M
+RMO 542	Amazon	Rondonia	-9.223	RMO	42	A	1	F
+RMO 543	Amazon	Rondonia	-9.223	RMO	42	A	1	F
+RMO 546	Amazon	Rondonia	-9.223	RMO	42	A	2	M
+RMO 554	Amazon	Rondonia	-9.223	RMO	42	A	3	F
+RMO 557	Amazon	Rondonia	-9.223	RMO	42	B	1	F
+RMO 561	Amazon	Rondonia	-9.223	RMO	42	B	2	F
+RMO 562	Amazon	Rondonia	-9.223	RMO	42	B	2	M
+RMO 571	Amazon	Rondonia	-9.223	RMO	42	C	1	F
+RMO 573	Amazon	Rondonia	-9.223	RMO	42	C	1	F
+RMO 596	Amazon	Rondonia	-9.223	RMO	13	A	3	M
+RMO 598	Amazon	Rondonia	-9.223	RMO	13	A	3	F
+RMO 602	Amazon	Rondonia	-9.223	RMO	13	B	1	F
+RMO 603	Amazon	Rondonia	-9.223	RMO	13	B	1	F
+RMO 605	Amazon	Rondonia	-9.223	RMO	13	B	1	F
+RMO 611	Amazon	Rondonia	-9.223	RMO	13	B	3	F
+RMO 625	Amazon	Rondonia	-9.223	RMO	13	C	2	M
+RMO 629	Amazon	Rondonia	-9.223	RMO	13	C	3	F
+RMO 639	Amazon	Rondonia	-9.223	RMO	17	A	2	M
+RMO 641	Amazon	Rondonia	-9.223	RMO	17	A	3	F
+RMO 646	Amazon	Rondonia	-9.223	RMO	17	B	1	M
+RMO 653	Amazon	Rondonia	-9.223	RMO	17	B	2	M
+RMO 656	Amazon	Rondonia	-9.223	RMO	17	B	3	M
+RMO 657	Amazon	Rondonia	-9.223	RMO	17	B	3	M
+RMO 659	Amazon	Rondonia	-9.223	RMO	17	B	3	F
+RMO 663	Amazon	Rondonia	-9.223	RMO	17	C	1	F
+RMO 671	Amazon	Rondonia	-9.223	RMO	17	C	3	M
+RMO 674	Amazon	Rondonia	-9.223	RMO	17	C	3	F
+RMO 682	Amazon	Rondonia	-9.223	RMO	5	A	2	F
+RMO 691	Amazon	Rondonia	-9.223	RMO	5	B	1	F
+RMO 694	Amazon	Rondonia	-9.223	RMO	5	B	1	F
+RMO 696	Amazon	Rondonia	-9.223	RMO	5	B	2	F
+RMO 700	Amazon	Rondonia	-9.223	RMO	5	B	2	M
+RMO 701	Amazon	Rondonia	-9.223	RMO	5	B	3	F
+RMO 702	Amazon	Rondonia	-9.223	RMO	5	B	3	F
+RMO 707	Amazon	Rondonia	-9.223	RMO	5	C	1	M
+RMO 708	Amazon	Rondonia	-9.223	RMO	5	C	1	M
+RMO 709	Amazon	Rondonia	-9.223	RMO	5	C	1 .	M
+RMO 712	Amazon	Rondonia	-9.223	RMO	5	C	2	M
+RMO 716	Amazon	Rondonia	-9.223	RMO	5	C	3	F
+RPV 095	Amazon	Rondonia	-8.742	RPV	11	A	1	M
+RPV 103	Amazon	Rondonia	-8.742	RPV	11	A	2	F
+RPV 116	Amazon	Rondonia	-8.742	RPV	11	B	2	M
+RPV 119	Amazon	Rondonia	-8.742	RPV	11	B	2	F
+RPV 123	Amazon	Rondonia	-8.742	RPV	11	B	3	F
+RPV 125	Amazon	Rondonia	-8.742	RPV	11	C	1	M
+RPV 142	Amazon	Rondonia	-8.742	RPV	23	A	1	M
+RPV 147	Amazon	Rondonia	-8.742	RPV	23	A	2	M
+RPV 156	Amazon	Rondonia	-8.742	RPV	23	B	1	M
+RPV 159	Amazon	Rondonia	-8.742	RPV	23	B	1	M
+RPV 167	Amazon	Rondonia	-8.742	RPV	23	B	3	M
+RPV 174	Amazon	Rondonia	-8.742	RPV	23	C	1	M
+RPV 176	Amazon	Rondonia	-8.742	RPV	23	C	2	M
+RPV 177	Amazon	Rondonia	-8.742	RPV	23	C	2	F
+RPV 181	Amazon	Rondonia	-8.742	RPV	23	C	3	M
+RPV 185	Amazon	Rondonia	-8.742	RPV	25	A	1	F
+RPV 191	Amazon	Rondonia	-8.742	RPV	25	A	2	F
+RPV 195	Amazon	Rondonia	-8.742	RPV	25	A	3	F
+RPV 220	Amazon	Rondonia	-8.742	RPV	25	C	2	F
+RPV 243	Amazon	Rondonia	-8.742	RPV	38	A	3	M
+RPV 244	Amazon	Rondonia	-8.742	RPV	38	A	3	M
+RPV 246	Amazon	Rondonia	-8.742	RPV	38	B	1	M
+RPV 252	Amazon	Rondonia	-8.742	RPV	38	B	2	M
+RPV 254	Amazon	Rondonia	-8.742	RPV	38	B	2	F
+RPV 258	Amazon	Rondonia	-8.742	RPV	38	B	3	F
+RPV 259	Amazon	Rondonia	-8.742	RPV	38	B	3	F
+RPV 263	Amazon	Rondonia	-8.742	RPV	38	C	1	M
+RPV 273	Amazon	Rondonia	-8.742	RPV	38	C	3	F
+RPV 280	Amazon	Rondonia	-8.742	RPV	12	A	2	F
+RPV 281	Amazon	Rondonia	-8.742	RPV	12	A	2	F
+RPV 290	Amazon	Rondonia	-8.742	RPV	12	B	1	F
+RPV 297	Amazon	Rondonia	-8.742	RPV	12	B	2	F
+RPV 300	Amazon	Rondonia	-8.742	RPV	12	B	3	F
+RPV 310	Amazon	Rondonia	-8.742	RPV	12	C	2	F
+RPV 312	Amazon	Rondonia	-8.742	RPV	12	C	2	F
+RPV 315	Amazon	Rondonia	-8.742	RPV	12	C	3	F
+RPV 329	Amazon	Rondonia	-8.742	RPV	17	A	2	M
+RPV 330	Amazon	Rondonia	-8.742	RPV	17	A	3	M
+RPV 337	Amazon	Rondonia	-8.742	RPV	17	B	1	M
+RPV 339	Amazon	Rondonia	-8.742	RPV	17	B	1	M
+RPV 344	Amazon	Rondonia	-8.742	RPV	17	B	2	M
+RPV 346	Amazon	Rondonia	-8.742	RPV	17	B	3	M
+RPV 350	Amazon	Rondonia	-8.742	RPV	17	C	1	M
+RPV 366	Amazon	Rondonia	-8.742	RPV	18	A	1	F
+RPV 371	Amazon	Rondonia	-8.742	RPV	18	A	2	M
+RPV 372	Amazon	Rondonia	-8.742	RPV	18	A	2	F
+RPV 374	Amazon	Rondonia	-8.742	RPV	18	A	2	F
+RPV 375	Amazon	Rondonia	-8.742	RPV	18	A	3	M
+RPV 391	Amazon	Rondonia	-8.742	RPV	18	B	3	M
+RPV 395	Amazon	Rondonia	-8.742	RPV	18	C	1	F
+RPV 399	Amazon	Rondonia	-8.742	RPV	18	C	1	F
+RPV 405	Amazon	Rondonia	-8.742	RPV	18	C	3	M
+RPV 407	Amazon	Rondonia	-8.742	RPV	18	C	3	M
+RPV 418	Amazon	Rondonia	-8.742	RPV	19	A	2	M
+RPV 425	Amazon	Rondonia	-8.742	RPV	19	B	1	M
+RPV 432	Amazon	Rondonia	-8.742	RPV	19	B	2	F
+RPV 434	Amazon	Rondonia	-8.742	RPV	19	B	2	F
+RPV 435	Amazon	Rondonia	-8.742	RPV	19	B	3	F
+RPV 439	Amazon	Rondonia	-8.742	RPV	19	B	3	M
+RPV 440	Amazon	Rondonia	-8.742	RPV	19	C	1	F
+RPV 441	Amazon	Rondonia	-8.742	RPV	19	C	1	F
+RPV 445	Amazon	Rondonia	-8.742	RPV	19	C	2	F
+RPV 455	Amazon	Rondonia	-8.742	RPV	20	A	1	M
+RPV 461	Amazon	Rondonia	-8.742	RPV	20	A	2	F
+RPV 461	Amazon	Rondonia	-8.742	RPV	20	A	2	F
+RPV 462	Amazon	Rondonia	-8.742	RPV	20	A	2	F
+RPV 463	Amazon	Rondonia	-8.742	RPV	20	A	2	M
+RPV 470	Amazon	Rondonia	-8.742	RPV	20	B	1	F
+RPV 472	Amazon	Rondonia	-8.742	RPV	20	B	1	M
+RPV 474	Amazon	Rondonia	-8.742	RPV	20	B	1	F
+RPV 475	Amazon	Rondonia	-8.742	RPV	20	B	2	F
+RPV 479	Amazon	Rondonia	-8.742	RPV	20	B	2	F
+RPV 480	Amazon	Rondonia	-8.742	RPV	20	B	3	F
+RPV 483	Amazon	Rondonia	-8.742	RPV	20	B	3	F
+RPV 487	Amazon	Rondonia	-8.742	RPV	20	C	1	M
+RPV 495	Amazon	Rondonia	-8.742	RPV	20	C	3	F
+RPV 497	Amazon	Rondonia	-8.742	RPV	20	C	3	F
+RPV 499	Amazon	Rondonia	-8.742	RPV	20	C	3	M
+RPV 502	Amazon	Rondonia	-8.742	RPV	28	A	1	F
+RPV 503	Amazon	Rondonia	-8.742	RPV	28	A	1	F
+RPV 520	Amazon	Rondonia	-8.742	RPV	28	B	2	F
+RPV 540	Amazon	Rondonia	-8.742	RPV	28	C	3	M
+RPV 542	Amazon	Rondonia	-8.742	RPV	28	C	3	M
+RPV 543	Amazon	Rondonia	-8.742	RPV	28	C	3	F
+RPV 545	Amazon	Rondonia	-8.742	RPV	37	A	1	F
+RPV 549	Amazon	Rondonia	-8.742	RPV	37	A	1	F
+RPV 550	Amazon	Rondonia	-8.742	RPV	37	A	2	M
+RPV 551	Amazon	Rondonia	-8.742	RPV	37	A	2	M
+RPV 556	Amazon	Rondonia	-8.742	RPV	37	A	3	M
+RPV 562	Amazon	Rondonia	-8.742	RPV	37	B	1	M
+RPV 566	Amazon	Rondonia	-8.742	RPV	37	B	2	F
+RPV 570	Amazon	Rondonia	-8.742	RPV	37	B	3	M
+RPV 574	Amazon	Rondonia	-8.742	RPV	37	B	3	F
+RPV 578	Amazon	Rondonia	-8.742	RPV	37	C	1	F
+RPV 580	Amazon	Rondonia	-8.742	RPV	37	C	2	M
+RPV 582	Amazon	Rondonia	-8.742	RPV	37	C	2	F
+RPV 591	Amazon	Rondonia	-8.742	RPV	43	A	1	F
+RPV 594	Amazon	Rondonia	-8.742	RPV	43	A	1	M
+RPV 602	Amazon	Rondonia	-8.742	RPV	43	A	3	F
+RPV 603	Amazon	Rondonia	-8.742	RPV	43	A	3	M
+RPV 604	Amazon	Rondonia	-8.742	RPV	43	A	3	M
+RPV 613	Amazon	Rondonia	-8.742	RPV	43	B	2	M
+RPV 614	Amazon	Rondonia	-8.742	RPV	43	B	2	M
+RPV 621	Amazon	Rondonia	-8.742	RPV	43	C	1	M
+RPV 635	Amazon	Rondonia	-8.742	RPV	33	A	1	F
+RPV 649	Amazon	Rondonia	-8.742	RPV	33	A	3	F
+RPV 652	Amazon	Rondonia	-8.742	RPV	33	B	1	M
+RPV 653	Amazon	Rondonia	-8.742	RPV	33	B	1	M
+RPV 658	Amazon	Rondonia	-8.742	RPV	33	B	2	M
+RPV 662	Amazon	Rondonia	-8.742	RPV	33	B	3	F
+RPV 664	Amazon	Rondonia	-8.742	RPV	33	B	3	F
+RPV 665	Amazon	Rondonia	-8.742	RPV	33	C	1	M
+RPV 669	Amazon	Rondonia	-8.742	RPV	33	C	1	F
+RPV 670	Amazon	Rondonia	-8.742	RPV	33	C	2	M
+RPV 677	Amazon	Rondonia	-8.742	RPV	33	C	3	M
+RPV 688	Amazon	Rondonia	-8.742	RPV	42	A	2	F
+RPV 690	Amazon	Rondonia	-8.742	RPV	42	A	3	M
+RPV 691	Amazon	Rondonia	-8.742	RPV	42	A	3	M
+RPV 693	Amazon	Rondonia	-8.742	RPV	42	A	3	F
+RPV 706	Amazon	Rondonia	-8.742	RPV	42	B	3	F
+RPV 709	Amazon	Rondonia	-8.742	RPV	42	B	3	F
+RPV 711	Amazon	Rondonia	-8.742	RPV	42	C	1	F
+RPV 714	Amazon	Rondonia	-8.742	RPV	42	C	1	M
+RPV 717	Amazon	Rondonia	-8.742	RPV	42	C	2	F
+RPV 722	Amazon	Rondonia	-8.742	RPV	42	C	3	F
+RPV 726	Amazon	Rondonia	-8.742	RPV	15	A	1	M
+RPV 728	Amazon	Rondonia	-8.742	RPV	15	A	1	F
+RPV 729	Amazon	Rondonia	-8.742	RPV	15	A	1	M
+RPV 755	Amazon	Rondonia	-8.742	RPV	15	C	1	F
+RPV 766	Amazon	Rondonia	-8.742	RPV	15	C	3	M
+SJU 014	Mata Atlantica	Rio de Janeiro	-22.611	SJU	6	A	1	F
+SJU 022	Mata Atlantica	Rio de Janeiro	-22.611	SJU	6	A	2	F
+SJU 026	Mata Atlantica	Rio de Janeiro	-22.611	SJU	6	A	3	M
+SJU 034	Mata Atlantica	Rio de Janeiro	-22.611	SJU	6	B	2	F
+SJU 037	Mata Atlantica	Rio de Janeiro	-22.611	SJU	6	B	2	M
+SJU 040	Mata Atlantica	Rio de Janeiro	-22.611	SJU	6	B	3	F
+SJU 060	Mata Atlantica	Rio de Janeiro	-22.611	SJU	4	A	1	F
+SJU 062	Mata Atlantica	Rio de Janeiro	-22.611	SJU	4	A	1	F
+SJU 068	Mata Atlantica	Rio de Janeiro	-22.611	SJU	4	A	2	M
+SJU 075	Mata Atlantica	Rio de Janeiro	-22.611	SJU	4	B	1	F
+SJU 080	Mata Atlantica	Rio de Janeiro	-22.611	SJU	4	B	2	F
+SJU 081	Mata Atlantica	Rio de Janeiro	-22.611	SJU	4	B	2	M
+SJU 086	Mata Atlantica	Rio de Janeiro	-22.611	SJU	4	B	3	M
+SJU 104	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	A	1	F
+SJU 105	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	A	1	M
+SJU 111	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	A	2	F
+SJU 119	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	B	1	M
+SJU 120	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	B	1	F
+SJU 123	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	B	1	F
+SJU 124	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	B	2	F
+SJU 127	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	B	2	M
+SJU 129	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	B	3	M
+SJU 130	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	B	3	M
+SJU 131	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	B	3	F
+SJU 135	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	C	1	F
+SJU 135	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	C	1	F
+SJU 136	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	C	1	F
+SJU 136	Mata Atlantica	Rio de Janeiro	-22.611	SJU	1	C	1	F
+SJU 150	Mata Atlantica	Rio de Janeiro	-22.611	SJU	2	A	1	F
+SJU 152	Mata Atlantica	Rio de Janeiro	-22.611	SJU	2	A	1	F
+SJU 154	Mata Atlantica	Rio de Janeiro	-22.611	SJU	2	A	2	M
+SJU 170	Mata Atlantica	Rio de Janeiro	-22.611	SJU	2	B	2	M
+SJU 184	Mata Atlantica	Rio de Janeiro	-22.611	SJU	2	C	2	F
+SJU 184	Mata Atlantica	Rio de Janeiro	-22.611	SJU	2	C	2	F
+SJU 185	Mata Atlantica	Rio de Janeiro	-22.611	SJU	2	C	2	F
+SJU 185	Mata Atlantica	Rio de Janeiro	-22.611	SJU	2	C	2	F
+SJU 196	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	A	1	M
+SJU 201	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	A	2	M
+SJU 204	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	A	3	M
+SJU 206	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	A	3	F
+SJU 207	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	A	3	M
+SJU 217	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	B	2	F
+SJU 218	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	B	2	M
+SJU 222	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	B	3	F
+SJU 223	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	B	3	F
+SJU 225	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	C	1	F
+SJU 225	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	C	1	F
+SJU 227	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	C	1	F
+SJU 227	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	C	1	F
+SJU 235	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	C	3	F
+SJU 235	Mata Atlantica	Rio de Janeiro	-22.611	SJU	3	C	3	F
+SJU 240	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	A	1	M
+SJU 245	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	A	2	M
+SJU 246	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	A	2	M
+SJU 250	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	A	3	F
+SJU 252	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	A	3	F
+SJU 254	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	B	1	M
+SJU 257	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	B	1	M
+SJU 265	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	B	3	F
+SJU 269	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	C	1	F
+SJU 269	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	C	1	F
+SJU 271	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	C	1	F
+SJU 271	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	C	1	F
+SJU 279	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	C	3	F
+SJU 279	Mata Atlantica	Rio de Janeiro	-22.611	SJU	5	C	3	F
+SJU 289	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	A	2	F
+SJU 291	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	A	2	F
+SJU 295	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	B	1	F
+SJU 296	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	B	1	M
+SJU 300	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	B	2	M
+SJU 303	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	B	2	M
+SJU 305	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	C	1	F
+SJU 305	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	C	1	F
+SJU 309	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	C	2	F
+SJU 309	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	C	2	F
+SJU 310	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	C	2	F
+SJU 310	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	C	2	F
+SJU 314	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	C	3	F
+SJU 314	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	C	3	F
+SJU 315	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	C	3	F
+SJU 315	Mata Atlantica	Rio de Janeiro	-22.611	SJU	7	C	3	F
+SJU 319	Mata Atlantica	Rio de Janeiro	-22.611	SJU	9	A	1	M
+SJU 320	Mata Atlantica	Rio de Janeiro	-22.611	SJU	9	A	1	M
+SJU 321	Mata Atlantica	Rio de Janeiro	-22.611	SJU	9	A	1	F
+SJU 325	Mata Atlantica	Rio de Janeiro	-22.611	SJU	9	A	2	F
+SJU 341	Mata Atlantica	Rio de Janeiro	-22.611	SJU	9	B	2	M
+SJU 364	Mata Atlantica	Rio de Janeiro	-22.611	SJU	12	A	1	M
+SJU 366	Mata Atlantica	Rio de Janeiro	-22.611	SJU	12	A	1	M
+SJU 370	Mata Atlantica	Rio de Janeiro	-22.611	SJU	12	A	2	M
+SJU 372	Mata Atlantica	Rio de Janeiro	-22.611	SJU	12	A	2	M
+SJU 376	Mata Atlantica	Rio de Janeiro	-22.611	SJU	12	A	3	F
+SJU 379	Mata Atlantica	Rio de Janeiro	-22.611	SJU	12	B	1	F
+SJU 381	Mata Atlantica	Rio de Janeiro	-22.611	SJU	12	B	1	M
+SJU 385	Mata Atlantica	Rio de Janeiro	-22.611	SJU	12	B	2	F
+SJU 389	Mata Atlantica	Rio de Janeiro	-22.611	SJU	12	B	3	M
+SJU 390	Mata Atlantica	Rio de Janeiro	-22.611	SJU	12	B	3	F
+SJU 392	Mata Atlantica	Rio de Janeiro	-22.611	SJU	12	B	3	M
+SJU 411	Mata Atlantica	Rio de Janeiro	-22.611	SJU	10	A	1	M
+SJU 412	Mata Atlantica	Rio de Janeiro	-22.611	SJU	10	A	1	M
+SJU 419	Mata Atlantica	Rio de Janeiro	-22.611	SJU	10	A	3	M
+SJU 422	Mata Atlantica	Rio de Janeiro	-22.611	SJU	10	A	3	F
+SJU 423	Mata Atlantica	Rio de Janeiro	-22.611	SJU	10	A	3	F
+SJU 426	Mata Atlantica	Rio de Janeiro	-22.611	SJU	10	B	1	F
+SJU 431	Mata Atlantica	Rio de Janeiro	-22.611	SJU	10	B	2	F
+SJU 434	Mata Atlantica	Rio de Janeiro	-22.611	SJU	10	B	3	F
+SJU 439	Mata Atlantica	Rio de Janeiro	-22.611	SJU	10	C	1	F
+SJU 439	Mata Atlantica	Rio de Janeiro	-22.611	SJU	10	C	1	F
+SJU 461	Mata Atlantica	Rio de Janeiro	-22.611	SJU	11	A	2	F
+SJU 465	Mata Atlantica	Rio de Janeiro	-22.611	SJU	11	A	3	F
+SJU 472	Mata Atlantica	Rio de Janeiro	-22.611	SJU	11	B	1	F
+SJU 473	Mata Atlantica	Rio de Janeiro	-22.611	SJU	11	B	1	M
+SJU 481	Mata Atlantica	Rio de Janeiro	-22.611	SJU	11	B	3	M
+TLC 104	Cerrado	Tocantins	-10.7	TLC	74	A	1	M
+TLC 105	Cerrado	Tocantins	-10.7	TLC	74	A	1	F
+TLC 114	Cerrado	Tocantins	-10.7	TLC	74	A	3	M
+TLC 119	Cerrado	Tocantins	-10.7	TLC	74	B	1	M
+TLC 120	Cerrado	Tocantins	-10.7	TLC	74	B	1	M
+TLC 121	Cerrado	Tocantins	-10.7	TLC	74	B	1	M
+TLC 125	Cerrado	Tocantins	-10.7	TLC	74	B	2	M
+TLC 129	Cerrado	Tocantins	-10.7	TLC	74	B	3	M
+TLC 130	Cerrado	Tocantins	-10.7	TLC	74	B	3	F
+TLC 132	Cerrado	Tocantins	-10.7	TLC	74	B	3	F
+TLC 136	Cerrado	Tocantins	-10.7	TLC	74	C	1	F
+TLC 137	Cerrado	Tocantins	-10.7	TLC	74	C	1	F
+TLC 139	Cerrado	Tocantins	-10.7	TLC	74	C	2	F
+TLC 145	Cerrado	Tocantins	-10.7	TLC	74	C	3	F
+TLC 146	Cerrado	Tocantins	-10.7	TLC	74	C	3	F
+TLC 150	Cerrado	Tocantins	-10.7	TLC	75	A	1	F
+TLC 151	Cerrado	Tocantins	-10.7	TLC	75	A	1	F
+TLC 162	Cerrado	Tocantins	-10.7	TLC	75	A	3	F
+TLC 163	Cerrado	Tocantins	-10.7	TLC	75	A	3	M
+TLC 166	Cerrado	Tocantins	-10.7	TLC	75	B	1	F
+TLC 176	Cerrado	Tocantins	-10.7	TLC	75	B	3	F
+TLC 178	Cerrado	Tocantins	-10.7	TLC	75	B	3	F
+TLC 184	Cerrado	Tocantins	-10.7	TLC	75	C	2	F
+TLC 185	Cerrado	Tocantins	-10.7	TLC	75	C	2	M
+TLC 189	Cerrado	Tocantins	-10.7	TLC	75	C	3	M
+TLC 194	Cerrado	Tocantins	-10.7	TLC	76	A	1	M
+TLC 198	Cerrado	Tocantins	-10.7	TLC	76	A	1	F
+TLC 206	Cerrado	Tocantins	-10.7	TLC	76	A	3	M
+TLC 207	Cerrado	Tocantins	-10.7	TLC	76	A	3	F
+TLC 209	Cerrado	Tocantins	-10.7	TLC	76	B	1	M
+TLC 210	Cerrado	Tocantins	-10.7	TLC	76	B	1	F
+TLC 214	Cerrado	Tocantins	-10.7	TLC	76	B	2	M
+TLC 215	Cerrado	Tocantins	-10.7	TLC	76	B	2	F
+TLC 218	Cerrado	Tocantins	-10.7	TLC	76	B	2	F
+TLC 219	Cerrado	Tocantins	-10.7	TLC	76	B	3	M
+TLC 226	Cerrado	Tocantins	-10.7	TLC	76	C	1	F
+TLC 229	Cerrado	Tocantins	-10.7	TLC	76	C	2	F
+TLC 231	Cerrado	Tocantins	-10.7	TLC	76	C	2	F
+TLC 234	Cerrado	Tocantins	-10.7	TLC	76	C	3	F
+TLC 237	Cerrado	Tocantins	-10.7	TLC	76	C	3	F
+TLC 239	Cerrado	Tocantins	-10.7	TLC	82	A	1	M
+TLC 242	Cerrado	Tocantins	-10.7	TLC	82	A	1	M
+TLC 244	Cerrado	Tocantins	-10.7	TLC	82	A	2	F
+TLC 245	Cerrado	Tocantins	-10.7	TLC	82	A	2	M
+TLC 248	Cerrado	Tocantins	-10.7	TLC	82	A	2	F
+TLC 249	Cerrado	Tocantins	-10.7	TLC	82	A	3	F
+TLC 253	Cerrado	Tocantins	-10.7	TLC	82	A	3	M
+TLC 256	Cerrado	Tocantins	-10.7	TLC	82	B	1	F
+TLC 257	Cerrado	Tocantins	-10.7	TLC	82	B	1	M
+TLC 260	Cerrado	Tocantins	-10.7	TLC	82	B	2	M
+TLC 262	Cerrado	Tocantins	-10.7	TLC	82	B	2	M
+TLC 267	Cerrado	Tocantins	-10.7	TLC	82	B	3	F
+TLC 271	Cerrado	Tocantins	-10.7	TLC	82	C	1	F
+TLC 275	Cerrado	Tocantins	-10.7	TLC	82	C	2	M
+TLC 276	Cerrado	Tocantins	-10.7	TLC	82	C	2	F
+TLC 281	Cerrado	Tocantins	-10.7	TLC	82	C	3	M
+TLC 283	Cerrado	Tocantins	-10.7	TLC	82	C	3	F
+TLC 284	Cerrado	Tocantins	-10.7	TLC	79	A	1	M
+TLC 285	Cerrado	Tocantins	-10.7	TLC	79	A	1	F
+TLC 286	Cerrado	Tocantins	-10.7	TLC	79	A	1	F
+TLC 295	Cerrado	Tocantins	-10.7	TLC	79	A	3	M
+TLC 296	Cerrado	Tocantins	-10.7	TLC	79	A	3	M
+TLC 302	Cerrado	Tocantins	-10.7	TLC	79	B	1	F
+TLC 304	Cerrado	Tocantins	-10.7	TLC	79	B	2	M
+TLC 307	Cerrado	Tocantins	-10.7	TLC	79	B	2	F
+TLC 311	Cerrado	Tocantins	-10.7	TLC	79	B	3	M
+TLC 316	Cerrado	Tocantins	-10.7	TLC	79	C	1	M
+TLC 324	Cerrado	Tocantins	-10.7	TLC	79	C	3	M
+TLC 327	Cerrado	Tocantins	-10.7	TLC	79	C	3	M
+TLC 332	Cerrado	Tocantins	-10.7	TLC	83	A	1	F
+TLC 333	Cerrado	Tocantins	-10.7	TLC	83	A	1	M
+TLC 334	Cerrado	Tocantins	-10.7	TLC	83	A	2	M
+TLC 335	Cerrado	Tocantins	-10.7	TLC	83	A	2	F
+TLC 338	Cerrado	Tocantins	-10.7	TLC	83	A	2	M
+TLC 340	Cerrado	Tocantins	-10.7	TLC	83	A	3	F
+TLC 341	Cerrado	Tocantins	-10.7	TLC	83	A	3	M
+TLC 342	Cerrado	Tocantins	-10.7	TLC	83	A	3	F
+TLC 346	Cerrado	Tocantins	-10.7	TLC	83	B	1	M
+TLC 347	Cerrado	Tocantins	-10.7	TLC	83	B	1	F
+TLC 348	Cerrado	Tocantins	-10.7	TLC	83	B	1	M
+TLC 349	Cerrado	Tocantins	-10.7	TLC	83	B	2	F
+TLC 352	Cerrado	Tocantins	-10.7	TLC	83	B	2	F
+TLC 356	Cerrado	Tocantins	-10.7	TLC	83	B	3	M
+TLC 359	Cerrado	Tocantins	-10.7	TLC	83	C	1	M
+TLC 360	Cerrado	Tocantins	-10.7	TLC	83	C	1	M
+TLC 379	Cerrado	Tocantins	-10.7	TLC	77	A	2	F
+TLC 381	Cerrado	Tocantins	-10.7	TLC	77	A	2	M
+TLC 382	Cerrado	Tocantins	-10.7	TLC	77	A	2	M
+TLC 383	Cerrado	Tocantins	-10.7	TLC	77	A	2	M
+TLC 384	Cerrado	Tocantins	-10.7	TLC	77	A	3	F
+TLC 391	Cerrado	Tocantins	-10.7	TLC	77	B	1	F
+TLC 393	Cerrado	Tocantins	-10.7	TLC	77	B	1	M
+TLC 394	Cerrado	Tocantins	-10.7	TLC	77	B	2	F
+TLC 396	Cerrado	Tocantins	-10.7	TLC	77	B	2	F
+TLC 399	Cerrado	Tocantins	-10.7	TLC	77	B	3	M
+TLC 404	Cerrado	Tocantins	-10.7	TLC	77	C	1	F
+TLC 405	Cerrado	Tocantins	-10.7	TLC	77	C	1	F
+TLC 406	Cerrado	Tocantins	-10.7	TLC	77	C	1	M
+TLC 407	Cerrado	Tocantins	-10.7	TLC	77	C	1	M
+TLC 409	Cerrado	Tocantins	-10.7	TLC	77	C	2	F
+TLC 410	Cerrado	Tocantins	-10.7	TLC	77	C	2	M
+TLC 413	Cerrado	Tocantins	-10.7	TLC	77	C	2	M
+TLC 415	Cerrado	Tocantins	-10.7	TLC	77	C	3	M
+TLC 426	Cerrado	Tocantins	-10.7	TLC	80	A	2	M
+TLC 427	Cerrado	Tocantins	-10.7	TLC	80	A	2	F
+TLC 428	Cerrado	Tocantins	-10.7	TLC	80	A	2	F
+TLC 431	Cerrado	Tocantins	-10.7	TLC	80	A	3	F
+TLC 440	Cerrado	Tocantins	-10.7	TLC	80	B	2	M
+TLC 441	Cerrado	Tocantins	-10.7	TLC	80	B	2	M
+TLC 443	Cerrado	Tocantins	-10.7	TLC	80	B	2	F
+TLC 444	Cerrado	Tocantins	-10.7	TLC	80	B	3	F
+TLC 450	Cerrado	Tocantins	-10.7	TLC	80	C	1	M
+TLC 451	Cerrado	Tocantins	-10.7	TLC	80	C	1	M
+TLC 454	Cerrado	Tocantins	-10.7	TLC	80	C	2	M
+TLC 456	Cerrado	Tocantins	-10.7	TLC	80	C	2	M
+TLC 457	Cerrado	Tocantins	-10.7	TLC	80	C	2	F
+TLC 459	Cerrado	Tocantins	-10.7	TLC	80	C	3	F
+TLC 460	Cerrado	Tocantins	-10.7	TLC	80	C	3	M
+TLC 461	Cerrado	Tocantins	-10.7	TLC	80	C	3	M
+TLC 462	Cerrado	Tocantins	-10.7	TLC	80	C	3	F
+TPN 021	Cerrado	Tocantins	-10.796	TPN	11	A	1	F
+TPN 022	Cerrado	Tocantins	-10.796	TPN	11	A	1	F
+TPN 023	Cerrado	Tocantins	-10.796	TPN	11	A	1	M
+TPN 026	Cerrado	Tocantins	-10.796	TPN	11	A	2	F
+TPN 027	Cerrado	Tocantins	-10.796	TPN	11	A	2	F
+TPN 028	Cerrado	Tocantins	-10.796	TPN	11	A	2	F
+TPN 032	Cerrado	Tocantins	-10.796	TPN	11	A	3	F
+TPN 033	Cerrado	Tocantins	-10.796	TPN	11	A	3	M
+TPN 034	Cerrado	Tocantins	-10.796	TPN	11	A	3	F
+TPN 036	Cerrado	Tocantins	-10.796	TPN	11	B	1	M
+TPN 038	Cerrado	Tocantins	-10.796	TPN	11	B	1	M
+TPN 040	Cerrado	Tocantins	-10.796	TPN	11	B	1	F
+TPN 041	Cerrado	Tocantins	-10.796	TPN	11	B	2	M
+TPN 042	Cerrado	Tocantins	-10.796	TPN	11	B	2	M
+TPN 043	Cerrado	Tocantins	-10.796	TPN	11	B	2	F
+TPN 044	Cerrado	Tocantins	-10.796	TPN	11	B	2	M
+TPN 046	Cerrado	Tocantins	-10.796	TPN	11	B	3	F
+TPN 049	Cerrado	Tocantins	-10.796	TPN	11	B	3	M
+TPN 051	Cerrado	Tocantins	-10.796	TPN	11	C	1	M
+TPN 053	Cerrado	Tocantins	-10.796	TPN	11	C	1	M
+TPN 059	Cerrado	Tocantins	-10.796	TPN	11	C	2	M
+TPN 060	Cerrado	Tocantins	-10.796	TPN	11	C	2	M
+TPN 066	Cerrado	Tocantins	-10.796	TPN	12	A	1	M
+TPN 067	Cerrado	Tocantins	-10.796	TPN	12	A	1	F
+TPN 068	Cerrado	Tocantins	-10.796	TPN	12	A	1	M
+TPN 069	Cerrado	Tocantins	-10.796	TPN	12	A	1	F
+TPN 076	Cerrado	Tocantins	-10.796	TPN	12	A	3	M
+TPN 077	Cerrado	Tocantins	-10.796	TPN	12	A	3	M
+TPN 079	Cerrado	Tocantins	-10.796	TPN	12	A	3	M
+TPN 082	Cerrado	Tocantins	-10.796	TPN	12	B	1	F
+TPN 086	Cerrado	Tocantins	-10.796	TPN	12	B	2	M
+TPN 087	Cerrado	Tocantins	-10.796	TPN	12	B	2	M
+TPN 088	Cerrado	Tocantins	-10.796	TPN	12	B	2	F
+TPN 089	Cerrado	Tocantins	-10.796	TPN	12	B	2	F
+TPN 090	Cerrado	Tocantins	-10.796	TPN	12	B	2	M
+TPN 091	Cerrado	Tocantins	-10.796	TPN	12	B	3	F
+TPN 092	Cerrado	Tocantins	-10.796	TPN	12	B	3	F
+TPN 093	Cerrado	Tocantins	-10.796	TPN	12	B	3	M
+TPN 096	Cerrado	Tocantins	-10.796	TPN	12	C	1	F
+TPN 097	Cerrado	Tocantins	-10.796	TPN	12	C	1	F
+TPN 099	Cerrado	Tocantins	-10.796	TPN	12	C	1	F
+TPN 100	Cerrado	Tocantins	-10.796	TPN	12	C	1	M
+TPN 101	Cerrado	Tocantins	-10.796	TPN	12	C	2	M
+TPN 102	Cerrado	Tocantins	-10.796	TPN	12	C	2	F
+TPN 103	Cerrado	Tocantins	-10.796	TPN	12	C	2	M
+TPN 106	Cerrado	Tocantins	-10.796	TPN	12	C	3	M
+TPN 107	Cerrado	Tocantins	-10.796	TPN	12	C	3	F
+TPN 108	Cerrado	Tocantins	-10.796	TPN	12	C	3	F
+TPN 111	Cerrado	Tocantins	-10.796	TPN	9	A	1	F
+TPN 116	Cerrado	Tocantins	-10.796	TPN	9	A	2	M
+TPN 121	Cerrado	Tocantins	-10.796	TPN	9	A	3	F
+TPN 122	Cerrado	Tocantins	-10.796	TPN	9	A	3	M
+TPN 126	Cerrado	Tocantins	-10.796	TPN	9	B	1	F
+TPN 131	Cerrado	Tocantins	-10.796	TPN	9	B	2	F
+TPN 136	Cerrado	Tocantins	-10.796	TPN	9	B	3	M
+TPN 137	Cerrado	Tocantins	-10.796	TPN	9	B	3	M
+TPN 138	Cerrado	Tocantins	-10.796	TPN	9	B	3	M
+TPN 146	Cerrado	Tocantins	-10.796	TPN	9	C	2	M
+TPN 147	Cerrado	Tocantins	-10.796	TPN	9	C	2	F
+TPN 148	Cerrado	Tocantins	-10.796	TPN	9	C	2	F
+TPN 156	Cerrado	Tocantins	-10.796	TPN	14	A	1	F
+TPN 157	Cerrado	Tocantins	-10.796	TPN	14	A	1	M
+TPN 158	Cerrado	Tocantins	-10.796	TPN	14	A	1	M
+TPN 161	Cerrado	Tocantins	-10.796	TPN	14	A	2	M
+TPN 166	Cerrado	Tocantins	-10.796	TPN	14	A	3	M
+TPN 167	Cerrado	Tocantins	-10.796	TPN	14	A	3	F
+TPN 168	Cerrado	Tocantins	-10.796	TPN	14	A	3	F
+TPN 171	Cerrado	Tocantins	-10.796	TPN	14	B	1	F
+TPN 172	Cerrado	Tocantins	-10.796	TPN	14	B	1	M
+TPN 173	Cerrado	Tocantins	-10.796	TPN	14	B	1	M
+TPN 174	Cerrado	Tocantins	-10.796	TPN	14	B	1	M
+TPN 176	Cerrado	Tocantins	-10.796	TPN	14	B	2	M
+TPN 178	Cerrado	Tocantins	-10.796	TPN	14	B	2	F
+TPN 182	Cerrado	Tocantins	-10.796	TPN	14	C	1	M
+TPN 183	Cerrado	Tocantins	-10.796	TPN	14	C	1	F
+TPN 187	Cerrado	Tocantins	-10.796	TPN	14	C	2	M
+TPN 188	Cerrado	Tocantins	-10.796	TPN	14	C	2	F
+TPN 191	Cerrado	Tocantins	-10.796	TPN	14	C	3	M
+TPN 197	Cerrado	Tocantins	-10.796	TPN	7	A	1	F
+TPN 198	Cerrado	Tocantins	-10.796	TPN	7	A	1	F
+TPN 199	Cerrado	Tocantins	-10.796	TPN	7	A	1	F
+TPN 201	Cerrado	Tocantins	-10.796	TPN	7	A	2	M
+TPN 202	Cerrado	Tocantins	-10.796	TPN	7	A	2	F
+TPN 203	Cerrado	Tocantins	-10.796	TPN	7	A	2	F
+TPN 205	Cerrado	Tocantins	-10.796	TPN	7	A	2	F
+TPN 206	Cerrado	Tocantins	-10.796	TPN	7	A	3	M
+TPN 207	Cerrado	Tocantins	-10.796	TPN	7	A	3	M
+TPN 208	Cerrado	Tocantins	-10.796	TPN	7	A	3	M
+TPN 209	Cerrado	Tocantins	-10.796	TPN	7	A	3	M
+TPN 210	Cerrado	Tocantins	-10.796	TPN	7	A	3	M
+TPN 211	Cerrado	Tocantins	-10.796	TPN	7	B	1	M
+TPN 212	Cerrado	Tocantins	-10.796	TPN	7	B	1	F
+TPN 213	Cerrado	Tocantins	-10.796	TPN	7	B	1	F
+TPN 214	Cerrado	Tocantins	-10.796	TPN	7	B	1	F
+TPN 215	Cerrado	Tocantins	-10.796	TPN	7	B	1	F
+TPN 216	Cerrado	Tocantins	-10.796	TPN	7	B	2	F
+TPN 217	Cerrado	Tocantins	-10.796	TPN	7	B	2	M
+TPN 222	Cerrado	Tocantins	-10.796	TPN	7	B	3	M
+TPN 224	Cerrado	Tocantins	-10.796	TPN	7	B	3	F
+TPN 225	Cerrado	Tocantins	-10.796	TPN	7	B	3	F
+TPN 226	Cerrado	Tocantins	-10.796	TPN	7	C	1	M
+TPN 227	Cerrado	Tocantins	-10.796	TPN	7	C	1	F
+TPN 229	Cerrado	Tocantins	-10.796	TPN	7	C	1	F
+TPN 230	Cerrado	Tocantins	-10.796	TPN	7	C	1	F
+TPN 231	Cerrado	Tocantins	-10.796	TPN	7	C	2	F
+TPN 232	Cerrado	Tocantins	-10.796	TPN	7	C	2	M
+TPN 234	Cerrado	Tocantins	-10.796	TPN	7	C	2	M
+TPN 235	Cerrado	Tocantins	-10.796	TPN	7	C	2	M
+TPN 236	Cerrado	Tocantins	-10.796	TPN	7	C	3	F
+TPN 237	Cerrado	Tocantins	-10.796	TPN	7	C	3	M
+TPN 238	Cerrado	Tocantins	-10.796	TPN	7	C	3	M
+TPN 239	Cerrado	Tocantins	-10.796	TPN	7	C	3	M
+TPN 240	Cerrado	Tocantins	-10.796	TPN	7	C	3	F

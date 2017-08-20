@@ -1,0 +1,239 @@
+---
+title: "Wing landmark repeatability"
+author: "Virginia Chu"
+date: "August 2, 2017"
+output: html_document
+---
+
+```
+#field collected
+setwd("C:/Users/vmc04/Dropbox/Life history data")
+mydata<-read.csv("Life history data 07112017.csv", header=TRUE)
+lifedata<-mydata
+lifedata$Locality=factor(lifedata$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+setwd("C:/Users/vmc04/Desktop/Lab reared wings for landmarking/13")
+mainfile<-read.csv("13 field original 2nd attempt.csv", header=TRUE)
+winglist<-read.csv("Repeat list from field.csv", header=TRUE)
+
+comp<-merge(mainfile, winglist, by="Code")
+classifier_file<-subset(comp, select=c(Code,Biome, State, Latitude, Locality, Family, Temp, Well,Sex, Wing.length..mm.))
+
+write.csv(classifier_file, "Lab reared specimens for geometric morphometrics final.csv")
+
+#labreared
+setwd("C:/Users/vmc04/Dropbox/Life history data")
+mydata<-read.csv("Life history data 07112017.csv", header=TRUE)
+lifedata<-mydata
+lifedata$Locality=factor(lifedata$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+APRFa1<-APRFAlist[sample(nrow(APRFAlist),3),]
+write.table(APRFa1, "clipboard",sep='t', row.names=FALSE)
+APRFb1<-APRFBlist[sample(nrow(APRFAlist),3),]
+write.table(APRFb1, "clipboard",sep='t', row.names=FALSE)
+APRFc1<-APRFClist[sample(nrow(APRFAlist),3),]
+write.table(APRFc1, "clipboard",sep='t', row.names=FALSE)
+
+APRMa1<-APRMAlist[sample(nrow(APRFAlist),3),]
+write.table(APRMa1, "clipboard",sep='t', row.names=FALSE)
+APRMb1<-APRMBlist[sample(nrow(APRFAlist),3),]
+write.table(APRMb1, "clipboard",sep='t', row.names=FALSE)
+APRMc1<-APRMClist[sample(nrow(APRFAlist),3),]
+write.table(APRMc1, "clipboard",sep='t', row.names=FALSE)
+
+#Repeatable data prep
+
+#create list used for repeatability
+setwd("C:/Users/vmc04/Desktop/Repeatability")
+testlist<- read.csv("List for repeatability.csv", header=TRUE)
+
+#get matching info from original
+setwd("C:/Users/vmc04/Desktop/Repeatability/Original landmarks")
+ori13lab<-read.csv("Lab reared 13 landmarks composite1.csv", header=TRUE)
+ori18lab<-read.csv("Lab reared 18 landmarks composite.csv", header=TRUE)
+
+#
+comp13<-merge(ori13lab, testlist, by="Code")
+
+write.csv(comp13, "13 Lab reared specimens original.csv")
+
+comp18<-merge(ori18lab, testlist, by="Code")
+
+write.csv(comp18, "18 Lab reared specimens original.csv")
+
+#field test repeatability
+setwd("C:/Users/vmc04/Dropbox/Wing project/Repeat score testing")
+ori13field<-read.csv("13L field fixed 1 original.csv", header=TRUE)
+ori18field<-read.csv("18L field landmarks original.csv", header=TRUE)
+fieldlist<-read.csv("List for field repeatability.csv", header=TRUE)
+
+comp13field<-merge(ori13field, fieldlist, by="Code")
+
+write.csv(comp13field, "13 Lab reared specimens original subset.csv")
+
+comp18field<-merge(ori18field, fieldlist, by="Code")
+
+write.csv(comp18field, "18 Lab reared specimens original subset.csv")
+
+
+#ANOVA for repeatability numbers
+setwd("C:/Users/vmc04/Dropbox/Wing project/Repeat score testing")
+repeat13field<-read.csv("13 repeat field testing file.csv", header=TRUE)
+repeat18field<-read.csv("18 repeat field testing file.csv", header=TRUE)
+
+repeat13field.mean <- aggregate(repeat13field, by = list(repeat13field$Repeat, repeat13field$Latitude), FUN = 'mean')
+repeat13field.sd <- aggregate(repeat13field, by = list(repeat13field$Repeat, repeat13field$Latitude), FUN = 'sd')
+#the following doesn't work
+repeat13field_mod<-lm(~Repeat+Latitude, data=repeat13field)
+repeat13field.aov <- with(repeat13field.mean, aov( x1,  y1,   x2 , y2,   x3 , y3 ,  x4 , y4 ,  x5,  y5,   x6 , y6,   x7,  y7,   x8  ,y8 ,  x9 , y9 , x10, y10, x11, y11, x12, y12, x13, y13~ Repeat * Latitude ))
+summary(repeat13field.aov)
+```
+
+## R Markdown
+
+Used this site for inspiration
+https://www.r-bloggers.com/two-way-anova-with-repeated-measures/
+
+Trying out this site:
+https://www.r-bloggers.com/tips-tricks-8-examining-replicate-error/
+
+```{r geomorph}
+
+#getting the original and repeat
+#original
+mainfile<-read.csv("13 field original 2nd attempt.csv", header=TRUE)
+winglist<-read.csv("Repeat list from field.csv", header=TRUE)
+comp<-merge(mainfile, winglist, by="ID")
+classifier_file<-subset(comp, select=c(Code,Biome, State, Latitude, Locality, Family, Temp, Well,Sex, Wing.length..mm.))
+
+write.csv(comp, "13 field ori 2nd attempt.csv")
+
+
+#trying out geomorph
+library(geomorph)
+setwd("C:/Users/vmc04/Dropbox/Wing project/Repeat score testing")
+tmp2<-as.matrix(read.csv("13 repeat field testing file1.csv",header=T, stringsAsFactors = FALSE))
+names<-tmp2[,1]
+tmp21 <- mapply(tmp2[,2:28], FUN=as.numeric)
+tmp22 <- matrix(data=tmp21, ncol=27, nrow=70)
+coords22<-arrayspecs(tmp22[,2:ncol(tmp22)],13,2)
+dimnames(coords22)[[3]]<-names
+#coords is the data file? but it is an array
+#issues with coords22 because it does not separate out the code ids by repeat
+#this is the updated one, i added _1 for original or _2 for repeat
+field13<-read.csv("13 repeat field testing file2.csv",header=T, stringsAsFactors = FALSE)
+tmp3<-as.matrix(field13)
+names3<-tmp3[,1]
+tmp31 <- mapply(tmp3[,2:27], FUN=as.numeric)
+tmp32 <- matrix(data=tmp31, ncol=26, nrow=70)
+coords32<-arrayspecs(tmp32[,1:ncol(tmp32)],13,2)
+dimnames(coords32)[[3]]<-names3
+f13r<-gpagen(coords32)
+#meh categories <- strsplit(dimnames(coords32)[[3]], "_")
+
+
+
+#attempt at categories
+field_cats<-read.csv("13 repeat field testing file.csv", header=TRUE)
+cat_id<-field_cats$ID
+cat_rep<-field_cats$Repeat
+cat_lat<-field_cats$Latitude
+cat_ind<- dimnames(f13r$coords)[[3]]
+
+#testing on category Id issue
+#my way
+procD.lm(f13r$coords~cat_id:cat_rep)
+#i get repeat of like 30%
+
+#make geomorph data frame?
+##USE THIS ONE
+gdf<-geomorph.data.frame(coords=f13r$coords, id=id_cat, rep=as.factor(cat_rep))
+
+#tweak but did not work, got 0 and inf again
+gdf<-geomorph.data.frame(coords=f13r$coords, id=id, rep=as.factor(cat_rep))
+
+procD.lm(coords~id:rep,data=gdf)
+
+
+aov13f<-procD.lm(coords~id:rep,data=gdf)
+
+# Then calculate repeatability
+AOV13f <- aov13f$aov.table
+((AOV13f$MS[1] - AOV13f$MS[2])/2) / (AOV13f$MS[2] + ((AOV13f$MS[1] - AOV13f$MS[2])/2))
+
+
+#try for 18 field
+field18<-read.csv("18 repeat field testing file1.csv",header=T, stringsAsFactors = FALSE)
+tmp8<-as.matrix(field18)
+names8<-tmp8[,1]
+tmp81 <- mapply(tmp8[,2:37], FUN=as.numeric)
+tmp82 <- matrix(data=tmp81, ncol=36, nrow=70)
+coords82<-arrayspecs(tmp82[,1:ncol(tmp82)],18,2)
+dimnames(coords82)[[3]]<-names8
+f18r<-gpagen(coords82)
+field_cats<-read.csv("13 repeat field testing file.csv", header=TRUE)
+cat_id<-field_cats$ID
+cat_rep<-field_cats$Repeat
+#gdf18<-geomorph.data.frame(coords=f18r$coords, id=cat_id, rep=as.factor(cat_rep))
+gdf18<-geomorph.data.frame(coords=f18r$coords, id=cat_id)
+
+procD.lm(coords~id:rep,data=gdf18)
+
+#aov18f<-procD.lm(coords~id:rep,data=gdf18)
+aov18f<-procD.lm(coords~id,data=gdf18)
+AOV18f <- aov18f$aov.table
+((AOV18f$MS[1] - AOV18f$MS[2])/2) / (AOV18f$MS[2] + ((AOV18f$MS[1] - AOV18f$MS[2])/2))
+
+#try for 13 lab
+setwd("C:/Users/vmc04/Dropbox/Wing project/Repeat score testing")
+lab13<-read.csv("Lab 13 repeat testing file1.csv",header=T, stringsAsFactors = FALSE)
+tmp13l<-as.matrix(lab13)
+names13l<-tmp13l[,1]
+tmp13l1 <- mapply(tmp13l[,2:27], FUN=as.numeric)
+tmp13l2 <- matrix(data=tmp13l1, ncol=26, nrow=252)
+coords13l<-arrayspecs(tmp13l2[,1:ncol(tmp13l2)],13,2)
+dimnames(coords13l)[[3]]<-names13l
+l13r<-gpagen(coords13l)
+field_catslab<-read.csv("Lab classifier data with repeat info1.csv", header=TRUE)
+cat_idlab<-field_catslab$Code
+cat_shidlab<-field_catslab$ID
+cat_replab<-field_catslab$Repeat
+gdl13<-geomorph.data.frame(coords=l13r$coords, id=cat_idlab)
+
+procD.lm(coords~id,data=gdl13)
+
+aov13l<-procD.lm(coords~id,data=gdl13)
+AOV13l <- aov13l$aov.table
+((AOV13l$MS[1] - AOV13l$MS[2])/2) / (AOV13l$MS[2] + ((AOV13l$MS[1] - AOV13l$MS[2])/2))
+
+#try for 18 lab
+lab18<-read.csv("Lab 18 repeat testing file1.csv",header=T, stringsAsFactors = FALSE)
+tmp18l<-as.matrix(lab18)
+names18l<-tmp18l[,1]
+tmp18l1 <- mapply(tmp18l[,2:37], FUN=as.numeric)
+tmp18l2 <- matrix(data=tmp18l1, ncol=36, nrow=252)
+coords18l<-arrayspecs(tmp18l2[,1:ncol(tmp18l2)],18,2)
+dimnames(coords18l)[[3]]<-names18l
+l18r<-gpagen(coords18l)
+field_cats<-read.csv("Lab classifier data with repeat info1.csv", header=TRUE)
+cat_idlab<-field_catslab$Code
+cat_shidlab<-field_catslab$ID
+cat_replab<-field_catslab$Repeat
+gdl18<-geomorph.data.frame(coords=l18r$coords, id=cat_idlab)
+
+procD.lm(coords~id,data=gdl18)
+
+aov18l<-procD.lm(coords~id,data=gdl18)
+AOV18l <- aov18l$aov.table
+((AOV18l$MS[1] - AOV18l$MS[2])/2) / (AOV18l$MS[2] + ((AOV18l$MS[1] - AOV18l$MS[2])/2))
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
