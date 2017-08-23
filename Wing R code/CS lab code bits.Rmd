@@ -70,6 +70,36 @@ summary(wing.mod3)
 
 wing.mod7=aov(CS.scaled.18~Locality+Sex+Temp.Num, data=quickie)
 summary(wing.mod7)
+
+#2017_08_23 update
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/Summary wing excel files")
+
+
+quickie<-read.csv("2017_08_20 Wing lab cs length 13 18.csv", header=TRUE)
+quickie$Locality=factor(quickie$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+#summary stats
+xWL<-aggregate (quickie$Wing.length..mm., list (LOC= quickie$Locality, TEMP= quickie$Temp.Num, Sex= quickie$Sex ),mean, na.rm=TRUE)
+write.table(xWL, "clipboard", sep='\t', row.names=FALSE)
+
+xWLsd<-aggregate (quickie$Wing.length..mm., list (LOC= quickie$Locality, TEMP= quickie$Temp.Num, Sex= quickie$Sex ),sd, na.rm=TRUE)
+write.table(xWLsd, "clipboard", sep='\t', row.names=FALSE)
+
+wing.mod5=aov(Wing.length..mm.~Locality+Sex+Temp.Num, data=quickie)
+summary(wing.mod3)
+
+wing.mod7=aov(CS.scaled.18~Locality+Sex+Temp.Num, data=quickie)
+summary(wing.mod7)
+
+#ANOVA for field cs
+quickiefield<-read.csv("2017_08_23 Field wing length.csv", header=TRUE)
+quickiefield$Locality=factor(quickiefield$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+xWL<-aggregate (quickiefield$Length.mm, list (LOC= quickiefield$Locality ),mean, na.rm=TRUE)
+write.table(xWL, "clipboard", sep='\t', row.names=FALSE)
+
+xWLsd<-aggregate (quickiefield$Length.mm, list (LOC= quickiefield$Locality ),sd, na.rm=TRUE)
+write.table(xWLsd, "clipboard", sep='\t', row.names=FALSE)
 ```
 
 ## R Markdown
