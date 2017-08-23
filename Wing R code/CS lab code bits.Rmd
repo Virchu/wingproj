@@ -66,8 +66,8 @@ quickie<-read.csv("Wing lab cs length 13 18.csv", header=TRUE)
 quickie$Locality=factor(quickie$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
 
 wing.mod5=aov(Wing.length..mm.~Locality+Sex+Temp.Num, data=quickie)
-summary(wing.mod3)
-
+summary(wing.mod5)
+print(HSD.test(wing.mod5, 'Locality'))
 wing.mod7=aov(CS.scaled.18~Locality+Sex+Temp.Num, data=quickie)
 summary(wing.mod7)
 
@@ -92,14 +92,50 @@ wing.mod7=aov(CS.scaled.18~Locality+Sex+Temp.Num, data=quickie)
 summary(wing.mod7)
 
 #ANOVA for field cs
-quickiefield<-read.csv("2017_08_23 Field wing length.csv", header=TRUE)
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/Summary wing excel files")
+quickiefield<-read.csv("2017_08_23 Field wing length 13 18 cs scaled.csv", header=TRUE)
 quickiefield$Locality=factor(quickiefield$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+wing.modfield=aov(Length.mm~Locality, data=quickiefield)
+summary(wing.modfield)
+
+library(agricolae)
+print(HSD.test(wing.modfield, 'Locality'))
+
+wing.modfield1=aov(X13.CS.scaled~Locality, data=quickiefield)
+summary(wing.modfield1)
+
+wing.modfield2=aov(X18.CS.scaled~Locality, data=quickiefield)
+summary(wing.modfield2)
 
 xWL<-aggregate (quickiefield$Length.mm, list (LOC= quickiefield$Locality ),mean, na.rm=TRUE)
 write.table(xWL, "clipboard", sep='\t', row.names=FALSE)
 
 xWLsd<-aggregate (quickiefield$Length.mm, list (LOC= quickiefield$Locality ),sd, na.rm=TRUE)
 write.table(xWLsd, "clipboard", sep='\t', row.names=FALSE)
+
+x13cs<-aggregate (quickiefield$X13.CS.scaled, list (LOC= quickiefield$Locality ),mean, na.rm=TRUE)
+write.table(x13cs, "clipboard", sep='\t', row.names=FALSE)
+
+x13cssd<-aggregate (quickiefield$X13.CS.scaled, list (LOC= quickiefield$Locality ),sd, na.rm=TRUE)
+write.table(x13cssd, "clipboard", sep='\t', row.names=FALSE)
+
+x18cs<-aggregate (quickiefield$X18.CS.scaled, list (LOC= quickiefield$Locality ),mean, na.rm=TRUE)
+write.table(x18cs, "clipboard", sep='\t', row.names=FALSE)
+
+x18cssd<-aggregate (quickiefield$X18.CS.scaled, list (LOC= quickiefield$Locality ),sd, na.rm=TRUE)
+write.table(x18cssd, "clipboard", sep='\t', row.names=FALSE)
+
+with(quickiefield, boxplot(Length.mm~Locality, col=(c("black","black","black","black","dimgray","dimgray", "white")),medcol=(c("white", "white","white","white","white","white","black" )), main="Field P wings-Wing length", xlab="Locality", ylab="Centroid Size (mm)"))
+
+with(quickiefield, boxplot(X13.CS.scaled~Locality, col=(c("black","black","black","black","dimgray","dimgray", "white")),medcol=(c("white", "white","white","white","white","white","black" )), main="Field P wings-13 landmarks CS measure", xlab="Locality", ylab="Centroid Size (mm)"))
+
+with(quickiefield, boxplot(X18.CS.scaled~Locality, col=(c("black","black","black","black","dimgray","dimgray", "white")),medcol=(c("white", "white","white","white","white","white","black" )), main="Field P wings-18 landmarks CS measure", xlab="Locality", ylab="Centroid Size (mm)"))
+
+
+#lab MANOVA
+fit13<-manova (CS.scaled.13~Locality*Temp.Num*Sex, data=quickie)
+summary(fit13, test="Wilks")
 ```
 
 ## R Markdown

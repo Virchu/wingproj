@@ -6,6 +6,23 @@ output: html_document
 ---
 
 ```
+#2017_08_23 redo for 18field
+#field collected
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/Repeat score testing")
+mainfile<-read.csv("2017_08_23 Field 18 landmarks scaled.csv", header=TRUE)
+mainfile$Locality=factor(mainfile$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+
+winglist<-read.csv("List for field repeatability.csv", header=TRUE)
+
+comp<-merge(mainfile, winglist, by="Code")
+
+write.csv(comp, "Field 18L original landmarks for repeatability.csv")
+
+classifier_file<-subset(comp, select=c(Code,Biome, State, Latitude, Locality, Family, Temp, Well,Sex, Wing.length..mm.))
+
+write.csv(classifier_file, "Lab reared specimens for geometric morphometrics final.csv")
+
 #field collected
 setwd("C:/Users/vmc04/Dropbox/Life history data")
 mydata<-read.csv("Life history data 07112017.csv", header=TRUE)
