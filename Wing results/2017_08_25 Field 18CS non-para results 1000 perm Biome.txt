@@ -1,0 +1,129 @@
+LISTE de n 
+ 159 71 11
+
+
+LISTE de moyennes 
+ 2.7665467597484268 2.9292954807042255 2.9041116479999998
+
+
+LISTE de variances 
+ 0.03019861453126373 0.041341619401122395 0.012552136087333968
+
+
+ATTENTION: 
+Pour les tests parametriques qui suivent, les Ã©chantillons utilisÃ©s doivent Ãªtre alÃ©atoires, simples et indÃ©pendants. 
+La variable Ã©tudiÃ©e doit se distribuer selon une loi normale dans les deux populations 
+dont sont extraits les Ã©chantillons
+
+
+
+Variances comparÃ©es groupe 1 avec groupe 2 
+ Effectifs  159 	<-> 71
+ Variances  0.03019861453126373 	<-> 0.041341619401122395 )
+ Std dev.:  0.17377748568575771 	<-> 0.20332638638681994
+La valeur observÃ©e de la statistique de test F: 1.3689905991654896 
+DegrÃ©s de libertÃ©: 70 y 158 
+P :  0.11000325970806268
+
+Variances comparÃ©es groupe 1 avec groupe 3 
+ Effectifs  159 	<-> 11
+ Variances  0.03019861453126373 	<-> 0.012552136087333968 )
+ Std dev.:  0.17377748568575771 	<-> 0.11203631593074617
+La valeur observÃ©e de la statistique de test F: 2.4058546147963105 
+DegrÃ©s de libertÃ©: 158 y 10 
+P :  0.12482817547255909
+----------------------------
+
+
+Variances comparÃ©es groupe 2 avec groupe 3 
+ Effectifs  71 	<-> 11
+ Variances  0.041341619401122395 	<-> 0.012552136087333968 )
+ Std dev.:  0.20332638638681994 	<-> 0.11203631593074617
+La valeur observÃ©e de la statistique de test F: 3.2935923506150591 
+DegrÃ©s de libertÃ©: 70 y 10 
+P :  0.044085369881071257
+----------------------------
+
+liste 2.7665467597484268 2.9292954807042255 2.9041116479999998
+
+Moyennes comparÃ©es groupe 1 avec groupe 2 ( 2.7665467597484268 avec 2.9292954807042255 )
+
+t = 6.2184823343136273 
+P = 2.3708466301286535e-09 
+DegrÃ©s de libertÃ©: 228
+
+Moyennes comparÃ©es groupe 1 avec groupe 3 ( 2.7665467597484268 avec 2.9041116479999998 )
+
+t = 2.5844727533618532 
+P = 0.010602640988353285 
+DegrÃ©s de libertÃ©: 168
+
+Moyennes comparÃ©es groupe 2 avec groupe 3 ( 2.9292954807042255 avec 2.9041116479999998 )
+
+t = 0.40005765752903943 
+P = 0.6901802799680774 
+DegrÃ©s de libertÃ©: 80
+
+---------------------------------------------------------
+Absolute differences of centroid sizes between groups
+---------------------------------------------------------
+
+1 -  2	 0.16274872095579873
+1 -  3	 0.13756488825157298
+2 -  3	 0.02518383270422575
+
+-------------------------------------------------------
+Absolute differences of centroid sizes between groups
+----------------------- E  N  D  --------------------------
+
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 1 y 2:	P = 0.00000
+ t random mas grande 0 veces sobre 1000
+->SIGNIFICATIF  (< 0.016666666666666666)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 1 y 2:	P = 0.15200
+ f random mas grande 152 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.016666666666666666
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 1 y 3:	P = 0.00900
+ t random mas grande 9 veces sobre 1000
+->SIGNIFICATIF  (< 0.016666666666666666)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 1 y 3:	P = 0.08100
+ f random mas grande 81 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.016666666666666666
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 2 y 3:	P = 0.70200
+ t random mas grande 702 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.016666666666666666
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 2 y 3:	P = 0.02200
+ f random mas grande 22 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.016666666666666666
+
+_____________________________________________
+
+
+NIVEAU I	COMPARAISONS DES MOYENNES
+Table des valeurs de P apres 1000 permutations
+
+_2  0.0000
+_3  0.0090 0.7020
+
+NIVEAU I	COMPARAISONS DES VARIANCES
+Table des valeurs de P apres 1000 permutations
+
+_2  0.1520
+_3  0.0810 0.0220

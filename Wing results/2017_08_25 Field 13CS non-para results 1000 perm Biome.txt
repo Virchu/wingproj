@@ -1,0 +1,114 @@
+
+
+Variances comparÃ©es groupe 1 avec groupe 2 
+ Effectifs  159 	<-> 71
+ Variances  0.036046306957968323 	<-> 0.053788523337286925 )
+ Std dev.:  0.18985864994244619 	<-> 0.23192352907216404
+La valeur observÃ©e de la statistique de test F: 1.4922062168534174 
+DegrÃ©s de libertÃ©: 70 y 158 
+P :  0.041496307768573937
+
+Variances comparÃ©es groupe 1 avec groupe 3 
+ Effectifs  159 	<-> 11
+ Variances  0.036046306957968323 	<-> 0.011799516475214466 )
+ Std dev.:  0.18985864994244619 	<-> 0.1086255792859788
+La valeur observÃ©e de la statistique de test F: 3.0548969556240353 
+DegrÃ©s de libertÃ©: 158 y 10 
+P :  0.054362671039545951
+----------------------------
+
+
+Variances comparÃ©es groupe 2 avec groupe 3 
+ Effectifs  71 	<-> 11
+ Variances  0.053788523337286925 	<-> 0.011799516475214466 )
+ Std dev.:  0.23192352907216404 	<-> 0.1086255792859788
+La valeur observÃ©e de la statistique de test F: 4.5585362290287641 
+DegrÃ©s de libertÃ©: 70 y 10 
+P :  0.012615171691136684
+----------------------------
+
+liste 3.1543802262830192 3.3279147782676071 3.2452734427272727
+
+Moyennes comparÃ©es groupe 1 avec groupe 2 ( 3.1543802262830192 avec 3.3279147782676071 )
+
+t = 5.9684265614441152 
+P = 9.0870320157421247e-09 
+DegrÃ©s de libertÃ©: 228
+
+Moyennes comparÃ©es groupe 1 avec groupe 3 ( 3.1543802262830192 avec 3.2452734427272727 )
+
+t = 1.5672733666235383 
+P = 0.11893243199839709 
+DegrÃ©s de libertÃ©: 168
+
+Moyennes comparÃ©es groupe 2 avec groupe 3 ( 3.3279147782676071 avec 3.2452734427272727 )
+
+t = 1.1576212502332122 
+P = 0.25046318995821304 
+DegrÃ©s de libertÃ©: 80
+
+---------------------------------------------------------
+Absolute differences of centroid sizes between groups
+---------------------------------------------------------
+
+1 -  2	 0.17353455198458789
+1 -  3	 0.090893216444253522
+2 -  3	 0.082641335540334371
+
+-------------------------------------------------------
+Absolute differences of centroid sizes between groups
+----------------------- E  N  D  --------------------------
+
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 1 y 2:	P = 0.00000
+ t random mas grande 0 veces sobre 1000
+->SIGNIFICATIF  (< 0.016666666666666666)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 1 y 2:	P = 0.07200
+ f random mas grande 72 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.016666666666666666
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 1 y 3:	P = 0.13000
+ t random mas grande 130 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.016666666666666666
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 1 y 3:	P = 0.04400
+ f random mas grande 44 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.016666666666666666
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 2 y 3:	P = 0.26100
+ t random mas grande 261 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.016666666666666666
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 2 y 3:	P = 0.01500
+ f random mas grande 15 veces sobre 1000
+->SIGNIFICATIF (< 0.016666666666666666)
+
+_____________________________________________
+
+
+NIVEAU I	COMPARAISONS DES MOYENNES
+Table des valeurs de P apres 1000 permutations
+
+_2  0.0000
+_3  0.1300 0.2610
+
+NIVEAU I	COMPARAISONS DES VARIANCES
+Table des valeurs de P apres 1000 permutations
+
+_2  0.0720
+_3  0.0440 0.0150
+
+

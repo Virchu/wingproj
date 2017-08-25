@@ -1,0 +1,58 @@
+---
+title: "Factorial ANOVA wings"
+author: "Virginia Chu"
+date: "August 25, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#2017_08_25 
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/Summary wing excel files")
+
+Wing_lab<-read.csv("2017_08_20 Wing lab cs length 13 18.csv", header=TRUE)
+Wing_lab$Locality=factor(Wing_lab$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+Wing_field<-read.csv("2017_08_23 Field wing length 13 18 cs scaled.csv", header=TRUE)
+Wing_field$Locality=factor(Wing_field$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+#normality testing
+shapiro.test(Wing_lab$CS.18)
+shapiro.test(Wing_lab$CS.scaled.13)
+shapiro.test(Wing_lab$Wing.length..mm.)
+
+
+shapiro.test(Wing_field$X13.CS.scaled)
+shapiro.test(Wing_field$X18.CS.scaled)
+shapiro.test(Wing_field$Length.mm)
+
+#packages to use
+library(car) #Levene's test
+library(compute.es) #Effect sizes
+library(multcomp) #post-hoc test
+library(pastecs) #descriptive stats
+library(reshape) #reshaping data
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+Sources/sites:
+Normality:
+http://www.dummies.com/programming/r/how-to-test-data-normality-in-a-formal-way-in-r/
+Factorial ANOVA:
+http://elderlab.yorku.ca/~elder/teaching/psyc3031/lectures/Lecture%208%20Factorial%20ANOVA%20(GLM%203).pdf
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
