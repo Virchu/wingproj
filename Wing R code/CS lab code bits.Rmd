@@ -71,6 +71,7 @@ print(HSD.test(wing.mod5, 'Locality'))
 wing.mod7=aov(CS.scaled.18~Locality+Sex+Temp.Num, data=quickie)
 summary(wing.mod7)
 
+
 #2017_08_23 update
 setwd("C:/Users/vmc04/Documents/GitHub/wingproj/Summary wing excel files")
 

@@ -27,6 +27,15 @@ family.glmm = bernoulli.glmm, m = 10^4, debug = TRUE)
 proc.time() - ptm
 #the summary of sal-sees that the fixed effects (cross) affects odds of mating
 #and both m and f are significant so should be a part of the model
+
+#to get fixed effect coef
+coef(sal)
+
+#extract variance components
+varcomps(sal)
+
+#confidence intervals
+confint(sal)
 ```
 
 
