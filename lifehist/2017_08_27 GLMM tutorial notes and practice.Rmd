@@ -1,0 +1,48 @@
+---
+title: "GLMM tutorial practice"
+author: "Virginia Chu"
+date: "August 27, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+install.packages("glmm")
+library(glmm)
+data(salamander)
+names(salamander)
+head(salamander)
+summary(salamander)
+
+#glm with a logit link
+set.seed(1234)
+ptm<-proc.time()
+#mate is outcome, male and female as random effects
+#use "0+Cross" to see the effect of each level
+#0+ female and male shows each cross and center on 0, usually want random effects to be centered on 0
+# varcomps allows for naming the list of variance components, same order as your stated random list
+#m is monte carlo sample size, the larger, the more accurate. 10^4 is for a quick computation
+sal <- glmm(Mate ~ 0 + Cross, random = list(~ 0 + Female,
+~ 0 + Male), varcomps.names = c("F", "M"), data = salamander,
+family.glmm = bernoulli.glmm, m = 10^4, debug = TRUE)
+proc.time() - ptm
+#the summary of sal-sees that the fixed effects (cross) affects odds of mating
+#and both m and f are significant so should be a part of the model
+```
+
+
+## R Markdown
+Tutoial- https://cran.r-project.org/web/packages/glmm/vignettes/intro.pdf
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
