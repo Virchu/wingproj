@@ -1,0 +1,56 @@
+---
+title: "2017_08_26 Lifehist glm"
+author: "Virginia Chu"
+date: "August 26, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#2017_08_26 glm attempt
+setwd("C:/Users/virgc/Dropbox/Life history data")
+lifedat<-read.csv("2017_08_26 Life history data.csv", header=TRUE)
+#ruybal- dev is 1/time to adult
+lifedat$rate<- 1/lifedat$EmTime
+#order by latitude
+lifedat$Locality=factor(lifedat$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+#
+mod1<-glm(rate~Temp*Locality*Sex,data=lifedat,family=Gamma);summary(mod1)
+mod2<-glm(rate~Temp,data=lifedat,family=Gamma);summary(mod2)
+mod3<-glm(rate~Temp*Sex,data=lifedat,family=Gamma);summary(mod3)
+mod4<-glm(rate~Temp*Locality,data=lifedat,family=Gamma);summary(mod4)
+mod5<-glm(rate~Temp*Biome,data=lifedat,family=Gamma);summary(mod5)
+mod6<-glm(rate~Temp*Biome*Sex,data=lifedat,family=Gamma);summary(mod6)
+mod7<-glm(rate~Temp*State*Sex,data=lifedat,family=Gamma);summary(mod7)
+mod8<-glm(rate~Temp*State,data=lifedat,family=Gamma);summary(mod8)
+AIC(mod1,mod2,mod3,mod4,mod5,mod6,mod7, mod8)
+
+#or this for automatic model building?
+#makes a big model
+lifebiglm <- lm(rate ~ (Family+Well)^2+(Family+Well)*(Temp+Locality+Sex), lifedat)
+#steps through to remove parts to minimize AIC, trave=FALSE blocks model output clutter
+lifesmallm <- step(lifebiglm,trace=FALSE)
+#d
+drop1(smallm,test="F")
+finalm <- lm(undercount~equip + econ  + perAA + equip:econ + equip:perAA, gavote)
+sumary(finalm)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

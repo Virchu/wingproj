@@ -1,0 +1,87 @@
+---
+title: "LifeHist Ruybal practice"
+author: "Virginia Chu"
+date: "August 26, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+rm(list=ls()) # clears workspace
+setwd("C:/Users/virgc/OneDrive/Documents/GitHub/wingproj/lifehist")
+Ddat<-read.csv("updated_Lsurv_12-17-13_Chu.csv", header=TRUE)
+library(ggplot2)
+library(lme4)
+
+
+######## Unstacking FE (female emergence?)##########
+#attach() calls data file as default, so you don't need to retype it
+attach(Ddat)
+#create var x for each population, temp, date info
+x<-1:length(pop_Temp)
+#create var y - to make new lines for each female found on each date, so increased rows
+y<-rep.int(x[is.finite(EG_fem)==T],times=EG_fem[is.finite(EG_fem)==T]) 
+#create new data with added y var, same var, but much more data...
+UDdat<-Ddat[y,]
+#changes udate so that each fem data is spread out
+UDdat$EG_fem<-UDdat$EG_fem-UDdat$EG_fem+1
+#detach ddat from being global
+detach(Ddat)
+#adds rate of development for females by group
+UDdat$rate<-1/UDdat$age
+######## ------------- ##########
+
+
+########################
+## GLM analysis for FET
+########################
+
+#organize by lat and elev
+UDdat$pop=relevel(UDdat$pop,ref="MD")
+#adds column with temp squared
+UDdat$Temp2=UDdat$Temp^2
+
+## mod1 = best fitting
+## also, note that temp better fitting than temp^2
+mod1r<-glm(rate~Temp*pop+Temp2*pop,data=UDdat,family=Gamma);summary(mod1r)
+
+#why temp2? 
+
+mod2r<-glm(rate~Temp+pop+Temp2+pop,data=UDdat,family=Gamma);summary(mod2r)
+mod3r<-glm(rate~Temp*pop,data=UDdat,family=Gamma);summary(mod3r)
+mod4r<-glm(rate~Temp2*pop,data=UDdat,family=Gamma);summary(mod4r)
+mod5r<-glm(rate~Temp2,data=UDdat,family=Gamma);summary(mod5r)
+mod6r<-glm(rate~pop,data=UDdat,family=Gamma);summary(mod6r)
+mod7r<-glm(rate~Temp,data=UDdat,family=Gamma);summary(mod7r)
+AIC(mod1r,mod2r,mod3r,mod4r,mod5r,mod6r,mod7r)
+
+### Extracting GLM predicted lines 
+
+ndat1<-data.frame(Temp=rep(16:31,4))
+ndat1$Temp2<-ndat1$Temp^2
+ndat1$pop<-factor(rep(c("MD","CG","NB","2100"),each=16))
+
+y2<- predict(mod1, newdata=ndat1, type = "response")
+ndat1$Predicted<-y2
+
+qplot(x=Temp,y=Predicted,col=pop,data=ndat1,geom="line")
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

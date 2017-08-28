@@ -1,0 +1,85 @@
+> mod1<-glm(rate~Temp*Locality*Sex,data=lifedat,family=Gamma);summary(mod1)
+
+Call:
+glm(formula = rate ~ Temp * Locality * Sex, family = Gamma, data = lifedat)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-0.34794  -0.07935  -0.00933   0.07091   0.44500  
+
+Coefficients: (19 not defined because of singularities)
+                        Estimate Std. Error t value Pr(>|t|)    
+(Intercept)            16.975641   2.345447   7.238 5.97e-13 ***
+TempB                  -3.337201   0.358109  -9.319  < 2e-16 ***
+TempC                  -4.041481   2.922904  -1.383 0.166877    
+LocalityAPR             1.146346   0.366982   3.124 0.001805 ** 
+LocalityRPV             2.558976   0.393079   6.510 8.98e-11 ***
+LocalityRMO             3.837704   0.406206   9.448  < 2e-16 ***
+LocalityTLC             3.024359   0.485761   6.226 5.56e-10 ***
+LocalityTPN             4.101536   0.801693   5.116 3.35e-07 ***
+LocalitySJU             5.911875   0.472918  12.501  < 2e-16 ***
+SexF                    3.776063   2.363964   1.597 0.110310    
+SexM                    3.403779   2.328496   1.462 0.143918    
+TempB:LocalityAPR      -0.612066   0.474985  -1.289 0.197651    
+TempC:LocalityAPR       0.168012   0.451899   0.372 0.710079    
+TempB:LocalityRPV      -1.077469   0.506006  -2.129 0.033318 *  
+TempC:LocalityRPV      -0.437372   0.486425  -0.899 0.368653    
+TempB:LocalityRMO      -2.026473   0.510236  -3.972 7.33e-05 ***
+TempC:LocalityRMO      -1.771864   0.495576  -3.575 0.000356 ***
+TempB:LocalityTLC      -0.003076   0.638906  -0.005 0.996159    
+TempC:LocalityTLC       0.419779   0.604596   0.694 0.487548    
+TempB:LocalityTPN      -0.031690   0.992508  -0.032 0.974531    
+TempC:LocalityTPN       0.795714   1.012193   0.786 0.431864    
+TempB:LocalitySJU      -2.571974   0.596253  -4.314 1.67e-05 ***
+TempC:LocalitySJU      -2.238695   0.713524  -3.138 0.001723 ** 
+TempB:SexF             -0.593561   0.529894  -1.120 0.262753    
+TempC:SexF             -1.724324   2.947086  -0.585 0.558535    
+TempB:SexM                    NA         NA      NA       NA    
+TempC:SexM             -2.040178   2.903228  -0.703 0.482288    
+LocalityAPR:SexF       -0.585215   0.538355  -1.087 0.277118    
+LocalityRPV:SexF        0.003271   0.567543   0.006 0.995402    
+LocalityRMO:SexF       -0.313481   0.572939  -0.547 0.584326    
+LocalityTLC:SexF       -0.219749   0.696766  -0.315 0.752495    
+LocalityTPN:SexF       -1.076552   1.069265  -1.007 0.314117    
+LocalitySJU:SexF        0.095863   0.673549   0.142 0.886834    
+LocalityAPR:SexM              NA         NA      NA       NA    
+LocalityRPV:SexM              NA         NA      NA       NA    
+LocalityRMO:SexM              NA         NA      NA       NA    
+LocalityTLC:SexM              NA         NA      NA       NA    
+LocalityTPN:SexM              NA         NA      NA       NA    
+LocalitySJU:SexM              NA         NA      NA       NA    
+TempB:LocalityAPR:SexF  1.303061   0.699049   1.864 0.062427 .  
+TempC:LocalityAPR:SexF -0.084661   0.672263  -0.126 0.899794    
+TempB:LocalityRPV:SexF  0.248134   0.731583   0.339 0.734506    
+TempC:LocalityRPV:SexF -0.265909   0.718615  -0.370 0.711390    
+TempB:LocalityRMO:SexF  0.649245   0.733667   0.885 0.376275    
+TempC:LocalityRMO:SexF -0.091857   0.712794  -0.129 0.897471    
+TempB:LocalityTLC:SexF  1.963332   0.934158   2.102 0.035674 *  
+TempC:LocalityTLC:SexF  0.158383   0.913394   0.173 0.862351    
+TempB:LocalityTPN:SexF  1.798372   1.400330   1.284 0.199169    
+TempC:LocalityTPN:SexF  1.525218   1.457403   1.047 0.295413    
+TempB:LocalitySJU:SexF  1.249390   0.870449   1.435 0.151310    
+TempC:LocalitySJU:SexF -1.922464   1.013394  -1.897 0.057931 .  
+TempB:LocalityAPR:SexM        NA         NA      NA       NA    
+TempC:LocalityAPR:SexM        NA         NA      NA       NA    
+TempB:LocalityRPV:SexM        NA         NA      NA       NA    
+TempC:LocalityRPV:SexM        NA         NA      NA       NA    
+TempB:LocalityRMO:SexM        NA         NA      NA       NA    
+TempC:LocalityRMO:SexM        NA         NA      NA       NA    
+TempB:LocalityTLC:SexM        NA         NA      NA       NA    
+TempC:LocalityTLC:SexM        NA         NA      NA       NA    
+TempB:LocalityTPN:SexM        NA         NA      NA       NA    
+TempC:LocalityTPN:SexM        NA         NA      NA       NA    
+TempB:LocalitySJU:SexM        NA         NA      NA       NA    
+TempC:LocalitySJU:SexM        NA         NA      NA       NA    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Gamma family taken to be 0.01316289)
+
+    Null deviance: 102.052  on 2652  degrees of freedom
+Residual deviance:  33.967  on 2609  degrees of freedom
+  (778 observations deleted due to missingness)
+AIC: -19713
+
+Number of Fisher Scoring iterations: 4
