@@ -1,0 +1,21 @@
+
+Fichier : C:/Users/vmc04/Documents/GitHub/wingproj/Metric disparity/Field 18 PW files/FieldARS18 coord_Aug20_Format_PW.txt
+ - - - Bottom left button WRAP to read LONG LINES - - - hit 2 times the very first time - - - - Bottom left button WRAP to read LONG LINE  - - - - - - then only 1 time is enough - - - -
+
+single matrix	Metric disparity of shape
+For partial warps of a single group, MD is the trace of the variance - covariance matrix
+If you enter a non-zero value for bootstrap, you may ask for another run with another file, and both MD will be compared
+Output will be saved in 'name_of_file_INFO_COVmd.txt' 
+
+File: 	C:/Users/vmc04/Documents/GitHub/wingproj/Metric disparity/Field 18 PW files/FieldARS18 coord_Aug20_Format_PW.txt
+Number of PW scores	 32 
+Number of objects	 17
+------------------------------------------ 
+METRIC DISPARITY (MD) 	=  0.0014139164584398  
+------------------------------------------
+
+Mean of randomized values (pseudo-mean): 0.0013496439994453 	(min 0.00096887000996867, max 0.0019414266298004)
+MD: left tail 		0.0011239280849979
+MD: right tail 		0.0016267492135492
+MD: standard error	 0.00015134019854376
+Data directory C:/Users/vmc04/Documents/GitHub/wingproj/Metric disparity/Field 18 PW files/FieldARS18 coord_Aug20_Format_PW.txt <-> C:/Users/vmc04/Documents/GitHub/wingproj/Metric disparity/Field 18 PW files/FieldARS18 coord_Aug20_Format_PW.txt

@@ -1,0 +1,20 @@
+
+Fichier : C:/Users/vmc04/Documents/GitHub/wingproj/Metric disparity/Field 18 PW files/FieldTPN18 landmark_Format_PW.txt
+
+single matrix	Metric disparity of shape
+For partial warps of a single group, MD is the trace of the variance - covariance matrix
+If you enter a non-zero value for bootstrap, you may ask for another run with another file, and both MD will be compared
+Output will be saved in 'name_of_file_INFO_COVmd.txt' 
+
+File: 	C:/Users/vmc04/Documents/GitHub/wingproj/Metric disparity/Field 18 PW files/FieldTPN18 landmark_Format_PW.txt
+Number of PW scores	 32 
+Number of objects	 17
+------------------------------------------ 
+METRIC DISPARITY (MD) 	=  0.0015581261878533  
+------------------------------------------
+
+Mean of randomized values (pseudo-mean): 0.0015218176492438 	(min 0.00097733224850639, max 0.0021108657324343)
+MD: left tail 		0.0012103232011095
+MD: right tail 		0.0018738644610089
+MD: standard error	 0.00020022868387616
+Data directory C:/Users/vmc04/Documents/GitHub/wingproj/Metric disparity/Field 18 PW files/FieldTPN18 landmark_Format_PW.txt <-> C:/Users/vmc04/Documents/GitHub/wingproj/Metric disparity/Field 18 PW files/FieldTPN18 landmark_Format_PW.txt

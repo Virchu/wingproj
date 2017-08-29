@@ -1,0 +1,12 @@
+C:/Users/vmc04/Documents/GitHub/wingproj/Metric disparity/Field 18/FieldSJU18 coord_Aug20_Format  - Centroid sizes -  1 11 36 0	from C:/Users/vmc04/Documents/GitHub/wingproj/2017_08_Field collected 13-18CLIC txt files/18 landmarks/FieldSJU18 coord_Aug20.txt - TPS like internal (simplified) format - can be converted to other format by using TET	
+1054.7111505578725
+1027.4368323378542
+993.30318746202681
+961.89708389203463
+954.75805544883713
+984.01371941655384
+1030.6546193776287
+978.86910372236298
+1011.3381948905345
+965.11280284856969
+1013.1798403486365

@@ -1,0 +1,18 @@
+C:/Users/vmc04/Documents/GitHub/wingproj/Metric disparity/Field 13/FieldARS13 coord_Aug10_Format  - Centroid sizes -  1 17 26 0	from C:/Users/vmc04/Desktop/Wing saga/Wing field landmark repeat/13 landmarks field repeat/ARS field collected/coord_Aug10.txt - TPS like internal (simplified) format - can be converted to other format by using TET	
+821.4019909698485
+964.34944193163005
+979.85964458024455
+944.96536363061421
+923.82574114385898
+959.60232147729596
+993.01344014453946
+1028.9882259922947
+1069.4041475369502
+974.70792469413038
+946.35714513805328
+941.21370090390769
+962.92055747086431
+921.90329878338798
+952.64409368387362
+807.11051573832481
+932.33816908805227
