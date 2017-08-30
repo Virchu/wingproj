@@ -1,0 +1,679 @@
+
+Fichier : C:/Users/vmc04/Documents/GitHub/wingproj/Pairwise comparisons/Field 13CS test file for var_CS.txt
+
+	Possible INPUT FILES for VAR:
+	..._CS.txt, ..._ARE.txt, ..._PER.txt, or ..._RW.txt.
+    
+	For the repeatability (R) estimation, the INPUT FILE must contain the two successive measurements of exactly the same individuals in exactly the same order (please use concatenate by rows with TET to build the file)
+    
+	For the non-parametric ANOVA of size (NII button) please enter 4 groups.
+    
+
+	NI Button
+	---------
+	NON PARAMETRIC COMPARISONS OF SIZE AND VARIANCE OF SIZE
+	You will be asked to enter a number of permutations to be typed in a small rectangle appearing at the bottom of the widget.
+
+	NII Button
+	---------
+	COMPARAISON DES MESURES DE PLASTICITE PHENOTYPIQUE ENTRE DEUX OU PLUSIEURS ESPECES
+	- Data
+	Le fichier d'entrée contient une seule colonne de chiffres (par exemple les valeurs de taille), avec en toute première ligne un commentaire libre décrivant l'origine des données.
+	- Data structure
+	Ces données sont les valeurs de taille (ou d'une autre variable continue) mesurée dans deux ou plusieurs espèces elles-mêmes examinées dans deux environnements différents. L'ordre des données est donc, pour chaque espèce, les valeurs dans le premier environnement (e1) suivies de celles observées dans le second environnement (e2). Chaque espèce se suit, et dans chaque espèce les deux environnements se succèdent toujours dans le même ordre (par exemple e1 et e2).
+	Il ne peut pas y avoir plus de deux environnements par espèce, et il ne peut pas n'y en avoir qu'un seul.
+
+	Qst Button - Button
+	-------------------
+	Fst equivalent for quantitative, continuous variables. Accepts data from a file containing size, like ...CS.txt or ...ARE.txt or ...PER.txt). Also available for shape in the COV module (menu \"subdivided matrix\") of CLIC.
+
+    Repeatability - Button
+    ----------------------
+    This button accepts either a one column file (containing size, like ...CS.txt or ...ARE.txt or ...PER.txt) or a relative warps file (..._RW.txt).
+
+
+Comment line groups- 17 50 47 45 54 17 11- Field 13CS
+
+Nombre de données : 241
+
+Data (vecteur): 
+2.683403315 3.150392278 3.2010619 3.087067255 3.018007119 3.134884111 3.244033477 3.361557979 3.493591038 3.184231965 3.091614006 3.074811107 3.145724315 3.011726773 3.112152572 2.636715101 3.045816008 2.880206539 3.030437472 3.330192619 3.290431352
+... etc.
+
+Total number of rows 241
+Number of columns (variables) : 1
+
+
+LISTE de n 
+ 17 50 47 45 54 17 11
+
+
+LISTE de moyennes 
+ 3.0986347246470589 3.14828384642 3.1313177588723398 3.2063008593777771 3.2682889415185201 3.2254882299411758 3.6962776705454545
+
+
+LISTE de variances 
+ 0.042115769108512204 0.036376694208468077 0.031653412762945962 0.035953529033141508 0.029255379712985159 0.027523329201812489 0.010447213093479906
+
+
+ATTENTION: 
+Pour les tests parametriques qui suivent, les échantillons utilisés doivent être aléatoires, simples et indépendants. 
+La variable étudiée doit se distribuer selon une loi normale dans les deux populations 
+dont sont extraits les échantillons
+
+
+
+Variances comparées groupe 1 avec groupe 2 
+ Effectifs  17 	<-> 50
+ Variances  0.042115769108512204 	<-> 0.036376694208468077 )
+ Std dev.:  0.20522126865535209 	<-> 0.19072675273403067
+La valeur observée de la statistique de test F: 1.157767906757952 
+Degrés de liberté: 16 y 49 
+P :  0.66704976916496372
+
+Variances comparées groupe 1 avec groupe 3 
+ Effectifs  17 	<-> 47
+ Variances  0.042115769108512204 	<-> 0.031653412762945962 )
+ Std dev.:  0.20522126865535209 	<-> 0.17791406004851321
+La valeur observée de la statistique de test F: 1.3305285412324848 
+Degrés de liberté: 16 y 46 
+P :  0.44058194920099703
+
+Variances comparées groupe 1 avec groupe 4 
+ Effectifs  17 	<-> 45
+ Variances  0.042115769108512204 	<-> 0.035953529033141508 )
+ Std dev.:  0.20522126865535209 	<-> 0.18961415831403916
+La valeur observée de la statistique de test F: 1.171394581869569 
+Degrés de liberté: 16 y 44 
+P :  0.65362153661661715
+
+Variances comparées groupe 1 avec groupe 5 
+ Effectifs  17 	<-> 54
+ Variances  0.042115769108512204 	<-> 0.029255379712985159 )
+ Std dev.:  0.20522126865535209 	<-> 0.17104204077648616
+La valeur observée de la statistique de test F: 1.439590582029564 
+Degrés de liberté: 16 y 53 
+P :  0.31920229549479551
+
+Variances comparées groupe 1 avec groupe 6 
+ Effectifs  17 	<-> 17
+ Variances  0.042115769108512204 	<-> 0.027523329201812489 )
+ Std dev.:  0.20522126865535209 	<-> 0.16590156479615401
+La valeur observée de la statistique de test F: 1.5301844046445792 
+Degrés de liberté: 16 y 16 
+P :  0.4039884433976435
+
+Variances comparées groupe 1 avec groupe 7 
+ Effectifs  17 	<-> 11
+ Variances  0.042115769108512204 	<-> 0.010447213093479906 )
+ Std dev.:  0.20522126865535209 	<-> 0.10221160938699628
+La valeur observée de la statistique de test F: 4.0312922433636018 
+Degrés de liberté: 16 y 10 
+P :  0.030383472376855902
+----------------------------
+
+
+Variances comparées groupe 2 avec groupe 3 
+ Effectifs  50 	<-> 47
+ Variances  0.036376694208468077 	<-> 0.031653412762945962 )
+ Std dev.:  0.19072675273403067 	<-> 0.17791406004851321
+La valeur observée de la statistique de test F: 1.1492187108194309 
+Degrés de liberté: 49 y 46 
+P :  0.6362692887729926
+
+Variances comparées groupe 2 avec groupe 4 
+ Effectifs  50 	<-> 45
+ Variances  0.036376694208468077 	<-> 0.035953529033141508 )
+ Std dev.:  0.19072675273403067 	<-> 0.18961415831403916
+La valeur observée de la statistique de test F: 1.0117697813457061 
+Degrés de liberté: 49 y 44 
+P :  0.97260672418649596
+
+Variances comparées groupe 2 avec groupe 5 
+ Effectifs  50 	<-> 54
+ Variances  0.036376694208468077 	<-> 0.029255379712985159 )
+ Std dev.:  0.19072675273403067 	<-> 0.17104204077648616
+La valeur observée de la statistique de test F: 1.2434189733767866 
+Degrés de liberté: 49 y 53 
+P :  0.43683782302573593
+
+Variances comparées groupe 2 avec groupe 6 
+ Effectifs  50 	<-> 17
+ Variances  0.036376694208468077 	<-> 0.027523329201812489 )
+ Std dev.:  0.19072675273403067 	<-> 0.16590156479615401
+La valeur observée de la statistique de test F: 1.3216676638839377 
+Degrés de liberté: 49 y 16 
+P :  0.55300976989379658
+
+Variances comparées groupe 2 avec groupe 7 
+ Effectifs  50 	<-> 11
+ Variances  0.036376694208468077 	<-> 0.010447213093479906 )
+ Std dev.:  0.19072675273403067 	<-> 0.10221160938699628
+La valeur observée de la statistique de test F: 3.4819519696760786 
+Degrés de liberté: 49 y 10 
+P :  0.037785260726454828
+----------------------------
+
+
+Variances comparées groupe 3 avec groupe 4 
+ Effectifs  47 	<-> 45
+ Variances  0.031653412762945962 	<-> 0.035953529033141508 )
+ Std dev.:  0.17791406004851321 	<-> 0.18961415831403916
+La valeur observée de la statistique de test F: 1.1358500046234932 
+Degrés de liberté: 44 y 46 
+P :  0.66934227377372157
+
+Variances comparées groupe 3 avec groupe 5 
+ Effectifs  47 	<-> 54
+ Variances  0.031653412762945962 	<-> 0.029255379712985159 )
+ Std dev.:  0.17791406004851321 	<-> 0.17104204077648616
+La valeur observée de la statistique de test F: 1.0819689600164863 
+Degrés de liberté: 46 y 53 
+P :  0.77793657170751551
+
+Variances comparées groupe 3 avec groupe 6 
+ Effectifs  47 	<-> 17
+ Variances  0.031653412762945962 	<-> 0.027523329201812489 )
+ Std dev.:  0.17791406004851321 	<-> 0.16590156479615401
+La valeur observée de la statistique de test F: 1.1500575577485552 
+Degrés de liberté: 46 y 16 
+P :  0.7893826253584848
+
+Variances comparées groupe 3 avec groupe 7 
+ Effectifs  47 	<-> 11
+ Variances  0.031653412762945962 	<-> 0.010447213093479906 )
+ Std dev.:  0.17791406004851321 	<-> 0.10221160938699628
+La valeur observée de la statistique de test F: 3.0298427417643867 
+Degrés de liberté: 46 y 10 
+P :  0.062955669207807707
+----------------------------
+
+
+Variances comparées groupe 4 avec groupe 5 
+ Effectifs  45 	<-> 54
+ Variances  0.035953529033141508 	<-> 0.029255379712985159 )
+ Std dev.:  0.18961415831403916 	<-> 0.17104204077648616
+La valeur observée de la statistique de test F: 1.2289544482372019 
+Degrés de liberté: 44 y 53 
+P :  0.47048715004934993
+
+Variances comparées groupe 4 avec groupe 6 
+ Effectifs  45 	<-> 17
+ Variances  0.035953529033141508 	<-> 0.027523329201812489 )
+ Std dev.:  0.18961415831403916 	<-> 0.16590156479615401
+La valeur observée de la statistique de test F: 1.3062928822859796 
+Degrés de liberté: 44 y 16 
+P :  0.57350379302789523
+
+Variances comparées groupe 4 avec groupe 7 
+ Effectifs  45 	<-> 11
+ Variances  0.035953529033141508 	<-> 0.010447213093479906 )
+ Std dev.:  0.18961415831403916 	<-> 0.10221160938699628
+La valeur observée de la statistique de test F: 3.4414468922415362 
+Degrés de liberté: 44 y 10 
+P :  0.040191981022148271
+----------------------------
+
+
+Variances comparées groupe 5 avec groupe 6 
+ Effectifs  54 	<-> 17
+ Variances  0.029255379712985159 	<-> 0.027523329201812489 )
+ Std dev.:  0.17104204077648616 	<-> 0.16590156479615401
+La valeur observée de la statistique de test F: 1.062930269026416 
+Degrés de liberté: 53 y 16 
+P :  0.93885777674099025
+
+Variances comparées groupe 5 avec groupe 7 
+ Effectifs  54 	<-> 11
+ Variances  0.029255379712985159 	<-> 0.010447213093479906 )
+ Std dev.:  0.17104204077648616 	<-> 0.10221160938699628
+La valeur observée de la statistique de test F: 2.8003046794597699 
+Degrés de liberté: 53 y 10 
+P :  0.081088916819938461
+----------------------------
+
+
+Variances comparées groupe 6 avec groupe 7 
+ Effectifs  17 	<-> 11
+ Variances  0.027523329201812489 	<-> 0.010447213093479906 )
+ Std dev.:  0.16590156479615401 	<-> 0.10221160938699628
+La valeur observée de la statistique de test F: 2.6345140044084836 
+Degrés de liberté: 16 y 10 
+P :  0.12419064914366817
+----------------------------
+
+liste 3.0986347246470589 3.14828384642 3.1313177588723398 3.2063008593777771 3.2682889415185201 3.2254882299411758 3.6962776705454545
+
+Moyennes comparées groupe 1 avec groupe 2 ( 3.0986347246470589 avec 3.14828384642 )
+
+t = 0.90970104587998279 
+P = 0.36634118269197069 
+Degrés de liberté: 65
+
+Moyennes comparées groupe 1 avec groupe 3 ( 3.0986347246470589 avec 3.1313177588723398 )
+
+t = 0.62304736258811455 
+P = 0.535538607413373 
+Degrés de liberté: 62
+
+Moyennes comparées groupe 1 avec groupe 4 ( 3.0986347246470589 avec 3.2063008593777771 )
+
+t = 1.9504669414220173 
+P = 0.055796228897949884 
+Degrés de liberté: 60
+
+Moyennes comparées groupe 1 avec groupe 5 ( 3.0986347246470589 avec 3.2682889415185201 )
+
+t = 3.3976305599082619 
+P = 0.0011321368461283399 
+Degrés de liberté: 69
+
+Moyennes comparées groupe 1 avec groupe 6 ( 3.0986347246470589 avec 3.2254882299411758 )
+
+t = 1.981985000674471 
+P = 0.056124723880450311 
+Degrés de liberté: 32
+
+Moyennes comparées groupe 1 avec groupe 7 ( 3.0986347246470589 avec 3.6962776705454545 )
+
+t = 8.9266791726673489 
+P = 2.133599519282825e-09 
+Degrés de liberté: 26
+
+Moyennes comparées groupe 2 avec groupe 3 ( 3.14828384642 avec 3.1313177588723398 )
+
+t = 0.45229169538495112 
+P = 0.65208995528075153 
+Degrés de liberté: 95
+
+Moyennes comparées groupe 2 avec groupe 4 ( 3.14828384642 avec 3.2063008593777771 )
+
+t = 1.4844706849435705 
+P = 0.14106569070200958 
+Degrés de liberté: 93
+
+Moyennes comparées groupe 2 avec groupe 5 ( 3.14828384642 avec 3.2682889415185201 )
+
+t = 3.3825776405920571 
+P = 0.0010194974359407638 
+Degrés de liberté: 102
+
+Moyennes comparées groupe 2 avec groupe 6 ( 3.14828384642 avec 3.2254882299411758 )
+
+t = 1.4870221894886981 
+P = 0.14184398912615137 
+Degrés de liberté: 65
+
+Moyennes comparées groupe 2 avec groupe 7 ( 3.14828384642 avec 3.6962776705454545 )
+
+t = 9.2011092105951473 
+P = 0.0 
+Degrés de liberté: 59
+
+Moyennes comparées groupe 3 avec groupe 4 ( 3.1313177588723398 avec 3.2063008593777771 )
+
+t = 1.9568212673872913 
+P = 0.053468084381687042 
+Degrés de liberté: 90
+
+Moyennes comparées groupe 3 avec groupe 5 ( 3.1313177588723398 avec 3.2682889415185201 )
+
+t = 3.9399859036583709 
+P = 0.0001518935184137149 
+Degrés de liberté: 99
+
+Moyennes comparées groupe 3 avec groupe 6 ( 3.1313177588723398 avec 3.2254882299411758 )
+
+t = 1.9025038869746682 
+P = 0.061752211356151054 
+Degrés de liberté: 62
+
+Moyennes comparées groupe 3 avec groupe 7 ( 3.1313177588723398 avec 3.6962776705454545 )
+
+t = 10.104317454150706 
+P = 3.1530333899354446e-14 
+Degrés de liberté: 56
+
+Moyennes comparées groupe 4 avec groupe 5 ( 3.2063008593777771 avec 3.2682889415185201 )
+
+t = 1.7089711529039093 
+P = 0.090654077412783973 
+Degrés de liberté: 97
+
+Moyennes comparées groupe 4 avec groupe 6 ( 3.2063008593777771 avec 3.2254882299411758 )
+
+t = 0.36711328861381826 
+P = 0.71482616858446857 
+Degrés de liberté: 60
+
+Moyennes comparées groupe 4 avec groupe 7 ( 3.2063008593777771 avec 3.6962776705454545 )
+
+t = 8.2432252414369387 
+P = 4.0032421821933895e-11 
+Degrés de liberté: 54
+
+Moyennes comparées groupe 5 avec groupe 6 ( 3.2682889415185201 avec 3.2254882299411758 )
+
+t = 0.90602892418775494 
+P = 0.36807359638047621 
+Degrés de liberté: 69
+
+Moyennes comparées groupe 5 avec groupe 7 ( 3.2682889415185201 avec 3.6962776705454545 )
+
+t = 7.9825050134515951 
+P = 0.0 
+Degrés de liberté: 63
+
+Moyennes comparées groupe 6 avec groupe 7 ( 3.2254882299411758 avec 3.6962776705454545 )
+
+t = 8.4046286908269554 
+P = 6.92677515345963e-09 
+Degrés de liberté: 26
+
+---------------------------------------------------------
+Absolute differences of centroid sizes between groups
+---------------------------------------------------------
+
+1 -  2	 0.049649121772941118
+1 -  3	 0.032683034225280849
+1 -  4	 0.10766613473071818
+1 -  5	 0.16965421687146121
+1 -  6	 0.12685350529411688
+1 -  7	 0.59764294589839562
+2 -  3	 0.016966087547660269
+2 -  4	 0.058017012957777059
+2 -  5	 0.12000509509852009
+2 -  6	 0.077204383521175757
+2 -  7	 0.5479938241254545
+3 -  4	 0.074983100505437328
+3 -  5	 0.13697118264618036
+3 -  6	 0.094170471068836026
+3 -  7	 0.56495991167311477
+4 -  5	 0.061988082140743028
+4 -  6	 0.019187370563398698
+4 -  7	 0.48997681116767744
+5 -  6	 0.04280071157734433
+5 -  7	 0.42798872902693441
+6 -  7	 0.47078944060427874
+
+-------------------------------------------------------
+Absolute differences of centroid sizes between groups
+----------------------- E  N  D  --------------------------
+
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 1 y 2:	P = 0.35900
+ t random mas grande 359 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 1 y 2:	P = 0.73300
+ f random mas grande 733 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 1 y 3:	P = 0.53600
+ t random mas grande 536 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 1 y 3:	P = 0.54900
+ f random mas grande 549 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 1 y 4:	P = 0.05000
+ t random mas grande 50 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 1 y 4:	P = 0.73500
+ f random mas grande 735 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 1 y 5:	P = 0.00000
+ t random mas grande 0 veces sobre 1000
+->SIGNIFICATIF  (< 0.0023809523809523812)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 1 y 5:	P = 0.42400
+ f random mas grande 424 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 1 y 6:	P = 0.05800
+ t random mas grande 58 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 1 y 6:	P = 0.46000
+ f random mas grande 460 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 1 y 7:	P = 0.00000
+ t random mas grande 0 veces sobre 1000
+->SIGNIFICATIF  (< 0.0023809523809523812)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 1 y 7:	P = 0.04400
+ f random mas grande 44 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 2 y 3:	P = 0.66600
+ t random mas grande 666 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 2 y 3:	P = 0.65100
+ f random mas grande 651 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 2 y 4:	P = 0.12800
+ t random mas grande 128 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 2 y 4:	P = 0.96400
+ f random mas grande 964 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 2 y 5:	P = 0.00000
+ t random mas grande 0 veces sobre 1000
+->SIGNIFICATIF  (< 0.0023809523809523812)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 2 y 5:	P = 0.46000
+ f random mas grande 460 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 2 y 6:	P = 0.14900
+ t random mas grande 149 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 2 y 6:	P = 0.55800
+ f random mas grande 558 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 2 y 7:	P = 0.00000
+ t random mas grande 0 veces sobre 1000
+->SIGNIFICATIF  (< 0.0023809523809523812)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 2 y 7:	P = 0.04700
+ f random mas grande 47 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 3 y 4:	P = 0.04500
+ t random mas grande 45 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 3 y 4:	P = 0.68600
+ f random mas grande 686 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 3 y 5:	P = 0.00000
+ t random mas grande 0 veces sobre 1000
+->SIGNIFICATIF  (< 0.0023809523809523812)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 3 y 5:	P = 0.81500
+ f random mas grande 815 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 3 y 6:	P = 0.05900
+ t random mas grande 59 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 3 y 6:	P = 0.79100
+ f random mas grande 791 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 3 y 7:	P = 0.00000
+ t random mas grande 0 veces sobre 1000
+->SIGNIFICATIF  (< 0.0023809523809523812)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 3 y 7:	P = 0.06200
+ f random mas grande 62 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 4 y 5:	P = 0.09700
+ t random mas grande 97 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 4 y 5:	P = 0.53000
+ f random mas grande 530 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 4 y 6:	P = 0.71300
+ t random mas grande 713 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 4 y 6:	P = 0.56200
+ f random mas grande 562 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 4 y 7:	P = 0.00000
+ t random mas grande 0 veces sobre 1000
+->SIGNIFICATIF  (< 0.0023809523809523812)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 4 y 7:	P = 0.03800
+ f random mas grande 38 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 5 y 6:	P = 0.34900
+ t random mas grande 349 veces sobre 1000
+-> Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 5 y 6:	P = 0.90300
+ f random mas grande 903 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 5 y 7:	P = 0.00000
+ t random mas grande 0 veces sobre 1000
+->SIGNIFICATIF  (< 0.0023809523809523812)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 5 y 7:	P = 0.08200
+ f random mas grande 82 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des moyennes
+entre 6 y 7:	P = 0.00000
+ t random mas grande 0 veces sobre 1000
+->SIGNIFICATIF  (< 0.0023809523809523812)
+_____________________________________________________________
+
+NIVEAU I	Comparaison non parametrique des variances
+entre 6 y 7:	P = 0.13200
+ f random mas grande 132 veces sobre 1000
+->  Starting value for the Bonferroni test : 0.0023809523809523812
+
+_____________________________________________
+
+
+NIVEAU I	COMPARAISONS DES MOYENNES
+Table des valeurs de P apres 1000 permutations
+
+_2  0.3590
+_3  0.5360 0.6660
+_4  0.0500 0.1280 0.0450
+_5  0.0000 0.0000 0.0000 0.0970
+_6  0.0580 0.1490 0.0590 0.7130 0.3490
+_7  0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+
+NIVEAU I	COMPARAISONS DES VARIANCES
+Table des valeurs de P apres 1000 permutations
+
+_2  0.7330
+_3  0.5490 0.6510
+_4  0.7350 0.9640 0.6860
+_5  0.4240 0.4600 0.8150 0.5300
+_6  0.4600 0.5580 0.7910 0.5620 0.9030
+_7  0.0440 0.0470 0.0620 0.0380 0.0820 0.1320
+
+
