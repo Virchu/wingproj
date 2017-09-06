@@ -1,0 +1,9 @@
+
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/Gomez analysis plan/Field 18 Procrustes analysis MOG composite/Field 18 landmarks composite")
+d<- read.table(file = "C:/Users/vmc04/Documents/GitHub/wingproj/Gomez analysis plan/Field 18 Procrustes analysis MOG composite/Field 18 landmarks composite/2017_09_06 Field 18 landmarks scaled_PW_PROCRUSTESphylip.txt",skip=1)
+g<-colMeans(d[1:2,])
+g<-data.frame(g)
+distances<-dist(g,"euclidean")
+cluster<-hclust(distances,method="average")
+png("C:/Users/vmc04/Documents/GitHub/wingproj/Gomez analysis plan/Field 18 Procrustes analysis MOG composite/Field 18 landmarks composite/grout_NJ.png");plot(cluster)
+dev.off()

@@ -1,0 +1,50 @@
+---
+title: "Lab wing 18 organization"
+author: "Virginia Chu"
+date: "September 6, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/2017_08 Lab wings excel files")
+mainfile<-read.csv("2017_09_06 Lab reared 18 landmarks scaled.csv", header=TRUE)
+winglist<-read.csv("2017_09_06 Lab reared specimens for geometric morphometrics final.csv", header=TRUE)
+
+
+
+comp<-merge(mainfile, winglist, by="Code")
+comp$Locality=factor(comp$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+write.csv(comp, "2017_09_06 Lab reared 18 full scaled landmarks.csv")
+check<-read.csv("2017_09_06 Lab reared 18 full scaled landmarks.csv", header=TRUE)
+check$Locality=factor(check$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+#tree building? Field 18
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/Gomez analysis plan/Field 18 Procrustes analysis MOG composite/Field 18 landmarks composite")
+d<- read.table("2017_09_06 Field 18 landmarks scaled_PW_PROCRUSTESphylip1.txt", skip=1)
+g<- colMeans(d[1:7,])
+g<- data.frame(g)
+distances<-dist(g,"euclidean")
+cluster<-hclust(distances,method="average")
+png("C:/Users/vmc04/Documents/GitHub/wingproj/Gomez analysis plan/Field 18 Procrustes analysis MOG composite/Field 18 landmarks composite/grout_NJ.png");plot(cluster)
+dev.off()
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
