@@ -8,12 +8,13 @@ output: html_document
 ```{r setup, include=FALSE}
 #2017_08_26 glm attempt
 setwd("C:/Users/virgc/Dropbox/Life history data")
-lifedat<-read.csv("2017_08_26 Life history data.csv", header=TRUE)
+lifedat<-read.csv("2017_09_19 Life history data.csv", header=TRUE)
 #ruybal- dev is 1/time to adult
-lifedat$rate<- 1/lifedat$EmTime
-#order by latitude
-lifedat$Locality=factor(lifedat$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
 #
+
+#lifedat$tempnum<-if (lifedat$Temp=="A") {20} else if (lifedat$Temp=="B") {24} else if (lifedat$Temp=="C") {28}
+
 mod1<-glm(rate~Temp*Locality*Sex,data=lifedat,family=Gamma);summary(mod1)
 mod2<-glm(rate~Temp,data=lifedat,family=Gamma);summary(mod2)
 mod3<-glm(rate~Temp*Sex,data=lifedat,family=Gamma);summary(mod3)
@@ -26,6 +27,8 @@ modelAIC<-AIC(mod1,mod2,mod3,mod4,mod5,mod6,mod7, mod8)
 print(modelAIC)
 print("mod1<-glm(rate~Temp*Locality*Sex,data=lifedat,family=Gamma);summary(mod1)")
 print(summary(mod1))
+
+
 
 #or this for automatic model building?
 #makes a big model
@@ -63,6 +66,33 @@ print(summary(mod1))
 lifebiglm <- lm(rate ~ (Family+Well)^2+(Family+Well)*(Temp+Locality+Sex), lifedat)
 #steps through to remove parts to minimize AIC, trave=FALSE blocks model output clutter
 lifesmallm <- step(lifebiglm,trace=FALSE)
+
+
+#testing distribution
+install.packages("car")
+require (car)
+install.packages("MASS")
+require(MASS)
+
+lifedat$Pupation.date<-lifedat$Pupation.date + 1
+qqnorm(lifedat$Pupation.date.t, "norm")
+qqp(lifedat$Pupation.date, "lnorm")
+
+
+##testing with continuous temp rather than groups
+mod1tn<-glm(rate~Tempnum*Locality*Sex,data=lifedat,family=Gamma);summary(mod1tn)
+mod2tn<-glm(rate~Tempnum,data=lifedat,family=Gamma);summary(mod2tn)
+mod3tn<-glm(rate~Tempnum*Sex,data=lifedat,family=Gamma);summary(mod3tn)
+mod4tn<-glm(rate~Tempnum*Locality,data=lifedat,family=Gamma);summary(mod4tn)
+mod5tn<-glm(rate~Tempnum*Biome,data=lifedat,family=Gamma);summary(mod5tn)
+mod6tn<-glm(rate~Tempnum*Biome*Sex,data=lifedat,family=Gamma);summary(mod6tn)
+mod7tn<-glm(rate~Tempnum*State*Sex,data=lifedat,family=Gamma);summary(mod7tn)
+mod8tn<-glm(rate~Tempnum*State,data=lifedat,family=Gamma);summary(mod8tn)
+modelAICtn<-AIC(mod1tn,mod2tn,mod3tn,mod4tn,mod5tn,mod6tn,mod7tn, mod8tn)
+print(modelAICtn)
+print("mod4tn<-glm(rate~Tempnum*Locality,data=lifedat,family=Gamma);summary(mod4tn)")
+print(summary(mod4tn))
+
 ```
 
 ## R Markdown
