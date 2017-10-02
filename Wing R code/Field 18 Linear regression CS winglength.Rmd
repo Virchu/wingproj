@@ -1,0 +1,105 @@
+---
+title: "Field wing linear regression, latitude cline, cva?"
+author: "Virginia Chu"
+date: "October 2, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/Gomez analysis plan")
+library(Morpho)
+library(dplyr)
+library(ggplot2)
+
+#link for sutom code http://www.cookbook-r.com/Manipulating_data/Summarizing_data/
+summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
+                      conf.interval=.95, .drop=TRUE) {
+    library(plyr)
+
+    # New version of length which can handle NA's: if na.rm==T, don't count them
+    length2 <- function (x, na.rm=FALSE) {
+        if (na.rm) sum(!is.na(x))
+        else       length(x)
+    }
+
+    # This does the summary. For each group's data frame, return a vector with
+    # N, mean, and sd
+    datac <- ddply(data, groupvars, .drop=.drop,
+      .fun = function(xx, col) {
+        c(N    = length2(xx[[col]], na.rm=na.rm),
+          mean = mean   (xx[[col]], na.rm=na.rm),
+          sd   = sd     (xx[[col]], na.rm=na.rm)
+        )
+      },
+      measurevar
+    )
+
+    # Rename the "mean" column    
+    datac <- rename(datac, c("mean" = measurevar))
+
+    datac$se <- datac$sd / sqrt(datac$N)  # Calculate standard error of the mean
+
+    # Confidence interval multiplier for standard error
+    # Calculate t-statistic for confidence interval: 
+    # e.g., if conf.interval is .95, use .975 (above/below), and use df=N-1
+    ciMult <- qt(conf.interval/2 + .5, datac$N-1)
+    datac$ci <- datac$se * ciMult
+
+    return(datac)
+}
+
+fwing<- read.csv("2017_10_02 Field 18 Partial warps.csv", header = TRUE)
+
+head(fwing)
+cline.mod<-lm(CS~Latitude, data=fwing)
+summary(cline.mod)
+
+#winglenm<- aggregate(fwing$Length.mm, list(lat=fwing$Latitude),mean, na.rm=TRUE)
+#winglensd<- aggregate(fwing$Length.mm, list(lat=fwing$Latitude),sd, na.rm=TRUE)
+
+#csm<- aggregate(fwing$CS, list(lat=fwing$Latitude),mean, na.rm=TRUE)
+#cssd<- aggregate(fwing$CS, list(lat=fwing$Latitude),sd, na.rm=TRUE)
+
+plot(winglenm)
+plot(csm)
+
+winglc<-summarySE(fwing, measurevar="Length.mm", groupvars = c("Latitude..S.","Biome", "Ecoregion"))
+csc<-summarySE(fwing, measurevar="CS", groupvars = c("Latitude..S.","Biome", "Ecoregion"))
+
+#ggplot(winglc, aes(x=Latitude, y=Length.mm, colour=Latitude)) +geom_errorbar(aes(ymin=Length.mm-se, ymax=Length.mm+se), width=.1)+ geom_line()+ geom_point()
+
+#how to get abline http://ggplot2.tidyverse.org/reference/geom_abline.html
+
+coef(lm(fwing$Length.mm~fwing$Latitude..S.))
+
+ggplot(winglc, aes(x=Latitude..S., y=Length.mm)) +geom_errorbar(aes(ymin=Length.mm-se, ymax=Length.mm+se), width=.1)+ geom_point(aes(colour=Biome))+ geom_abline(intercept=2.836, slope=0.0227) +xlab("Latitude (Southern)")+ ylab("Wing Length (mm)")+ ggtitle("Field Wing length across increasing latitude")
+
+coef(lm(fwing$CS~fwing$Latitude..S.))
+
+
+ggplot(csc, aes(x=Latitude..S., y=CS)) +geom_errorbar(aes(ymin=CS-se, ymax=CS+se), width=.1)+ geom_point(aes(colour=Biome))+ geom_abline(intercept=2.627, slope=0.0229) +xlab("Latitude (Southern)")+ ylab("Centroid Size")+ ggtitle("Field Centroid Size across increasing latitude")
+
+```
+
+## R Markdown
+
+Field wing data
+ID  Biome Latitude Latitude..S. Locality Ecoregion Collection.month Season Length.mm CS   PW1-32
+
+http://www.cookbook-r.com/Graphs/Plotting_means_and_error_bars_(ggplot2)/
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
