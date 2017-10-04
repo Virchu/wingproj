@@ -1,0 +1,55 @@
+---
+title: "Field PCA"
+author: "Virginia Chu"
+date: "October 3, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("C:/Users/virgc/GitHub/wingproj/Gomez analysis plan")
+
+require(graphics)
+field_wings<- read.csv("2017_10_02 Field 18 Partial warps.csv", header=TRUE)
+
+field_wings1<-data.frame(field_wings$CS, field_wings$Biome, field_wings$Latitude,field_wings$Ecoregion, field_wings$Season)
+#biome: 1,2,3
+field_wings1$Biome1<-NA
+as.character(field_wings1$Biome)
+within(field_wings, field_wings$Biome1<-ifelse(field_wings$Biome=="Amazon",1,
+                                                 ifelse(field_wings$Biome=="Cerrado",2,3)))
+
+field_wings1$Biome1<- ifelse(field_wings1$Biome=="Amazon",1,(ifelse(field_wings1$Biome=="Cerrado",2,3)))
+#ecoregion: 1,2,3,4
+#season:1,2
+head(field_wings1)
+field.pc<-princomp(field_wings1[,-1], cor=TRUE)
+
+#practice from book
+install.packages("HSAUR2")
+library(HSAUR2)
+data(USairpollution)
+head(USairpollution)
+USairpollution[,-1]
+pairs(USairpollution[,-1], upper.panel = panel.cor)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
