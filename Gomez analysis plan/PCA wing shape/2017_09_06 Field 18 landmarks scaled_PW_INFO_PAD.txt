@@ -1,0 +1,19 @@
+
+Fichier : C:/Users/vmc04/Documents/GitHub/wingproj/Gomez analysis plan/PCA wing shape/2017_09_06 Field 18 landmarks scaled_PW.txt
+
+Archivo	C:/Users/vmc04/Documents/GitHub/wingproj/Gomez analysis plan/PCA wing shape/2017_09_06 Field 18 landmarks scaled_PW.txt
+Comentario
+SAMPLE INFO: C:/Users/vmc04/Documents/GitHub/wingproj/Gomez analysis plan/2017_09_06 Field 18 landmarks scaled - {partial warps scores - U1 y U2 en las dos ultimas columnas} - Field 18 landmarks for analysis- 17 50 47 45 54 17 11 or 67-92-71-11 or 159-71-11
+
+
+----------------- - - - - - - - - - - -----------------
+
+Datos, en parte:
+0.0003536879862514517 -0.00093442735223163941 -0.001172147951551517
+0.0018694209667981653 0.0018709444475340305 0.00041380910397264875
+1.7080599265364354e-05 0.00012891099668654315 -0.00049548101668615819
+0.001188701858613159 0.0010278881872573991 -0.0013302691307165767
+...
+
+241	Nombre total d'individus
+32	Nombre de variables

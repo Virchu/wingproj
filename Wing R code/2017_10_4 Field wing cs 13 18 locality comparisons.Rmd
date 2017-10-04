@@ -1,0 +1,75 @@
+---
+
+title: "2017_10_04 Field wing 18 13 cs comparisons"
+author: "Virginia Chu"
+date: "October 4, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/Summary wing excel files")
+quickiefield<-read.csv("2017_08_23 Field wing length 13 18 cs scaled.csv", header=TRUE)
+quickiefield$Locality=factor(quickiefield$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+View(quickiefield)
+x13cs<-aggregate (quickiefield$X13.CS.scaled, list (LOC= quickiefield$Locality ),mean, na.rm=TRUE)
+write.table(xWL, "clipboard", sep='\t', row.names=FALSE)
+x13cssd<-aggregate (quickiefield$X13.CS.scaled, list (LOC= quickiefield$Locality ),sd, na.rm=TRUE)
+write.table(xWLsd, "clipboard", sep='\t', row.names=FALSE)
+x13cs<-aggregate (quickiefield$X13.CS.scaled, list (LOC= quickiefield$Locality ),mean, na.rm=TRUE)
+write.table(x13cs, "clipboard", sep='\t', row.names=FALSE)
+x13cssd<-aggregate (quickiefield$X13.CS.scaled, list (LOC= quickiefield$Locality ),sd, na.rm=TRUE)
+write.table(X13cssd, "clipboard", sep='\t', row.names=FALSE)
+View(x13cssd)
+x13cssd<-aggregate (quickiefield$X13.CS.scaled, list (LOC= quickiefield$Locality ),sd, na.rm=TRUE)
+write.table(x13cssd, "clipboard", sep='\t', row.names=FALSE)
+x18cs<-aggregate (quickiefield$X18.CS.scaled, list (LOC= quickiefield$Locality ),mean, na.rm=TRUE)
+write.table(x18cs, "clipboard", sep='\t', row.names=FALSE)
+x18cssd<-aggregate (quickiefield$X18.CS.scaled, list (LOC= quickiefield$Locality ),sd, na.rm=TRUE)
+write.table(x18cssd, "clipboard", sep='\t', row.names=FALSE)
+with(quickiefield, boxplot(X13.CS.scaled~Locality, col=(c("purple","orange", "green")),main="Field P wings-13 landmarks CS measure", xlab="Grouping", ylab="Centroid Size (mm)"))
+with(quickiefield, boxplot(X13.CS.scaled~Locality, col=(c("forestgreen","forestgreen","forestgreen","forestgreen","darkorange2","darkorange2", "darkorchid3")),medcol=(c("gold1")), main="Field P wings-13 landmarks CS measure", xlab="Grouping", ylab="Centroid Size (mm)"))
+with(quickiefield, boxplot(X13.CS.scaled~Locality, col=(c("forestgreen","forestgreen","forestgreen","forestgreen","dimgray","dimgray", "darkorchid3")),medcol=(c("gold1")), main="Field P wings-13 landmarks CS measure", xlab="Grouping", ylab="Centroid Size (mm)"))
+with(quickiefield, boxplot(X13.CS.scaled~Locality, col=(c("black","black","black","black","dimgray","dimgray", "white")),medcol=(c("white", "white","white","white","white","white","black" )), main="Field P wings-13 landmarks CS measure", xlab="Grouping", ylab="Centroid Size (mm)"))
+with(quickiefield, boxplot(X18.CS.scaled~Locality, col=(c("black","black","black","black","dimgray","dimgray", "white")),medcol=(c("white", "white","white","white","white","white","black" )), main="Field P wings-13 landmarks CS measure", xlab="Grouping", ylab="Centroid Size (mm)"))
+wing.modfield=aov(Length.mm~Locality, data=quickiefield)
+summary(wing.modfield)
+wing.modfield1=aov(X13.CS.scaled~Locality, data=quickiefield)
+summary(wing.modfield1)
+wing.modfield2=aov(X18.CS.scaled~Locality, data=quickiefield)
+summary(wing.modfield2)
+with(quickiefield, boxplot(Length.mm~Locality, col=(c("black","black","black","black","dimgray","dimgray", "white")),medcol=(c("white", "white","white","white","white","white","black" )), main="Field P wings-13 landmarks CS measure", xlab="Grouping", ylab="Centroid Size (mm)"))
+with(quickiefield, boxplot(Length.mm~Locality, col=(c("black","black","black","black","dimgray","dimgray", "white")),medcol=(c("white", "white","white","white","white","white","black" )), main="Field P wings-Wing length", xlab="Locality", ylab="Centroid Size (mm)"))
+with(quickiefield, boxplot(X13.CS.scaled~Locality, col=(c("black","black","black","black","dimgray","dimgray", "white")),medcol=(c("white", "white","white","white","white","white","black" )), main="Field P wings-13 landmarks CS measure", xlab="Locality", ylab="Centroid Size (mm)"))
+with(quickiefield, boxplot(X18.CS.scaled~Locality, col=(c("black","black","black","black","dimgray","dimgray", "white")),medcol=(c("white", "white","white","white","white","white","black" )), main="Field P wings-18 landmarks CS measure", xlab="Locality", ylab="Centroid Size (mm)"))
+library(agricolae)
+print(HSD.test(wing.modfield, 'Locality'))
+print(HSD.test(wing.modfield1, 'Locality'))
+print(HSD.test(wing.modfield2, 'Locality'))
+wing.mod5=aov(Wing.length..mm.~Locality+Sex+Temp.Num, data=quickie)
+summary(wing.mod5)
+print(HSD.test(wing.mod3, 'Locality'))
+print(HSD.test(wing.mod5, 'Locality'))
+head(quickie)
+fit13<-manova (CS.scaled.13~Locality*Temp.Num*Sex, data=quickie)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
