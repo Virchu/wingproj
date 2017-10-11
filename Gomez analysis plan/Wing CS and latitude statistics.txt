@@ -1,0 +1,26 @@
+CS and latitude
+
+summary(cline.mod)
+
+Call:
+lm(formula = CS ~ Latitude, data = fwing)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.46349 -0.10564 -0.00265  0.11149  0.53049 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  2.626957   0.023555 111.523   <2e-16 ***
+Latitude    -0.022941   0.002476  -9.264   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.168 on 239 degrees of freedom
+Multiple R-squared:  0.2642,	Adjusted R-squared:  0.2611 
+F-statistic: 85.82 on 1 and 239 DF,  p-value: < 2.2e-16
+
+
+coef(lm(fwing$CS~fwing$Latitude..S.))
+       (Intercept) fwing$Latitude..S. 
+        2.62695746         0.02294124 

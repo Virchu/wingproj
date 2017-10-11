@@ -7,8 +7,10 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
+#work
 setwd("C:/Users/vmc04/Documents/GitHub/wingproj/Gomez analysis plan")
+#laptop
+setwd("C:/Users/virgc/GitHub/wingproj/Gomez analysis plan")
 library(Morpho)
 library(dplyr)
 library(ggplot2)
@@ -49,8 +51,8 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
 
     return(datac)
 }
-
 fwing<- read.csv("2017_10_02 Field 18 Partial warps.csv", header = TRUE)
+
 
 head(fwing)
 cline.mod<-lm(CS~Latitude, data=fwing)
