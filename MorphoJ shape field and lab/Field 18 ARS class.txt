@@ -1,0 +1,18 @@
+ID	Biome	Locality	Collection.month	Season
+ARS 002	Amazon	ARS	16-Oct	Dry
+ARS 003	Amazon	ARS	16-Oct	Dry
+ARS 004	Amazon	ARS	16-Oct	Dry
+ARS 005	Amazon	ARS	16-Oct	Dry
+ARS 006	Amazon	ARS	16-Oct	Dry
+ARS 007	Amazon	ARS	16-Oct	Dry
+ARS 008	Amazon	ARS	16-Oct	Dry
+ARS 009	Amazon	ARS	16-Oct	Dry
+ARS 010	Amazon	ARS	16-Oct	Dry
+ARS 011	Amazon	ARS	16-Oct	Dry
+ARS 012	Amazon	ARS	16-Oct	Dry
+ARS 013	Amazon	ARS	16-Oct	Dry
+ARS 014	Amazon	ARS	16-Oct	Dry
+ARS 016	Amazon	ARS	16-Oct	Dry
+ARS 017	Amazon	ARS	16-Oct	Dry
+ARS 019	Amazon	ARS	16-Oct	Dry
+ARS 020	Amazon	ARS	16-Oct	Dry

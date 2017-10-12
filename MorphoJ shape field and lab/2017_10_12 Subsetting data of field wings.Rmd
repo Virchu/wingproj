@@ -1,0 +1,97 @@
+---
+title: "Files for MorphoJ practice"
+author: "Virginia Chu"
+date: "October 12, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#work comp
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/MorphoJ shape field and lab")
+
+#read in .csv
+fieldw<-read.csv("2017_10_12 Field 18 details and scaled coords.csv", header=TRUE)
+
+#subdivide based on locality
+field_ARS<-subset(fieldw, Locality=="ARS", select=c(1:44))
+field_APR<-subset(fieldw, Locality=="APR", select=c(1:44))
+field_RPV<-subset(fieldw, Locality=="RPV", select=c(1:44))
+field_RMO<-subset(fieldw, Locality=="RMO", select=c(1:44))
+field_TLC<-subset(fieldw, Locality=="TLC", select=c(1:44))
+field_TPN<-subset(fieldw, Locality=="TPN", select=c(1:44))
+field_SJU<-subset(fieldw, Locality=="SJU", select=c(1:44))
+
+#subsetting into coordinates
+field_ARScoord<-subset(field_ARS, Locality=="ARS", select=c(1,9:44))
+field_APRcoord<-subset(field_APR, Locality=="APR", select=c(1,9:44))
+field_RPVcoord<-subset(field_RPV, Locality=="RPV", select=c(1,9:44))
+field_RMOcoord<-subset(field_RMO, Locality=="RMO", select=c(1,9:44))
+field_TLCcoord<-subset(field_TLC, Locality=="TLC", select=c(1,9:44))
+field_TPNcoord<-subset(field_TPN, Locality=="TPN", select=c(1,9:44))
+field_SJUcoord<-subset(field_SJU, Locality=="SJU", select=c(1,9:44))
+
+#covariates, 
+field_ARScov<-subset(field_ARS, Locality=="ARS", select=c(1,7:8))
+field_APRcov<-subset(field_APR, Locality=="APR", select=c(1,7:8))
+field_RPVcov<-subset(field_RPV, Locality=="RPV", select=c(1,7:8))
+field_RMOcov<-subset(field_RMO, Locality=="RMO", select=c(1,7:8))
+field_TLCcov<-subset(field_TLC, Locality=="TLC", select=c(1,7:8))
+field_TPNcov<-subset(field_TPN, Locality=="TPN", select=c(1,7:8))
+field_SJUcov<-subset(field_SJU, Locality=="SJU", select=c(1,7:8))
+
+#and classifiers
+field_ARSclas<-subset(field_ARS, Locality=="ARS", select=c(1:2,4:6))
+field_APRclas<-subset(field_APR, Locality=="APR", select=c(1:2,4:6))
+field_RPVclas<-subset(field_RPV, Locality=="RPV", select=c(1:2,4:6))
+field_RMOclas<-subset(field_RMO, Locality=="RMO", select=c(1:2,4:6))
+field_TLCclas<-subset(field_TLC, Locality=="TLC", select=c(1:2,4:6))
+field_TPNclas<-subset(field_TPN, Locality=="TPN", select=c(1:2,4:6))
+field_SJUclas<-subset(field_SJU, Locality=="SJU", select=c(1:2,4:6))
+#make into tab delimited .txt
+
+write.table(field_ARScoord, "Field 18 ARS coords.txt", quote=FALSE,sep="\t", row.names = FALSE)
+write.table(field_APRcoord, "Field 18 APR coords.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_RPVcoord, "Field 18 RPV coords.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_RMOcoord, "Field 18 RMO coords.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_TLCcoord, "Field 18 TLC coords.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_TPNcoord, "Field 18 TPN coords.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_SJUcoord, "Field 18 SJU coords.txt", sep="\t",quote=FALSE, row.names = FALSE)
+
+write.table(field_ARScov, "Field 18 ARS cov.txt", quote=FALSE,sep="\t", row.names = FALSE)
+write.table(field_APRcov, "Field 18 APR cov.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_RPVcov, "Field 18 RPV cov.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_RMOcov, "Field 18 RMO cov.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_TLCcov, "Field 18 TLC cov.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_TPNcov, "Field 18 TPN cov.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_SJUcov, "Field 18 SJU cov.txt", sep="\t",quote=FALSE, row.names = FALSE)
+
+write.table(field_ARSclas, "Field 18 ARS class.txt", quote=FALSE,sep="\t", row.names = FALSE)
+write.table(field_APRclas, "Field 18 APR class.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_RPVclas, "Field 18 RPV class.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_RMOclas, "Field 18 RMO class.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_TLCclas, "Field 18 TLC class.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_TPNclas, "Field 18 TPN class.txt", sep="\t",quote=FALSE, row.names = FALSE)
+write.table(field_SJUclas, "Field 18 SJU class.txt", sep="\t",quote=FALSE, row.names = FALSE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

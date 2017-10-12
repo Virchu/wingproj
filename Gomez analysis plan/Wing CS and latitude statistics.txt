@@ -1,7 +1,6 @@
-CS and latitude
+﻿CS and latitude
 
 summary(cline.mod)
-
 Call:
 lm(formula = CS ~ Latitude, data = fwing)
 

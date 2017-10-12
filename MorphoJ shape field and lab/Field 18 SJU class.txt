@@ -1,0 +1,12 @@
+ID	Biome	Locality	Collection.month	Season
+SJU 001	Mata Atlantica	SJU	16-May	Dry
+SJU 002	Mata Atlantica	SJU	16-May	Dry
+SJU 003	Mata Atlantica	SJU	16-May	Dry
+SJU 004	Mata Atlantica	SJU	16-May	Dry
+SJU 005	Mata Atlantica	SJU	16-May	Dry
+SJU 006	Mata Atlantica	SJU	16-May	Dry
+SJU 009	Mata Atlantica	SJU	16-May	Dry
+SJU 010	Mata Atlantica	SJU	16-May	Dry
+SJU 011	Mata Atlantica	SJU	16-May	Dry
+SJU 012	Mata Atlantica	SJU	16-May	Dry
+SJU 013	Mata Atlantica	SJU	16-May	Dry

@@ -1,0 +1,18 @@
+ID	Biome	Locality	Collection.month	Season
+TPN 001	Cerrado	TPN	16-Feb	Wet
+TPN 002	Cerrado	TPN	16-Feb	Wet
+TPN 003	Cerrado	TPN	16-Feb	Wet
+TPN 004	Cerrado	TPN	16-Mar	Wet
+TPN 006	Cerrado	TPN	16-Mar	Wet
+TPN 007	Cerrado	TPN	16-Mar	Wet
+TPN 008	Cerrado	TPN	16-Mar	Wet
+TPN 009	Cerrado	TPN	16-Mar	Wet
+TPN 010	Cerrado	TPN	16-Mar	Wet
+TPN 011	Cerrado	TPN	16-Mar	Wet
+TPN 012	Cerrado	TPN	16-Mar	Wet
+TPN 013	Cerrado	TPN	16-Mar	Wet
+TPN 014	Cerrado	TPN	16-Mar	Wet
+TPN 016	Cerrado	TPN	16-Mar	Wet
+TPN 017	Cerrado	TPN	16-Mar	Wet
+TPN 018	Cerrado	TPN	16-Mar	Wet
+TPN 020	Cerrado	TPN	16-Mar	Wet
