@@ -1,0 +1,157 @@
+---
+title: "Lab wing data results"
+author: "Virginia Chu"
+date: "October 16, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#work comp
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+
+#read in .csv
+labwingdat<-read.csv("2017_10_16 Lab reared 18 landmarks scaled id info.csv", header=TRUE)
+
+labwingdat$Locality=factor(labwingdat$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+#aggregate for basic prelim data table [wing length-11, cs-12]
+prelimdat<-aggregate(labwingdat[,11], list(labwingdat$Locality, labwingdat$Temp_num, labwingdat$Sex), mean)
+write.table(prelimdat,"clipboard", sep="\t")
+prelimdat1<-aggregate(labwingdat[,11], list(labwingdat$Locality, labwingdat$Temp_num, labwingdat$Sex), sd)
+write.table(prelimdat1,"clipboard", sep="\t")
+prelimdat2<-aggregate(labwingdat[,11], list(labwingdat$Locality, labwingdat$Temp_num, labwingdat$Sex), length)
+write.table(prelimdat2,"clipboard", sep="\t")
+
+prelimdat3<-aggregate(labwingdat[,12], list(labwingdat$Locality, labwingdat$Temp_num, labwingdat$Sex), mean)
+write.table(prelimdat3,"clipboard", sep="\t")
+prelimdat4<-aggregate(labwingdat[,12], list(labwingdat$Locality, labwingdat$Temp_num, labwingdat$Sex), sd)
+write.table(prelimdat4,"clipboard", sep="\t")
+
+#MANOVA bits http://www.sthda.com/english/wiki/manova-test-in-r-multivariate-analysis-of-variance
+library(mvnormtest)
+labtest<-t(labwingdat[12:13])
+mshapiro.test(labtest)
+qqnorm(labtest)
+
+#normality satisfied
+
+labwlen<-labwingdat$Wing.length..mm.
+labcs<-labwingdat$Centroid.Size
+
+#MANOVA
+#cbind- to see if columns differ across
+#do wilks like Giovan
+labres.man<-manova(cbind(Wing.length..mm., Centroid.Size)~Locality+Temp_let+Sex, data=labwingdat)
+summary(labres.man)
+summary.aov(labres.man)
+
+labres1.man<-manova(cbind(Wing.length..mm., Centroid.Size)~Locality, data=labwingdat)
+summary(labres1.man, test="Wilks")
+summary.aov(labres1.man)
+
+labres2.man<-manova(cbind(Wing.length..mm., Centroid.Size)~as.factor(Temp_num), data=labwingdat)
+summary(labres2.man, test="Wilks")
+summary.aov(labres2.man)
+
+labres3.man<-manova(cbind(Wing.length..mm., Centroid.Size)~Sex, data=labwingdat)
+summary(labres3.man, test="Wilks")
+summary.aov(labres3.man)
+
+labres4.man<-manova(cbind(Wing.length..mm., Centroid.Size)~Locality+Temp_let, data=labwingdat)
+summary(labres4.man, test="Wilks")
+summary.aov(labres4.man)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+library(Morpho)
+library(plyr)
+library(dplyr)
+library(ggplot2)
+
+#link for sutom code http://www.cookbook-r.com/Manipulating_data/Summarizing_data/
+summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
+                      conf.interval=.95, .drop=TRUE) {
+    library(plyr)
+
+    # New version of length which can handle NA's: if na.rm==T, don't count them
+    length2 <- function (x, na.rm=FALSE) {
+        if (na.rm) sum(!is.na(x))
+        else       length(x)
+    }
+
+    # This does the summary. For each group's data frame, return a vector with
+    # N, mean, and sd
+    datac <- ddply(data, groupvars, .drop=.drop,
+      .fun = function(xx, col) {
+        c(N    = length2(xx[[col]], na.rm=na.rm),
+          mean = mean   (xx[[col]], na.rm=na.rm),
+          sd   = sd     (xx[[col]], na.rm=na.rm)
+        )
+      },
+      measurevar
+    )
+
+    # Rename the "mean" column    
+    datac <- rename(datac, c("mean" = measurevar))
+
+    datac$se <- datac$sd / sqrt(datac$N)  # Calculate standard error of the mean
+
+    # Confidence interval multiplier for standard error
+    # Calculate t-statistic for confidence interval: 
+    # e.g., if conf.interval is .95, use .975 (above/below), and use df=N-1
+    ciMult <- qt(conf.interval/2 + .5, datac$N-1)
+    datac$ci <- datac$se * ciMult
+
+    return(datac)
+}
+
+
+
+head(labwingdat)
+cline.mod<-lm(Centroid.Size~Latitude, data=labwingdat)
+summary(cline.mod)
+
+#winglenm<- aggregate(fwing$Length.mm, list(lat=fwing$Latitude),mean, na.rm=TRUE)
+#winglensd<- aggregate(fwing$Length.mm, list(lat=fwing$Latitude),sd, na.rm=TRUE)
+
+#csm<- aggregate(fwing$CS, list(lat=fwing$Latitude),mean, na.rm=TRUE)
+#cssd<- aggregate(fwing$CS, list(lat=fwing$Latitude),sd, na.rm=TRUE)
+
+#plot(winglenm)
+#plot(csm)
+
+winglc<-summarySE(labwingdat, measurevar="Wing.length.mm", groupvars = c("Latitude","Biome", "Temp_num", "Sex"))
+csc<-summarySE(labwingdat, measurevar="Centroid.Size", groupvars = c("Latitude.S","Biome", "Temp_let", "Sex"))
+
+#ggplot(winglc, aes(x=Latitude, y=Length.mm, colour=Latitude)) +geom_errorbar(aes(ymin=Length.mm-se, ymax=Length.mm+se), width=.1)+ geom_line()+ geom_point()
+
+#how to get abline http://ggplot2.tidyverse.org/reference/geom_abline.html
+
+coef(lm(fwing$Length.mm~fwing$Latitude..S.))
+
+ggplot(winglc, aes(x=Latitude..S., y=Length.mm)) +geom_errorbar(aes(ymin=Length.mm-se, ymax=Length.mm+se), width=.1)+ geom_point(aes(colour=Biome))+ geom_abline(intercept=2.836, slope=0.0227) +xlab("Latitude (Southern)")+ ylab("Wing Length (mm)")+ ggtitle("Field Wing length across increasing latitude")
+
+coef(lm(labwingdat$Centroid.Size~labwingdat$Latitude.S))
+
+
+ggplot(csc, aes(x=Latitude.S, y=Centroid.Size)) +geom_errorbar(aes(ymin=Centroid.Size-se, ymax=Centroid.Size+se), width=.1)+ geom_point(aes(colour=Temp_let, shape=Sex),size=1.5)+ geom_abline(intercept=2.37730189, slope=0.010107) +xlab("Latitude (Southern)")+ ylab("Centroid Size")+ ggtitle("Lab Centroid Size across increasing latitude")
+
+```
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

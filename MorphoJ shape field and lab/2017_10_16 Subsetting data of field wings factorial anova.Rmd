@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 setwd("C:/Users/vmc04/Documents/GitHub/wingproj/MorphoJ shape field and lab")
 
 #home laptop
-setwd ("C:/Users/virgc/GitHub/wingproj/MorphoJ shape field and lab")
+#setwd ("C:/Users/virgc/GitHub/wingproj/MorphoJ shape field and lab")
 #read in .csv
 fieldw<-read.csv("2017_10_12 Field 18 details and scaled coords.csv", header=TRUE)
 
@@ -100,6 +100,10 @@ write.table(field_SJUclas, "Field 18 SJU class.txt", sep="\t",quote=FALSE, row.n
 ## R Markdown
 
 Factorial Anova resource- http://rcompanion.org/handbook/G_09.html
+http://homepages.inf.ed.ac.uk/bwebb/statistics/Factorial_ANOVA_in_R.pdf
+
+MANOVA
+http://www.sthda.com/english/wiki/manova-test-in-r-multivariate-analysis-of-variance
 ```{r cars}
 #MANOVA bits borrowed from lab wing 
 library(mvnormtest)
@@ -119,6 +123,10 @@ fieldres.man<-manova(cbind(Length.mm, CS)~Locality, data=fieldw)
 summary(fieldres.man,test="Wilks")
 summary.aov(fieldres.man)
 
+fieldres.man1<-manova(cbind(Length.mm, CS)~Biome, data=fieldw)
+summary(fieldres.man1,test="Wilks")
+summary.aov(fieldres.man1)
+
 
 #factorial anova
 #http://rcompanion.org/handbook/G_09.html
@@ -135,7 +143,7 @@ library(RColorBrewer)
 #Data$Country = factor(Data$Country,levels=unique(Data$Country))
 
 interaction.plot(x.factor     = fieldw$Biome,
-                 trace.factor = fieldw$Latitude, 
+                 trace.factor = fieldw$Latitude.S, 
                  response     = fieldw$CS, 
                  fun = mean,
                  type="b",
@@ -146,7 +154,7 @@ interaction.plot(x.factor     = fieldw$Biome,
 
 
 
-interaction.plot(x.factor     = fieldw$Season,
+interaction.plot(x.factor     = fieldw$Biome,
                  trace.factor = fieldw$Locality, 
                  response     = fieldw$CS, 
                  fun = mean,
@@ -170,7 +178,7 @@ cld(leastsquare,    alpha=0.05,     Letters=letters,      ### Use lower-case let
     adjust="tukey")       ### Tukey-adjusted comparisons 
 
 
-##better graph
+##better graph?
 ### Create a data frame called Sum with means and standard deviations 
 
 library(FSA) 
@@ -187,7 +195,7 @@ Sum
 
 pd = position_dodge(.2)
 
-ggplot(Sum, aes(x = Biome,
+#ggplot(Sum, aes(x = Biome,
                 y = mean,
                 color = Latitude)) +
     geom_errorbar(aes(ymin = mean - se,

@@ -1,0 +1,52 @@
+---
+title: "2017_10_16 Lab wing data file management"
+author: "Virginia Chu"
+date: "October 16, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#work comp
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+
+#read in .csv
+labw<-read.csv("2017_09_28 Life history data file.csv", header=TRUE)
+
+#labw$Locality=factor(labw$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+#list of lab wings for id data
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/Wing source data field_lab")
+lablist<-read.csv("2017_10_16 Lab reared 18 landmarks scaled.csv", header=TRUE)
+lablist1<-subset(lablist, select=(c(1)))
+
+#subset of lab data, want 1:9,35
+labwings<-merge(labw, lablist1, by= "ID")
+#labwings$Locality=factor(labwings$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+labwings1<- subset(labwings, select=(c(1:9, 16:17)))
+#labwings1$Locality=factor(labwings1$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+write.table(lablist1, "clipboard", sep="\t")
+write.table(labwings1,file="clipboard-16384", sep="\t")
+#exclude TPN 7 progeny
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
