@@ -1,0 +1,149 @@
+---
+title: "2017_10_17 Life hist glm data analysis"
+author: "Virginia Chu"
+date: "October 17, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+##work comp
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+lifehist<-read.csv("2017_10_17 Life history data new clean file.csv", header=TRUE)
+lifehist$Locality=factor(lifehist$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+#print(head(lifehist))
+##libraries needed
+library(ggplot2)
+library(lme4)
+
+## glm for rate of development
+#ruybal rate= 1/time to adult [AdRate]
+mod1<-glm(AdRate~Temp_num*Locality*Sex,data=lifehist,family=Gamma);summary(mod1)
+mod2<-glm(AdRate~Temp_num,data=lifehist,family=Gamma);summary(mod2)
+mod3<-glm(AdRate~Temp_num*Sex,data=lifehist,family=Gamma);summary(mod3)
+mod4<-glm(AdRate~Temp_num*Locality,data=lifehist,family=Gamma);summary(mod4)
+mod5<-glm(AdRate~Temp_num*Biome,data=lifehist,family=Gamma);summary(mod5)
+mod6<-glm(AdRate~Temp_num*Biome*Sex,data=lifehist,family=Gamma);summary(mod6)
+mod7<-glm(AdRate~Temp_num*State*Sex,data=lifehist,family=Gamma);summary(mod7)
+mod8<-glm(AdRate~Temp_num*State,data=lifehist,family=Gamma);summary(mod8)
+modelAIC<-AIC(mod1,mod2,mod3,mod4,mod5,mod6,mod7, mod8)
+print(modelAIC)
+write.table(modelAIC, "clipboard", sep="/t")
+print("mod1<-glm(rate~Temp*Locality*Sex,data=lifedat,family=Gamma);summary(mod1)")
+#print(summary(mod1))
+
+
+mod1.1<-glm(AdRate~Temp_num^2*Locality*Sex,data=lifehist,family=Gamma);summary(mod1.1)
+mod2.1<-glm(AdRate~Temp_num^2,data=lifehist,family=Gamma);summary(mod2.1)
+mod3.1<-glm(AdRate~Temp_num^2*Sex,data=lifehist,family=Gamma);summary(mod3.1)
+mod4.1<-glm(AdRate~Temp_num^2*Locality,data=lifehist,family=Gamma);summary(mod4.1)
+mod5.1<-glm(AdRate~Temp_num^2*Biome,data=lifehist,family=Gamma);summary(mod5.1)
+mod6.1<-glm(AdRate~Temp_num^2*Biome*Sex,data=lifehist,family=Gamma);summary(mod6.1)
+mod7.1<-glm(AdRate~Temp_num^2*State*Sex,data=lifehist,family=Gamma);summary(mod7.1)
+mod8.1<-glm(AdRate~Temp_num^2*State,data=lifehist,family=Gamma);summary(mod8.1)
+modelAIC1.1<-AIC(mod1.1,mod2.1,mod3.1,mod4.1,mod5.1,mod6.1,mod7.1, mod8.1)
+print(modelAIC1.1)
+#print("mod1<-glm(rate~Temp*Locality*Sex,data=lifedat,family=Gamma);summary(mod1)")
+
+mod1.2<-glm(AdRate~Temp_let*Locality*Sex,data=lifehist,family=Gamma);summary(mod1.2)
+mod2.2<-glm(AdRate~Temp_let,data=lifehist,family=Gamma);summary(mod2.2)
+mod3.2<-glm(AdRate~Temp_let*Sex,data=lifehist,family=Gamma);summary(mod3.2)
+mod4.2<-glm(AdRate~Temp_let*Locality,data=lifehist,family=Gamma);summary(mod4.2)
+mod5.2<-glm(AdRate~Temp_let*Biome,data=lifehist,family=Gamma);summary(mod5.2)
+mod6.2<-glm(AdRate~Temp_let*Biome*Sex,data=lifehist,family=Gamma);summary(mod6.2)
+mod7.2<-glm(AdRate~Temp_let*State*Sex,data=lifehist,family=Gamma);summary(mod7.2)
+mod8.2<-glm(AdRate~Temp_let*State,data=lifehist,family=Gamma);summary(mod8.2)
+modelAIC1.2<-AIC(mod1.2,mod2.2,mod3.2,mod4.2,mod5.2,mod6.2,mod7.2, mod8.2)
+print(modelAIC1.2)
+
+mod1.3<-glm(AdRate~Temp_num*Locality*Sex,data=lifehist,family=binomial);summary(mod1.3)
+mod2.3<-glm(AdRate~Temp_num,data=lifehist,family=binomial);summary(mod2.3)
+mod3.3<-glm(AdRate~Temp_num*Sex,data=lifehist,family=binomial);summary(mod3.3)
+mod4.3<-glm(AdRate~Temp_num*Locality,data=lifehist,family=binomial);summary(mod4.3)
+mod5.3<-glm(AdRate~Temp_num*Biome,data=lifehist,family=binomial);summary(mod5.3)
+mod6.3<-glm(AdRate~Temp_num*Biome*Sex,data=lifehist,family=binomial);summary(mod6.3)
+mod7.3<-glm(AdRate~Temp_num*State*Sex,data=lifehist,family=binomial);summary(mod7.3)
+mod8.3<-glm(AdRate~Temp_num*State,data=lifehist,family=binomial);summary(mod8.3)
+modelAIC1.3<-AIC(mod1.3,mod2.3,mod3.3,mod4.3,mod5.3,mod6.3,mod7.3, mod8.3)
+print(modelAIC1.3)
+
+mod1.4<-glm(AdRate~Temp_num*Locality*Sex,data=lifehist,family=binomial(logit));summary(mod1.4)
+mod2.4<-glm(AdRate~Temp_num,data=lifehist,family=binomial(logit));summary(mod2.4)
+mod3.4<-glm(AdRate~Temp_num*Sex,data=lifehist,family=binomial(logit));summary(mod3.4)
+mod4.4<-glm(AdRate~Temp_num*Locality,data=lifehist,family=binomial(logit));summary(mod4.4)
+mod5.4<-glm(AdRate~Temp_num*Biome,data=lifehist,family=binomial(logit));summary(mod5.4)
+mod6.4<-glm(AdRate~Temp_num*Biome*Sex,data=lifehist,family=binomial(logit));summary(mod6.4)
+mod7.4<-glm(AdRate~Temp_num*State*Sex,data=lifehist,family=binomial(logit));summary(mod7.4)
+mod8.4<-glm(AdRate~Temp_num*State,data=lifehist,family=binomial(logit));summary(mod8.4)
+modelAIC1.4<-AIC(mod1.4,mod2.4,mod3.4,mod4.4,mod5.4,mod6.4,mod7.4, mod8.4)
+print(modelAIC1.4)
+
+##subset data by sexes
+lifehist_females<-subset(lifehist, Sex=="F", select=c(1:30))
+lifehist_males<-subset(lifehist, Sex=="M", select=c(1:30))
+
+mod1.5<-glm(AdRate~Temp_let*Locality,data=lifehist_females,family=binomial(logit));summary(mod1.5)
+mod2.5<-glm(AdRate~Temp_let,data=lifehist_females,family=binomial(logit));summary(mod2.5)
+mod3.5<-glm(AdRate~Locality,data=lifehist_females,family=binomial(logit));summary(mod3.5)
+mod4.5<-glm(AdRate~Temp_let*Biome,data=lifehist_females,family=binomial(logit));summary(mod4.5)
+mod5.5<-glm(AdRate~Temp_let*State,data=lifehist_females,family=binomial(logit));summary(mod5.5)
+mod6.5<-glm(AdRate~Biome,data=lifehist_females,family=binomial(logit));summary(mod6.5)
+mod7.5<-glm(AdRate~State,data=lifehist_females,family=binomial(logit));summary(mod7.5)
+modelAIC1.5<-AIC(mod1.5,mod2.5,mod3.5,mod4.5,mod5.5,mod6.5,mod7.5)
+print(modelAIC1.5)
+
+mod1.6<-glm(AdRate~Temp_num*Locality,data=lifehist_females,family=binomial(logit));summary(mod1.6)
+mod2.6<-glm(AdRate~Temp_num,data=lifehist_females,family=binomial(logit));summary(mod2.6)
+mod3.6<-glm(AdRate~Locality,data=lifehist_females,family=binomial(logit));summary(mod3.6)
+mod4.6<-glm(AdRate~Temp_num*Biome,data=lifehist_females,family=binomial(logit));summary(mod4.6)
+mod5.6<-glm(AdRate~Temp_num*State,data=lifehist_females,family=binomial(logit));summary(mod5.6)
+mod6.6<-glm(AdRate~Biome,data=lifehist_females,family=binomial(logit));summary(mod6.6)
+mod7.6<-glm(AdRate~State,data=lifehist_females,family=binomial(logit));summary(mod7.6)
+modelAIC1.6<-AIC(mod1.6,mod2.6,mod3.6,mod4.6,mod5.6,mod6.6,mod7.6)
+print(modelAIC1.6)
+```
+
+## R Markdown
+
+Life history data
+# Description of columns:
+## Independent variables
+* Biome [Amazon, Cerrado, Mata Atlantica]- Categorical/nominal
+    + State [Amazonas, Rondonia, Tocantins, Mata Atlantica]-Ordinal
+    + Locality [ARS, APR, RPV, RMO, TLC, TPN, SJU]-Ordinal
+    + Latitude [-2.864, -3.028, -8.742, -9.223, -10.7, -10.796, -22.611 ]- Ordinal
+* Family [for lab reared, which female within the biome/locality they came from]- Categorical
+  + Well grouping [1,2,3]- Ordinal (5 larvae raised in each of 3 wells per female per temperature)
+* Temperature [ 20 (A), 24 (B), 28C (C)]- Ordinal
+* Temp_num
+* Sex [M/F]- Categorical
+
+## Dependent variables
+* Death status (0,1,2) - Ordinal 0=died as larvae, 1= died as pupae, 2=died as adult
+* LL- Larvae life length (days)- Discrete, all
+* sLL- Larvae life length (days)- Discrete, only ones that went to adult
+* PL- Pupal life length (days)- Discrete (Emergence.date-pupation.date)
+* AL- Adult life length (days)- Discrete (Deathtime-Emergence.date)
+* EmTime- time to emergence (Emergence.date-Hatch.day)
+* Wing length (mm)- Continuous
+* Rate of development
+* Sex ratio
+
+##Datafile column headers
+ID	Biome	State	Latitude	Locality	Family	Temp_let	Temp_num	Well	Hatch.day	LD	Pupation.date	PD	Emergence.date	Adult.death	Sex	Wing.length..mm.	Grouping	Plate.info	sLL	Emtime	Preadult.death	Sex1	Death_stat	AdRate	LarvRate	Puplen	Puprate	D.pread.rate	AL
+
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
