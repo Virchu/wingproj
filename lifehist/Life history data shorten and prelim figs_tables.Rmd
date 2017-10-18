@@ -1,0 +1,55 @@
+---
+title: "Life history file reduction and prelim tables and figures"
+author: "Virginia Chu"
+date: "October 18, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+##work comp
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+lifehistfull<-read.csv("2017_10_17 Life history data new clean file.csv", header=TRUE)
+lifehistfull$Locality=factor(lifehistfull$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+#limit data to results and identifiers
+colnames(lifehistfull)
+
+#get subset of data
+#just ID, Biome, State, Latitude, Locality, Family, Temp_let, Temp_num, Sex, Sex1, Wing length, sll, dll, dpl,emtime, pre
+lifehistshort<-subset(lifehistfull, select=c(1:8,16, 25, 17,20:24, 26:33 ))
+
+write.csv(lifehistshort, "2017_10_18 Life history shortened.csv")
+##subset data by sexes
+lifehist_females<-subset(lifehistshort, Sex=="F", select=c(1:24))
+lifehist_males<-subset(lifehistshort, Sex=="M", select=c(1:24))
+
+colnames(lifehistshort)
+##make some tables
+#table survival
+tab1<-aggregate(lifehistshort, list(Death_stat, Locality, Temp_let), FUN=mean)
+
+tab1<-aggregate (lifehistshort$Death_stat, list (LOC= lifehistshort$Locality, TEMP= lifehistshort$Temp_let, sex=lifehistshort$Sex),sum)
+write.table(tab1, "clipboard", sep='\t', row.names=FALSE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

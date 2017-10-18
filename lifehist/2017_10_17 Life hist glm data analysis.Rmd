@@ -80,8 +80,8 @@ modelAIC1.4<-AIC(mod1.4,mod2.4,mod3.4,mod4.4,mod5.4,mod6.4,mod7.4, mod8.4)
 print(modelAIC1.4)
 
 ##subset data by sexes
-lifehist_females<-subset(lifehist, Sex=="F", select=c(1:30))
-lifehist_males<-subset(lifehist, Sex=="M", select=c(1:30))
+lifehist_females<-subset(lifehist, Sex=="F", select=c(1:33))
+lifehist_males<-subset(lifehist, Sex=="M", select=c(1:33))
 
 mod1.5<-glm(AdRate~Temp_let*Locality,data=lifehist_females,family=binomial(logit));summary(mod1.5)
 mod2.5<-glm(AdRate~Temp_let,data=lifehist_females,family=binomial(logit));summary(mod2.5)

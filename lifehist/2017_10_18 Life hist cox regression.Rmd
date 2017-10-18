@@ -1,0 +1,120 @@
+---
+title: "Life hist cox regression"
+author: "Virginia Chu"
+date: "October 18, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+##work comp
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+lifehist<-read.csv("2017_10_17 Life history data new clean file.csv", header=TRUE)
+lifehist$Locality=factor(lifehist$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+
+
+##libraries needed
+library(survival)
+library(survminer)
+
+#univariate cox regression first
+res.cox1<-coxph(Surv(time, Death_stat)~Sex, data=lifehist)
+summary(res.cox1)
+#can't really do cox on all with sex because i don't have sex if died....
+
+##subset data by sexes
+lifehist_females<-subset(lifehist, Sex=="F", select=c(1:33))
+lifehist_males<-subset(lifehist, Sex=="M", select=c(1:33))
+
+res.cox2<-coxph(Surv(time, Death_stat)~Biome, data=lifehist_females)
+summary(res.cox2)
+res.cox2m<-coxph(Surv(time, Death_stat)~Biome, data=lifehist_males)
+summary(res.cox2m)
+
+res.cox3<-coxph(Surv(time, Death_stat)~Temp_let, data=lifehist_females)
+summary(res.cox3)
+
+res.cox3m<-coxph(Surv(time, Death_stat)~Temp_let, data=lifehist_males)
+summary(res.cox3m)
+
+res.cox4<-coxph(Surv(time, Death_stat)~State, data=lifehist_females)
+summary(res.cox4)
+
+res.cox4m<-coxph(Surv(time, Death_stat)~State, data=lifehist_males)
+summary(res.cox4m)
+
+res.cox5<-coxph(Surv(time, Death_stat)~Locality, data=lifehist_females)
+summary(res.cox5)
+
+res.cox5m<-coxph(Surv(time, Death_stat)~Locality, data=lifehist_males)
+summary(res.cox5m)
+
+#issues with building because of high amount of colinearity...
+res.coxfem<-coxph(Surv(time, Death_stat)~Temp_let+Biome+State+Locality, data=lifehist_females)
+summary(res.coxfem)
+
+res.coxfem1<-coxph(Surv(time, Death_stat)~Temp_let+Locality, singular.ok=TRUE, data=lifehist_females)
+summary(res.coxfem1)
+
+#test to see why getting single matrix errors
+with(lifehist_females, table(Death_stat,Locality))
+with(lifehist_females, table(Death_stat,State))
+
+
+##batch apply to covariates from tutorial, not totally working pra mim
+covariates<-c("Biome", "State","Locality", "Temp_let")
+univ_formulas<-sapply(covariates, function(x)as.formula(paste('Surv(time,Death_stat)~',x)))
+univ_models<-lapply(univ_formulas, function(x){coxph(x,data=lifehist)})
+#get yo' data
+univ_results<- lapply(univ_models, function(x) {x<-summary(x) 
+  p.value<-signif(x$wald["pvalue"], digits=2)
+  wald.test<-signif(x$wald["test"], digits=2)
+  beta<-signif(x$coef[1], digits=2);#coeficient beta
+  HR <-signif(x$coef[2], digits=2);#exp(beta)
+  HR.confint.lower <- signif(x$conf.int[,"lower .95"], 2)
+  HR.confint.upper <- signif(x$conf.int[,"upper .95"],2)
+  HR <- paste0(HR, " (", HR.confint.lower, "-", HR.confint.upper, ")")
+  res<-c(beta, HR, wald.test, p.value)
+  names(res)<-c("beta", "HR (95% CI for HR)", "wald.test", "p.value")
+                          return(res)
+                })
+univ_results <- lapply(univ_models,
+                       function(x){ 
+                          x <- summary(x)
+                          p.value<-signif(x$wald["pvalue"], digits=2)
+                          wald.test<-signif(x$wald["test"], digits=2)
+                          beta<-signif(x$coef[1], digits=2);#coeficient beta
+                          HR <-signif(x$coef[2], digits=2);#exp(beta)
+                          HR.confint.lower <- signif(x$conf.int[,"lower .95"], 2)
+                          HR.confint.upper <- signif(x$conf.int[,"upper .95"],2)
+                          HR <- paste0(HR, " (", 
+                                       HR.confint.lower, "-", HR.confint.upper, ")")
+                          res<-c(beta, HR, wald.test, p.value)
+                          names(res)<-c("beta", "HR (95% CI for HR)", "wald.test", 
+                                        "p.value")
+                          return(res)#return(exp(cbind(coef(x),confint(x))))
+                         })
+
+res <- t(as.data.frame(univ_results, check.names = FALSE))
+as.data.frame(res)
+```
+
+## R Markdown
+
+Cox regression tutorial- https://www.r-bloggers.com/cox-proportional-hazards-model/
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
