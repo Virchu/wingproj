@@ -13,6 +13,11 @@ setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
 lifehistfull<-read.csv("2017_10_17 Life history data new clean file.csv", header=TRUE)
 lifehistfull$Locality=factor(lifehistfull$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
 
+#libraries
+library(lattice)
+library(dplyr)
+require(data.table)
+
 #limit data to results and identifiers
 colnames(lifehistfull)
 
@@ -32,6 +37,14 @@ tab1<-aggregate(lifehistshort, list(Death_stat, Locality, Temp_let), FUN=mean)
 
 tab1<-aggregate (lifehistshort$Death_stat, list (LOC= lifehistshort$Locality, TEMP= lifehistshort$Temp_let, sex=lifehistshort$Sex),sum)
 write.table(tab1, "clipboard", sep='\t', row.names=FALSE)
+
+tab2<-aggregate (lifehistshort$Locality, list (LOC= lifehistshort$Locality, TEMP= lifehistshort$Temp_let),length)
+write.table(tab2, "clipboard", sep='\t', row.names=FALSE)
+
+##tables 
+tab3<-aggregate (lifehistshort$Wing.length..mm.~ lifehistshort$Locality +lifehistshort$Temp_let+ lifehistshort$Sex,data=lifehistshort, FUN=function(x) c(mu=mean(x), sd=sd(x), count=length(x)))
+
+#tab4<-lifehistshort[, .(Winglenm=mean(Wing.length..mm.), n=.N), by=.(Locality, Temp_let)]
 ```
 
 ## R Markdown

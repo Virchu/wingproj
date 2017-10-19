@@ -1,0 +1,22 @@
+Biome,State,Locality,Temp,Female,Male ,Died
+Amazon,Amazonas,ARS,A,65,69,11
+Amazon,Amazonas,APR,A,88,110,20
+Amazon,Rondonia,RPV,A,89,92,38
+Amazon,Rondonia,RMO,A,102,90,31
+Cerrado,Tocantins,TLC,A,45,47,28
+Cerrado,Tocantins,TPN,A,18,14,27
+Mata Atlantica,Rio de Janeiro,SJU,A,66,63,31
+Amazon,Amazonas,ARS,B,57,78,8
+Amazon,Amazonas,APR,B,101,97,19
+Amazon,Rondonia,RPV,B,98,86,39
+Amazon,Rondonia,RMO,B,96,101,26
+Cerrado,Tocantins,TLC,B,41,43,34
+Cerrado,Tocantins,TPN,B,15,20,20
+Mata Atlantica,Rio de Janeiro,SJU,B,57,66,36
+Amazon,Amazonas,ARS,C,54,76,16
+Amazon,Amazonas,APR,C,85,94,32
+Amazon,Rondonia,RPV,C,65,76,83
+Amazon,Rondonia,RMO,C,82,78,62
+Cerrado,Tocantins,TLC,C,27,44,49
+Cerrado,Tocantins,TPN,C,10,14,36
+Mata Atlantica,Rio de Janeiro,SJU,C,16,17,132

@@ -1,0 +1,148 @@
+---
+title: "Life hist stats attempts anova, glm, prob test"
+author: "Virginia Chu"
+date: "October 19, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+lifehistshort<-read.csv("2017_10_18 Life history shortened.csv", header=TRUE)
+lifehistshort$Locality=factor(lifehistshort$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+
+##nested design in r
+boxplot(AdRate~Temp_let, data=lifehistshort)
+boxplot(AdRate~Biome, data=lifehistshort)
+boxplot(AdRate~Locality, data=lifehistshort)
+
+dotplot(AdRate~Locality|Biome, data=lifehistshort)
+
+res1<-lm(AdRate~ Biome + Biome/Locality, data=lifehistshort)
+anova(res1)
+TukeyHSD(aov(res1), "Biome")
+TukeyHSD(aov(res1), "Biome:Locality")
+
+## effect of temp on proportion surviving by sex and location
+lifetot<-read.csv("2017_10_19 Life hist totals for proportion  survived from temp.csv", header=TRUE)
+lifetot$Total<-lifetot$Female+lifetot$Male+lifetot$Died
+lifetot$PerFem<-lifetot$Female/lifetot$Total
+lifetot$PerMal<-lifetot$Male/lifetot$Total
+lifetot$Alive<-lifetot$Male+lifetot$Female
+
+table( lifehistshort$Temp_let, lifehistshort$Sex1)
+prop.test(table(lifehistshort$Temp_let, lifehistshort$Sex1), correct=FALSE)
+#prop.test(table(lifehistshort$Temp_num, lifehistshort$Sex1), correct=FALSE)
+
+table( lifehistshort$Locality, lifehistshort$Sex1)
+prop.test(table(lifehistshort$Locality, lifehistshort$Sex1), correct=FALSE)
+
+#library(MASS)
+#survtab<-xtabs(Death_stat~Locality+Temp_let, data=lifehistshort)
+#loglm(~Locality+Temp_let,survtab)
+
+library(gmodels)
+#make separate table
+lifecont<-subset(lifehistshort, select=c(5,7,17) )
+#CrossTable(lifehistshort$Death_stat, lifehistshort$Temp_let, chisq=TRUE)
+#CrossTable(lifetot$Locality, lifetot$Temp, chisq=TRUE)
+
+###WORKS FOR 3 WAY CONTINGENCY
+lifecont1<-read.csv("2017_10_19 Life hist totals for proportion  survived from temp1.csv",header=TRUE)
+class(lifecont1)
+library(dplyr)
+### Specify the order of factor levels
+### Otherwise, R will alphabetize them
+data=mutate(lifecont1, Locality=factor(Locality, levels=unique(Locality)),
+            Temperature=factor(Temperature, levels=unique(Temperature)),
+            Status=factor(Status, levels=unique(Status)))
+
+data.xtabs=xtabs(Count~Locality+Temperature+Status, data=data)
+ftable(data.xtabs)
+mantelhaen.test(data.xtabs)
+
+lifecont2<-lifecont1
+lifecont2$Biome= ifelse(lifecont2$Locality=="ARS" | "APR", "Amazon", "Mata Atlantica")      
+data=mutate(lifecont1, Locality=factor(Locality, levels=unique(Locality)),
+            Temperature=factor(Temperature, levels=unique(Temperature)),
+            Status=factor(Status, levels=unique(Status)))
+
+data.xtabs=xtabs(Count~Locality+Temperature+Status, data=data)
+ftable(data.xtabs)
+mantelhaen.test(data.xtabs)
+#ind fisher exact tests
+#n=dim(data.xtabs)[3]
+#for(i in 1:n){
+#   Name = dimnames(data.xtabs)[3]$Locality[i]
+#   P.value = fisher.test(data.xtabs[,,i])$p.value
+#   cat(Name, "\n")
+#   cat("Fisher test p-value: ", P.value, "\n")
+#   cat("\n")
+#  } #insufficient workspace even at 2e6
+
+
+
+
+##glmm
+#from Nakagawa et al 2013
+library(lme4)
+# Fit null model without fixed effects (but including all random effects)
+mod_adrate0<-glmer(AdRate~1+(1|Biome)+(1|State), family=binomial, data=lifehistshort)
+summary(mod_adrate0)
+
+##body size
+#null
+mod_wing0<-lmer(Wing.length..mm.~1+(1|Biome)+(1|State), data=lifehistshort)
+summary(mod_wing0)
+#full
+mod_wingf<-lmer(Wing.length..mm.~Sex+Temp_let+Locality+(1|Biome)+(1|State), data=lifehistshort)
+summary(mod_wingf)
+
+# AIC and BIC needs to be calcualted with ML not REML in body size models
+m0wing <- lmer(Wing.length..mm.~1+(1|Biome)+(1|State), data = lifehistshort, REML = FALSE)
+m1wing <- lmer(Wing.length..mm.~Temp_let+(1|Biome)+(1|State), data = lifehistshort, REML = FALSE)
+m2wing <- lmer(Wing.length..mm.~Temp_let+Locality+(1|Biome)+(1|State), data = lifehistshort, REML = FALSE)
+mFwing <- lmer(Wing.length..mm.~Sex+Temp_let+Locality+(1|Biome)+(1|State), data = lifehistshort, REML = FALSE)
+
+summary(m0wing)
+summary(mFwing)
+model_wingAIC<-AIC(m0wing,m1wing,m2wing,mFwing)
+print(model_wingAIC)
+
+Data <- read.csv("mee3261-sup-0001-DataS1.csv")
+m0 <- lmer(BodyL ~ 1 + (1 | Population) + (1 | Container), data = Data)
+
+# Fit alternative model including fixed and all random effects
+mF <- lmer(BodyL ~ Sex + Treatment + Habitat + (1 | Population) + (1 | Container), data = Data)
+
+# View model fits for both models
+summary(m0)
+summary(mF)
+m0ML <- lmer(BodyL ~ 1 + (1 | Population) + (1 | Container), data = Data, REML = FALSE)
+mFML <- lmer(BodyL ~ Sex + Treatment + Habitat + (1 | Population) + (1 | Container), data = Data, REML = FALSE)
+
+# View model fits for both models fitted by ML
+summary(m0ML)
+summary(mFML)
+```
+
+## R Markdown
+
+Proportion- http://www.r-tutor.com/elementary-statistics/inference-about-two-populations/comparison-two-population-proportions
+Cochran-mantel-haenszel-https://rcompanion.org/rcompanion/b_10.html
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
