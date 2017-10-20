@@ -89,8 +89,22 @@ mantelhaen.test(data.xtabs)
 #from Nakagawa et al 2013
 library(lme4)
 # Fit null model without fixed effects (but including all random effects)
-mod_adrate0<-glmer(AdRate~1+(1|Biome)+(1|State), family=binomial, data=lifehistshort)
+mod_adrate0<-lmer(AdRate~1+(1|Biome)+(1|State), family=binomial, data=lifehistshort)
+mod_adrate1<-lmer(AdRate~1+(1|Biome)+(1|State), family=binomial, data=lifehistshort,na.action=na.omit)
+mod_adrateF1<-lmer(AdRate~Temp_let+Locality+(1|Biome)+(1|State), family=binomial, data=lifehistshort)
+mod_adrateF2<-lmer(AdRate~Temp_let+Locality+(1|Biome)+(1|State), family=binomial, data=lifehistshort, na.action=na.omit)
 summary(mod_adrate0)
+modadrate<-AIC(mod_adrate0, mod_adrate1, mod_adrateF1, mod_adrateF2)
+modadrate
+
+##different distribution?
+mod_adrate01<-glm(AdRate~1+(1|Biome)+(1|State), family=binomial(logit), data=lifehistshort)
+mod_adrate11<-glm(AdRate~1+(1|Biome)+(1|State), family=binomial(logit), data=lifehistshort,na.action=na.omit)
+mod_adrateF11<-glm(AdRate~Temp_let+Locality+(1|Biome)+(1|State), family=binomial(logit), data=lifehistshort)
+mod_adrateF21<-glm(AdRate~Temp_let+Locality+(1|Biome)+(1|State), family=binomial(logit), data=lifehistshort, na.action=na.omit)
+summary(mod_adrate01)
+modadrate1<-AIC(mod_adrate01, mod_adrate11, mod_adrateF11, mod_adrateF21)
+modadrate1
 
 ##body size
 #null
@@ -102,11 +116,15 @@ summary(mod_wingf)
 
 # AIC and BIC needs to be calcualted with ML not REML in body size models
 m0wing <- lmer(Wing.length..mm.~1+(1|Biome)+(1|State), data = lifehistshort, REML = FALSE)
+m01wing <- lmer(Wing.length..mm.~1+(1|Biome)+(1|State), data = lifehistshort, REML = FALSE, na.action=na.omit)
+m02wing <- lmer(Wing.length..mm.~1+(1|Biome)+(1|State), data = lifehistshort, REML = FALSE, na.action=na.exclude)
 m1wing <- lmer(Wing.length..mm.~Temp_let+(1|Biome)+(1|State), data = lifehistshort, REML = FALSE)
 m2wing <- lmer(Wing.length..mm.~Temp_let+Locality+(1|Biome)+(1|State), data = lifehistshort, REML = FALSE)
 mFwing <- lmer(Wing.length..mm.~Sex+Temp_let+Locality+(1|Biome)+(1|State), data = lifehistshort, REML = FALSE)
 
 summary(m0wing)
+summary(m01wing)
+modelnaomit<-AIC(m0wing, m01wing,m02wing)
 summary(mFwing)
 model_wingAIC<-AIC(m0wing,m1wing,m2wing,mFwing)
 print(model_wingAIC)
