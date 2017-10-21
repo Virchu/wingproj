@@ -19,6 +19,7 @@ lifehist$Locality=factor(lifehist$Locality, c("ARS","APR","RPV","RMO","TLC","TPN
 library(survival)
 library(survminer)
 
+
 #univariate cox regression first
 res.cox1<-coxph(Surv(time, Death_stat)~Sex, data=lifehist)
 summary(res.cox1)

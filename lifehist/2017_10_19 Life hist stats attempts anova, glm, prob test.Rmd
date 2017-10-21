@@ -11,7 +11,10 @@ knitr::opts_chunk$set(echo = TRUE)
 setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
 lifehistshort<-read.csv("2017_10_18 Life history shortened.csv", header=TRUE)
 lifehistshort$Locality=factor(lifehistshort$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+lifehistshort$Lat_group=factor(lifehistshort$Lat_group, c(1,2,3))
 
+library(dplyr)
+library(lme4)
 
 ##nested design in r
 boxplot(AdRate~Temp_let, data=lifehistshort)
@@ -87,7 +90,11 @@ mantelhaen.test(data.xtabs)
 
 ##glmm
 #from Nakagawa et al 2013
-library(lme4)
+
+shapiro.test(survive$AdRate)
+shapiro.test(survive$Wing.length..mm.)
+#not normally distributed
+
 # Fit null model without fixed effects (but including all random effects)
 mod_adrate0<-lmer(AdRate~1+(1|Biome)+(1|State), family=binomial, data=lifehistshort)
 mod_adrate1<-lmer(AdRate~1+(1|Biome)+(1|State), family=binomial, data=lifehistshort,na.action=na.omit)
@@ -144,12 +151,95 @@ mFML <- lmer(BodyL ~ Sex + Treatment + Habitat + (1 | Population) + (1 | Contain
 # View model fits for both models fitted by ML
 summary(m0ML)
 summary(mFML)
+
+
+
+#*#*#*#Time to emergence
+# Two Way Factorial Design 
+#fit <- aov(y ~ A + B + A:B, data=mydataframe)
+#fit <- aov(y ~ A*B, data=mydataframe) # same thing
+# Analysis of Covariance 
+#fit <- aov(y ~ A + x, data=mydataframe)
+survive<- subset(lifehistshort, !is.na(Sex1), c=(1:25))
+shapiro.test(survive$Emtime)
+#not normal, use nonparametric test
+em_fit1g<-glmer(Emtime~Lat_group+(1|Biome)+Temp_let, data=survive, family=poisson)
+summary(em_fit1g)
+
+em_fit2g<-glmer(Emtime~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=poisson)
+summary(em_fit2g)
+
+em_fit3g<-glmer(Emtime~Lat_group+(1|Biome)+(1|State)+Temp_let, data=survive, family=poisson)
+summary(em_fit3g)
+
+em_fit4g<-glmer(Emtime~(1|Biome)+Lat_group*Temp_let, data=survive, family=poisson)
+summary(em_fit4g)
+emfitg_mod<-AIC(em_fit1g, em_fit2g, em_fit3g, em_fit4g)
+
+emfit1<-glm(Emtime~Temp_let, data=survive, family=poisson)
+emfit2<-glm(Emtime~Lat_group, data=survive, family=poisson)
+emfit3<-glm(Emtime~Lat_group+Temp_let, data=survive, family=poisson)
+emfit4<-glm(Emtime~Lat_group*Temp_let, data=survive, family=poisson)
+emfit_mod<-AIC(emfit1, emfit2, emfit3, emfit4)
+
+emfit1c<-glm(Emtime~Temp_num, data=survive, family=poisson)
+emfit2c<-glm(Emtime~Lat_group, data=survive, family=poisson)
+emfit3c<-glm(Emtime~Lat_group+Temp_num, data=survive, family=poisson)
+emfit4c<-glm(Emtime~Lat_group*Temp_num, data=survive, family=poisson)
+emfit_modc<-AIC(emfit1c, emfit2c, emfit3c, emfit4c)
+
+#emtime data
+emtime_avg<-aggregate(survive$Emtime, list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), mean)
+write.table(emtime_avg, "clipboard", sep='\t')
+emtime_sd<-aggregate(survive$Emtime, list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), sd)
+write.table(emtime_sd, "clipboard", sep='\t')
+
+emtime_avg1<-aggregate(survive$Emtime, list(Latitude= survive$Lat_group, Sex=survive$Sex, Temperature=survive$Temp_num), mean)
+write.table(emtime_avg1, "clipboard", sep='\t')
+emtime_sd1<-aggregate(survive$Emtime, list(Latitude= survive$Lat_group, Sex=survive$Sex, Temperature=survive$Temp_num), sd)
+write.table(emtime_sd1, "clipboard", sep='\t')
+
+emtime_avg2<-aggregate(survive$Emtime, list(Latitude= survive$Lat_group, Temperature=survive$Temp_num), mean)
+write.table(emtime_avg2, "clipboard", sep='\t')
+emtime_sd2<-aggregate(survive$Emtime, list(Latitude= survive$Lat_group, Temperature=survive$Temp_num), sd)
+write.table(emtime_sd2, "clipboard", sep='\t')
+
+##lsmeans on categorical (temp let and locality)
+library(lsmeans)
+em_post<-cld(lsmeans(emfit3, "Lat_group",adjust="tukey"))
+em_post1g<-cld(lsmeans(em_fit1g, "Lat_group", adjust="tukey"))
+em_post2<-cld(lsmeans(emfit3, "Temp_let",adjust="tukey"))
+
+
+##&#&#&# ANCOVA on EMTIME
+em_anc<-lm(Emtime~Lat_group*Temp_let, data=survive)
+summary(em_anc)
+em_ancls<-cld(lsmeans(em_anc, c("Lat_group", "Temp_let")))
+
+survivef<-subset(survive, Sex=="F", c(1:25))
+survivem<-subset(survive, Sex=="M", c(1:25))
+
+em_ancf<-lm(Emtime~Lat_group*Temp_let, data=survivef)
+summary(em_ancf)
+em_anclsf<-cld(lsmeans(em_ancf, c("Lat_group", "Temp_let")))
+
+em_ancm<-lm(Emtime~Lat_group*Temp_let, data=survivem)
+summary(em_ancm)
+em_anclsm<-cld(lsmeans(em_ancm, c("Lat_group", "Temp_let")))
+
+em_ancal<-lm(Emtime~Lat_group*Temp_let*Sex, data=survive)
+summary(em_ancal)
+em_anclsal<-cld(lsmeans(em_ancal, c("Lat_group", "Temp_let", "Sex")))
+
+
 ```
 
 ## R Markdown
 
 Proportion- http://www.r-tutor.com/elementary-statistics/inference-about-two-populations/comparison-two-population-proportions
 Cochran-mantel-haenszel-https://rcompanion.org/rcompanion/b_10.html
+
+ANCOVA lsmeans tutorial-http://rstudio-pubs-static.s3.amazonaws.com/22877_056e76459d274dd6bc9158433aff35ef.html
 
 ```{r cars}
 summary(cars)
