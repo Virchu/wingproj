@@ -655,6 +655,116 @@ al_ancal<-lm(AL~Lat_group*Temp_let*Sex, data=survive)
 summary(al_ancal)
 al_anclsal<-cld(lsmeans(al_ancal, c("Lat_group", "Temp_let", "Sex")))
 
+#*#*#*#*#*#*#*#*#*#*#*# LENGTH OF WING- BODY SIZE
+# Two Way Factorial Design 
+#fit <- aov(y ~ A + B + A:B, data=mydataframe)
+#fit <- aov(y ~ A*B, data=mydataframe) # same thing
+# Analysis of Covariance 
+#fit <- aov(y ~ A + x, data=mydataframe)
+
+shapiro.test(survive$Wing.length..mm.)
+#not normal, use nonparametric test
+
+#GLMM with gamma, high negative aic
+
+wl_fit1b<-glmer(Wing.length..mm.~(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(wl_fit1b)
+
+wl_fit2b<-glmer(Wing.length..mm.~Lat_group+(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(wl_fit2b)
+
+wl_fit3b<-glmer(Wing.length..mm.~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=Gamma)
+summary(wl_fit3b)
+
+wl_fit4b<-glmer(Wing.length..mm.~(1|Biome)+(1|State)+Temp_let, data=survive, family=Gamma)
+summary(wl_fit4b)
+
+wl_fit5b<-glmer(Wing.length..mm.~(1|Biome)+Lat_group+Temp_let+Sex, data=survive, family=Gamma)
+wl_fit6b<-glmer(Wing.length..mm.~(1|Biome)+(1|State)+Lat_group+Temp_let+Sex, data=survive, family=Gamma)
+summary(wl_fit5b)
+wl_fit7b<-glmer(Wing.length..mm.~(1|Biome)+(1|State)+Lat_group*Temp_let*Sex, data=survive, family=Gamma)
+wl_itb_mod<-AIC(wl_fit1b, wl_fit2b, wl_fit3b, wl_fit4b, wl_fit5b, wl_fit6b,wl_fit7b)
+wl_itb_mod 
+
+###wl_fit7p is lowest followed by fit3b
+
+#GLMM with binomial
+
+al_fit1b<-glmer(AL~(1|Biome)+(1|State), data=survive, family=binomial)
+summary(al_fit1b)
+
+
+
+#GLMM with gamma-> Gives me large, negative AIC
+al_fit1g<-glmer(AL~(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(al_fit1g)
+#GAMMA DOES NOT WORK WITH AL
+
+
+#GLM with gaussian-> Gives me large, negative AIC
+lr_fit1ga<-lmer(LarvRate~(1|Biome)+(1|State), data=survive)
+summary(lr_fit1ga)
+
+lr_fit2ga<-lmer(LarvRate~Lat_group+(1|Biome)+(1|State), data=survive)
+summary(lr_fit2ga)
+
+lr_fit3ga<-lmer(LarvRate~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive)
+summary(lr_fit3ga)
+
+lr_fit4ga<-lmer(LarvRate~(1|Biome)+(1|State)+Temp_let, data=survive)
+summary(lr_fit4ga)
+
+lr_fit5ga<-lmer(LarvRate~(1|Biome)+Lat_group+Temp_let+Sex, data=survive)
+summary(lr_fit5ga)
+lrfitb_modga<-AIC(lr_fit1ga, lr_fit2ga, lr_fit3ga, lr_fit4ga, lr_fit5ga)
+lrfitb_modga
+
+
+
+#Wing length data
+wltime_avg<-aggregate(survive$Wing.length..mm., list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), mean, na.rm=TRUE)
+write.table(wltime_avg, "clipboard", sep='\t')
+wltime_sd<-aggregate(survive$Wing.length..mm., list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), sd, na.rm=TRUE)
+write.table(wltime_sd, "clipboard", sep='\t')
+
+wltime_avg1<-aggregate(survive$Wing.length..mm., list(Latitude= survive$Lat_group, Sex=survive$Sex, Temperature=survive$Temp_num), mean, na.rm=TRUE)
+write.table(wltime_avg1, "clipboard", sep='\t')
+wltime_sd1<-aggregate(survive$Wing.length..mm., list(Latitude= survive$Lat_group, Sex=survive$Sex, Temperature=survive$Temp_num), sd, na.rm=TRUE)
+write.table(wltime_sd1, "clipboard", sep='\t')
+
+wltime_avg2<-aggregate(survive$Wing.length..mm., list(Latitude= survive$Lat_group, Temperature=survive$Temp_num), mean, na.rm=TRUE)
+write.table(wltime_avg2, "clipboard", sep='\t')
+wltime_sd2<-aggregate(survive$Wing.length..mm., list(Latitude= survive$Lat_group, Temperature=survive$Temp_num), sd, na.rm=TRUE)
+write.table(wltime_sd2, "clipboard", sep='\t')
+
+
+##lsmeans on categorical (temp let and locality)
+library(lsmeans)
+em_post<-cld(lsmeans(emfit3, "Lat_group",adjust="tukey"))
+em_post1g<-cld(lsmeans(em_fit1g, "Lat_group", adjust="tukey"))
+em_post2<-cld(lsmeans(emfit3, "Temp_let",adjust="tukey"))
+
+
+##&#& ANCOVA on LarvRate
+al_anc<-lm(AL~Lat_group*Temp_let, data=survive)
+summary(al_anc)
+al_ancls<-cld(lsmeans(al_anc, c("Lat_group", "Temp_let")))
+
+survivef<-subset(survive, Sex=="F", c(1:25))
+survivem<-subset(survive, Sex=="M", c(1:25))
+
+al_ancf<-lm(AL~Lat_group*Temp_let, data=survivef)
+summary(al_ancf)
+al_anclsf<-cld(lsmeans(al_ancf, c("Lat_group", "Temp_let")))
+
+al_ancm<-lm(AL~Lat_group*Temp_let, data=survivem)
+summary(al_ancm)
+al_anclsm<-cld(lsmeans(al_ancm, c("Lat_group", "Temp_let")))
+
+al_ancal<-lm(AL~Lat_group*Temp_let*Sex, data=survive)
+summary(al_ancal)
+al_anclsal<-cld(lsmeans(al_ancal, c("Lat_group", "Temp_let", "Sex")))
+
 ```
 
 ## R Markdown
