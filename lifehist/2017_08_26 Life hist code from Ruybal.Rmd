@@ -7,7 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 rm(list=ls()) # clears workspace
-setwd("C:/Users/virgc/OneDrive/Documents/GitHub/wingproj/lifehist")
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
 Ddat<-read.csv("updated_Lsurv_12-17-13_Chu.csv", header=TRUE)
 library(ggplot2)
 library(lme4)

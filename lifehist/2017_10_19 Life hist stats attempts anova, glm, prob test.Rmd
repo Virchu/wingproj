@@ -13,8 +13,17 @@ lifehistshort<-read.csv("2017_10_18 Life history shortened.csv", header=TRUE)
 lifehistshort$Locality=factor(lifehistshort$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
 lifehistshort$Lat_group=factor(lifehistshort$Lat_group, c(1,2,3))
 
+survive<- subset(lifehistshort, !is.na(Sex1), c=(1:25))
+
 library(dplyr)
 library(lme4)
+
+#Shapiro wilk on outcome variable
+shapiro.test(survive$AdRate) #no
+shapiro.test(survive$Wing.length..mm.) #no
+shapiro.test(survive$LarvRate) #no
+shapiro.test(survive$Puprate) #no
+shapiro.test(survive$Puplen) #no
 
 ##nested design in r
 boxplot(AdRate~Temp_let, data=lifehistshort)
@@ -154,28 +163,65 @@ summary(mFML)
 
 
 
-#*#*#*#Time to emergence
+#*#*#*#*#*#*#*#*#*#*#*#TIME TO EMERGENCE
 # Two Way Factorial Design 
 #fit <- aov(y ~ A + B + A:B, data=mydataframe)
 #fit <- aov(y ~ A*B, data=mydataframe) # same thing
 # Analysis of Covariance 
 #fit <- aov(y ~ A + x, data=mydataframe)
-survive<- subset(lifehistshort, !is.na(Sex1), c=(1:25))
+
 shapiro.test(survive$Emtime)
 #not normal, use nonparametric test
-em_fit1g<-glmer(Emtime~Lat_group+(1|Biome)+Temp_let, data=survive, family=poisson)
-summary(em_fit1g)
+#GLMM with poission
+em_fit1gp<-glmer(Emtime~(1|Biome)+(1|State), data=survive, family=poisson)
+summary(em_fit1gp)
 
-em_fit2g<-glmer(Emtime~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=poisson)
-summary(em_fit2g)
+em_fit2gp<-glmer(Emtime~Lat_group+(1|Biome)+(1|State), data=survive, family=poisson)
+summary(em_fit2gp)
 
-em_fit3g<-glmer(Emtime~Lat_group+(1|Biome)+(1|State)+Temp_let, data=survive, family=poisson)
-summary(em_fit3g)
+em_fit3gp<-glmer(Emtime~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=poisson)
+summary(em_fit3gp)
 
-em_fit4g<-glmer(Emtime~(1|Biome)+Lat_group*Temp_let, data=survive, family=poisson)
-summary(em_fit4g)
-emfitg_mod<-AIC(em_fit1g, em_fit2g, em_fit3g, em_fit4g)
+em_fit4gp<-glmer(Emtime~(1|Biome)+(1|State)+Temp_let, data=survive, family=poisson)
+summary(em_fit4gp)
 
+em_fit5gp<-glmer(Emtime~(1|Biome)+Lat_group+Temp_let+Sex, data=survive, family=poisson)
+summary(em_fit5gp)
+emfitgp_mod<-AIC(em_fit1gp, em_fit2gp, em_fit3gp, em_fit4gp, em_fit5gp)
+emfitgp_mod #fit3, 4, 5 all have similar AIC
+
+
+#GLMM with gamma_ 
+em_fit1gg<-glmer(Emtime~(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(em_fit1gg)
+
+em_fit2gg<-glmer(Emtime~Lat_group+(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(em_fit2gg)
+
+em_fit3gg<-glmer(Emtime~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=Gamma)
+summary(em_fit3gg)
+
+em_fit4gg<-glmer(Emtime~(1|Biome)+(1|State)+Temp_let, data=survive, family=Gamma)
+summary(em_fit4gg)
+
+em_fit5gg<-glmer(Emtime~(1|Biome)+Lat_group+Temp_let+Sex, data=survive, family=Gamma)
+summary(em_fit5gg)
+
+em_fit6gg<-glmer(Emtime~(1|Biome)+Lat_group*Temp_let+Sex, data=survive, family=Gamma)
+summary(em_fit6gg)
+
+em_fit7gg<-glmer(Emtime~(1|Biome)+Lat_group*Temp_let*Sex, data=survive, family=Gamma)
+summary(em_fit7gg)
+
+em_fit8gg<-glmer(Emtime~(1|Biome)+Lat_group+Temp_let*Sex, data=survive, family=Gamma)
+summary(em_fit8gg)
+
+emfitgg_mod<-AIC(em_fit1gg, em_fit2gg, em_fit3gg, em_fit4gg, em_fit5gg, em_fit6gg, em_fit7gg ,em_fit8gg)
+
+#emfitgg3 has lowest AIC... but sex is sig in model 5....
+#->em_fit3gg<-glmer(Emtime~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=Gamma)
+
+#GLM, not glmm
 emfit1<-glm(Emtime~Temp_let, data=survive, family=poisson)
 emfit2<-glm(Emtime~Lat_group, data=survive, family=poisson)
 emfit3<-glm(Emtime~Lat_group+Temp_let, data=survive, family=poisson)
@@ -211,7 +257,7 @@ em_post1g<-cld(lsmeans(em_fit1g, "Lat_group", adjust="tukey"))
 em_post2<-cld(lsmeans(emfit3, "Temp_let",adjust="tukey"))
 
 
-##&#&#&# ANCOVA on EMTIME
+##&#& ANCOVA on EMTIME
 em_anc<-lm(Emtime~Lat_group*Temp_let, data=survive)
 summary(em_anc)
 em_ancls<-cld(lsmeans(em_anc, c("Lat_group", "Temp_let")))
@@ -231,6 +277,383 @@ em_ancal<-lm(Emtime~Lat_group*Temp_let*Sex, data=survive)
 summary(em_ancal)
 em_anclsal<-cld(lsmeans(em_ancal, c("Lat_group", "Temp_let", "Sex")))
 
+
+#*#*#*#*#*#*#*#*#*#*#*#RATE OF DEVELOPMENT (ADRATE)
+# Two Way Factorial Design 
+#fit <- aov(y ~ A + B + A:B, data=mydataframe)
+#fit <- aov(y ~ A*B, data=mydataframe) # same thing
+# Analysis of Covariance 
+#fit <- aov(y ~ A + x, data=mydataframe)
+
+shapiro.test(survive$AdRate)
+#not normal, use nonparametric test
+
+#GLMM with binomial, get non-integer #successes in a binomial glm error
+
+#got error, so increase iterations and change optimizer?
+glmerControl(optimizer="bobyqa", optCtrl = list(maxfun = 100000))
+
+ad_fit1b<-glmer(AdRate~(1|Biome)+(1|State), data=survive, family=binomial)
+summary(ad_fit1b)
+
+ad_fit2b<-glmer(AdRate~Lat_group+(1|Biome)+(1|State), data=survive, family=binomial)
+summary(ad_fit2b)
+
+ad_fit3b<-glmer(AdRate~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=binomial)
+summary(ad_fit3b)
+
+ad_fit4b<-glmer(AdRate~(1|Biome)+(1|State)+Temp_let, data=survive, family=binomial)
+summary(ad_fit4b)
+
+ad_fit5b<-glmer(AdRate~(1|Biome)+Lat_group+Temp_let+Sex, data=survive, family=binomial)
+ad_fit6b<-glmer(AdRate~(1|Biome)+(1|State)+Lat_group+Temp_let+Sex, data=survive, family=binomial)
+summary(ad_fit5b)
+adfitb_mod<-AIC(ad_fit1b, ad_fit2b, ad_fit3b, ad_fit4b, ad_fit5b, ad_fit6b)
+adfitb_mod #fit1??
+
+
+#GLMM with gamma-> Gives me large, negative AIC
+ad_fit1g<-glmer(AdRate~(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(ad_fit1g)
+
+ad_fit2g<-glmer(AdRate~Lat_group+(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(ad_fit2g)
+
+ad_fit3g<-glmer(AdRate~Lat_group+(1|Biome)+(1|State)+Temp_let, data=survive, family=Gamma)
+summary(ad_fit3g)
+
+ad_fit4g<-glmer(AdRate~(1|Biome)+(1|State)+Temp_let, data=survive, family=Gamma)
+summary(ad_fit4g)
+
+ad_fit5g<-glmer(AdRate~(1|Biome)+Lat_group+Temp_let+Sex, data=survive, family=Gamma)
+summary(ad_fit5g)
+ad_fit6g<-glmer(AdRate~(1|Biome)+(1|State)+Lat_group+Temp_let+Sex, data=survive, family=Gamma)
+summary(ad_fit6g)
+
+ad_fit7g<-glmer(AdRate~(1|Biome)+(1|State)+Lat_group*Temp_let*Sex, data=survive, family=Gamma)
+summary(ad_fit7g)
+
+adfitb_modg<-AIC(ad_fit1g, ad_fit2g, ad_fit3g, ad_fit4g, ad_fit5g, ad_fit6g, ad_fit7g)
+adfitb_modg
+#adfit3, so sex not diff
+
+#GLM with gaussian-> Gives me large, negative AIC
+ad_fit1ga<-lmer(AdRate~(1|Biome)+(1|State), data=survive)
+summary(ad_fit1ga)
+
+ad_fit2ga<-lmer(AdRate~Lat_group+(1|Biome)+(1|State), data=survive)
+summary(ad_fit2ga)
+
+ad_fit3ga<-lmer(AdRate~Lat_group+(1|Biome)+(1|State)+Temp_let, data=survive)
+summary(ad_fit3ga)
+
+ad_fit4ga<-lmer(AdRate~(1|Biome)+(1|State)+Temp_let, data=survive)
+summary(ad_fit4ga)
+
+ad_fit5ga<-lmer(AdRate~(1|Biome)+Lat_group+Temp_let+Sex, data=survive)
+summary(ad_fit5ga)
+adfitb_modga<-AIC(ad_fit1ga, ad_fit2ga, ad_fit3ga, ad_fit4ga, ad_fit5ga)
+adfitb_modga
+
+
+#GLM, not glmm
+adfit1<-glm(AdRate~Temp_let, data=survive, family=quasibinomial)
+adfit2<-glm(AdRate~Lat_group, data=survive, family=quasibinomial)
+adfit3<-glm(AdRate~Lat_group+Temp_let, data=survive, family=quasibinomial)
+adfit4<-glm(AdRate~Lat_group*Temp_let, data=survive, family=quasibinomial)
+adfit5<-glm(AdRate~Sex, data=survive, family=quasibinomial)
+adfit6<-glm(AdRate~Sex+Temp_let, data=survive, family=quasibinomial)
+adfit7<-glm(AdRate~Sex+Temp_let+Lat_group, data=survive, family=quasibinomial)
+adfit_mod<-AIC(adfit1, adfit2, adfit3, adfit4, adfit5, adfit6, adfit7)
+
+adfit1g<-glm(AdRate~Temp_let, data=survive, family=Gamma)
+adfit2g<-glm(AdRate~Lat_group, data=survive, family=Gamma)
+adfit3g<-glm(AdRate~Lat_group+Temp_let, data=survive, family=Gamma)
+adfit4g<-glm(AdRate~Lat_group*Temp_let, data=survive, family=Gamma)
+adfit5g<-glm(AdRate~Sex, data=survive, family=Gamma)
+adfit6g<-glm(AdRate~Sex+Temp_let, data=survive, family=Gamma)
+adfit7g<-glm(AdRate~Sex+Temp_let+Lat_group, data=survive, family=Gamma)
+adfit_modg<-AIC(adfit1g, adfit2g, adfit3g, adfit4g, adfit5g, adfit6g, adfit7g)
+
+#AdRate data
+adtime_avg<-aggregate(survive$AdRate, list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), mean)
+write.table(adtime_avg, "clipboard", sep='\t')
+adtime_sd<-aggregate(survive$AdRate, list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), sd)
+write.table(adtime_sd, "clipboard", sep='\t')
+
+adtime_avg1<-aggregate(survive$AdRate, list(Latitude= survive$Lat_group, Sex=survive$Sex, Temperature=survive$Temp_num), mean)
+write.table(adtime_avg1, "clipboard", sep='\t')
+adtime_sd1<-aggregate(survive$AdRate, list(Latitude= survive$Lat_group, Sex=survive$Sex, Temperature=survive$Temp_num), sd)
+write.table(adtime_sd1, "clipboard", sep='\t')
+
+adtime_avg2<-aggregate(survive$AdRate, list(Latitude= survive$Lat_group, Temperature=survive$Temp_num), mean)
+write.table(adtime_avg2, "clipboard", sep='\t')
+adtime_sd2<-aggregate(survive$AdRate, list(Latitude= survive$Lat_group, Temperature=survive$Temp_num), sd)
+write.table(adtime_sd2, "clipboard", sep='\t')
+
+##lsmeans on categorical (temp let and locality)
+library(lsmeans)
+em_post<-cld(lsmeans(emfit3, "Lat_group",adjust="tukey"))
+em_post1g<-cld(lsmeans(em_fit1g, "Lat_group", adjust="tukey"))
+em_post2<-cld(lsmeans(emfit3, "Temp_let",adjust="tukey"))
+
+
+##&#& ANCOVA on ADrate
+ad_anc<-lm(AdRate~Lat_group*Temp_let, data=survive)
+summary(ad_anc)
+ad_ancls<-cld(lsmeans(ad_anc, c("Lat_group", "Temp_let")))
+
+survivef<-subset(survive, Sex=="F", c(1:25))
+survivem<-subset(survive, Sex=="M", c(1:25))
+
+ad_ancf<-lm(AdRate~Lat_group*Temp_let, data=survivef)
+summary(ad_ancf)
+ad_anclsf<-cld(lsmeans(em_ancf, c("Lat_group", "Temp_let")))
+
+ad_ancm<-lm(AdRate~Lat_group*Temp_let, data=survivem)
+summary(ad_ancm)
+ad_anclsm<-cld(lsmeans(ad_ancm, c("Lat_group", "Temp_let")))
+
+ad_ancal<-lm(AdRate~Lat_group*Temp_let*Sex, data=survive)
+summary(ad_ancal)
+ad_anclsal<-cld(lsmeans(ad_ancal, c("Lat_group", "Temp_let", "Sex")))
+
+#*#*#*#*#*#*#*#*#*#*#*#RATE OF LARVAE DEVELOPMENT (LARVRATE)
+# Two Way Factorial Design 
+#fit <- aov(y ~ A + B + A:B, data=mydataframe)
+#fit <- aov(y ~ A*B, data=mydataframe) # same thing
+# Analysis of Covariance 
+#fit <- aov(y ~ A + x, data=mydataframe)
+
+shapiro.test(survive$AdRate)
+#not normal, use nonparametric test
+
+#GLMM with binomial, get non-integer #successes in a binomial glm error
+
+#got error, so increase iterations and change optimizer?
+glmerControl(optimizer="bobyqa", optCtrl = list(maxfun = 100000))
+
+lr_fit1b<-glmer(LarvRate~(1|Biome)+(1|State), data=survive, family=binomial)
+summary(lr_fit1b)
+
+lr_fit2b<-glmer(LarvRate~Lat_group+(1|Biome)+(1|State), data=survive, family=binomial)
+summary(lr_fit2b)
+
+lr_fit3b<-glmer(LarvRate~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=binomial)
+summary(lr_fit3b)
+
+lr_fit4b<-glmer(LarvRate~(1|Biome)+(1|State)+Temp_let, data=survive, family=binomial)
+summary(lr_fit4b)
+
+lr_fit5b<-glmer(LarvRate~(1|Biome)+Lat_group+Temp_let+Sex, data=survive, family=binomial)
+lr_fit6b<-glmer(LarvRate~(1|Biome)+(1|State)+Lat_group+Temp_let+Sex, data=survive, family=binomial)
+summary(lr_fit5b)
+lrfitb_mod<-AIC(lr_fit1b, lr_fit2b, lr_fit3b, lr_fit4b, lr_fit5b, lr_fit6b)
+lrfitb_mod 
+
+
+#GLMM with gamma-> Gives me large, negative AIC
+lr_fit1g<-glmer(LarvRate~(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(lr_fit1g)
+
+lr_fit2g<-glmer(LarvRate~Lat_group+(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(lr_fit2g)
+
+lr_fit3g<-glmer(LarvRate~Lat_group+(1|Biome)+(1|State)+Temp_let, data=survive, family=Gamma)
+summary(lr_fit3g)
+
+lr_fit4g<-glmer(LarvRate~(1|Biome)+(1|State)+Temp_let, data=survive, family=Gamma)
+summary(lr_fit4g)
+
+lr_fit5g<-glmer(LarvRate~(1|Biome)+Lat_group+Temp_let+Sex, data=survive, family=Gamma)
+summary(lr_fit5g)
+lr_fit6g<-glmer(LarvRate~(1|Biome)+(1|State)+Lat_group+Temp_let+Sex, data=survive, family=Gamma)
+summary(lr_fit6g)
+
+lr_fit7g<-glmer(LarvRate~(1|Biome)+(1|State)+Lat_group*Temp_let*Sex, data=survive, family=Gamma)
+summary(lr_fit7g)
+
+lrfitb_modg<-AIC(lr_fit1g, lr_fit2g, lr_fit3g, lr_fit4g, lr_fit5g, lr_fit6g, lr_fit7g)
+lrfitb_modg
+#lrfit3g, so sex not diff
+
+#GLM with gaussian-> Gives me large, negative AIC
+lr_fit1ga<-lmer(LarvRate~(1|Biome)+(1|State), data=survive)
+summary(lr_fit1ga)
+
+lr_fit2ga<-lmer(LarvRate~Lat_group+(1|Biome)+(1|State), data=survive)
+summary(lr_fit2ga)
+
+lr_fit3ga<-lmer(LarvRate~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive)
+summary(lr_fit3ga)
+
+lr_fit4ga<-lmer(LarvRate~(1|Biome)+(1|State)+Temp_let, data=survive)
+summary(lr_fit4ga)
+
+lr_fit5ga<-lmer(LarvRate~(1|Biome)+Lat_group+Temp_let+Sex, data=survive)
+summary(lr_fit5ga)
+lrfitb_modga<-AIC(lr_fit1ga, lr_fit2ga, lr_fit3ga, lr_fit4ga, lr_fit5ga)
+lrfitb_modga
+
+
+
+#LarvRate data
+lrtime_avg<-aggregate(survive$LarvRate, list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), mean)
+write.table(lrtime_avg, "clipboard", sep='\t')
+lrtime_sd<-aggregate(survive$LarvRate, list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), sd)
+write.table(lrtime_sd, "clipboard", sep='\t')
+
+lrtime_avg1<-aggregate(survive$LarvRate, list(Latitude= survive$Lat_group, Sex=survive$Sex, Temperature=survive$Temp_num), mean)
+write.table(lrtime_avg1, "clipboard", sep='\t')
+lrtime_sd1<-aggregate(survive$LarvRate, list(Latitude= survive$Lat_group, Sex=survive$Sex, Temperature=survive$Temp_num), sd)
+write.table(lrtime_sd1, "clipboard", sep='\t')
+
+lrtime_avg2<-aggregate(survive$LarvRate, list(Latitude= survive$Lat_group, Temperature=survive$Temp_num), mean)
+write.table(lrtime_avg2, "clipboard", sep='\t')
+lrtime_sd2<-aggregate(survive$LarvRate, list(Latitude= survive$Lat_group, Temperature=survive$Temp_num), sd)
+write.table(lrtime_sd2, "clipboard", sep='\t')
+
+
+##lsmeans on categorical (temp let and locality)
+library(lsmeans)
+em_post<-cld(lsmeans(emfit3, "Lat_group",adjust="tukey"))
+em_post1g<-cld(lsmeans(em_fit1g, "Lat_group", adjust="tukey"))
+em_post2<-cld(lsmeans(emfit3, "Temp_let",adjust="tukey"))
+
+
+##&#& ANCOVA on LarvRate
+lr_anc<-lm(LarvRate~Lat_group*Temp_let, data=survive)
+summary(lr_anc)
+lr_ancls<-cld(lsmeans(lr_anc, c("Lat_group", "Temp_let")))
+
+survivef<-subset(survive, Sex=="F", c(1:25))
+survivem<-subset(survive, Sex=="M", c(1:25))
+
+lr_ancf<-lm(LarvRate~Lat_group*Temp_let, data=survivef)
+summary(lr_ancf)
+lr_anclsf<-cld(lsmeans(lr_ancf, c("Lat_group", "Temp_let")))
+
+lr_ancm<-lm(LarvRate~Lat_group*Temp_let, data=survivem)
+summary(lr_ancm)
+lr_anclsm<-cld(lsmeans(lr_ancm, c("Lat_group", "Temp_let")))
+
+lr_ancal<-lm(LarvRate~Lat_group*Temp_let*Sex, data=survive)
+summary(lr_ancal)
+lr_anclsal<-cld(lsmeans(lr_ancal, c("Lat_group", "Temp_let", "Sex")))
+
+#*#*#*#*#*#*#*#*#*#*#*# LENGTH OF ADULT LIFE
+# Two Way Factorial Design 
+#fit <- aov(y ~ A + B + A:B, data=mydataframe)
+#fit <- aov(y ~ A*B, data=mydataframe) # same thing
+# Analysis of Covariance 
+#fit <- aov(y ~ A + x, data=mydataframe)
+
+shapiro.test(survive$AL)
+#not normal, use nonparametric test
+
+#GLMM with binomial, get non-integer #successes in a binomial glm error
+
+#got error, so increase iterations and change optimizer?
+glmerControl(optimizer="bobyqa", optCtrl = list(maxfun = 100000))
+
+al_fit1p<-glmer(AL~(1|Biome)+(1|State), data=survive, family=poisson)
+summary(al_fit1p)
+
+al_fit2p<-glmer(AL~Lat_group+(1|Biome)+(1|State), data=survive, family=poisson)
+summary(al_fit2p)
+
+al_fit3p<-glmer(AL~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=poisson)
+summary(al_fit3p)
+
+al_fit4p<-glmer(AL~(1|Biome)+(1|State)+Temp_let, data=survive, family=poisson)
+summary(al_fit4p)
+
+al_fit5p<-glmer(AL~(1|Biome)+Lat_group+Temp_let+Sex, data=survive, family=poisson)
+al_fit6p<-glmer(AL~(1|Biome)+(1|State)+Lat_group+Temp_let+Sex, data=survive, family=poisson)
+summary(al_fit5p)
+al_fit7p<-glmer(AL~(1|Biome)+(1|State)+Lat_group*Temp_let*Sex, data=survive, family=poisson)
+alfitp_mod<-AIC(al_fit1p, al_fit2p, al_fit3p, al_fit4p, al_fit5p, al_fit6p,al_fit7p)
+alfitp_mod 
+
+###al_fit5p is lowest
+
+#GLMM with binomial
+
+al_fit1b<-glmer(AL~(1|Biome)+(1|State), data=survive, family=binomial)
+summary(al_fit1b)
+
+
+
+#GLMM with gamma-> Gives me large, negative AIC
+al_fit1g<-glmer(AL~(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(al_fit1g)
+#GAMMA DOES NOT WORK WITH AL
+
+
+#GLM with gaussian-> Gives me large, negative AIC
+lr_fit1ga<-lmer(LarvRate~(1|Biome)+(1|State), data=survive)
+summary(lr_fit1ga)
+
+lr_fit2ga<-lmer(LarvRate~Lat_group+(1|Biome)+(1|State), data=survive)
+summary(lr_fit2ga)
+
+lr_fit3ga<-lmer(LarvRate~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive)
+summary(lr_fit3ga)
+
+lr_fit4ga<-lmer(LarvRate~(1|Biome)+(1|State)+Temp_let, data=survive)
+summary(lr_fit4ga)
+
+lr_fit5ga<-lmer(LarvRate~(1|Biome)+Lat_group+Temp_let+Sex, data=survive)
+summary(lr_fit5ga)
+lrfitb_modga<-AIC(lr_fit1ga, lr_fit2ga, lr_fit3ga, lr_fit4ga, lr_fit5ga)
+lrfitb_modga
+
+
+
+#LarvRate data
+altime_avg<-aggregate(survive$AL, list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), mean)
+write.table(altime_avg, "clipboard", sep='\t')
+altime_sd<-aggregate(survive$AL, list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), sd)
+write.table(altime_sd, "clipboard", sep='\t')
+
+altime_avg1<-aggregate(survive$AL, list(Latitude= survive$Lat_group, Sex=survive$Sex, Temperature=survive$Temp_num), mean)
+write.table(altime_avg1, "clipboard", sep='\t')
+altime_sd1<-aggregate(survive$AL, list(Latitude= survive$Lat_group, Sex=survive$Sex, Temperature=survive$Temp_num), sd)
+write.table(altime_sd1, "clipboard", sep='\t')
+
+altime_avg2<-aggregate(survive$AL, list(Latitude= survive$Lat_group, Temperature=survive$Temp_num), mean)
+write.table(altime_avg2, "clipboard", sep='\t')
+altime_sd2<-aggregate(survive$AL, list(Latitude= survive$Lat_group, Temperature=survive$Temp_num), sd)
+write.table(altime_sd2, "clipboard", sep='\t')
+
+
+
+##lsmeans on categorical (temp let and locality)
+library(lsmeans)
+em_post<-cld(lsmeans(emfit3, "Lat_group",adjust="tukey"))
+em_post1g<-cld(lsmeans(em_fit1g, "Lat_group", adjust="tukey"))
+em_post2<-cld(lsmeans(emfit3, "Temp_let",adjust="tukey"))
+
+
+##&#& ANCOVA on LarvRate
+al_anc<-lm(AL~Lat_group*Temp_let, data=survive)
+summary(al_anc)
+al_ancls<-cld(lsmeans(al_anc, c("Lat_group", "Temp_let")))
+
+survivef<-subset(survive, Sex=="F", c(1:25))
+survivem<-subset(survive, Sex=="M", c(1:25))
+
+al_ancf<-lm(AL~Lat_group*Temp_let, data=survivef)
+summary(al_ancf)
+al_anclsf<-cld(lsmeans(al_ancf, c("Lat_group", "Temp_let")))
+
+al_ancm<-lm(AL~Lat_group*Temp_let, data=survivem)
+summary(al_ancm)
+al_anclsm<-cld(lsmeans(al_ancm, c("Lat_group", "Temp_let")))
+
+al_ancal<-lm(AL~Lat_group*Temp_let*Sex, data=survive)
+summary(al_ancal)
+al_anclsal<-cld(lsmeans(al_ancal, c("Lat_group", "Temp_let", "Sex")))
 
 ```
 
