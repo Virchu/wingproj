@@ -9,6 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 
 setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+#laptop
+setwd("C:/Users/virgc/GitHub/wingproj/lifehist")
 lifehistshort<-read.csv("2017_10_18 Life history shortened.csv", header=TRUE)
 lifehistshort$Locality=factor(lifehistshort$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
 lifehistshort$Lat_group=factor(lifehistshort$Lat_group, c(1,2,3))
