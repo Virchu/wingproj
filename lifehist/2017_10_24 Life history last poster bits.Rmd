@@ -17,6 +17,7 @@ survive<- subset(lifehistshort, !is.na(Sex1), c=(1:25))
 
 library(dplyr)
 library(lme4)
+library(ggplot2)
 
 
 ##$#$#$# Larvae rate of development
@@ -38,6 +39,23 @@ anova(lr_mod3g, lr_mod4g)
 
 ###$#$## Wing Cline
 lab_winglen<-lm(Wing.length..mm.~Latitude, data=survive)
+summary(lab_winglen)
+surva<-subset(survive, Temp_let=="A", select= c(1:25))
+survb<-subset(survive, Temp_let=="B", select= c(1:25))
+survc<-subset(survive, Temp_let=="C", select= c(1:25))
+
+lab_cline_sexall<- ggplot(survive, aes(x=Latitude, y=Wing.length..mm.))+ geom_point(aes(colour=Sex))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude")
+
+lab_cline_sexA<- ggplot(surva, aes(x=Latitude, y=Wing.length..mm.))+ geom_point(aes(colour=Sex))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude (20C)")
+
+lab_cline_sexB<- ggplot(survb, aes(x=Latitude, y=Wing.length..mm.))+ geom_point(aes(colour=Sex))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude (24C)")
+
+lab_cline_sexC<- ggplot(survc, aes(x=Latitude, y=Wing.length..mm.))+ geom_point(aes(colour=Sex))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude (28C)")
+
+
+lab_cline_tempall<- ggplot(survive, aes(x=Latitude, y=Wing.length..mm.))+ geom_point(aes(colour=Temp_let))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude")
+
+print(lab_cline_tempall+scale_shape_manual(values=c(15,24)))
 
 #summary SE found in 2017_10_16 Lab wing graphs norm manova
 
@@ -54,7 +72,25 @@ lab_cline_Temp1<-ggplot(winglab, aes(x=Latitude, y=Wing.length..mm.)) + geom_abl
 
 lab_cline_Temp2<-ggplot(winglab, aes(x=Latitude, y=Wing.length..mm., fill=Temp_num)) +  geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude")
 
-lab_cline_sexall<- ggplot(survive, aes(x=Latitude, y=Wing.length..mm.))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")
+lab_cline_sexall<- ggplot(survive, aes(x=Latitude, y=Wing.length..mm.))+ geom_abline(intercept=2.587, slope=-0.01108396) +geom_point() +xlab("Latitude")+ ylab("Wing Length (mm)") 
+
+
+winglength_avg<-aggregate(survive$Wing.length..mm., list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), mean , na.rm=TRUE)
+write.table(winglength_avg, "clipboard", sep='\t')
+winglength_sd<-aggregate(survive$Wing.length..mm., list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), sd, na.rm=TRUE)
+write.table(winglength_sd, "clipboard", sep='\t')
+
+winglength_lat<-aggregate(survive$Wing.length..mm., list(Latitude= survive$Latitude, Sex=survive$Sex, Temperature=survive$Temp_num), mean , na.rm=TRUE)
+write.table(winglength_lat, "clipboard", sep='\t')
+
+coef(lm(surva$Wing.length..mm.~surva$Latitude))
+coef(lm(survb$Wing.length..mm.~survb$Latitude))
+coef(lm(survc$Wing.length..mm.~survc$Latitude))
+
+lr_moda<-lm(LarvRate~Lat_group, data=surva)
+lr_modb<-lm(LarvRate~Lat_group, data=survb)
+lr_modc<-lm(LarvRate~Lat_group, data=survc)
+
 ```
 
 ## R Markdown
