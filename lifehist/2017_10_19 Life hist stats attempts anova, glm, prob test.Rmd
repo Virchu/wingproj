@@ -27,6 +27,8 @@ shapiro.test(survive$LarvRate) #no
 shapiro.test(survive$Puprate) #no
 shapiro.test(survive$Puplen) #no
 
+#descriptive data for intro table
+
 ##nested design in r
 boxplot(AdRate~Temp_let, data=lifehistshort)
 boxplot(AdRate~Biome, data=lifehistshort)
@@ -450,14 +452,17 @@ summary(lr_fit4b)
 lr_fit5b<-glmer(LarvRate~(1|Biome)+Lat_group+Temp_let+Sex, data=survive, family=binomial)
 lr_fit6b<-glmer(LarvRate~(1|Biome)+(1|State)+Lat_group+Temp_let+Sex, data=survive, family=binomial)
 summary(lr_fit5b)
-lrfitb_mod<-AIC(lr_fit1b, lr_fit2b, lr_fit3b, lr_fit4b, lr_fit5b, lr_fit6b)
+
+lr_fit7b<-glmer(LarvRate~(1|Biome)+(1|State)+Lat_group*Temp_let*Sex, data=survive, family=binomial)
+summary(lr_fit7b)
+lrfitb_mod<-AIC(lr_fit1b, lr_fit2b, lr_fit3b, lr_fit4b, lr_fit5b, lr_fit6b, lr_fit7b)
 lrfitb_mod 
 
 
 #GLMM with gamma-> Gives me large, negative AIC
 lr_fit1g<-glmer(LarvRate~(1|Biome)+(1|State), data=survive, family=Gamma)
 summary(lr_fit1g)
-
+anova(lr_fit1g, lr_fit2g)
 lr_fit2g<-glmer(LarvRate~Lat_group+(1|Biome)+(1|State), data=survive, family=Gamma)
 summary(lr_fit2g)
 
@@ -690,11 +695,32 @@ wl_itb_mod
 
 ###wl_fit7p is lowest followed by fit3b
 
-#GLMM with binomial
+#GLMM with poisson- HATE, not integers
+wl_fit1p<-glmer(Wing.length..mm.~(1|Biome)+(1|State), data=survive, family=poisson)
 
-al_fit1b<-glmer(AL~(1|Biome)+(1|State), data=survive, family=binomial)
-summary(al_fit1b)
+wl_fit1p<-glmer(Wing.length..mm.~(1|Biome)+(1|State), data=survive, family=poisson)
+summary(wl_fit1b)
 
+wl_fit2p<-glmer(Wing.length..mm.~Lat_group+(1|Biome)+(1|State), data=survive, family=poisson)
+summary(wl_fit2b)
+
+wl_fit3p<-glmer(Wing.length..mm.~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=poisson)
+summary(wl_fit3b)
+
+wl_fit4p<-glmer(Wing.length..mm.~(1|Biome)+(1|State)+Temp_let, data=survive, family=poisson)
+summary(wl_fit4b)
+
+wl_fit5p<-glmer(Wing.length..mm.~(1|Biome)+Lat_group+Temp_let+Sex, data=survive, family=poisson)
+wl_fit6p<-glmer(Wing.length..mm.~(1|Biome)+(1|State)+Lat_group+Temp_let+Sex, data=survive, family=poisson)
+summary(wl_fit5b)
+wl_fit7p<-glmer(Wing.length..mm.~(1|Biome)+(1|State)+Lat_group*Temp_let*Sex, data=survive, family=poisson)
+wl_itp_mod<-AIC(wl_fit1p, wl_fit2p, wl_fit3p, wl_fit4p, wl_fit5p, wl_fit6p,wl_fit7p)
+wl_itp_mod 
+
+
+wl_anca<-lm(Wing.length..mm.~Lat_group*Temp_let, data=survive)
+summary(wl_anca)
+al_anclsa<-cld(lsmeans(wl_anca, c("Lat_group", "Temp_let")))
 
 
 #GLMM with gamma-> Gives me large, negative AIC
@@ -748,9 +774,9 @@ em_post2<-cld(lsmeans(emfit3, "Temp_let",adjust="tukey"))
 
 
 ##&#& ANCOVA on LarvRate
-al_anc<-lm(AL~Lat_group*Temp_let, data=survive)
-summary(al_anc)
-al_ancls<-cld(lsmeans(al_anc, c("Lat_group", "Temp_let")))
+wl_anc<-lm(Wing.length..mm.~Lat_group*Temp_let, data=survive)
+summary(wl_anc)
+wl_ancls<-cld(lsmeans(wl_anc, c("Lat_group", "Temp_let")))
 
 survivef<-subset(survive, Sex=="F", c(1:25))
 survivem<-subset(survive, Sex=="M", c(1:25))
