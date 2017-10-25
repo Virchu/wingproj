@@ -91,6 +91,31 @@ lr_moda<-lm(LarvRate~Lat_group, data=surva)
 lr_modb<-lm(LarvRate~Lat_group, data=survb)
 lr_modc<-lm(LarvRate~Lat_group, data=survc)
 
+
+survive<-survcurve
+survive$Lat_group=factor(survive$Lat_group, c(1,2,3))
+lr_fit3g<-glmer(LarvRate~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=Gamma)
+summary(lr_fit3g)
+
+lr_fit1g1<-glmer(LarvRate~(1|Biome)+(1|Family)+Lat_group*Temp_let, data=survive, family=Gamma)
+summary(lr_fit1g1)
+library(lsmeans)
+library(dplyr)
+library(lme4)
+lr_post<-cld(lsmeans(lr_fit1g1, c("Lat_group", "Temp_let"),adjust="tukey", type="response"))
+
+
+al_anc<-lm(AL~Lat_group*Temp_let, data=survive)
+summary(al_anc)
+al_ancls<-cld(lsmeans(al_anc, c("Lat_group", "Temp_let")))
+
+
+lr_fit1g1a<-glmer(LarvRate~(1|Biome)+(1|Family)+Lat_group, data=surva, family=Gamma)
+summary(lr_fit1g1a)
+lr_fit1g1b<-glmer(LarvRate~(1|Biome)+(1|Family)+Lat_group, data=survb, family=Gamma)
+summary(lr_fit1g1b)
+lr_fit1g1c<-glmer(LarvRate~(1|Biome)+(1|Family)+Lat_group, data=survc, family=Gamma)
+summary(lr_fit1g1c)
 ```
 
 ## R Markdown
