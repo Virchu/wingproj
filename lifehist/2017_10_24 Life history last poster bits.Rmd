@@ -1,0 +1,137 @@
+---
+title: "GLMM checking from tutorial life hist"
+author: "Virginia Chu"
+date: "October 23, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+
+lifehistshort<-read.csv("2017_10_18 Life history shortened.csv", header=TRUE)
+lifehistshort$Locality=factor(lifehistshort$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+lifehistshort$Lat_group=factor(lifehistshort$Lat_group, c(1,2,3))
+
+survive<- subset(lifehistshort, !is.na(Sex1), c=(1:25))
+
+library(dplyr)
+library(lme4)
+library(ggplot2)
+
+
+##$#$#$# Larvae rate of development
+lr_mod1g<-glmer(LarvRate~Lat_group+Temp_let+(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(lr_mod1g)
+
+lr_mod2g<-glmer(LarvRate~Lat_group*Temp_let+(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(lr_mod2g)
+
+anova(lr_mod1g, lr_mod2g)
+
+lr_mod3g<-glmer(LarvRate~Lat_group+Temp_let+Sex+(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(lr_mod3g)
+
+lr_mod4g<-glmer(LarvRate~Lat_group*Temp_let*Sex+(1|Biome)+(1|State), data=survive, family=Gamma)
+summary(lr_mod4g)
+
+anova(lr_mod3g, lr_mod4g)
+
+###$#$## Wing Cline
+lab_winglen<-lm(Wing.length..mm.~Latitude, data=survive)
+summary(lab_winglen)
+surva<-subset(survive, Temp_let=="A", select= c(1:25))
+survb<-subset(survive, Temp_let=="B", select= c(1:25))
+survc<-subset(survive, Temp_let=="C", select= c(1:25))
+
+lab_cline_sexall<- ggplot(survive, aes(x=Latitude, y=Wing.length..mm.))+ geom_point(aes(colour=Sex))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude")
+
+lab_cline_sexA<- ggplot(surva, aes(x=Latitude, y=Wing.length..mm.))+ geom_point(aes(colour=Sex))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude (20C)")
+
+lab_cline_sexB<- ggplot(survb, aes(x=Latitude, y=Wing.length..mm.))+ geom_point(aes(colour=Sex))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude (24C)")
+
+lab_cline_sexC<- ggplot(survc, aes(x=Latitude, y=Wing.length..mm.))+ geom_point(aes(colour=Sex))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude (28C)")
+
+
+lab_cline_tempall<- ggplot(survive, aes(x=Latitude, y=Wing.length..mm.))+ geom_point(aes(colour=Temp_let))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude")
+
+print(lab_cline_tempall+scale_shape_manual(values=c(15,24)))
+
+#summary SE found in 2017_10_16 Lab wing graphs norm manova
+
+winglab<-summarySE(survive, measurevar="Wing.length..mm.", groupvars = c("Latitude","Biome", "Temp_num", "Sex"))
+
+winglabc<-summarySE(survive, measurevar="Wing.length..mm.", groupvars = c("Latitude","Biome", "Temp_let", "Sex"))
+coef(lm(survive$Wing.length..mm.~survive$Latitude))
+
+lab_cline_Sex<-ggplot(winglab, aes(x=Latitude, y=Wing.length..mm.)) +geom_errorbar(aes(ymin=Wing.length..mm.-se, ymax=Wing.length..mm.+se), width=.1)+ geom_point(aes(colour=Sex))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude")
+
+lab_cline_Temp<-ggplot(winglab, aes(x=Latitude, y=Wing.length..mm.)) +geom_errorbar(aes(ymin=Wing.length..mm.-se, ymax=Wing.length..mm.+se), width=.1)+ geom_point(aes(colour=Temp_num))+ geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude")
+
+lab_cline_Temp1<-ggplot(winglab, aes(x=Latitude, y=Wing.length..mm.)) + geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude")
+
+lab_cline_Temp2<-ggplot(winglab, aes(x=Latitude, y=Wing.length..mm., fill=Temp_num)) +  geom_abline(intercept=2.587, slope=-0.01108396) +xlab("Latitude")+ ylab("Wing Length (mm)")+ ggtitle("Lab Wing length across increasing latitude")
+
+lab_cline_sexall<- ggplot(survive, aes(x=Latitude, y=Wing.length..mm.))+ geom_abline(intercept=2.587, slope=-0.01108396) +geom_point() +xlab("Latitude")+ ylab("Wing Length (mm)") 
+
+
+winglength_avg<-aggregate(survive$Wing.length..mm., list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), mean , na.rm=TRUE)
+write.table(winglength_avg, "clipboard", sep='\t')
+winglength_sd<-aggregate(survive$Wing.length..mm., list(Locality= survive$Locality, Sex=survive$Sex, Temperature=survive$Temp_num), sd, na.rm=TRUE)
+write.table(winglength_sd, "clipboard", sep='\t')
+
+winglength_lat<-aggregate(survive$Wing.length..mm., list(Latitude= survive$Latitude, Sex=survive$Sex, Temperature=survive$Temp_num), mean , na.rm=TRUE)
+write.table(winglength_lat, "clipboard", sep='\t')
+
+coef(lm(surva$Wing.length..mm.~surva$Latitude))
+coef(lm(survb$Wing.length..mm.~survb$Latitude))
+coef(lm(survc$Wing.length..mm.~survc$Latitude))
+
+lr_moda<-lm(LarvRate~Lat_group, data=surva)
+lr_modb<-lm(LarvRate~Lat_group, data=survb)
+lr_modc<-lm(LarvRate~Lat_group, data=survc)
+
+
+survive<-survcurve
+survive$Lat_group=factor(survive$Lat_group, c(1,2,3))
+lr_fit3g<-glmer(LarvRate~Lat_group+(1|Biome)+(1|Family)+Temp_let, data=survive, family=Gamma)
+summary(lr_fit3g)
+
+lr_fit1g1<-glmer(LarvRate~(1|Biome)+(1|Family)+Lat_group*Temp_let, data=survive, family=Gamma)
+summary(lr_fit1g1)
+library(lsmeans)
+library(dplyr)
+library(lme4)
+lr_post<-cld(lsmeans(lr_fit1g1, c("Lat_group", "Temp_let"),adjust="tukey", type="response"))
+
+
+al_anc<-lm(AL~Lat_group*Temp_let, data=survive)
+summary(al_anc)
+al_ancls<-cld(lsmeans(al_anc, c("Lat_group", "Temp_let")))
+
+
+lr_fit1g1a<-glmer(LarvRate~(1|Biome)+(1|Family)+Lat_group, data=surva, family=Gamma)
+summary(lr_fit1g1a)
+lr_fit1g1b<-glmer(LarvRate~(1|Biome)+(1|Family)+Lat_group, data=survb, family=Gamma)
+summary(lr_fit1g1b)
+lr_fit1g1c<-glmer(LarvRate~(1|Biome)+(1|Family)+Lat_group, data=survc, family=Gamma)
+summary(lr_fit1g1c)
+```
+
+## R Markdown
+
+Tutorial- https://www.andrew.cmu.edu/user/achoulde/94842/lectures/lecture10/lecture10-94842.html#interpreting-coefficients-of-factor-variables
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
