@@ -110,12 +110,27 @@ summary(al_anc)
 al_ancls<-cld(lsmeans(al_anc, c("Lat_group", "Temp_let")))
 
 
+
 lr_fit1g1a<-glmer(LarvRate~(1|Biome)+(1|Family)+Lat_group, data=surva, family=Gamma)
 summary(lr_fit1g1a)
 lr_fit1g1b<-glmer(LarvRate~(1|Biome)+(1|Family)+Lat_group, data=survb, family=Gamma)
 summary(lr_fit1g1b)
 lr_fit1g1c<-glmer(LarvRate~(1|Biome)+(1|Family)+Lat_group, data=survc, family=Gamma)
 summary(lr_fit1g1c)
+
+ar_fit1g1a<-glmer(AdRate~(1|Biome)+(1|Family)+Lat_group, data=surva, family=Gamma)
+summary(ar_fit1g1a)
+ar_fit1g1b<-glmer(AdRate~(1|Biome)+(1|Family)+Lat_group, data=survb, family=Gamma)
+summary(ar_fit1g1b)
+ar_fit1g1c<-glmer(AdRate~(1|Biome)+(1|Family)+Lat_group, data=survc, family=Gamma)
+summary(ar_fit1g1c)
+
+al_fit1p1a<-glmer(AL~(1|Biome)+(1|Family)+Lat_group, data=surva, family=poisson)
+summary(al_fit1p1a)
+al_fit1p1b<-glmer(AL~(1|Biome)+(1|Family)+Lat_group, data=survb, family=poisson)
+summary(al_fit1p1b)
+al_fit1p1c<-glmer(AL~(1|Biome)+(1|Family)+Lat_group, data=survc, family=poisson)
+summary(al_fit1p1c)
 ```
 
 ## R Markdown
