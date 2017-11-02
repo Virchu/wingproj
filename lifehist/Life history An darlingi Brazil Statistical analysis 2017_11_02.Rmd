@@ -1,0 +1,68 @@
+---
+title: "Life history An darlingi Brazil Statistical analysis 11/2/2017"
+author: "Virginia Chu"
+date: "November 2, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+
+lifehistshort<-read.csv("2017_10_18 Life history shortened.csv", header=TRUE)
+lifehistshort$Locality=factor(lifehistshort$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+lifehistshort$Lat_group=factor(lifehistshort$Lat_group, c(1,2,3))
+```
+
+## Life history data description
+# Description of columns:
+## Independent variables
+* Biome [Amazon, Cerrado, Mata Atlantica]- Categorical/nominal
+    + State [Amazonas, Rondonia, Tocantins, Mata Atlantica]-Ordinal
+    + Locality [ARS, APR, RPV, RMO, TLC, TPN, SJU]-Ordinal
+    + Latitude [-2.864, -3.028, -8.742, -9.223, -10.7, -10.796, -22.611 ]- Ordinal
+* Family [for lab reared, which female within the biome/locality they came from]- Categorical
+ (5 larvae raised in each of 3 wells per female per temperature)
+* Temp_let- A, B, C
+* Temp_num- 20,24,28
+* Sex [M/F]- Only from surviving adults, did not sex pre-adults
+* Sex1 [1/0]- 0-Female, 1-Male, 
+
+## Dependent variables
+* Wing length (mm)
+* sLL- Larvae life length (days)- Discrete, only ones that went to adult
+* dLL- Larvae life length (days)- Discrete, length of life of preadults that didn't develop to adults
+* dPL- Pupal+larvae life length (days)- Length of time that pupae that died, survived 
+* EmTime- time to emergence (Emergence.date-Hatch.day)
+* Preadult.death- Time of life (in days) that preadults (that didn't make it to adulthood)
+* Death_stat [0/1]- 0- preadult, 1-adult death status
+* AdRate- 
+* LarvRate- 
+* Puplen-
+* Puprate-
+* D.pread.rate-
+* AL- Adult life length (days)- Discrete (Deathtime-Emergence.date)
+* time-
+
+
+* Rate of development
+* Sex ratio
+
+##Datafile column headers
+ ID  Biome    State Latitude Lat_group Locality Family Temp_let Temp_num Sex Sex1 Wing.length..mm. sLL dLL dPL Emtime
+  Preadult.death Death_stat     AdRate   LarvRate Puplen   Puprate D.pread.rate AL time
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
