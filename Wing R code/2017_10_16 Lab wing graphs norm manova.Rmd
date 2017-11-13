@@ -10,6 +10,8 @@ knitr::opts_chunk$set(echo = TRUE)
 #work comp
 setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
 
+#laptop
+setwd("C:/Users/virgc/GitHub/wingproj/Wing source data field_lab")
 #read in .csv
 labwingdat<-read.csv("2017_10_16 Lab reared 18 landmarks scaled id info.csv", header=TRUE)
 
@@ -136,12 +138,23 @@ csc<-summarySE(labwingdat, measurevar="Centroid.Size", groupvars = c("Latitude.S
 
 coef(lm(fwing$Length.mm~fwing$Latitude..S.))
 
+coef(lm(labwingdat$Wing.length..mm. ~labwingdat$Centroid.Size))
+wing1<- lm(labwingdat$Wing.length..mm. ~labwingdat$Centroid.Size)
+summary (wing1)
 ggplot(winglc, aes(x=Latitude..S., y=Length.mm)) +geom_errorbar(aes(ymin=Length.mm-se, ymax=Length.mm+se), width=.1)+ geom_point(aes(colour=Biome))+ geom_abline(intercept=2.836, slope=0.0227) +xlab("Latitude (Southern)")+ ylab("Wing Length (mm)")+ ggtitle("Field Wing length across increasing latitude")
 
 coef(lm(labwingdat$Centroid.Size~labwingdat$Latitude.S))
 
 
 ggplot(csc, aes(x=Latitude.S, y=Centroid.Size)) +geom_errorbar(aes(ymin=Centroid.Size-se, ymax=Centroid.Size+se), width=.1)+ geom_point(aes(colour=Temp_let, shape=Sex),size=1.5)+ geom_abline(intercept=2.37730189, slope=0.010107) +xlab("Latitude (Southern)")+ ylab("Centroid Size")+ ggtitle("Lab Centroid Size across increasing latitude")
+
+#pairwise comparisons
+#pairwise.t.test(dataPairwiseComparisons$StressReduction, dataPairwiseComparisons$Treatment, p.adj = "bonferroni")
+#https://www.r-bloggers.com/r-tutorial-series-anova-pairwise-comparison-methods/
+a_a<-pairwise.t.test(labwingdat$Centroid.Size, labwingdat$Locality, p.adj= "bonferroni")
+a_b<-pairwise.t.test(labwingdat$Centroid.Size, labwingdat$Locality, p.adj= "none")
+#write.table(YOURDATAFRAMENAMEHERE, "clipboard", sep='\t', row.names=FALSE)
+write.table(a_b[["p.value"]],file="output.csv",sep=",") 
 
 ```
 ```

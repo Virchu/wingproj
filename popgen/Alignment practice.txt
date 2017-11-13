@@ -1,0 +1,61 @@
+##Practice aligning
+#Get raw illumina files from here
+/illumina/Adarlingi_Chu_2017
+
+#copy to practest
+cp file.fastq.gz /home/vchu/practest
+
+#go back to practest
+cd ~/practest
+
+#how to nest gunzip....
+gunzip SJU1.fastq.gz
+
+#gsnap code with unzip
+gsnap -t 36 -n 1 -m 5 -i 2 --min-coverage=0.90 -A sam -d Adar_scaffolds -D /genomes/Adarlingi/Adar_scaffolds  SJU1.fastq > SJU1.sam
+
+#get first line of sam file
+grep -v @SQ SJU1.sam| head
+
+make new directory for rad aligned files
+mkdir rad_alignments
+
+for f in /illumina/Adarlingi_Chu_2017
+#get sample code from kevin
+#sed- find and replace program
+
+
+#!/bin/bash
+
+projectdir=~/projects/Cpipiens/field_16Oct2017
+inputdir=$projectdir/filtered_sequences
+dbname="culex_scaffolds"
+dbdir=/genomes/culex/
+
+outputdir=$/home/vchu/adar_rad_alignments
+
+mkdir $outputdir
+touch $outputdir/align.log
+for f in $inputdir/*.fq.gz
+do
+    echo "Processing: $f" >> $outputdir/align.log
+    filename=$(basename $f | sed 's/\.fastq.gz//')
+    gsnap -t 60 -n 1 -m 10 -i 2 --min-coverage=0.95 --quiet-if-excessive  -A sam -d $dbname -D $dbdir --gunzip $f > $outputdir/$filename.sam 2>>$outputdir/align.log
+done
+
+ls ./$outputdir/*.sam | parallel "samtools view -b -S {} | samtools sort - {.}; samtools index {.}.bam"
+rm ./$outputdir/*.sam
+
+#~/bin/bash
+# bam_aligned_reads_summary.sh INFILE
+# written 1 May 2016
+# Input: a bam (or sam) filename
+# returns three columns
+#  1. The root of the filename (text before a '.' character)
+#  2. The number of mapped reads in the alignment file
+#  3. The number of unmapped reads in the alignment file
+############
+
+f=$(basename $1 | cut -f 1 -d .)
+
+echo -e "$f\t$(samtools view -c -F 4 $1)\t$(samtools view -c -f 4 $1)"

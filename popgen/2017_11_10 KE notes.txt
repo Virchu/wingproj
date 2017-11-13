@@ -1,0 +1,130 @@
+mv file newdirectory
+
+go up a level in directory -cd ..
+
+cp origfile /directory/subdirectory
+
+
+Sequence alignment practice
+scp to login to server to move file into new folder
+geneious program on lab computer (maybe have it or something equivalent)
+
+ways to generate genotypes
+need to line up, stacks at certain parts
+quality of reads to ref, lots of parameters to deal with, no realy right answer for which parameters are best
+
+settings of old darlingi work
+lots of ways to align sequence
+
+bowtie and gsnap
+gsnap us suggested parameters from Catchen
+do it for 1 file
+look up how sam files look that is generated
+bam is binary computer readable and compressed
+stacks has separate qc 
+want to drop sketchy info, drop reads to get higher quality sequences
+
+fastq, sam files important
+
+samtools- for sam files, can have ie flags
+ie how many reads mapped and how many didn't from sam file 
+
+can check sequences with microbiome
+
+for sequence- 
+my sequence reads are in , ind fastq files, /illumina/Adarlingi_Chu_2017
+copy one file over to directory
+/genomes/Adarlingi/Adar_scaffolds is the ref genomes/Adarlingi/Adar_scaffolds
+
+
+gff is an annotation file, has lots of info of what each looks like
+like what you would see in vectorbase 
+
+practice aligning
+file- SJU3.fastq.gz
+
+cp SJU3.fastq.gz /home/vchu/practest
+# Align with GSnap and convert to BAM
+# gunzip SJU3.fastq.gz to unzip the fastq file
+
+gsnap -t 36 -n 1 -m 5 -i 2 --min-coverage=0.90 -A sam -d Adar_scaffolds -D ~ SJU3.fastq > SJU3.sam
+		 
+		 
+samtools view -b -S -o SJU3.bam SJU3.sam
+
+
+-t= 36 worker threads
+-n= max number of paths to print (default 100)	
+-m= max # mismatches allowed
+-i= penalty for indel (def 2), counts against mismatches
+-A= sam type
+-d= genome database
+-D= genome directory
+
+   
+ grep -v @SQ SJU3.sam| head
+ 
+To run something without being connected 
+program- screen
+screen- makes new terminal
+ctrl + a+d detaches
+screen -r to go back to terminal
+exit kills a screen terminal
+screen -S nameofscreen
+
+sam is a sequence file while bam is a binary, compressed version of sam
+
+K00337:103:HLVT3BBXX:4:1101:9536:1209   0       scaffold_31     143018  40      151M    *       0       0       NGGGAAGTGAATGACTTCCGCCGGTGGACATGTGCCCGATCCACCGGGGGCACCGATGGCTTCATCATCCGAACTGACGACGGACGGACGGAGGACGGATCGATGGAAAGCGCGCACCGATGCACCGAGTAGGATTTGTTTTAAGAATCTA      #AAFAJFJJJJJJJJJJJJJJJJJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJFJJJJJJJJJJJJJJFFJJJJFJJJJJJJJJJJJJJJFJFJJFJFJJJJJJAFJ7AAJFF-7<---77-7AA<-<      MD:Z:115G8G19A6 NH:i:1  HI:i:1  NM:i:3  SM:i:40      XQ:i:40 X2:i:0  XO:Z:UU XG:Z:A
+
+K00337...-Query template name
+0-Flag, positive strand (16 is reverse)
+scaffold_31- references seq name
+143018- position, 
+40- mapping quality
+151M- cigar
+*- rnext, no info available on alignment of next
+0- pnext, 0 means info unavailable
+0- tlen, template length, info unavailable
+NGGGAA...- seq
+other stuff- qual, ascii of base quality +33
+
+
+K00337:103:HLVT3BBXX:4:1101:24535:1244  16      scaffold_1087   15310   40      59M3D92M        *       0       0       GCTGCTGCTGCTTCTGTAGTTGCTGTTGTAATTGTTGTTGCTGTTGTTGTTGCTGTTGCTGCTGTTGTTGTTGCTGCTGCTGCTGTACGGCTTTCAGTTGTTGCGCTTGGCGTACCTTTTTGCAATAAATGTTCGCCAGAAGGTTTGGCTG F<<A7<AA7<FF7FFJJFJF-JFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJFJJJFJJJFJJJFJAFJJJJJJJJJJJJJJFFJJJJJJJJJJJJJJJJJAFJJJJJJFJJJJJJFFFAA MD:Z:12G46^TGT20T71     NH:i:1  HI:i:1  NM:i:5  SM:i:40 XQ:i:40 X2:i:0XO:Z:UU   XG:Z:A
+
+top - shows all processes being run by computer
+-> load average- shows processor usage, out of 64 cpus on server  
+
+good to check to see what people are doing on machine
+
+samtolls syntax us weird
+indexes things to see where things are, needed for stacks
+
+parallel function- spreading computation across many processors, can help speed things up
+
+get bam.bai- bam index file for each
+
+run script from text file
+shebang !# where to send it, point to where to run
+
+linux oermissions
+read, write execute
+if you have a script, need to make executable
+chmod +x filename
+so in future ./filename
+./ is to tell unix where to look
+find where it looks first- $PATH
+working directory is never in path
+
+change owner of file to mean
+modify kevins code for aligning
+
+nano or emacs to modify
+or download and modify
+
+
+when alignments are done- 
+bam_aligned_reads_summary.sh
+need to write a loop for this file
+for f in *.bam: do bam_aligned_reads_summary.sh $f >> read_summary; done 
+
+look up sam tools

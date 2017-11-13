@@ -1,0 +1,190 @@
+AC114_17	Amazonia	Cruzeiro do Sul
+AC116_10	Amazonia	Cruzeiro do Sul
+AC116_11	Amazonia	Cruzeiro do Sul
+AC117_18	Amazonia	Cruzeiro do Sul
+AC117_22	Amazonia	Cruzeiro do Sul
+AC117_23	Amazonia	Cruzeiro do Sul
+AC118_10	Amazonia	Cruzeiro do Sul
+AC118_13	Amazonia	Cruzeiro do Sul
+AC119_9	Amazonia	Cruzeiro do Sul
+AC120_10	Amazonia	Cruzeiro do Sul
+AC120_11	Amazonia	Cruzeiro do Sul
+AC120_12	Amazonia	Cruzeiro do Sul
+AC121_5	Amazonia	Cruzeiro do Sul
+AC121_6	Amazonia	Cruzeiro do Sul
+AC246_17	Amazonia	Mancio Lima
+AC246_28	Amazonia	Mancio Lima
+AC246_31	Amazonia	Mancio Lima
+AC246_32	Amazonia	Mancio Lima
+AC246_38	Amazonia	Mancio Lima
+AC246_5	Amazonia	Mancio Lima
+AC246_6	Amazonia	Mancio Lima
+AC247_12	Amazonia	Mancio Lima
+AC247_15	Amazonia	Mancio Lima
+AC247_18	Amazonia	Mancio Lima
+AC247_19	Amazonia	Mancio Lima
+AC247_5	Amazonia	Mancio Lima
+AC247_8	Amazonia	Mancio Lima
+AC247_9	Amazonia	Mancio Lima
+AC69_1	Amazonia	Acrelandia
+AC69_10	Amazonia	Acrelandia
+AC69_11	Amazonia	Acrelandia
+AC69_12	Amazonia	Acrelandia
+AC69_13	Amazonia	Acrelandia
+AC69_15	Amazonia	Acrelandia
+AC69_16	Amazonia	Acrelandia
+AC69_17	Amazonia	Acrelandia
+AC69_18	Amazonia	Acrelandia
+AC69_20	Amazonia	Acrelandia
+AC69_21	Amazonia	Acrelandia
+AC69_22	Amazonia	Acrelandia
+AC69_23	Amazonia	Acrelandia
+AC69_3	Amazonia	Acrelandia
+AM160_71	Amazonia	Humaita
+AM160_78	Amazonia	Humaita
+AM161_28	Amazonia	Humaita
+AM161_32	Amazonia	Humaita
+AM161_35	Amazonia	Humaita
+AM162_15	Amazonia	Humaita
+AM162_16	Amazonia	Humaita
+AM162_17	Amazonia	Humaita
+AM162_18	Amazonia	Humaita
+AM162_4	Amazonia	Humaita
+AM162_5	Amazonia	Humaita
+AM163_5	Amazonia	Humaita
+AM164_11	Amazonia	Humaita
+AM40_37	Amazonia	Labrea
+AM40_39	Amazonia	Labrea
+AM40_45	Amazonia	Labrea
+AM40_56	Amazonia	Labrea
+AM40_65	Amazonia	Labrea
+AM41_18	Amazonia	Labrea
+AM41_22	Amazonia	Labrea
+AM41_24	Amazonia	Labrea
+AM41_26	Amazonia	Labrea
+AM41_36	Amazonia	Labrea
+AM42_19	Amazonia	Labrea
+AM42_34	Amazonia	Labrea
+AM43_37	Amazonia	Labrea
+AM94_1	Amazonia	Itacoatiara
+AM94_15	Amazonia	Itacoatiara
+AM94_5	Amazonia	Itacoatiara
+AM94_7	Amazonia	Itacoatiara
+AM94_9	Amazonia	Itacoatiara
+AM95_1	Amazonia	Itacoatiara
+AM95_4	Amazonia	Itacoatiara
+AM95_8	Amazonia	Itacoatiara
+AM96_3	Amazonia	Itacoatiara
+AM96_4	Amazonia	Itacoatiara
+AM96_5	Amazonia	Itacoatiara
+AM97_5	Amazonia	Itacoatiara
+AM98_2	Amazonia	Itacoatiara
+APR14	Amazonia	Manaus
+APR18	Amazonia	Manaus
+APR19	Amazonia	Manaus
+APR2	Amazonia	Manaus
+APR3	Amazonia	Manaus
+APR33	Amazonia	Manaus
+APR36	Amazonia	Manaus
+APR38	Amazonia	Manaus
+APR4	Amazonia	Manaus
+APR44	Amazonia	Manaus
+APR6	Amazonia	Manaus
+APR7	Amazonia	Manaus
+APR8	Amazonia	Manaus
+ARS1	Amazonia	Remal Novo Horizonte
+ARS10	Amazonia	Remal Novo Horizonte
+ARS11	Amazonia	Remal Novo Horizonte
+ARS13	Amazonia	Remal Novo Horizonte
+ARS14	Amazonia	Remal Novo Horizonte
+ARS16	Amazonia	Remal Novo Horizonte
+ARS17	Amazonia	Remal Novo Horizonte
+ARS2	Amazonia	Remal Novo Horizonte
+ARS3	Amazonia	Remal Novo Horizonte
+ARS4	Amazonia	Remal Novo Horizonte
+ARS6	Amazonia	Remal Novo Horizonte
+ARS8	Amazonia	Remal Novo Horizonte
+ARS9	Amazonia	Remal Novo Horizonte
+PA100_1	Amazonia	Pacaja
+PA109_1	Amazonia	Pacaja
+PA111_2	Amazonia	Pacaja
+PA67_13	Amazonia	Pacaja
+PA71_1	Amazonia	Pacaja
+PA73_1	Amazonia	Pacaja
+PA80_1	Amazonia	Pacaja
+PA82_1	Amazonia	Pacaja
+PA82_3	Amazonia	Pacaja
+PA89_1	Amazonia	Pacaja
+PA90_1	Amazonia	Pacaja
+PA92_1	Amazonia	Pacaja
+PA94_1	Amazonia	Pacaja
+PA99_1	Amazonia	Pacaja
+RMO13	Amazonia	Machadinho DOeste
+RMO17	Amazonia	Machadinho DOeste
+RMO18	Amazonia	Machadinho DOeste
+RMO24	Amazonia	Machadinho DOeste
+RMO26	Amazonia	Machadinho DOeste
+RMO27	Amazonia	Machadinho DOeste
+RMO33	Amazonia	Machadinho DOeste
+RMO36	Amazonia	Machadinho DOeste
+RMO39	Amazonia	Machadinho DOeste
+RMO41	Amazonia	Machadinho DOeste
+RMO42	Amazonia	Machadinho DOeste
+RMO5	Amazonia	Machadinho DOeste
+RMO6	Amazonia	Machadinho DOeste
+RMO9	Amazonia	Machadinho DOeste
+RPV11	Amazonia	Porto Velho
+RPV12	Amazonia	Porto Velho
+RPV15	Amazonia	Porto Velho
+RPV17	Amazonia	Porto Velho
+RPV18	Amazonia	Porto Velho
+RPV19	Amazonia	Porto Velho
+RPV20	Amazonia	Porto Velho
+RPV23	Amazonia	Porto Velho
+RPV25	Amazonia	Porto Velho
+RPV28	Amazonia	Porto Velho
+RPV33	Amazonia	Porto Velho
+RPV37	Amazonia	Porto Velho
+RPV38	Amazonia	Porto Velho
+RPV42	Amazonia	Porto Velho
+SJU1	Mata Atlantica	Lake Juturnaiba
+SJU10	Mata Atlantica	Lake Juturnaiba
+SJU11	Mata Atlantica	Lake Juturnaiba
+SJU12	Mata Atlantica	Lake Juturnaiba
+SJU13	Mata Atlantica	Lake Juturnaiba
+SJU2	Mata Atlantica	Lake Juturnaiba
+SJU3	Mata Atlantica	Lake Juturnaiba
+SJU4	Mata Atlantica	Lake Juturnaiba
+SJU5	Mata Atlantica	Lake Juturnaiba
+SJU6	Mata Atlantica	Lake Juturnaiba
+SJU7	Mata Atlantica	Lake Juturnaiba
+SJU8	Mata Atlantica	Lake Juturnaiba
+SJU9	Mata Atlantica	Lake Juturnaiba
+TLC52	Cerrado	Lagoa de Confusao
+TLC53	Cerrado	Lagoa de Confusao
+TLC70	Cerrado	Lagoa de Confusao
+TLC71	Cerrado	Lagoa de Confusao
+TLC73	Cerrado	Lagoa de Confusao
+TLC74	Cerrado	Lagoa de Confusao
+TLC75	Cerrado	Lagoa de Confusao
+TLC76	Cerrado	Lagoa de Confusao
+TLC77	Cerrado	Lagoa de Confusao
+TLC78	Cerrado	Lagoa de Confusao
+TLC79	Cerrado	Lagoa de Confusao
+TLC81	Cerrado	Lagoa de Confusao
+TLC82	Cerrado	Lagoa de Confusao
+TLC83	Cerrado	Lagoa de Confusao
+TPN11	Cerrado	Porto Nacional
+TPN12	Cerrado	Porto Nacional
+TPN13	Cerrado	Porto Nacional
+TPN14	Cerrado	Porto Nacional
+TPN16	Cerrado	Porto Nacional
+TPN17	Cerrado	Porto Nacional
+TPN18	Cerrado	Porto Nacional
+TPN20	Cerrado	Porto Nacional
+TPN3	Cerrado	Porto Nacional
+TPN4	Cerrado	Porto Nacional
+TPN5	Cerrado	Porto Nacional
+TPN6	Cerrado	Porto Nacional
+TPN8	Cerrado	Porto Nacional
+TPN9	Cerrado	Porto Nacional
