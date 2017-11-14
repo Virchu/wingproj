@@ -15,6 +15,7 @@ library(Morpho)
 library(dplyr)
 library(ggplot2)
 
+
 #link for sutom code http://www.cookbook-r.com/Manipulating_data/Summarizing_data/
 summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
                       conf.interval=.95, .drop=TRUE) {
@@ -58,8 +59,8 @@ head(fwing)
 cline.mod<-lm(CS~Latitude, data=fwing)
 summary(cline.mod)
 
-#winglenm<- aggregate(fwing$Length.mm, list(lat=fwing$Latitude),mean, na.rm=TRUE)
-#winglensd<- aggregate(fwing$Length.mm, list(lat=fwing$Latitude),sd, na.rm=TRUE)
+winglenm<- aggregate(fwing$Length.mm, list(lat=fwing$Latitude),mean, na.rm=TRUE)
+winglensd<- aggregate(fwing$Length.mm, list(lat=fwing$Latitude),sd, na.rm=TRUE)
 
 #csm<- aggregate(fwing$CS, list(lat=fwing$Latitude),mean, na.rm=TRUE)
 #cssd<- aggregate(fwing$CS, list(lat=fwing$Latitude),sd, na.rm=TRUE)
@@ -75,14 +76,29 @@ csc<-summarySE(fwing, measurevar="CS", groupvars = c("Latitude..S.","Biome", "Ec
 #how to get abline http://ggplot2.tidyverse.org/reference/geom_abline.html
 
 coef(lm(fwing$Length.mm~fwing$Latitude..S.))
+summary(lm(fwing$Length.mm~fwing$Latitude..S.))
 
 ggplot(winglc, aes(x=Latitude..S., y=Length.mm)) +geom_errorbar(aes(ymin=Length.mm-se, ymax=Length.mm+se), width=.1)+ geom_point(aes(colour=Biome))+ geom_abline(intercept=2.836, slope=0.0227) +xlab("Latitude (Southern)")+ ylab("Wing Length (mm)")+ ggtitle("Field Wing length across increasing latitude")
 
 coef(lm(fwing$CS~fwing$Latitude..S.))
-
+summary (lm(fwing$CS~fwing$Latitude..S.))
 
 ggplot(csc, aes(x=Latitude..S., y=CS)) +geom_errorbar(aes(ymin=CS-se, ymax=CS+se), width=.1)+ geom_point(aes(colour=Biome))+ geom_abline(intercept=2.627, slope=0.0229) +xlab("Latitude (Southern)")+ ylab("Centroid Size")+ ggtitle("Field Centroid Size across increasing latitude")
 
+
+##MANOVA for shape using partial warps 
+#turn pw data into a matrix!
+head
+f_pw<-fwing [,11:42]
+f_pw_mat<-as.matrix(f_pw)
+
+fman1<-manova(f_pw_mat~fwing$Biome*fwing$Latitude)
+summary.aov(fman1)
+
+lda(fwing$Biome~f_pw_mat, CV=F)
+#fman1.lm<- lm(f_pw_mat~fwing$Biome+fwing$Latitude)
+#anova(fman1.lm)
+#fman1.rg<- ref.grid(fman1.lm)
 ```
 
 ## R Markdown
