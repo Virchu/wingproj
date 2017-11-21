@@ -1,0 +1,64 @@
+Biome,State,Locality,Temp,Status,Count
+Amazon,Amazonas,ARS,A,Female,65
+Amazon,Amazonas,ARS,A,Male,69
+Amazon,Amazonas,ARS,A,Died,11
+Amazon,Amazonas,APR,A,Female,88
+Amazon,Amazonas,APR,A,Male,110
+Amazon,Amazonas,APR,A,Died,20
+Amazon,Rondonia,RPV,A,Female,89
+Amazon,Rondonia,RPV,A,Male,92
+Amazon,Rondonia,RPV,A,Died,38
+Amazon,Rondonia,RMO,A,Female,102
+Amazon,Rondonia,RMO,A,Male,90
+Amazon,Rondonia,RMO,A,Died,31
+Cerrado,Tocantins,TLC,A,Female,45
+Cerrado,Tocantins,TLC,A,Male,47
+Cerrado,Tocantins,TLC,A,Died,28
+Cerrado,Tocantins,TPN,A,Female,18
+Cerrado,Tocantins,TPN,A,Male,14
+Cerrado,Tocantins,TPN,A,Died,27
+Mata Atlantica,Rio de Janeiro,SJU,A,Female,66
+Mata Atlantica,Rio de Janeiro,SJU,A,Male,63
+Mata Atlantica,Rio de Janeiro,SJU,A,Died,31
+Amazon,Amazonas,ARS,B,Female,57
+Amazon,Amazonas,ARS,B,Male,78
+Amazon,Amazonas,ARS,B,Died,8
+Amazon,Amazonas,APR,B,Female,101
+Amazon,Amazonas,APR,B,Male,97
+Amazon,Amazonas,APR,B,Died,19
+Amazon,Rondonia,RPV,B,Female,98
+Amazon,Rondonia,RPV,B,Male,86
+Amazon,Rondonia,RPV,B,Died,39
+Amazon,Rondonia,RMO,B,Female,96
+Amazon,Rondonia,RMO,B,Male,101
+Amazon,Rondonia,RMO,B,Died,26
+Cerrado,Tocantins,TLC,B,Female,41
+Cerrado,Tocantins,TLC,B,Male,43
+Cerrado,Tocantins,TLC,B,Died,34
+Cerrado,Tocantins,TPN,B,Female,15
+Cerrado,Tocantins,TPN,B,Male,20
+Cerrado,Tocantins,TPN,B,Died,20
+Mata Atlantica,Rio de Janeiro,SJU,B,Female,57
+Mata Atlantica,Rio de Janeiro,SJU,B,Male,66
+Mata Atlantica,Rio de Janeiro,SJU,B,Died,36
+Amazon,Amazonas,ARS,C,Female,54
+Amazon,Amazonas,ARS,C,Male,76
+Amazon,Amazonas,ARS,C,Died,16
+Amazon,Amazonas,APR,C,Female,85
+Amazon,Amazonas,APR,C,Male,94
+Amazon,Amazonas,APR,C,Died,32
+Amazon,Rondonia,RPV,C,Female,65
+Amazon,Rondonia,RPV,C,Male,76
+Amazon,Rondonia,RPV,C,Died,83
+Amazon,Rondonia,RMO,C,Female,82
+Amazon,Rondonia,RMO,C,Male,78
+Amazon,Rondonia,RMO,C,Died,62
+Cerrado,Tocantins,TLC,C,Female,27
+Cerrado,Tocantins,TLC,C,Male,44
+Cerrado,Tocantins,TLC,C,Died,49
+Cerrado,Tocantins,TPN,C,Female,10
+Cerrado,Tocantins,TPN,C,Male,14
+Cerrado,Tocantins,TPN,C,Died,36
+Mata Atlantica,Rio de Janeiro,SJU,C,Female,16
+Mata Atlantica,Rio de Janeiro,SJU,C,Male,17
+Mata Atlantica,Rio de Janeiro,SJU,C,Died,132

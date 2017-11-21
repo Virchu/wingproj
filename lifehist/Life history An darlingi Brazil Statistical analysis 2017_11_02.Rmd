@@ -9,39 +9,66 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 
 library(dplyr)
-
-#setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+library(plyr)
+library (survival)
+library (survminer)
+library(lme4)
+library(ggplot2)
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
 #laptop
-setwd("C:/Users/virgc/GitHub/wingproj/lifehist")
+#setwd("C:/Users/virgc/GitHub/wingproj/lifehist")
 #Read in datafile
 lifehistshort<-read.csv("2017_10_18 Life history shortened.csv", header=TRUE)
-#Factor
+#Factor levels of locality, temp num, and lat_group
 lifehistshort$Locality=factor(lifehistshort$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
 lifehistshort$Lat_group=factor(lifehistshort$Lat_group, c(1,2,3))
-
+lifehistshort$Temp_num=factor(lifehistshort$Lat_group, c(20,24,28))
 
 ## Effect of temp on proportion surviving by sex and location
-lifetot<-read.csv("2017_10_19 Life hist totals for proportion  survived from temp.csv", header=TRUE)
-lifetot$Total<-lifetot$Female+lifetot$Male+lifetot$Died
-lifetot$PerFem<-lifetot$Female/lifetot$Total
-lifetot$PerMal<-lifetot$Male/lifetot$Total
-lifetot$Alive<-lifetot$Male+lifetot$Female
+lifetot<-read.csv("2017_11_21 Life hist prop temp.csv", header=TRUE)
+lifecont1<-read.csv("2017_10_19 Life hist totals for proportion  survived from temp1.csv",header=TRUE)
 
-#temp had significant affect? p=<2.2e-16
+##Descriptive tables
+
+#LarvRate
+larvae<- ddply(lifehistshort,c("Lat_group", "Temp_let"), summarise,
+               N= length(LarvRate),
+               mean=mean(LarvRate, na.rm=TRUE),
+               sd= sd(LarvRate, na.rm=TRUE),
+               se=sd/sqrt(N))
+Preadtime<-ddply(lifehistshort,c("Lat_group", "Temp_let"), summarise,
+               N= length(AdRate),
+               mean=mean(AdRate, na.rm=TRUE),
+               sd= sd(AdRate, na.rm=TRUE),
+               se=sd/sqrt(N))
+Emergtime<-ddply(lifehistshort,c("Lat_group", "Temp_let"), summarise,
+               N= length(Emtime),
+               mean=mean(Emtime, na.rm=TRUE),
+               sd= sd(Emtime, na.rm=TRUE),
+               se=sd/sqrt(N))
+Adlife<-ddply(lifehistshort,c("Lat_group", "Temp_let"), summarise,
+               N= length(AL),
+               mean=mean(AL, na.rm=TRUE),
+               sd= sd(AL, na.rm=TRUE),
+               se=sd/sqrt(N))
+Winglength<-ddply(lifehistshort,c("Lat_group", "Temp_let"), summarise,
+               N= length(Wing.length..mm.),
+               mean=mean(Wing.length..mm., na.rm=TRUE),
+               sd= sd(Wing.length..mm., na.rm=TRUE),
+               se=sd/sqrt(N))
+
+#1a. temp had significant affect? p=<2.2e-16
 
 table( lifehistshort$Temp_let, lifehistshort$Death_stat)
 prop.test(table(lifehistshort$Temp_let, lifehistshort$Death_stat), correct=FALSE)
 
 
-#locality had significant affect? p=<2.2e-16
+#1b. locality had significant affect? p=<2.2e-16
 table( lifehistshort$Locality, lifehistshort$Death_stat)
 prop.test(table(lifehistshort$Locality, lifehistshort$Death_stat), correct=FALSE)
 
-#Association between temp and location interaction  and proportion survived to adulthood, p=0.4249
+#1c. Association between temp and location interaction  and proportion survived to adulthood, p=0.4249
 #Used mantelhaen.test
-lifecont1<-read.csv("2017_10_19 Life hist totals for proportion  survived from temp1.csv",header=TRUE)
-class(lifecont1)
-
 data=mutate(lifecont1, Locality=factor(Locality, levels=unique(Locality)),
             Temperature=factor(Temperature, levels=unique(Temperature)),
             Status=factor(Status, levels=unique(Status)))
@@ -49,15 +76,66 @@ data=mutate(lifecont1, Locality=factor(Locality, levels=unique(Locality)),
 data.xtabs=xtabs(Count~Locality+Temperature+Status, data=data)
 ftable(data.xtabs)
 mantelhaen.test(data.xtabs)
-#mantelhaen.test(xtabs(Count~Locality+Temperature+Status, data=data))
 
-#Association between temp and proportion survived by sex, p=0.347
+#1d. Cox regression?
+cox_propt<-coxph(Surv(time, Death_stat)~ Temp_let+ Locality+Temp_let:Locality , lifehistshort)
+summary(cox_propt)
+cox_propl<-coxph(Surv(time, Death_stat)~ Temp_let +Lat_group+Temp_let:Lat_group, lifehistshort)
+summary(cox_propl)
+
+
+#1e. Log rank test
+sd_t<- survdiff(Surv(time, Death_stat)~ Temp_let, lifehistshort)
+sd_l<- survdiff(Surv(time, Death_stat)~ Locality, lifehistshort)
+sd_g<- survdiff(Surv(time, Death_stat)~ Lat_group, lifehistshort)
+
+#2a. Association between temp and proportion survived by sex, p=0.347
 table( lifehistshort$Temp_let, lifehistshort$Sex1)
 prop.test(table(lifehistshort$Temp_let, lifehistshort$Sex1), correct=FALSE)
-#Association between location and proportion survived by sex, p=0.4634
+#2b. Association between location and proportion survived by sex, p=0.4634
 table( lifehistshort$Locality, lifehistshort$Sex1)
 prop.test(table(lifehistshort$Locality, lifehistshort$Sex1), correct=FALSE)
 
+#2c. Association between temp and location interaction  and proportion survived to adulthood, p=0.4335
+#Used mantelhaen.test
+data1=mutate(lifetot, Locality=factor(Locality, levels=unique(Locality)),
+            Temperature=factor(Temp, levels=unique(Temp)),
+            Status=factor(Status, levels=unique(Status)))
+
+data1.xtabs=xtabs(Count~Locality+Temperature+Status, data=data1)
+ftable(data1.xtabs)
+mantelhaen.test(data1.xtabs)
+
+#3a. GLMM with gamma
+lr_fit1g<-glmer(LarvRate~(1|Biome)+(1|State) +(1|Family), data=lifehistshort, family=Gamma)
+summary(lr_fit1g)
+lr_fit2g<-glmer(LarvRate~Lat_group+(1|Biome)+(1|State), data=lifehistshort, family=Gamma)
+summary(lr_fit2g)
+lr_fit3g<-glmer(LarvRate~Lat_group+Temp_let+(1|Biome)+(1|State), data=lifehistshort, family=Gamma)
+summary(lr_fit3g)
+lr_fit4g<-glmer(LarvRate~(1|Biome)+(1|State)+Temp_let*Lat_group, data=lifehistshort, family=Gamma)
+summary(lr_fit4g)
+
+lrfitb_modg<-AIC(lr_fit1g, lr_fit2g, lr_fit3g, lr_fit4g)
+lrfitb_modg
+
+#3b. GLMM with gamma by sex
+lr_fit6g<-glmer(LarvRate~(1|Biome)+(1|State)+Lat_group+Temp_let+Sex, data=lifehistshort, family=Gamma)
+summary(lr_fit6g)
+lr_fit7g<-glmer(LarvRate~(1|Biome)+(1|State)+Lat_group*Temp_let*Sex, data=lifehistshort, family=Gamma)
+summary(lr_fit7g)
+
+lrfitb_modg1<-AIC(lr_fit6g, lr_fit7g)
+lrfitb_modg1
+
+#3c. GLMM with gamma by sex for preadult development
+pr_fit1<- glmer(AdRate~ (1|Biome)+(1|State)+Temp_let*Lat_group*Sex, data=lifehistshort, family=Gamma)
+summary(pr_fit1)
+
+
+#4a. GLMM with gamma for preadult development
+pr_fit1<- glmer(AdRate~ (1|Biome)+(1|State)+Temp_let*Lat_group*Sex, data=lifehistshort, family=Gamma)
+summary(pr_fit1)
 
 ```
 
@@ -97,43 +175,88 @@ prop.test(table(lifehistshort$Locality, lifehistshort$Sex1), correct=FALSE)
  ID  Biome    State Latitude Lat_group Locality Family Temp_let Temp_num Sex Sex1 Wing.length..mm. sLL dLL dPL Emtime
   Preadult.death Death_stat     AdRate   LarvRate Puplen   Puprate D.pread.rate AL time
   
+##Plots
 
-## Analysis
+
+## Questions and Analysis
+
+1. Does temperature or population location affect the proportion that survived to adulthood?
 
 * Surviving proportion based on death as adult vs. preadult
 Proportions test: prop.test and mantel.haen
 
-Temperature alone [prop.test(table(lifehistshort$Temp_let, lifehistshort$Death_stat), correct=FALSE)] p<2.2e-16
+1a. Temperature alone : p<2.2e-16
 
-Locality alone [prop.test(table(lifehistshort$Temp_let, lifehistshort$Locality), correct=FALSE)] p<2.2e-16
+1b. Locality alone : p<2.2e-16
 
-Temperature and Locality [#mantelhaen.test(xtabs(Count~Locality+Temperature+Status, data=data))]  p=0.4249
+1c. Temperature and Locality :  p=0.4249
 
+>The combined effects of temperature and locality did not have a significant effect on the proportion that survived to adulthood.
+
+2. Does temperature or population location affect the proportion that survived to adulthood by sex?
 * Surviving sex ratio
 Proportions test: prop.test and mantel.haen
 
-Temperature alone [prop.test(table(lifehistshort$Temp_let, lifehistshort$Sex1), correct=FALSE)] p=0.347
+2a. Temperature alone : p=0.347
 
-Locality alone [prop.test(table(lifehistshort$Temp_let, lifehistshort$Sex1), correct=FALSE)] p=0.4634
+2b. Locality alone : p=0.4634
 
-Temperature and Locality [#mantelhaen.test(xtabs(Count~Locality+Temperature+Status, data=data))]  p=0.4249
+2c. Temperature and Locality :  p=0.4335
 
-* Rate of development
+>The combined effects of temperature and locality did not have a significant effect on the proportion by sex that survived to adulthood.
 
-** Larvae
+3. Does temperature or population location affect the rate of larvae alone or preadult (larvae and pupae) development? 
 
+3a. GLMM, gamma dist
+Larvae rate ~ (1 | Biome) + (1 | State) + Temp_let * Lat_group
+"lr_fit4g
+(Intercept)           19.5005     0.5503   35.44  < 2e-16 ***
+Temp_letB             -2.6475     0.1665  -15.90  < 2e-16 ***
+Temp_letC             -4.6888     0.1598  -29.34  < 2e-16 ***
+Lat_group2             2.1412     0.1761   12.16  < 2e-16 ***
+Lat_group3             3.7665     0.8099    4.65 3.31e-06 ***
+Temp_letB:Lat_group2  -0.7457     0.2263   -3.29 0.000985 ***
+Temp_letC:Lat_group2  -0.3757     0.2220   -1.69 0.090590 .  
+Temp_letB:Lat_group3  -1.7524     0.3765   -4.65 3.25e-06 ***
+Temp_letC:Lat_group3  -2.4423     0.4688   -5.21 1.90e-07 ***"
 
+>Stronger differences between all groups at 20C and 24C, 28C has mid-latitude similar to low. Low lat (Lat_group =1) fastest development at all temperatures
+
+3b.GLMM with gamma by sex
+LarvRate~(1|Biome)+(1|State)+Lat_group*Temp_let*Sex
+"            Estimate Std. Error t value Pr(>|z|)    
+(Intercept) 18.54714    1.90907    9.72  < 2e-16 ***
+Lat_group2   1.71167    0.09297   18.41  < 2e-16 ***
+Lat_group3   2.48619    0.79110    3.14  0.00167 ** 
+Temp_letB   -3.18989    0.10748  -29.68  < 2e-16 ***
+Temp_letC   -5.03073    0.10801  -46.58  < 2e-16 ***
+SexF         1.49009    1.81701    0.82  0.41217    
+SexM         1.12456    1.81678    0.62  0.53593"  
+
+>Sex did not affect rate of larvae development.
+
+3c. GLMM of preadult rate by sex
+AdRate~ (1|Biome)+(1|State)+Temp_let*Lat_group*Sex
+
+>Sex did not affect rate of preadult development.
+
+4. Does temperature or population location affect the adult life span? 
 
 
 ```{}
 
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
+## Plots
 
 ```{r pressure, echo=FALSE}
-```
+ggplot(larvae, aes(x=Temp_let, y=mean, fill=Lat_group)) + geom_bar(position=position_dodge(), stat="identity")+ geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd),width=.4,position=position_dodge(.9)) +xlab("Latitude group")+ ylab("Rate of Larvae Development (1/day)")+ ggtitle("Larvae rate of development by temperature and latitude group (SD bars)")
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+ggplot(Preadtime, aes(x=Temp_let, y=mean, fill=Lat_group)) + geom_bar(position=position_dodge(), stat="identity")+ geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd),width=.4,position=position_dodge(.9)) +xlab("Latitude group")+ ylab("Rate of Preadult Development (1/day)")+ ggtitle("Preadult rate of development by temperature and latitude group (SD bars)")
+
+ggplot(Emergtime, aes(x=Temp_let, y=mean, fill=Lat_group)) + geom_bar(position=position_dodge(), stat="identity")+ geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd),width=.4,position=position_dodge(.9)) +xlab("Latitude group")+ ylab("Time to eclosion (days)")+ ggtitle("Time to eclosion by temperature and latitude group (SD bars)")
+
+ggplot(Adlife, aes(x=Temp_let, y=mean, fill=Lat_group)) + geom_bar(position=position_dodge(), stat="identity")+ geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd),width=.4,position=position_dodge(.9)) +xlab("Latitude group")+ ylab("Length of Adult life (days)")+ ggtitle("Length of adult life by temperature and latitude group (SD bars)")
+
+ggplot(Winglength, aes(x=Temp_let, y=mean, fill=Lat_group)) + geom_bar(position=position_dodge(), stat="identity")+ geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd),width=.4,position=position_dodge(.9)) +xlab("Latitude group")+ ylab("Wing length (mm)")+ ggtitle("Wing length by temperature and latitude group (SD bars)")
+```
