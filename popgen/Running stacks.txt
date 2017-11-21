@@ -1,2 +1,82 @@
 #running stacks
 
+ref_map.pl
+#get permission to write to mysql
+#mostly .txt but can go into browser
+#make batch=1
+# need output file- stacks#
+# pop map file- make file of each sample name (bam file name) and then identifier (can have 2 layers) (tab separated text file)
+# make it 30 threads
+# specify paths to sample --sample (directoty to samples)
+# use default stack assembly 
+# create B database- ends in _radtags  (Adar_S1_radtags)
+# D description- stacks default settings
+#--create_db
+
+ref_map.pl -o adar_stacks1 -O adar_popmap_locbio.txt -T 30 -b 1 --samples adar_alignments -B Adar_S1_radtags -D stacks_default --create_db 
+
+
+#create screen
+screen -S adar_stacks1
+#could use catalog from plos paper, would standardize between the 2...
+
+ref_map.pl -o adar_stacks2 -O adar_popmap_locbio.txt -T 30 -b 1 --samples adar_alignments -B Adar_S2_radtags -D stacks_default --create_db 
+
+
+ /usr/local/bin/populations -b 1 -P adar_stacks2 -s -M adar_popmap_locbio.txt -t 30 2>&1
+ remake popmap with location first, then biome
+ 
+ 
+ #TROUBLESHOOTING
+ 
+ load_radtags.pl 
+ -D name of database
+ path- just path to stacks, input file
+ same popmap that you ran stacks on
+  will put things up to database
+  
+  load_radtags.pl -D adar_S2_radtags -p adar_stacks2 -M adar_popmap_locbio.txt
+ 
+ 
+ then run index_radtags.pl
+ helps make searching fast and easy
+ put in index
+ -c and -t 
+ 
+ index_radtags.pl -D adar_S2_radtags -c -t
+ * is independent of load_radtags
+ 
+ using popmaps-> pull out complete alleles/loci so that the same data set is consistent
+ creates a white list- figure out which loci you like, then run populations as many times with loci that you want to use
+ makes data set consistent 
+ 
+ run rxstacks after I get stuff up to site
+ 
+ 
+ aligning to a genome- doesn't mean sequence is from that genome-
+ might go to things that are highly conserved in lots of things
+ like wucheria stuff went to ribosomal stuff
+ rna seq are maintained, nucleotide super conserved, no codons
+ 
+ rxstacks -b 1 -P adar_stacks2 -o adar_rxstack
+ 
+ redo c and s for rxstacks individually
+ 
+ cstacks -P adar_rxstack -M adar_popmap_locbio.txt -b 2
+ 
+ sstacks -P adar_rxstack -M adar_popmap_locbio.txt -b 2
+ 
+ add flag to make catalog in load_radtags.pl
+ maybe some issue with mysql permissions?
+ 
+ load_radtags.pl -D adar_S2_radtags -p adar_stacks2 -M adar_popmap_locbio.txt -c
+ Kevin ran this from his computer after my 2 attemps
+ 1st attempt got errors and 0'
+ 2nd attempt got no errors but nothing
+	ind screen error- mysql> select * from samples select 10
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select 10' at line 1
+mysql> quit;
+
+ 3rd attempt from Kevins end and still nothing
+ 

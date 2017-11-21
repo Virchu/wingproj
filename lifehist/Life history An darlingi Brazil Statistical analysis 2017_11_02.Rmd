@@ -8,11 +8,57 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+library(dplyr)
 
+#setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+#laptop
+setwd("C:/Users/virgc/GitHub/wingproj/lifehist")
+#Read in datafile
 lifehistshort<-read.csv("2017_10_18 Life history shortened.csv", header=TRUE)
+#Factor
 lifehistshort$Locality=factor(lifehistshort$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
 lifehistshort$Lat_group=factor(lifehistshort$Lat_group, c(1,2,3))
+
+
+## Effect of temp on proportion surviving by sex and location
+lifetot<-read.csv("2017_10_19 Life hist totals for proportion  survived from temp.csv", header=TRUE)
+lifetot$Total<-lifetot$Female+lifetot$Male+lifetot$Died
+lifetot$PerFem<-lifetot$Female/lifetot$Total
+lifetot$PerMal<-lifetot$Male/lifetot$Total
+lifetot$Alive<-lifetot$Male+lifetot$Female
+
+#temp had significant affect? p=<2.2e-16
+
+table( lifehistshort$Temp_let, lifehistshort$Death_stat)
+prop.test(table(lifehistshort$Temp_let, lifehistshort$Death_stat), correct=FALSE)
+
+
+#locality had significant affect? p=<2.2e-16
+table( lifehistshort$Locality, lifehistshort$Death_stat)
+prop.test(table(lifehistshort$Locality, lifehistshort$Death_stat), correct=FALSE)
+
+#Association between temp and location interaction  and proportion survived to adulthood, p=0.4249
+#Used mantelhaen.test
+lifecont1<-read.csv("2017_10_19 Life hist totals for proportion  survived from temp1.csv",header=TRUE)
+class(lifecont1)
+
+data=mutate(lifecont1, Locality=factor(Locality, levels=unique(Locality)),
+            Temperature=factor(Temperature, levels=unique(Temperature)),
+            Status=factor(Status, levels=unique(Status)))
+
+data.xtabs=xtabs(Count~Locality+Temperature+Status, data=data)
+ftable(data.xtabs)
+mantelhaen.test(data.xtabs)
+#mantelhaen.test(xtabs(Count~Locality+Temperature+Status, data=data))
+
+#Association between temp and proportion survived by sex, p=0.347
+table( lifehistshort$Temp_let, lifehistshort$Sex1)
+prop.test(table(lifehistshort$Temp_let, lifehistshort$Sex1), correct=FALSE)
+#Association between location and proportion survived by sex, p=0.4634
+table( lifehistshort$Locality, lifehistshort$Sex1)
+prop.test(table(lifehistshort$Locality, lifehistshort$Sex1), correct=FALSE)
+
+
 ```
 
 ## Life history data description
@@ -22,6 +68,7 @@ lifehistshort$Lat_group=factor(lifehistshort$Lat_group, c(1,2,3))
     + State [Amazonas, Rondonia, Tocantins, Mata Atlantica]-Ordinal
     + Locality [ARS, APR, RPV, RMO, TLC, TPN, SJU]-Ordinal
     + Latitude [-2.864, -3.028, -8.742, -9.223, -10.7, -10.796, -22.611 ]- Ordinal
+* Lat_group- 1 (low, near equator), 2 (mid), 3 (high, near Rio))
 * Family [for lab reared, which female within the biome/locality they came from]- Categorical
  (5 larvae raised in each of 3 wells per female per temperature)
 * Temp_let- A, B, C
@@ -37,24 +84,49 @@ lifehistshort$Lat_group=factor(lifehistshort$Lat_group, c(1,2,3))
 * EmTime- time to emergence (Emergence.date-Hatch.day)
 * Preadult.death- Time of life (in days) that preadults (that didn't make it to adulthood)
 * Death_stat [0/1]- 0- preadult, 1-adult death status
-* AdRate- 
-* LarvRate- 
-* Puplen-
-* Puprate-
-* D.pread.rate-
+* AdRate- Rate of development of mosquitoes that survived to adulthood
+* LarvRate- Rate of development of 
+* Puplen- Length in days of pupal life
+* Puprate- Rate of development of pupae
+* D.pread.rate- rate of development of mosquitoes that didn't survive to adulthood
 * AL- Adult life length (days)- Discrete (Deathtime-Emergence.date)
-* time-
+* time- total length of time alive, regardless of death status as adult or larvae
 
-
-* Rate of development
-* Sex ratio
 
 ##Datafile column headers
  ID  Biome    State Latitude Lat_group Locality Family Temp_let Temp_num Sex Sex1 Wing.length..mm. sLL dLL dPL Emtime
   Preadult.death Death_stat     AdRate   LarvRate Puplen   Puprate D.pread.rate AL time
+  
 
-```{r cars}
-summary(cars)
+## Analysis
+
+* Surviving proportion based on death as adult vs. preadult
+Proportions test: prop.test and mantel.haen
+
+Temperature alone [prop.test(table(lifehistshort$Temp_let, lifehistshort$Death_stat), correct=FALSE)] p<2.2e-16
+
+Locality alone [prop.test(table(lifehistshort$Temp_let, lifehistshort$Locality), correct=FALSE)] p<2.2e-16
+
+Temperature and Locality [#mantelhaen.test(xtabs(Count~Locality+Temperature+Status, data=data))]  p=0.4249
+
+* Surviving sex ratio
+Proportions test: prop.test and mantel.haen
+
+Temperature alone [prop.test(table(lifehistshort$Temp_let, lifehistshort$Sex1), correct=FALSE)] p=0.347
+
+Locality alone [prop.test(table(lifehistshort$Temp_let, lifehistshort$Sex1), correct=FALSE)] p=0.4634
+
+Temperature and Locality [#mantelhaen.test(xtabs(Count~Locality+Temperature+Status, data=data))]  p=0.4249
+
+* Rate of development
+
+** Larvae
+
+
+
+
+```{}
+
 ```
 
 ## Including Plots
@@ -62,7 +134,6 @@ summary(cars)
 You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

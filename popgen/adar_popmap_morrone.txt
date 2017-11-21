@@ -1,190 +1,190 @@
-AC114_17	South Brazilian dominion	Rondônia province
-AC116_10	South Brazilian dominion	Rondônia province
-AC116_11	South Brazilian dominion	Rondônia province
-AC117_18	South Brazilian dominion	Rondônia province
-AC117_22	South Brazilian dominion	Rondônia province
-AC117_23	South Brazilian dominion	Rondônia province
-AC118_10	South Brazilian dominion	Rondônia province
-AC118_13	South Brazilian dominion	Rondônia province
-AC119_9	South Brazilian dominion	Rondônia province
-AC120_10	South Brazilian dominion	Rondônia province
-AC120_11	South Brazilian dominion	Rondônia province
-AC120_12	South Brazilian dominion	Rondônia province
-AC121_5	South Brazilian dominion	Rondônia province
-AC121_6	South Brazilian dominion	Rondônia province
-AC246_17	South Brazilian dominion	Rondônia province
-AC246_28	South Brazilian dominion	Rondônia province
-AC246_31	South Brazilian dominion	Rondônia province
-AC246_32	South Brazilian dominion	Rondônia province
-AC246_38	South Brazilian dominion	Rondônia province
-AC246_5	South Brazilian dominion	Rondônia province
-AC246_6	South Brazilian dominion	Rondônia province
-AC247_12	South Brazilian dominion	Rondônia province
-AC247_15	South Brazilian dominion	Rondônia province
-AC247_18	South Brazilian dominion	Rondônia province
-AC247_19	South Brazilian dominion	Rondônia province
-AC247_5	South Brazilian dominion	Rondônia province
-AC247_8	South Brazilian dominion	Rondônia province
-AC247_9	South Brazilian dominion	Rondônia province
-AC69_1	South Brazilian dominion	Rondônia province
-AC69_10	South Brazilian dominion	Rondônia province
-AC69_11	South Brazilian dominion	Rondônia province
-AC69_12	South Brazilian dominion	Rondônia province
-AC69_13	South Brazilian dominion	Rondônia province
-AC69_15	South Brazilian dominion	Rondônia province
-AC69_16	South Brazilian dominion	Rondônia province
-AC69_17	South Brazilian dominion	Rondônia province
-AC69_18	South Brazilian dominion	Rondônia province
-AC69_20	South Brazilian dominion	Rondônia province
-AC69_21	South Brazilian dominion	Rondônia province
-AC69_22	South Brazilian dominion	Rondônia province
-AC69_23	South Brazilian dominion	Rondônia province
-AC69_3	South Brazilian dominion	Rondônia province
-AM160_71	South Brazilian dominion	Madeira province
-AM160_78	South Brazilian dominion	Madeira province
-AM161_28	South Brazilian dominion	Madeira province
-AM161_32	South Brazilian dominion	Madeira province
-AM161_35	South Brazilian dominion	Madeira province
-AM162_15	South Brazilian dominion	Madeira province
-AM162_16	South Brazilian dominion	Madeira province
-AM162_17	South Brazilian dominion	Madeira province
-AM162_18	South Brazilian dominion	Madeira province
-AM162_4	South Brazilian dominion	Madeira province
-AM162_5	South Brazilian dominion	Madeira province
-AM163_5	South Brazilian dominion	Madeira province
-AM164_11	South Brazilian dominion	Madeira province
-AM40_37	South Brazilian dominion	Madeira province
-AM40_39	South Brazilian dominion	Madeira province
-AM40_45	South Brazilian dominion	Madeira province
-AM40_56	South Brazilian dominion	Madeira province
-AM40_65	South Brazilian dominion	Madeira province
-AM41_18	South Brazilian dominion	Madeira province
-AM41_22	South Brazilian dominion	Madeira province
-AM41_24	South Brazilian dominion	Madeira province
-AM41_26	South Brazilian dominion	Madeira province
-AM41_36	South Brazilian dominion	Madeira province
-AM42_19	South Brazilian dominion	Madeira province
-AM42_34	South Brazilian dominion	Madeira province
-AM43_37	South Brazilian dominion	Madeira province
-AM94_1	Boreal Brazilian dominion	Roraima province
-AM94_15	Boreal Brazilian dominion	Roraima province
-AM94_5	Boreal Brazilian dominion	Roraima province
-AM94_7	Boreal Brazilian dominion	Roraima province
-AM94_9	Boreal Brazilian dominion	Roraima province
-AM95_1	Boreal Brazilian dominion	Roraima province
-AM95_4	Boreal Brazilian dominion	Roraima province
-AM95_8	Boreal Brazilian dominion	Roraima province
-AM96_3	Boreal Brazilian dominion	Roraima province
-AM96_4	Boreal Brazilian dominion	Roraima province
-AM96_5	Boreal Brazilian dominion	Roraima province
-AM97_5	Boreal Brazilian dominion	Roraima province
-AM98_2	Boreal Brazilian dominion	Roraima province
-APR14	Boreal Brazilian dominion	Roraima province
-APR18	Boreal Brazilian dominion	Roraima province
-APR19	Boreal Brazilian dominion	Roraima province
-APR2	Boreal Brazilian dominion	Roraima province
-APR3	Boreal Brazilian dominion	Roraima province
-APR33	Boreal Brazilian dominion	Roraima province
-APR36	Boreal Brazilian dominion	Roraima province
-APR38	Boreal Brazilian dominion	Roraima province
-APR4	Boreal Brazilian dominion	Roraima province
-APR44	Boreal Brazilian dominion	Roraima province
-APR6	Boreal Brazilian dominion	Roraima province
-APR7	Boreal Brazilian dominion	Roraima province
-APR8	Boreal Brazilian dominion	Roraima province
-ARS1	Boreal Brazilian dominion	Roraima province
-ARS10	Boreal Brazilian dominion	Roraima province
-ARS11	Boreal Brazilian dominion	Roraima province
-ARS13	Boreal Brazilian dominion	Roraima province
-ARS14	Boreal Brazilian dominion	Roraima province
-ARS16	Boreal Brazilian dominion	Roraima province
-ARS17	Boreal Brazilian dominion	Roraima province
-ARS2	Boreal Brazilian dominion	Roraima province
-ARS3	Boreal Brazilian dominion	Roraima province
-ARS4	Boreal Brazilian dominion	Roraima province
-ARS6	Boreal Brazilian dominion	Roraima province
-ARS8	Boreal Brazilian dominion	Roraima province
-ARS9	Boreal Brazilian dominion	Roraima province
-PA100_1	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA109_1	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA111_2	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA67_13	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA71_1	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA73_1	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA80_1	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA82_1	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA82_3	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA89_1	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA90_1	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA92_1	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA94_1	South-eastern Amazonian dominion	Xingu-Tapajós province
-PA99_1	South-eastern Amazonian dominion	Xingu-Tapajós province
-RMO13	South Brazilian dominion	Madeira province
-RMO17	South Brazilian dominion	Madeira province
-RMO18	South Brazilian dominion	Madeira province
-RMO24	South Brazilian dominion	Madeira province
-RMO26	South Brazilian dominion	Madeira province
-RMO27	South Brazilian dominion	Madeira province
-RMO33	South Brazilian dominion	Madeira province
-RMO36	South Brazilian dominion	Madeira province
-RMO39	South Brazilian dominion	Madeira province
-RMO41	South Brazilian dominion	Madeira province
-RMO42	South Brazilian dominion	Madeira province
-RMO5	South Brazilian dominion	Madeira province
-RMO6	South Brazilian dominion	Madeira province
-RMO9	South Brazilian dominion	Madeira province
-RPV11	South Brazilian dominion	Madeira province
-RPV12	South Brazilian dominion	Madeira province
-RPV15	South Brazilian dominion	Madeira province
-RPV17	South Brazilian dominion	Madeira province
-RPV18	South Brazilian dominion	Madeira province
-RPV19	South Brazilian dominion	Madeira province
-RPV20	South Brazilian dominion	Madeira province
-RPV23	South Brazilian dominion	Madeira province
-RPV25	South Brazilian dominion	Madeira province
-RPV28	South Brazilian dominion	Madeira province
-RPV33	South Brazilian dominion	Madeira province
-RPV37	South Brazilian dominion	Madeira province
-RPV38	South Brazilian dominion	Madeira province
-RPV42	South Brazilian dominion	Madeira province
-SJU1	Parana dominion	Atlantic province
-SJU10	Parana dominion	Atlantic province
-SJU11	Parana dominion	Atlantic province
-SJU12	Parana dominion	Atlantic province
-SJU13	Parana dominion	Atlantic province
-SJU2	Parana dominion	Atlantic province
-SJU3	Parana dominion	Atlantic province
-SJU4	Parana dominion	Atlantic province
-SJU5	Parana dominion	Atlantic province
-SJU6	Parana dominion	Atlantic province
-SJU7	Parana dominion	Atlantic province
-SJU8	Parana dominion	Atlantic province
-SJU9	Parana dominion	Atlantic province
-TLC52	Chacoan dominion	Cerrado province
-TLC53	Chacoan dominion	Cerrado province
-TLC70	Chacoan dominion	Cerrado province
-TLC71	Chacoan dominion	Cerrado province
-TLC73	Chacoan dominion	Cerrado province
-TLC74	Chacoan dominion	Cerrado province
-TLC75	Chacoan dominion	Cerrado province
-TLC76	Chacoan dominion	Cerrado province
-TLC77	Chacoan dominion	Cerrado province
-TLC78	Chacoan dominion	Cerrado province
-TLC79	Chacoan dominion	Cerrado province
-TLC81	Chacoan dominion	Cerrado province
-TLC82	Chacoan dominion	Cerrado province
-TLC83	Chacoan dominion	Cerrado province
-TPN11	Chacoan dominion	Cerrado province
-TPN12	Chacoan dominion	Cerrado province
-TPN13	Chacoan dominion	Cerrado province
-TPN14	Chacoan dominion	Cerrado province
-TPN16	Chacoan dominion	Cerrado province
-TPN17	Chacoan dominion	Cerrado province
-TPN18	Chacoan dominion	Cerrado province
-TPN20	Chacoan dominion	Cerrado province
-TPN3	Chacoan dominion	Cerrado province
-TPN4	Chacoan dominion	Cerrado province
-TPN5	Chacoan dominion	Cerrado province
-TPN6	Chacoan dominion	Cerrado province
-TPN8	Chacoan dominion	Cerrado province
-TPN9	Chacoan dominion	Cerrado province
+AC114_17	Rondônia province	South Brazilian dominion
+AC116_10	Rondônia province	South Brazilian dominion
+AC116_11	Rondônia province	South Brazilian dominion
+AC117_18	Rondônia province	South Brazilian dominion
+AC117_22	Rondônia province	South Brazilian dominion
+AC117_23	Rondônia province	South Brazilian dominion
+AC118_10	Rondônia province	South Brazilian dominion
+AC118_13	Rondônia province	South Brazilian dominion
+AC119_9	Rondônia province	South Brazilian dominion
+AC120_10	Rondônia province	South Brazilian dominion
+AC120_11	Rondônia province	South Brazilian dominion
+AC120_12	Rondônia province	South Brazilian dominion
+AC121_5	Rondônia province	South Brazilian dominion
+AC121_6	Rondônia province	South Brazilian dominion
+AC246_17	Rondônia province	South Brazilian dominion
+AC246_28	Rondônia province	South Brazilian dominion
+AC246_31	Rondônia province	South Brazilian dominion
+AC246_32	Rondônia province	South Brazilian dominion
+AC246_38	Rondônia province	South Brazilian dominion
+AC246_5	Rondônia province	South Brazilian dominion
+AC246_6	Rondônia province	South Brazilian dominion
+AC247_12	Rondônia province	South Brazilian dominion
+AC247_15	Rondônia province	South Brazilian dominion
+AC247_18	Rondônia province	South Brazilian dominion
+AC247_19	Rondônia province	South Brazilian dominion
+AC247_5	Rondônia province	South Brazilian dominion
+AC247_8	Rondônia province	South Brazilian dominion
+AC247_9	Rondônia province	South Brazilian dominion
+AC69_1	Rondônia province	South Brazilian dominion
+AC69_10	Rondônia province	South Brazilian dominion
+AC69_11	Rondônia province	South Brazilian dominion
+AC69_12	Rondônia province	South Brazilian dominion
+AC69_13	Rondônia province	South Brazilian dominion
+AC69_15	Rondônia province	South Brazilian dominion
+AC69_16	Rondônia province	South Brazilian dominion
+AC69_17	Rondônia province	South Brazilian dominion
+AC69_18	Rondônia province	South Brazilian dominion
+AC69_20	Rondônia province	South Brazilian dominion
+AC69_21	Rondônia province	South Brazilian dominion
+AC69_22	Rondônia province	South Brazilian dominion
+AC69_23	Rondônia province	South Brazilian dominion
+AC69_3	Rondônia province	South Brazilian dominion
+AM160_71	Madeira province	South Brazilian dominion
+AM160_78	Madeira province	South Brazilian dominion
+AM161_28	Madeira province	South Brazilian dominion
+AM161_32	Madeira province	South Brazilian dominion
+AM161_35	Madeira province	South Brazilian dominion
+AM162_15	Madeira province	South Brazilian dominion
+AM162_16	Madeira province	South Brazilian dominion
+AM162_17	Madeira province	South Brazilian dominion
+AM162_18	Madeira province	South Brazilian dominion
+AM162_4	Madeira province	South Brazilian dominion
+AM162_5	Madeira province	South Brazilian dominion
+AM163_5	Madeira province	South Brazilian dominion
+AM164_11	Madeira province	South Brazilian dominion
+AM40_37	Madeira province	South Brazilian dominion
+AM40_39	Madeira province	South Brazilian dominion
+AM40_45	Madeira province	South Brazilian dominion
+AM40_56	Madeira province	South Brazilian dominion
+AM40_65	Madeira province	South Brazilian dominion
+AM41_18	Madeira province	South Brazilian dominion
+AM41_22	Madeira province	South Brazilian dominion
+AM41_24	Madeira province	South Brazilian dominion
+AM41_26	Madeira province	South Brazilian dominion
+AM41_36	Madeira province	South Brazilian dominion
+AM42_19	Madeira province	South Brazilian dominion
+AM42_34	Madeira province	South Brazilian dominion
+AM43_37	Madeira province	South Brazilian dominion
+AM94_1	Roraima province	Boreal Brazilian dominion
+AM94_15	Roraima province	Boreal Brazilian dominion
+AM94_5	Roraima province	Boreal Brazilian dominion
+AM94_7	Roraima province	Boreal Brazilian dominion
+AM94_9	Roraima province	Boreal Brazilian dominion
+AM95_1	Roraima province	Boreal Brazilian dominion
+AM95_4	Roraima province	Boreal Brazilian dominion
+AM95_8	Roraima province	Boreal Brazilian dominion
+AM96_3	Roraima province	Boreal Brazilian dominion
+AM96_4	Roraima province	Boreal Brazilian dominion
+AM96_5	Roraima province	Boreal Brazilian dominion
+AM97_5	Roraima province	Boreal Brazilian dominion
+AM98_2	Roraima province	Boreal Brazilian dominion
+APR14	Roraima province	Boreal Brazilian dominion
+APR18	Roraima province	Boreal Brazilian dominion
+APR19	Roraima province	Boreal Brazilian dominion
+APR2	Roraima province	Boreal Brazilian dominion
+APR3	Roraima province	Boreal Brazilian dominion
+APR33	Roraima province	Boreal Brazilian dominion
+APR36	Roraima province	Boreal Brazilian dominion
+APR38	Roraima province	Boreal Brazilian dominion
+APR4	Roraima province	Boreal Brazilian dominion
+APR44	Roraima province	Boreal Brazilian dominion
+APR6	Roraima province	Boreal Brazilian dominion
+APR7	Roraima province	Boreal Brazilian dominion
+APR8	Roraima province	Boreal Brazilian dominion
+ARS1	Roraima province	Boreal Brazilian dominion
+ARS10	Roraima province	Boreal Brazilian dominion
+ARS11	Roraima province	Boreal Brazilian dominion
+ARS13	Roraima province	Boreal Brazilian dominion
+ARS14	Roraima province	Boreal Brazilian dominion
+ARS16	Roraima province	Boreal Brazilian dominion
+ARS17	Roraima province	Boreal Brazilian dominion
+ARS2	Roraima province	Boreal Brazilian dominion
+ARS3	Roraima province	Boreal Brazilian dominion
+ARS4	Roraima province	Boreal Brazilian dominion
+ARS6	Roraima province	Boreal Brazilian dominion
+ARS8	Roraima province	Boreal Brazilian dominion
+ARS9	Roraima province	Boreal Brazilian dominion
+PA100_1	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA109_1	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA111_2	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA67_13	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA71_1	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA73_1	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA80_1	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA82_1	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA82_3	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA89_1	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA90_1	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA92_1	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA94_1	Xingu-Tapajós province	South-eastern Amazonian dominion
+PA99_1	Xingu-Tapajós province	South-eastern Amazonian dominion
+RMO13	Madeira province	South Brazilian dominion
+RMO17	Madeira province	South Brazilian dominion
+RMO18	Madeira province	South Brazilian dominion
+RMO24	Madeira province	South Brazilian dominion
+RMO26	Madeira province	South Brazilian dominion
+RMO27	Madeira province	South Brazilian dominion
+RMO33	Madeira province	South Brazilian dominion
+RMO36	Madeira province	South Brazilian dominion
+RMO39	Madeira province	South Brazilian dominion
+RMO41	Madeira province	South Brazilian dominion
+RMO42	Madeira province	South Brazilian dominion
+RMO5	Madeira province	South Brazilian dominion
+RMO6	Madeira province	South Brazilian dominion
+RMO9	Madeira province	South Brazilian dominion
+RPV11	Madeira province	South Brazilian dominion
+RPV12	Madeira province	South Brazilian dominion
+RPV15	Madeira province	South Brazilian dominion
+RPV17	Madeira province	South Brazilian dominion
+RPV18	Madeira province	South Brazilian dominion
+RPV19	Madeira province	South Brazilian dominion
+RPV20	Madeira province	South Brazilian dominion
+RPV23	Madeira province	South Brazilian dominion
+RPV25	Madeira province	South Brazilian dominion
+RPV28	Madeira province	South Brazilian dominion
+RPV33	Madeira province	South Brazilian dominion
+RPV37	Madeira province	South Brazilian dominion
+RPV38	Madeira province	South Brazilian dominion
+RPV42	Madeira province	South Brazilian dominion
+SJU1	Atlantic province	Parana dominion
+SJU10	Atlantic province	Parana dominion
+SJU11	Atlantic province	Parana dominion
+SJU12	Atlantic province	Parana dominion
+SJU13	Atlantic province	Parana dominion
+SJU2	Atlantic province	Parana dominion
+SJU3	Atlantic province	Parana dominion
+SJU4	Atlantic province	Parana dominion
+SJU5	Atlantic province	Parana dominion
+SJU6	Atlantic province	Parana dominion
+SJU7	Atlantic province	Parana dominion
+SJU8	Atlantic province	Parana dominion
+SJU9	Atlantic province	Parana dominion
+TLC52	Cerrado province	Chacoan dominion
+TLC53	Cerrado province	Chacoan dominion
+TLC70	Cerrado province	Chacoan dominion
+TLC71	Cerrado province	Chacoan dominion
+TLC73	Cerrado province	Chacoan dominion
+TLC74	Cerrado province	Chacoan dominion
+TLC75	Cerrado province	Chacoan dominion
+TLC76	Cerrado province	Chacoan dominion
+TLC77	Cerrado province	Chacoan dominion
+TLC78	Cerrado province	Chacoan dominion
+TLC79	Cerrado province	Chacoan dominion
+TLC81	Cerrado province	Chacoan dominion
+TLC82	Cerrado province	Chacoan dominion
+TLC83	Cerrado province	Chacoan dominion
+TPN11	Cerrado province	Chacoan dominion
+TPN12	Cerrado province	Chacoan dominion
+TPN13	Cerrado province	Chacoan dominion
+TPN14	Cerrado province	Chacoan dominion
+TPN16	Cerrado province	Chacoan dominion
+TPN17	Cerrado province	Chacoan dominion
+TPN18	Cerrado province	Chacoan dominion
+TPN20	Cerrado province	Chacoan dominion
+TPN3	Cerrado province	Chacoan dominion
+TPN4	Cerrado province	Chacoan dominion
+TPN5	Cerrado province	Chacoan dominion
+TPN6	Cerrado province	Chacoan dominion
+TPN8	Cerrado province	Chacoan dominion
+TPN9	Cerrado province	Chacoan dominion

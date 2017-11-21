@@ -1,0 +1,15 @@
+##Adar_stacks1 failed
+
+  /usr/local/bin/pstacks -t bam -f adar_alignments/RMO13.bam -o adar_stacks1 -i   -p 30 2>&1
+
+ref_map.pl: Aborted because the last command failed. (129)
+
+
+##Re ran it as adar_stacks2 and it also failed
+# i used a modified popmap that had no special characters this time to see if that would help
+#this 2nd attempt went further but still stopped early 
+adar_stacks2/TPN9  -p 30 2>&1
+Calculating population-level summary statistics
+  /usr/local/bin/populations -b 1 -P adar_stacks2 -s -M adar_popmap_locbio.txt -t 30 2>&1
+
+ref_map.pl: Aborted because the last command failed. (141)
