@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #install.packages("survminer")
 #install.packages("lme4")
 #install.packages("ggplot2")
+#install.packages("multcompView")
 #install.packages("lsmeans")
 #install.packages("ggpubr")
 
@@ -26,9 +27,10 @@ library(lme4)
 library(ggplot2)
 library(lsmeans)
 library(ggpubr)
-setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+library(multcompView)
+#setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
 #laptop
-#setwd("C:/Users/virgc/GitHub/wingproj/lifehist")
+setwd("C:/Users/virgc/GitHub/wingproj/lifehist")
 #Read in datafile
 lifehistshort<-read.csv("2017_10_18 Life history shortened.csv", header=TRUE)
 #Factor levels of locality, temp num, and lat_group
@@ -99,9 +101,9 @@ ftable(data.xtabs)
 mantelhaen.test(data.xtabs)
 
 #1d. Cox regression?
-cox_propt<-coxph(Surv(time, Death_stat)~ Temp_let+ Locality+Temp_let:Locality , lifehistshort)
+cox_propt<-coxph(Surv(time, Death_stat)~ Temp_let+ Locality+Temp_let*Locality , lifehistshort)
 summary(cox_propt)
-cox_propl<-coxph(Surv(time, Death_stat)~ Temp_let +Lat_group+Temp_let:Lat_group, lifehistshort)
+cox_propl<-coxph(Surv(time, Death_stat)~ Temp_let +Lat_group+Temp_let*Lat_group, lifehistshort)
 summary(cox_propl)
 
 
@@ -206,6 +208,7 @@ ggscatter(life28, x = "LarvRate", y = "AL",
           xlab = "Rate of Larvae development (1/days)", ylab = "Adult life (days)")
 ```
 
+
 ## Life history data description
 # Description of columns:
 ## Independent variables
@@ -307,13 +310,6 @@ AL ~ (1 | Biome) + (1 | State) + Temp_let * Lat_group
 
 >Wing length different by temperature but not distinct by latitude group or sex. See wl1_post
 
-
-
-
-
-```{}
-
-```
 
 ## Plots
 
