@@ -1,0 +1,113 @@
+---
+title: "Wing MANOVA"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#home desktop
+setwd("C:/Users/virgc/Documents/GitHub/wingproj/Wing source data field_lab")
+
+field18<- read.csv("2017_09_06 Field 18 Partial warps.csv", header=TRUE)
+#Biome, lat group and locality are nested
+
+#factor
+field18$Locality=factor(field18$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+
+
+#size
+fieldres.man2<-manova(cbind(Length.mm,CS)~Biome*Latitude, data=field18)
+summary(fieldres.man2, test="Wilks")
+
+fieldres.man3<-manova(cbind(Length.mm,CS)~(Biome*Locality*Lat_group), data=field18)
+summary(fieldres.man3, test="Wilks")
+summary.aov(fieldres.man3)
+
+test1<-manova((cbind(field18$Length.mm, field18$CS))~field18$Biome*field18$Lat_group*field18$Locality)
+summary(test1, test="Wilks")
+#pairwise comparison
+a_a<-pairwise.t.test(field18$CS, field18$Locality, p.adj="bonferroni")
+#make matrix of just partial warps
+f18_shape<-as.matrix(field18[,10:41])
+f18_manova1<-manova(f18_shape~field18$Biome)
+
+f18_res<-summary(f18_manova1, test=c("Pillai", "Wilks", "Hotelling-Lawley", "Roy"))
+
+f18_manova2<-manova(f18_shape~field18$Biome+field18$Lat_group)
+
+f18_res2<-summary(f18_manova2, test=c("Pillai", "Wilks", "Hotelling-Lawley", "Roy"))
+
+f18_manova3<-manova(f18_shape~field18$Biome+field18$Lat_group+field18$Locality)
+
+f18_res3<-summary(f18_manova3, test=c("Pillai", "Wilks", "Hotelling-Lawley", "Roy"))
+
+f18_manova4<-manova(f18_shape~field18$Biome*field18$Lat_group*field18$Locality)
+f18_manova5<-manova(f18_shape~field18$Biome*field18$Lat_group*field18$Locality)
+
+f18_res4<-summary(f18_manova3, test=c("Pillai", "Wilks", "Hotelling-Lawley", "Roy"))
+f18_res5<-summary(f18_manova4, test= "Wilks")
+#all 3 seem to be important
+
+f18_dfa1<- lda(field18$Biome~f18_shape, CV=F)
+f18_dfa2<- lda(field18$Biome~f18_shape, CV=T)
+
+f18_dfa2_table <- table(field18$Biome,f18_dfa2$class)
+
+f18_pro<-diag(prop.table(f18_dfa2_table,1)) 
+
+f18_biome_table<-cbind(f18_dfa2_table,f18_pro)
+f18_biome_table
+
+f18_dfa3<- lda(field18$Lat_group~f18_shape, CV=F)
+f18_dfa4<- lda(field18$Lat_group~f18_shape, CV=T)
+
+f18_dfa4_table <- table(field18$Lat_group,f18_dfa4$class)
+
+f18_pro1<-diag(prop.table(f18_dfa4_table,1)) 
+
+f18_latgroup_table<-cbind(f18_dfa4_table,f18_pro1)
+f18_latgroup_table
+
+
+f18_dfa5<- lda(field18$Locality~f18_shape, CV=F)
+f18_dfa6<- lda(field18$Locality~f18_shape, CV=T)
+
+f18_dfa6_table <- table(field18$Locality,f18_dfa6$class)
+
+f18_pro2<-diag(prop.table(f18_dfa6_table,1)) 
+
+f18_loc_table<-cbind(f18_dfa6_table,f18_pro2)
+f18_loc_table
+
+#plots
+#all over the place
+scores1<- predict(f18_dfa1)$x
+plot(scores1)
+
+plot(f18_dfa1)
+plot(f18_dfa3)
+plot(f18_dfa5)
+
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -1,0 +1,91 @@
+---
+title: "Shape practice"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#install.packages("MASS")
+library(MASS)
+
+mus_dat<- read.delim("Lab06 Rodent data.txt", header=TRUE)
+#make matrix of just partial warps
+mus_shape<-as.matrix(mus_dat[,4:27])
+mus_manova1<-manova(mus_shape~mus_dat$Category)
+
+mus_res<-summary(mus_manova1, test=c("Pillai", "Wilks", "Hotelling-Lawley", "Roy"))
+
+mus_manova2<-manova(mus_shape~mus_dat$Category+mus_dat$Strain)
+
+mus_res2<-summary(mus_manova2, test=c("Pillai", "Wilks", "Hotelling-Lawley", "Roy"))
+
+#mus_manova3<-manova(mus_shape~mus_dat$Category*mus_dat$Strain)
+
+#mus_res3<-summary(mus_manova3, test=c("Pillai", "Wilks", "Hotelling-Lawley", "Roy"))
+#null is that neither affects shape
+#So the MANOVA shows me that both category anad strain are significant to shape
+
+
+dfa1<-summary.aov(mus_manova2)
+#This goes point by point to see if both strain and cateogry impact each partial warp
+
+
+mus_dfa1<- lda(mus_dat$Category~mus_shape, CV=F)
+mus_dfa2<- lda(mus_dat$Category~mus_shape, CV=T)
+
+mus_dfa2_table <- table(mus_dat$Category,mus_dfa2$class)
+
+#lab-78, 2
+#Mutant-106, 5
+#all wild properly assigned
+
+pro<-diag(prop.table(mus_dfa2_table,1)) 
+
+mus_table<-cbind(mus_dfa2_table, pro)
+mus_table
+
+#overall proportion of correcet classifications
+opro<- sum(diag(prop.table(mus_dfa2_table)))
+
+plot(mus_dfa1)
+#mutant and lab most similar
+
+scores1<- predict(mus_dfa1)$x
+plot(scores1)
+
+#check for outliers
+mahalanobis(x, center, cov)
+
+
+mus_dfa3<- lda(mus_dat$Strain~mus_shape, CV=F)
+mus_dfa4<- lda(mus_dat$Strain~mus_shape, CV=T)
+
+mus_dfa3_table <- table(mus_dat$Strain,mus_dfa4$class)
+
+#lab-78, 5
+#Mutant-106, 2
+#all wild properly assigned
+
+pro1<-diag(prop.table(mus_dfa3_table,1)) 
+
+mus_table1<-cbind(mus_dfa3_table, pro1)
+mus_table1
+```
+
+## R Markdown
+
+http://www2.clarku.edu/faculty/pbergmann/biostats/Biol206%20-%20Lab06-%20MANOVA.pdf
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
