@@ -1,0 +1,9 @@
+Biome,"Average mean temp (min, max)",Ecoregion (State),Latitude (group),Site,Temperature treatment (°C),,
+,,,,,20,24,28
+Amazonia,"28.6 (25.6, 33.2)",Imeri (Amazonas),-2.864 (1),ARS,145,143,146
+,"28.2 (24.4, 32.7)",Imeri (Amazonas),-3.028 (1),APR,218,217,211
+,"26.4 (23.1, 31.9)",Madeira (Rondonia),-8.742 (2),RPV ,219,223,224
+,"26.7 ( 24.5, 32.1)",Madeira (Rondonia),-9.223 (2),RMO,223,223,222
+Cerrado,"28.4 (23.3, 35.4)",Cerrado (Tocantins),-10.7 (2),TLC ,120,118,120
+,"28.4 (23.1, 35.2)",Cerrado (Tocantins),-10.796 (2),TPN,59,55,60
+Mata Atlantica,"21.4 (17, 27.8)",Atlantic (Rio de Janeiro),-22.611 (3),SJU,160,159,165
