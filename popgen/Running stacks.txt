@@ -62,9 +62,9 @@ ref_map.pl -o adar_stacks2 -O adar_popmap_locbio.txt -T 30 -b 1 --samples adar_a
  
  redo c and s for rxstacks individually
  
- cstacks -P adar_rxstack -M adar_popmap_locbio.txt -b 2
+ cstacks -P adar_rxstack -M adar_popmap_locbio.txt -b 1 -p 30
  
- sstacks -P adar_rxstack -M adar_popmap_locbio.txt -b 2
+ sstacks -P adar_rxstack -M adar_popmap_locbio.txt -b 1
  
  add flag to make catalog in load_radtags.pl
  maybe some issue with mysql permissions?
