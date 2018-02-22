@@ -1,0 +1,108 @@
+---
+title: "Life history data anaysis part 2 - Jan 2018"
+author: "Virginia Chu"
+date: "January 29, 2018"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#cake stuff
+library(lme4)
+library(mdhglm)
+library(dhglm)
+
+if(!require(psych)){install.packages("car")}
+if(!require(MASS)){install.packages("MASS")}
+if(!require(rcompanion)){install.packages("rcompanion")}
+#test out transforming
+qqnorm(cake$angle)
+qqnorm(log(cake$angle))
+
+data(cake, package="mdhglm")
+model_mu<- DHGLMMODELING(Model="meam", Link="identity", LinPred = Angle~Recipe*Temperature+(1|Replicate)+(1|Replicate:Recipe),RandDist = c("gaussian", "gaussian"))
+model_phi<-DHGLMMODELING(Model="dispersion")
+
+#issue here? rows of matrices must match?
+fit1<-dhglmfit(RespDist="gaussian", ,BinomialDen=NULL, DataMain=cake,  MeanModel=model_mu, DispersionModel=model_phi, Maxiter = 1)
+
+plotdhglm(fit1)
+
+#data transformation
+library("rcompanion")
+#fix install.packages('Rcpp', dependencies = TRUE)
+Turbidity = c(1.0, 1.2, 1.1, 1.1, 2.4, 2.2, 2.6, 4.1, 5.0, 10.0, 4.0, 4.1, 4.2, 4.1, 5.1, 4.5, 5.0, 15.2, 10.0, 20.0, 1.1, 1.1, 1.2, 1.6, 2.2, 3.0, 4.0, 10.5)
+plotNormalHistogram(Turbidity)
+qqnorm(Turbidity,
+       ylab="Sample Quantiles for Turbidity")
+qqline(Turbidity, 
+       col="red")
+# right skewed so test out square riit
+T_sqrt = sqrt(Turbidity)
+plotNormalHistogram(T_sqrt)
+#cube is stronger than sqrt
+T_cub = sign(Turbidity) * abs(Turbidity)^(1/3)   # Avoid complex numbers 
+                                                 #   for some cube roots
+
+plotNormalHistogram(T_cub)
+
+#log is strong
+T_log = log(Turbidity)
+plotNormalHistogram(T_log)
+
+#work
+setwd("C:/Users/vmc04/Documents/GitHub/wingproj/lifehist")
+#Read in datafile
+lifehistshort<-read.csv("2017_10_18 Life history shortened.csv", header=TRUE)
+#life.desc<-read.csv("Life hist site clim.csv", header=TRUE)
+#Factor levels of locality, temp num, and lat_group
+lifehistshort$Locality=factor(lifehistshort$Locality, c("ARS","APR","RPV","RMO","TLC","TPN","SJU"))
+lifehistshort$Lat_group=factor(lifehistshort$Lat_group, c(1,2,3))
+lifehistshort$Temp_num=factor(lifehistshort$Temp_num, c(20,24,28))
+lifehistshort$Lat_grouple<- ifelse(lifehistshort$Lat_group ==1, "Low latitude", ifelse(lifehistshort$Lat_group==2, "Mid latitude", "High latitude"))
+lifehistshort$Lat_grouple=factor(lifehistshort$Lat_grouple, levels=c("Low latitude", "Mid latitude", "High latitude"))
+ #subset data to get only complete data to adulthood
+lifehist.comp<-subset(lifehistshort, !is.na(Sex1))
+lifehist.comp$growth<-(log(lifehist.comp$Wing.length..mm.)/lifehist.comp$sLL)
+
+#send lifehist.comp out
+write.csv(lifehist.comp,file="2018_01_29 Life history composite of adults_untrans.csv")
+lifehist<-read.csv("2018_01_29 Life history composite of adults_untrans.csv", header=TRUE)
+qqnorm(lifehist$Wing.length..mm.)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+References
+
+GLMM
+https://ase.tufts.edu/gsc/gradresources/guidetomixedmodelsinr/mixed%20model%20guide.html
+
+Nested GLMM
+https://stats.stackexchange.com/questions/228800/crossed-vs-nested-random-effects-how-do-they-differ-and-how-are-they-specified/228814#228814
+ebook
+http://eds.b.ebscohost.com.libproxy.albany.edu/eds/ebookviewer/ebook/bmxlYmtfXzE1NTY1MzdfX0FO0?sid=9a864548-3f2f-4910-8324-df58f10cae82@sessionmgr101&vid=0&format=EB&rid=3
+
+Transformation
+http://rcompanion.org/handbook/I_12.html
+
+ANOVA of subset data
+https://stackoverflow.com/questions/41017997/anova-within-subsets-of-data?rq=1
+https://stats.stackexchange.com/questions/57844/efficient-way-to-run-multiple-anovas-on-subsets-of-data
