@@ -1,0 +1,95 @@
+APR14	Amazon Low latitude
+APR18	Amazon Low latitude
+APR19	Amazon Low latitude
+APR2	Amazon Low latitude
+APR33	Amazon Low latitude
+APR36	Amazon Low latitude
+APR38	Amazon Low latitude
+APR3	Amazon Low latitude
+APR44	Amazon Low latitude
+APR4	Amazon Low latitude
+APR6	Amazon Low latitude
+APR7	Amazon Low latitude
+APR8	Amazon Low latitude
+ARS10	Amazon Low latitude
+ARS11	Amazon Low latitude
+ARS13	Amazon Low latitude
+ARS14	Amazon Low latitude
+ARS16	Amazon Low latitude
+ARS17	Amazon Low latitude
+ARS1	Amazon Low latitude
+ARS2	Amazon Low latitude
+ARS3	Amazon Low latitude
+ARS4	Amazon Low latitude
+ARS6	Amazon Low latitude
+ARS8	Amazon Low latitude
+ARS9	Amazon Low latitude
+RMO13	Amazon Mid latitude
+RMO17	Amazon Mid latitude
+RMO18	Amazon Mid latitude
+RMO24	Amazon Mid latitude
+RMO26	Amazon Mid latitude
+RMO27	Amazon Mid latitude
+RMO33	Amazon Mid latitude
+RMO36	Amazon Mid latitude
+RMO39	Amazon Mid latitude
+RMO41	Amazon Mid latitude
+RMO42	Amazon Mid latitude
+RMO5	Amazon Mid latitude
+RMO6	Amazon Mid latitude
+RMO9	Amazon Mid latitude
+RPV11	Amazon Mid latitude
+RPV12	Amazon Mid latitude
+RPV15	Amazon Mid latitude
+RPV17	Amazon Mid latitude
+RPV18	Amazon Mid latitude
+RPV19	Amazon Mid latitude
+RPV20	Amazon Mid latitude
+RPV23	Amazon Mid latitude
+RPV25	Amazon Mid latitude
+RPV28	Amazon Mid latitude
+RPV33	Amazon Mid latitude
+RPV37	Amazon Mid latitude
+RPV38	Amazon Mid latitude
+RPV42	Amazon Mid latitude
+SJU10	Mata atlantica High latitude
+SJU11	Mata atlantica High latitude
+SJU12	Mata atlantica High latitude
+SJU13	Mata atlantica High latitude
+SJU1	Mata atlantica High latitude
+SJU2	Mata atlantica High latitude
+SJU3	Mata atlantica High latitude
+SJU4	Mata atlantica High latitude
+SJU5	Mata atlantica High latitude
+SJU6	Mata atlantica High latitude
+SJU7	Mata atlantica High latitude
+SJU8	Mata atlantica High latitude
+SJU9	Mata atlantica High latitude
+TLC52	Cerrado Mid latitude
+TLC53	Cerrado Mid latitude
+TLC70	Cerrado Mid latitude
+TLC71	Cerrado Mid latitude
+TLC73	Cerrado Mid latitude
+TLC74	Cerrado Mid latitude
+TLC75	Cerrado Mid latitude
+TLC76	Cerrado Mid latitude
+TLC77	Cerrado Mid latitude
+TLC78	Cerrado Mid latitude
+TLC79	Cerrado Mid latitude
+TLC81	Cerrado Mid latitude
+TLC82	Cerrado Mid latitude
+TLC83	Cerrado Mid latitude
+TPN11	Cerrado Mid latitude
+TPN12	Cerrado Mid latitude
+TPN13	Cerrado Mid latitude
+TPN14	Cerrado Mid latitude
+TPN16	Cerrado Mid latitude
+TPN17	Cerrado Mid latitude
+TPN18	Cerrado Mid latitude
+TPN20	Cerrado Mid latitude
+TPN3	Cerrado Mid latitude
+TPN4	Cerrado Mid latitude
+TPN5	Cerrado Mid latitude
+TPN6	Cerrado Mid latitude
+TPN8	Cerrado Mid latitude
+TPN9	Cerrado Mid latitude
