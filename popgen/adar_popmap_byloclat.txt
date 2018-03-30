@@ -1,0 +1,95 @@
+APR14	Manaus Brasilierinho	-3.028
+APR18	Manaus Brasilierinho	-3.028
+APR19	Manaus Brasilierinho	-3.028
+APR2	Manaus Brasilierinho	-3.028
+APR3	Manaus Brasilierinho	-3.028
+APR33	Manaus Brasilierinho	-3.028
+APR36	Manaus Brasilierinho	-3.028
+APR38	Manaus Brasilierinho	-3.028
+APR4	Manaus Brasilierinho	-3.028
+APR44	Manaus Brasilierinho	-3.028
+APR6	Manaus Brasilierinho	-3.028
+APR7	Manaus Brasilierinho	-3.028
+APR8	Manaus Brasilierinho	-3.028
+ARS1	Remal Novo Horizonte	-2.864
+ARS10	Remal Novo Horizonte	-2.864
+ARS11	Remal Novo Horizonte	-2.864
+ARS13	Remal Novo Horizonte	-2.864
+ARS14	Remal Novo Horizonte	-2.864
+ARS16	Remal Novo Horizonte	-2.864
+ARS17	Remal Novo Horizonte	-2.864
+ARS2	Remal Novo Horizonte	-2.864
+ARS3	Remal Novo Horizonte	-2.864
+ARS4	Remal Novo Horizonte	-2.864
+ARS6	Remal Novo Horizonte	-2.864
+ARS8	Remal Novo Horizonte	-2.864
+ARS9	Remal Novo Horizonte	-2.864
+RMO13	Machadinho DOeste	-9.223
+RMO17	Machadinho DOeste	-9.223
+RMO18	Machadinho DOeste	-9.223
+RMO24	Machadinho DOeste	-9.223
+RMO26	Machadinho DOeste	-9.223
+RMO27	Machadinho DOeste	-9.223
+RMO33	Machadinho DOeste	-9.223
+RMO36	Machadinho DOeste	-9.223
+RMO39	Machadinho DOeste	-9.223
+RMO41	Machadinho DOeste	-9.223
+RMO42	Machadinho DOeste	-9.223
+RMO5	Machadinho DOeste	-9.223
+RMO6	Machadinho DOeste	-9.223
+RMO9	Machadinho DOeste	-9.223
+RPV11	Porto Velho	-8.742
+RPV12	Porto Velho	-8.742
+RPV15	Porto Velho	-8.742
+RPV17	Porto Velho	-8.742
+RPV18	Porto Velho	-8.742
+RPV19	Porto Velho	-8.742
+RPV20	Porto Velho	-8.742
+RPV23	Porto Velho	-8.742
+RPV25	Porto Velho	-8.742
+RPV28	Porto Velho	-8.742
+RPV33	Porto Velho	-8.742
+RPV37	Porto Velho	-8.742
+RPV38	Porto Velho	-8.742
+RPV42	Porto Velho	-8.742
+SJU1	Lake Juturnaiba	-22.611
+SJU10	Lake Juturnaiba	-22.611
+SJU11	Lake Juturnaiba	-22.611
+SJU12	Lake Juturnaiba	-22.611
+SJU13	Lake Juturnaiba	-22.611
+SJU2	Lake Juturnaiba	-22.611
+SJU3	Lake Juturnaiba	-22.611
+SJU4	Lake Juturnaiba	-22.611
+SJU5	Lake Juturnaiba	-22.611
+SJU6	Lake Juturnaiba	-22.611
+SJU7	Lake Juturnaiba	-22.611
+SJU8	Lake Juturnaiba	-22.611
+SJU9	Lake Juturnaiba	-22.611
+TLC52	Lagoa de Confusao	-10.7
+TLC53	Lagoa de Confusao	-10.7
+TLC70	Lagoa de Confusao	-10.7
+TLC71	Lagoa de Confusao	-10.7
+TLC73	Lagoa de Confusao	-10.7
+TLC74	Lagoa de Confusao	-10.7
+TLC75	Lagoa de Confusao	-10.7
+TLC76	Lagoa de Confusao	-10.7
+TLC77	Lagoa de Confusao	-10.7
+TLC78	Lagoa de Confusao	-10.7
+TLC79	Lagoa de Confusao	-10.7
+TLC81	Lagoa de Confusao	-10.7
+TLC82	Lagoa de Confusao	-10.7
+TLC83	Lagoa de Confusao	-10.7
+TPN11	Porto Nacional	-11.796
+TPN12	Porto Nacional	-11.796
+TPN13	Porto Nacional	-11.796
+TPN14	Porto Nacional	-11.796
+TPN16	Porto Nacional	-11.796
+TPN17	Porto Nacional	-11.796
+TPN18	Porto Nacional	-11.796
+TPN20	Porto Nacional	-11.796
+TPN3	Porto Nacional	-11.796
+TPN4	Porto Nacional	-11.796
+TPN5	Porto Nacional	-11.796
+TPN6	Porto Nacional	-11.796
+TPN8	Porto Nacional	-11.796
+TPN9	Porto Nacional	-11.796
