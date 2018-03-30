@@ -1,0 +1,17 @@
+Vchu@genome.smcm.edu
+
+Code I used in ~virchu_code
+	adar_ref_16.sh (wrote to adar_stacks4)
+	adar_ref_16_rx.sh (wrote to adar_stacks4/stacks_rx_brazil_16)
+	adar_stru1.sh
+
+Folder with all of the life history samples (95)
+	~analysis2/adar_aligments
+	
+Directory created and wrote to
+	~adar_stacks4
+	
+popmap is ~adar_popmap_bypop.txt
+	
+File for structure 
+	~/adar_stacks4/adar_bra16_stru.tsv
