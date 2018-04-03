@@ -1,0 +1,43 @@
+Locality,Biome,State,Lat,Temperature,Status,Count
+ARS,Amazon,Amazonas,-2.864,A,Alive,134
+APR,Amazon,Amazonas,-3.028,A,Alive,198
+RPV,Amazon,Rondonia,-8.742,A,Alive,181
+RMO,Amazon,Rondonia,-9.223,A,Alive,192
+TLC,Cerrado ,Tocantins,-10.7,A,Alive,92
+TPN,Cerrado ,Tocantins,-10.796,A,Alive,32
+SJU,Mata Atlantica,Rio de Janeiro,-22.611,A,Alive,129
+ARS,Amazon,Amazonas,-2.864,B,Alive,135
+APR,Amazon,Amazonas,-3.028,B,Alive,198
+RPV,Amazon,Rondonia,-8.742,B,Alive,184
+RMO,Amazon,Rondonia,-9.223,B,Alive,197
+TLC,Cerrado ,Tocantins,-10.7,B,Alive,84
+TPN,Cerrado ,Tocantins,-10.796,B,Alive,35
+SJU,Mata Atlantica,Rio de Janeiro,-22.611,B,Alive,123
+ARS,Amazon,Amazonas,-2.864,C,Alive,130
+APR,Amazon,Amazonas,-3.028,C,Alive,179
+RPV,Amazon,Rondonia,-8.742,C,Alive,141
+RMO,Amazon,Rondonia,-9.223,C,Alive,160
+TLC,Cerrado ,Tocantins,-10.7,C,Alive,71
+TPN,Cerrado ,Tocantins,-10.796,C,Alive,24
+SJU,Mata Atlantica,Rio de Janeiro,-22.611,C,Alive,33
+ARS,Amazon,Amazonas,-2.864,A,Dead,11
+APR,Amazon,Amazonas,-3.028,A,Dead,20
+RPV,Amazon,Rondonia,-8.742,A,Dead,38
+RMO,Amazon,Rondonia,-9.223,A,Dead,31
+TLC,Cerrado ,Tocantins,-10.7,A,Dead,28
+TPN,Cerrado ,Tocantins,-10.796,A,Dead,27
+SJU,Mata Atlantica,Rio de Janeiro,-22.611,A,Dead,31
+ARS,Amazon,Amazonas,-2.864,B,Dead,8
+APR,Amazon,Amazonas,-3.028,B,Dead,19
+RPV,Amazon,Rondonia,-8.742,B,Dead,39
+RMO,Amazon,Rondonia,-9.223,B,Dead,26
+TLC,Cerrado ,Tocantins,-10.7,B,Dead,34
+TPN,Cerrado ,Tocantins,-10.796,B,Dead,20
+SJU,Mata Atlantica,Rio de Janeiro,-22.611,B,Dead,36
+ARS,Amazon,Amazonas,-2.864,C,Dead,16
+APR,Amazon,Amazonas,-3.028,C,Dead,32
+RPV,Amazon,Rondonia,-8.742,C,Dead,83
+RMO,Amazon,Rondonia,-9.223,C,Dead,62
+TLC,Cerrado ,Tocantins,-10.7,C,Dead,49
+TPN,Cerrado ,Tocantins,-10.796,C,Dead,36
+SJU,Mata Atlantica,Rio de Janeiro,-22.611,C,Dead,132
