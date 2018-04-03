@@ -1,0 +1,10 @@
+Linux commands cheat sheet
+
+cd		change directory
+mkdir	make a new directory
+head	view beginning file
+cat		see whole file
+cd ~ 	go back to home directory
+pwd		get directory location
+
+rm -rf mydir		remove directory
