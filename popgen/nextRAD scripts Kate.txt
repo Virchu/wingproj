@@ -1,0 +1,111 @@
+# masterbashscript.sh - run ref_map on An. darlingi nextRAD data
+
+#!/bin/bash
+
+# Quality filter the reads - includes all 320 Peruvian samples and 57 Brazilian samples from Emerson et al. 2015
+
+projectdir=~/bitetimeloc_nextrad/
+seqdir=/illumina/HCHYTBBXX/669/
+outdir=$projectdir/filtered_sequences
+
+mkdir $outdir
+process_radtags -p $seqdir -b $projectdir/barcodes_669 -o $outdir -c -q --index_null --disable_rad_check -i 'gzfastq'
+
+seqdir=/illumina/HCHYTBBXX/670/
+
+process_radtags -p $seqdir -b $projectdir/barcodes_670 -o $outdir -c -q --index_null --disable_rad_check -i 'gzfastq'
+
+# Take all reads and align to darlingi genome scaffolds
+
+projectdir=~/bitetimeloc_nextrad/
+inputdir=$projectdir/filtered_sequences
+dbname="Adar_scaffolds"
+dbdir=/genomes/Adarlingi
+
+mkdir $projectdir/alignments_newsettings_withbrazil
+outputdir=$projectdir/alignments_newsettings_withbrazil
+touch $outputdir/align.log
+
+for f in $inputdir/*.fq.gz
+do
+  echo "Processing: $f" >> $outputdir/align.log
+  filename=$(basename $f | sed 's/\.fq.gz//')
+  gsnap -t 60 -n 1 -i 2 -m 5 --min-coverage=0.95 --quiet-if-excessive -A sam -d $dbname -D $dbdir --gunzip $f >$outputdir/$filename.sam 2 >>$outputdir/align.log
+done
+
+# Convert sam files to indexed bam files
+
+projectdir=~/bitetimeloc_nextrad/alignments_newsettings_withbrazil
+touch $projectdir/samtobam.log
+
+for f in $projectdir/*.sam
+do
+ echo "Processing: $f" >> $projectdir/samtobam.log
+ filename=$(basename $f | sed 's/\.sam//')
+ samtools view -bS $projectdir/$filename.sam > $projectdir/$filename.bam
+ samtools sort $projectdir/$filename.bam $projectdir/${filename}_sorted
+ samtools index $projectdir/${filename}_sorted.bam $projectdir/${filename}_sorted.bam.bai
+ rm $projectdir/$filename.sam $projectdir/$filename.bam
+done
+
+# Run ref_map.pl, creating a MYSQL database to allow use of the Stacks web browser
+# Sample list includes all Brazilian samples, only 162 Peruvian samples with >200,000 aligned reads
+
+basedir=~/bitetimeloc_nextrad
+aligndir=$basedir/alignments_newsettings_withbrazil
+stacksdir=$basedir/stacks_withbrazil_200k
+dbname="dar_bitetimeloc_wbrazil_over200k_radtags"
+
+mkdir $stacksdir
+
+ref_map.pl -b 1 -o $stacksdir -T 20 -O $basedir/samplelist_withbrazil_over200kalignedreads.tsv -m 5 -B $dbname \
+           --samples $aligndir -D 'An darlingi biting time/loc KP new alignment m5 with Brazil over 200k aligned reads' \
+           --overw_db \
+
+index_radtags.pl -c -t -D $dbname
+
+# Run rxstacks genotype correction module, then re-run cstacks and sstacks
+# Includes creation of MySQL database
+
+projectdir=~/bitetimeloc_nextrad
+stacksdir=$projectdir/stacks_withbrazil_200k
+rxdir=$stacksdir/stacks_rx_lnl200
+dbname="darbitetimeloc_withbrazil200k_rx200_radtags"
+files=$(cat $projectdir/withbrazil_over200kalignedreads.tsv)
+
+mkdir $rxdir
+
+mysql -e 'CREATE DATABASE darbitetimeloc_withbrazil200k_rx200_radtags'
+mysql $dbname < /usr/local/share/stacks/sql/stacks.sql
+
+rxstacks -b 1 -P $stacksdir -o $rxdir -t 20 --conf_lim 0.25 --prune_haplo --model_type bounded --bound_high 0.1 \
+  --lnl_lim -200.0 --lnl_dist --verbose
+
+samp=""
+for f in $files
+do
+ samp+="-s $rxdir/$f ";
+done
+
+cstacks -b 1 -g -p 20 -o $rxdir &>> $rxdir/cstackslog $samp
+
+for f in $files
+do
+ sstacks -g -p 20 -b 1 -c $rxdir/batch_1 \
+ -s $rxdir/${f} \
+ -o $rxdir/ &>> $rxdir/sstackslog
+done
+
+load_radtags.pl -D $dbname -p $rxdir -b 1 -M $projectdir/samplelist_withbrazil_over200kalignedreads.tsv \
+	-c -B -e 'An darlingi biting time/loc KP new alignment m5 with Brazil over 200k aligned reads - after rxstacks lnl_lim -200'
+index_radtags.pl -D $dbname -c -t
+
+# Run populations to create Structure file
+# Sample list includes only 162 Peruvian samples, all in 1 population
+
+basedir=~/bitetimeloc_nextrad
+stacksdir=$basedir/stacks_withbrazil_200k/stacks_rx_lnl200
+outdir=$stacksdir/populations_r0.75
+
+populations -b 1 -P $stacksdir -M $basedir/samplelist_onlyperu_over200kalignedreads.tsv -O $outdir \
+        -t 20 -r 0.75 --write_single_snp --structure

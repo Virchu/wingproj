@@ -1,12 +1,21 @@
 Vchu@genome.smcm.edu
 
 Code I used in ~virchu_code
+<<<<<<< HEAD
 	adar_ref_16.sh 
 	adar_ref_16_rx.sh
 	adar_stru1.sh
 
 Folder with all of the life history samples (95)
 	~adar_aligments
+=======
+	adar_ref_16.sh (wrote to adar_stacks4)
+	adar_ref_16_rx.sh (wrote to adar_stacks4/stacks_rx_brazil_16)
+	adar_stru1.sh
+
+Folder with all of the life history samples (95)
+	~analysis2/adar_aligments
+>>>>>>> bcd2b2403e7a02e9d69b98f9ea29121657d927aa
 	
 Directory created and wrote to
 	~adar_stacks4
