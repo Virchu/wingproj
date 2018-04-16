@@ -15,10 +15,12 @@ library(Rcpp)
 adar_full<-read.csv("C:\\Users\\virgc\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
 adar_adult<-subset(adar_full, adar_full$Death_stat==1 & !is.na(adar_full$Sex1))
 
-#quickview
+#quickview of data
 scatterplotMatrix(~sLL+Biome+State+Temp_num, data = adar_adult)
+scatterplotMatrix(~AL+Biome+State+Temp_num, data = adar_adult)
+scatterplotMatrix(~Wing.length..mm.+Biome+State+Temp_num, data = adar_adult)
 
-
+#larvae plot
 ggplot(data = adar_adult, aes(x = Temp_num, y = sLL, color = Biome))+
   geom_jitter( size = 3)+
   geom_smooth(method = "lm")
@@ -76,7 +78,7 @@ models <- sapply(x, function(my) {
 ANOVA.tables <- sapply(models, anova, simplify=FALSE)
 #does anovas within each Lat*Temp
 
-#genetic variation
+#genetic variation locality level
 APR_an<-aov(sLL~Temp_num, data=APR_all)
 ARS_an<-aov(sLL~Temp_num, data=ARS_all)
 RMO_an<-aov(sLL~Temp_num, data=RMO_all)
@@ -94,8 +96,15 @@ T20s_an<-aov(sLL~State, data=T20_all)
 T24s_an<-aov(sLL~State, data=T24_all)
 T28s_an<-aov(sLL~State, data=T28_all)
 
+library(lme4)
+library(lmerTest)
 #genetic variance for plasticity
-larv_an<-aov(sLL~Temp_num*State, data=adar_adult)
+larv_mod<-lmer(sLL~Temp_num*State+(1|Fam_new)+(1|State:Temp_num:Fam_new), data=adar_adult)
+anova(larv_mod)
+rand(larv_mod)#get random effects table
+#both Treatment and State sig as well as interaction
+larv_loc_an<-aov(sLL~Temp_num*Locality, data=adar_adult)
+summary(larv_loc_an)
 
 ##correlation
 lar_al_cor<-lm(AL~sLL, data=adar_adult)
