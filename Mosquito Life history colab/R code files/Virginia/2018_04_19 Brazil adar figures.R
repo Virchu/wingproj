@@ -1,21 +1,21 @@
 #updated life history figures
-require(Rcpp)
-library(Rcpp)
-library(brms)
+#require(Rcpp)
+
 library(dplyr)
 library(ggplot2)
 library(lme4)
 library(raster)
 library(cowplot)
 library(car)
-devtools::install_github("paul-buerkner/brms")
+library(rstan)
+#devtools::install_github("paul-buerkner/brms")
 #read in and check data
 #adult <- read.csv("C:\\Users\\Tim\\Desktop\\mosquito\\2018_03_07 Life history adult data.csv")
-#all_data <- read.csv("C:\\Users\\virgc\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
-#adult<-read.csv("C:\\Users\\virgc\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
+all_data <- read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
+adult<-read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
 ##work
-all_data <- read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
-adult<-read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
+#all_data <- read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
+#adult<-read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
 
 all_data$State<-factor(all_data$State, levels=c("Amazonas", "Rondonia", "Tocantins", "Rio de Janeiro"))
 all_data$Locality<-factor(all_data$Locality, levels=c("ARS", "APR", "RPV", "RMO","TLC","TPN", "SJU"))
@@ -136,17 +136,3 @@ wing.state.line<-
   scale_x_discrete(limit = c(20, 24,28))+
   labs(x="Temperature (C)", y="Adult time (days)", linetype="Latitude group" )
 
-###bayes model attempts
-#from tim
-# no group-level effect (Random Effect)
-get_prior(mean.sLL~ Temp_fac + State, data = adult.sum.nosex)
-
-brm1 <- brm(mean.sLL~ 1+ Temp_fac + State, data = adult.sum.nosex,
-            chains = 2, cores = 2, control= list(adapt_delta = 0.9), #SAMPLING PARAMETER SPACE
-            iter = 3000, warmup = 1500, thin = 5, 
-            prior =  c(prior(normal(0, 1), "b"),
-                       prior(normal(0, 1), "Intercept"),
-                       prior(normal(0, 1), "sigma")))
-
-#multivariate model to look at correlation
-multi_adult<- brm(cbind(sLL, AL, Wing.length..mm.)~ Temp+State, +(1|m|Fam_new), data=adult.sum.nosex, chains=2, cones=2)
