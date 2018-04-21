@@ -6,15 +6,15 @@ library(lme4)
 library(raster)
 library(cowplot)
 library(car)
-library(rstan)
+#library(rstan)
 #library(shinystan)
 #read in and check data
 #adult <- read.csv("C:\\Users\\Tim\\Desktop\\mosquito\\2018_03_07 Life history adult data.csv")
-all_data <- read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
-adult<-read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
+#all_data <- read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
+#adult<-read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
 ##work
-#all_data <- read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
-#adult<-read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
+all_data <- read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
+adult<-read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
 
 all_data$State<-factor(all_data$State, levels=c("Amazonas", "Rondonia", "Tocantins", "Rio de Janeiro"))
 all_data$Locality<-factor(all_data$Locality, levels=c("ARS", "APR", "RPV", "RMO","TLC","TPN", "SJU"))
@@ -81,11 +81,22 @@ brm1 <- brm(mean.sLL~ 1+ Temp_fac + State, data = adult.sum.nosex,
                        prior(normal(0, 1), "Intercept"),
                        prior(normal(0, 1), "sigma")))
 
+#compare to all data (with dead larvae, n=778)
+brm1.1 <- brm(mean.sLL~ 1+ Temp_num + State, data = all.sum.nosex,
+            chains = 2, cores = 2, control= list(adapt_delta = 0.9), #SAMPLING PARAMETER SPACE
+            iter = 3000, warmup = 1500, thin = 5, 
+            prior =  c(prior(normal(0, 1), "b"),
+                       prior(normal(0, 1), "Intercept"),
+                       prior(normal(0, 1), "sigma")))
+
 # model checking
 summary(brm1)
 fixef(brm1)
 bayes_R2(brm1) # Bayesian R2 estimate, get confidence interval
 
+summary(brm1.1)
+fixef(brm1.1)
+bayes_R2(brm1.1)
 # use shiny to take a look at model outputs, diagnostic plots
 launch_shiny(brm1)
 

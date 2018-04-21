@@ -11,17 +11,18 @@ library(rstan)
 #devtools::install_github("paul-buerkner/brms")
 #read in and check data
 #adult <- read.csv("C:\\Users\\Tim\\Desktop\\mosquito\\2018_03_07 Life history adult data.csv")
-all_data <- read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
-adult<-read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
+#all_data <- read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
+#adult<-read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
 ##work
-#all_data <- read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
-#adult<-read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
+all_data <- read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
+adult<-read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_07 Life history adult data.csv")
 
 all_data$State<-factor(all_data$State, levels=c("Amazonas", "Rondonia", "Tocantins", "Rio de Janeiro"))
 all_data$Locality<-factor(all_data$Locality, levels=c("ARS", "APR", "RPV", "RMO","TLC","TPN", "SJU"))
 adult$State<-factor(adult$State, levels=c("Amazonas", "Rondonia", "Tocantins", "Rio de Janeiro"))
 adult$Locality<-factor(adult$Locality, levels=c("ARS", "APR", "RPV", "RMO","TLC","TPN", "SJU"))
 
+field_wing<-read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_04_20 Field wing length 13 18 cs scaled.csv")
 
 #all_data (n=3430) with separate sexes
 all.sum <- all_data %>% group_by(Fam_new, Biome, State, Locality, Sex, Lat_group) %>% summarize(mean.sLL = mean(sLL, na.rm = TRUE), 
@@ -70,6 +71,12 @@ adult.sum.nosex <- adult %>% group_by(Fam_new, Biome, State, Locality, Temp_fac,
                                                                                                           mean.Lat = mean(Latitude, na.rm = TRUE)) %>% data.frame
 adult.sum.nosex$State<-factor(adult.sum.nosex$State, levels=c("Amazonas", "Rondonia", "Tocantins", "Rio de Janeiro"))
 
+field.sum <- field_wing %>% group_by(Biome, State, Latitude, Lat_grouple) %>%
+  summarize (mean.wing=mean(Length.mm, na.rm=TRUE),
+             sd.wing= sd(Length.mm, na.rm=TRUE),
+             N.wing=length(Length.mm),   
+             se.wing=sd.wing/sqrt(N.wing)) %>% data.frame                                                                                                
+field.sum$State<-factor(field.sum$State, levels=c("Amazonas", "Rondonia", "Tocantins", "Rio de Janeiro"))
 larv.state.line<-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.sLL, group=interaction(Biome,Lat_grouple),colour=State, shape=Biome, linetype = Lat_grouple))+
   geom_line(aes(linetype = Lat_grouple),size=1,position=position_dodge(0.5), stat="summary", fun.y="mean")+
@@ -78,7 +85,7 @@ larv.state.line<-
   geom_point(aes(shape = Biome), size=2.1, position=position_dodge(0.5), stat="summary", fun.y="mean")+
   ggtitle("Average larvae development by temperature and state")+
   scale_y_continuous(breaks = c(13: 24))+ theme_classic() +
-  theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
+  theme(plot.title = element_text(size=20,hjust = 0.5), legend.text = element_text(size=10), axis.text = element_text(size = 15))+
   scale_x_discrete(limit = c(20, 24,28))+
   labs(x="Temperature (C)", y="Larvae development (days)", linetype="Latitude group" )
 
@@ -134,5 +141,29 @@ wing.state.line<-
   #scale_y_continuous(breaks = c(1: 6))+ theme_classic() +
   theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
   scale_x_discrete(limit = c(20, 24,28))+
-  labs(x="Temperature (C)", y="Adult time (days)", linetype="Latitude group" )
+  labs(x="Temperature (C)", y="Wing length (mm)", linetype="Latitude group" )
 
+line<-lm(Length.mm~abs(Latitude), data=field_wing)
+field.wing.state.line<-
+  ggplot(field.sum, aes(x=abs(Latitude), y=mean.wing,colour=State))+
+  geom_errorbar(aes(ymin=mean.wing-se.wing, ymax=mean.wing+se.wing), colour="black",linetype=1,size=.8,width=.6)+
+  geom_point(colour="black", size=4)+
+  geom_point(aes(shape = Biome), size=2.1)+
+  ggtitle("Average wing length by state (P)")+
+  theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
+  labs(x="Latitude (S)", y="Wing length (mm)" )+
+  geom_abline(color="red", aes(intercept=2.83609836, slope=0.02276525))
+#used line details to hardcode linear regression line
+
+#bar graphs
+larv.hist.temp<-ggplot(adult.sum.nosex, aes(x=State, y=mean.sLL, fill=State, group=Temp_fac))+ 
+  geom_point(stat="summary", fun.y="mean")+
+  theme_minimal()+ 
+  geom_bar(aes(fill=State),colour="black", stat="summary", fun.y="mean")+
+  scale_fill_manual("State", values = c("Amazonas" = "black", "Rondonia" = "dark grey", "Tocantins" = "light grey", "Rio de Janeiro" = "white"))+  
+  facet_grid(.~Temp_fac)+ ggtitle("Average Larvae development (days) \n by Temperature and State") +
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle = 45, hjust = 1))+ 
+  xlab("State")+ylab("Days as larvae")+ 
+  geom_errorbar(aes(ymin=mean.sLL-se.sLL, ymax=mean.sLL+se.sLL), width=.6, stat="summary", fun.y="mean")+
+  coord_cartesian(ylim = c(12, 28)) +labs (fill="Population") #+ 
+  #geom_text(aes(label=.group), position=position_dodge(width=0.9), vjust=-0.9)
