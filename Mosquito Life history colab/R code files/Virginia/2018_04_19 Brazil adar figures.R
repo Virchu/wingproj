@@ -83,9 +83,10 @@ larv.state.line<-
   geom_errorbar(aes(ymin=mean.sLL-se.sLL, ymax=mean.sLL+se.sLL),stat="summary", colour="black",linetype=1,size=.8,width=.6, position=position_dodge(0.5))+
   geom_point(colour="black", size=4,position=position_dodge(0.5), stat="summary", fun.y="mean")+
   geom_point(aes(shape = Biome), size=2.1, position=position_dodge(0.5), stat="summary", fun.y="mean")+
-  ggtitle("Average larvae development by temperature and state")+
+  #ggtitle("Average larvae development by temperature and state")+
   scale_y_continuous(breaks = c(13: 24))+ theme_classic() +
-  theme(plot.title = element_text(size=20,hjust = 0.5), legend.text = element_text(size=10), axis.text = element_text(size = 15))+
+  #theme(plot.title = element_text(size=20,hjust = 0.5), legend.text = element_text(size=10), axis.text = element_text(size = 15))+
+  theme( axis.title.x= element_text(size=20),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+
   scale_x_discrete(limit = c(20, 24,28))+
   labs(x="Temperature (C)", y="Larvae development (days)", linetype="Latitude group" )
 
@@ -124,9 +125,10 @@ adult.state.line<-
   geom_errorbar(aes(ymin=mean.AL-se.AL, ymax=mean.AL+se.AL),stat="summary", colour="black",linetype=1,size=.8,width=.6, position=position_dodge(0.5))+
   geom_point(colour="black", size=4,position=position_dodge(0.5), stat="summary", fun.y="mean")+
   geom_point(aes(shape = Biome), size=2.1, position=position_dodge(0.5), stat="summary", fun.y="mean")+
-  ggtitle("Average adult life by temperature and state")+
+  #ggtitle("Average adult life by temperature and state")+
   scale_y_continuous(breaks = c(1: 6))+ theme_classic() +
-  theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
+  #theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
+  theme( axis.title.x= element_text(size=20),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+
   scale_x_discrete(limit = c(20, 24,28))+
   labs(x="Temperature (C)", y="Adult time (days)", linetype="Latitude group" )
 
@@ -137,22 +139,25 @@ wing.state.line<-
   geom_errorbar(aes(ymin=mean.wing-se.wing, ymax=mean.wing+se.wing),stat="summary", colour="black",linetype=1,size=.8,width=.6, position=position_dodge(0.5))+
   geom_point(colour="black", size=4,position=position_dodge(0.5), stat="summary", fun.y="mean")+
   geom_point(aes(shape = Biome), size=2.1, position=position_dodge(0.5), stat="summary", fun.y="mean")+
-  ggtitle("Average wing length by temperature and state")+
+  #ggtitle("Average wing length by temperature and state")+
   #scale_y_continuous(breaks = c(1: 6))+ theme_classic() +
-  theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
+  #theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
+  theme( axis.title.x= element_text(size=20),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+
   scale_x_discrete(limit = c(20, 24,28))+
   labs(x="Temperature (C)", y="Wing length (mm)", linetype="Latitude group" )
 
 line<-lm(Length.mm~abs(Latitude), data=field_wing)
 field.wing.state.line<-
-  ggplot(field.sum, aes(x=abs(Latitude), y=mean.wing,colour=State))+
+  ggplot(field.sum, aes(x=abs(Latitude), y=mean.wing,colour=State, shape=Biome))+
   geom_errorbar(aes(ymin=mean.wing-se.wing, ymax=mean.wing+se.wing), colour="black",linetype=1,size=.8,width=.6)+
   geom_point(colour="black", size=4)+
   geom_point(aes(shape = Biome), size=2.1)+
   ggtitle("Average wing length by state (P)")+
-  theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
+  theme(plot.title = element_text(size=25,hjust = 0.5), axis.title.x= element_text(size=20),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+
   labs(x="Latitude (S)", y="Wing length (mm)" )+
   geom_abline(color="red", aes(intercept=2.83609836, slope=0.02276525))
+field.wing.state.line+ annotate("text", x=5, y=3.4, label = "y=2.84+0.023x" ) +
+  annotate("text", x=5, y=3.37, label = "R^2==0.23", parse=T) 
 #used line details to hardcode linear regression line
 
 #bar graphs
