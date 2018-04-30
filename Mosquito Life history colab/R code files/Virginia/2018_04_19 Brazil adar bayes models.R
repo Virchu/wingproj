@@ -89,6 +89,10 @@ brm0.1 <- brm(count~ 1+ Temp_num + State+ (1|Fam_new), data = all.sum.nosex,
                        prior(normal(0, 1), "Intercept"),
                        prior(normal(0, 1), "sigma"),
                        prior(normal(0, 1), "sd")))
+
+brm0.11 <- brm(count~ 1+ Temp_num + State+ (1|Fam_new), data = all.sum.nosex,
+              chains = 2, cores = 2, control= list(adapt_delta = 0.9), #SAMPLING PARAMETER SPACE
+              iter = 3000, warmup = 1500, thin = 5)
 # model checking
 summary(brm0)
 fixef(brm0)
@@ -103,9 +107,16 @@ plot(brm0.1)
 plot(marginal_effects(brm0.1), points=TRUE)
 #larvae development
 
-get_prior(mean.sLL~ Temp_num + State+(1|Fam_new), data = all.sum.nosex)
+get_prior(mean.sLL~ Temp_num * State+(1|Fam_new), data = all.sum.nosex)
 
 brm1 <- brm(mean.sLL~ 1+ Temp_fac + State, data = adult.sum.nosex,
+            chains = 2, cores = 2, control= list(adapt_delta = 0.9), #SAMPLING PARAMETER SPACE
+            iter = 3000, warmup = 1500, thin = 5, 
+            prior =  c(prior(normal(0, 1), "b"),
+                       prior(normal(0, 1), "Intercept"),
+                       prior(normal(0, 1), "sigma")))
+
+brm1.m <- brm(mean.sLL~ 1+ Temp_fac * State, data = adult.sum.nosex,
             chains = 2, cores = 2, control= list(adapt_delta = 0.9), #SAMPLING PARAMETER SPACE
             iter = 3000, warmup = 1500, thin = 5, 
             prior =  c(prior(normal(0, 1), "b"),
@@ -122,7 +133,7 @@ brm1.1 <- brm(mean.sLL~ 1+ Temp_num + State, data = all.sum.nosex,
 
 #how to set priors for random effect?
 
-brm1.2 <- brm(mean.sLL~ 1+ Temp_num + State, data = all.sum.nosex,
+brm1.2 <- brm(mean.sLL~ 1+ Temp_num + State+ (1|Fam_new), data = all.sum.nosex,
               chains = 2, cores = 2, control= list(adapt_delta = 0.9), #SAMPLING PARAMETER SPACE
               iter = 3000, warmup = 1500, thin = 5, 
               prior =  c(prior(normal(0, 1), "b"),
@@ -172,15 +183,14 @@ summary(brm3)
 fixef(brm3)
 bayes_R2(brm3)
 #multivariate model to look at correlation
-get_prior(cbind(mean.sLL, mean.AL, mean.wing)~ Temp_fac+State+(1|m|Fam_new), data=adult.sum.nosex)
+get_prior(cbind(mean.sLL, mean.AL, mean.wing)~ Temp_fac+State, data=adult.sum.nosex)
 
-multi_adult<- brm(cbind(mean.sLL, mean.AL, mean.wing)~ 1+Temp_fac+State+(1|m|Fam_new), data=adult.sum.nosex, 
+multi_adult<- brm(cbind(mean.sLL, mean.AL, mean.wing)~ 1+Temp_fac+State, data=adult.sum.nosex, 
                   chains=2, cones=2,control= list(adapt_delta = 0.9),
                   iter = 3000, warmup = 1500, thin = 5, 
                   prior =  c(prior(normal(0, 1), "b"),
                              prior(normal(0, 1), "cor"),
                              prior(normal(0, 1), "Intercept"),
                              prior(normal(0, 1), "sigma"),
-                             prior(normal(0, 1), "sd"),
                              prior(normal(0, 1), "rescor")
                              ))
