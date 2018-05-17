@@ -162,3 +162,16 @@ ggplot(data = fut.comb.points.env, aes(x = PC1, y = PC2, color = state, fill = s
   geom_point(size = 4)+
   ggtitle("Future (2070) bioclimatic PCA")+
   stat_ellipse(geom = "polygon", alpha = 0.5)
+
+
+###different bioclim map
+#https://adnguyen.github.io/demos/RasterPCA_demo.html
+#libraries related to maps
+library(sp)
+library(raster)
+library(maps)
+library(mapdata)
+library(RStoolbox)# rasterPCA function
+
+#packages for reading in data
+library(data.table)
