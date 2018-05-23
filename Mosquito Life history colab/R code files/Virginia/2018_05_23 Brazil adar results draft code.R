@@ -10,6 +10,8 @@ library(gridExtra)
 library(MASS)
 library(GGally)
 library(ggpubr)
+library(survival)
+library(survminer)
 ##Datafiles
 #complete data set
 all_data <- read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
@@ -329,4 +331,56 @@ wingadult.cor <-
 grid.arrange(cor1,  wingadult.cor,larvadult.cor, larvwing.cor, ncol=2,nrow=2,top="Correlation between larvae development, wing length and adult lifespan")
 
 
+##by state instead of temp
+larvwing.cor1 <-
+  ggplot(adult.sum.corsub, aes(x=mean.sLL, y=mean.wing,group=State))+
+  geom_point(aes(colour=State))+
+  geom_smooth(method='lm')+
+  geom_abline(colour="black", size=1.5, alpha=0.5, intercept = 1.985, slope = 0.03894)+
+  #ggtitle("Larvae development and Wing length")+
+  xlab("Average larvae development (days)")+ ylab("Average wing length (mm)") +
+  theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
+
+#larvae and adult life correlation plot
+laradult<-lm(adult.sum.corsub1$Avg.Adult~adult.sum.corsub1$Avg.Larvae)
+larvadult.cor1 <-
+  ggplot(adult.sum.corsub, aes(x=mean.sLL, y=mean.AL,group=State))+
+  geom_point(aes(colour=State))+
+  geom_smooth(method='lm')+
+  geom_abline(colour="black", size=1.5, alpha=0.5, intercept = -1.2521, slope = 0.2394)+
+  #ggtitle("Larvae development and Adult lifespan")+
+  xlab("Average larvae development (days)")+ ylab("Average adult life (days)") +
+  theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
+
+#wing and adult life correlation plot
+wingadult<-lm(adult.sum.corsub1$Avg.Adult~adult.sum.corsub1$Avg.Wing)
+wingadult.cor1 <-
+  ggplot(adult.sum.corsub, aes(x=mean.wing, y=mean.AL,group=State))+
+  geom_point(aes(colour=State))+
+  geom_smooth(method='lm')+
+  geom_abline(colour="black", size=1.5, alpha=0.5, intercept = -10.62, slope = 5.089)+
+  #ggtitle("Wing length and Adult lifespan")+
+  xlab("Average wing length (mm)")+ ylab("Average adult life (days)") +
+  theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
+
+grid.arrange(cor1,  wingadult.cor1,larvadult.cor1, larvwing.cor1, ncol=2,nrow=2,top="Correlation between larvae development, wing length and adult lifespan by state")
+
+
 ###survival
+
+survival.fit1<-survfit(Surv(time)~Temp_fac+State, data=adult)
+ggsurv<-ggsurvplot(survival.fit1,  conf.int=TRUE, color="Temp_fac", palette=c("#619CFF", "#00BA38", "#F8766D"),
+                   title="Kaplan-Meier Survival",legend.title="Temperature (C)",
+                   xlab= "Time (days)",
+                   font.main= c(20, "bold"),
+                   font.x= 15,
+                   font.y=15,
+                   risk.table = )
+ggsurv$plot +theme_bw() + facet_grid (State~.) +theme(plot.title = element_text(hjust = 0.5))
+
+#fit cox model
+cox<- coxph(Surv(time)~Temp_fac+State, data=adult)
+summary(cox)
+
+cox1<- coxph(Surv(time)~Temp_num*Latitude, data=adult)
+summary(cox1)
