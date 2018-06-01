@@ -5,10 +5,10 @@
 library(lme4)
 library(lmerTest)
 library(multcomp)
-
+library(dplyr)
 
 #Datafiles
-adar_full<-read.csv("C:\\Users\\virgc\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
+adar_full<-read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
 adar_adult<-subset(adar_full, adar_full$Death_stat==1 & !is.na(adar_full$Sex1))
 
 #group by state to look within state
@@ -26,6 +26,18 @@ anova(larv_mod) #both Treatment and State sig as well as interaction
 rand(larv_mod)#get random effects table
 difflsmeans(larv_mod, test.effs="State") #all state comparisons except rio and tocantins significant
 difflsmeans(larv_mod, test.effs="Temp_let") #all temp comparisons significant
+
+larv_modb<-lmer(sLL~Temp_let*Biome+(1|Fam_new)+(1|Biome:Temp_let:Fam_new), data=adar_adult)
+anova(larv_modb) #both Treatment and State sig as well as interaction
+rand(larv_modb)#get random effects table
+difflsmeans(larv_modb, test.effs="Biome") #all state comparisons except rio and tocantins significant
+difflsmeans(larv_modb, test.effs="Temp_let") #all temp comparisons significant
+
+larv_modl<-lmer(sLL~Temp_let*Latitude+(1|Fam_new)+(1|Latitude:Temp_let:Fam_new), data=adar_adult)
+anova(larv_modl) #both Treatment and State sig as well as interaction
+rand(larv_modl)#get random effects table
+difflsmeans(larv_modl, test.effs="Latitude") #all state comparisons except rio and tocantins significant
+difflsmeans(larv_modl, test.effs="Temp_let") #all temp comparisons significant
 
 #posthoc
 larv_post=glht(larv_mod, linfct=mcp(State="Tukey"))

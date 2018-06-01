@@ -3,6 +3,7 @@
 ##Install libraries
 library(lme4)
 library(lmerTest)
+library(lsmeans)
 library(multcomp)
 library(dplyr)
 library(ggplot2)

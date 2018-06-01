@@ -1,7 +1,7 @@
 ###Results for life history adar- region
 
 ##Install libraries
-library(lme4)
+#library(lme4)
 library(lmerTest)
 library(multcomp)
 library(dplyr)
@@ -12,7 +12,7 @@ library(GGally)
 library(ggpubr)
 ##Datafiles
 #complete data set
-all_data <- read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
+all_data <- read.csv("C:\\Users\\virgc\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
 #create dataframe of survived to adult data
 adult<-subset(all_data, all_data$Death_stat==1 & !is.na(all_data$Sex1))
 #field wing data
