@@ -124,28 +124,28 @@ larv.am <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.sLL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Amazonas"))+
   ggtitle("Amazonas State")+
-  xlab("Temperature (C)")+ ylab("Larvae time (days)") +
+  xlab("Temperature (???C)")+ ylab("Larvae time (days)") +
   scale_y_continuous(breaks = c(13: 24))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
 larv.ro <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.sLL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Rondonia"))+
   ggtitle("Rondonia State")+
-  xlab("Temperature (C)")+ ylab("Larvae time (days)") +
+  xlab("Temperature (???C)")+ ylab("Larvae time (days)") +
   scale_y_continuous(breaks = c(13: 24))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
 larv.to <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.sLL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Tocantins"))+
   ggtitle("Tocantins State")+
-  xlab("Temperature (C)")+ ylab("Larvae time (days)") +
+  xlab("Temperature (???C)")+ ylab("Larvae time (days)") +
   scale_y_continuous(breaks = c(13: 24))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
 larv.rj <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.sLL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Rio de Janeiro"))+
   ggtitle("Rio de Janeiro State")+
-  xlab("Temperature (C)")+ ylab("Larvae time (days)") +
+  xlab("Temperature (???C)")+ ylab("Larvae time (days)") +
   scale_y_continuous(breaks = c(13: 24))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
 #arrange plots
@@ -161,7 +161,7 @@ larv.state.line<-
   ggtitle("Average larvae development (days)")+
   scale_y_continuous(breaks = c(13: 24))+ theme_classic() +
   theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
-  labs(x="Temperature (C)", y="Larvae development (days)", linetype="Latitude group" )
+  labs(x="Temperature (???C)", y="Larvae development (days)", linetype="Latitude group" )
 
 #Adult longevity#
 #sup b.1
@@ -169,28 +169,28 @@ adult.am <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.AL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Amazonas"))+
   ggtitle("Amazonas State")+
-  xlab("Temperature (C)")+ ylab("Adult time (days)") +
+  xlab("Temperature (???C)")+ ylab("Adult time (days)") +
   scale_y_continuous(breaks = c(0:6))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
 adult.ro <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.AL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Rondonia"))+
   ggtitle("Rondonia State")+
-  xlab("Temperature (C)")+ ylab("Adult time (days)") +
+  xlab("Temperature (???C)")+ ylab("Adult time (days)") +
   scale_y_continuous(breaks = c(0:6))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
 adult.to <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.AL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Tocantins"))+
   ggtitle("Tocantins State")+
-  xlab("Temperature (C)")+ ylab("Adult time (days)") +
+  xlab("Temperature (???C)")+ ylab("Adult time (days)") +
   scale_y_continuous(breaks = c(0:6))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
 adult.rj <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.AL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Rio de Janeiro"))+
   ggtitle("Rio de Janeiro State")+
-  xlab("Temperature (C)")+ ylab("Adult time (days)") +
+  xlab("Temperature (???C)")+ ylab("Adult time (days)") +
   scale_y_continuous(breaks = c(0:6))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
 #arrange plots
@@ -207,7 +207,7 @@ adult.state.line<-
   ggtitle("Average adult life (days)")+
   scale_y_continuous(breaks = c(1: 6))+ theme_classic() +
   theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
-  labs(x="Temperature (C)", y="Adult time (days)", linetype="Latitude group" )
+  labs(x="Temperature (???C)", y="Adult time (days)", linetype="Latitude group" )
 
 #Wing length#
 #sup c.1
@@ -215,28 +215,28 @@ wing.am <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.AL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Amazonas"))+
   ggtitle("Amazonas State")+
-  xlab("Temperature (C)")+ ylab("Wing length (mm)") +
+  xlab("Temperature (???C)")+ ylab("Wing length (mm)") +
   scale_y_continuous(breaks = c(0:6))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
 wing.ro <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.AL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Rondonia"))+
   ggtitle("Rondonia State")+
-  xlab("Temperature (C)")+ ylab("Wing length (mm)") +
+  xlab("Temperature (???C)")+ ylab("Wing length (mm)") +
   scale_y_continuous(breaks = c(0:6))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
 wing.to <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.AL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Tocantins"))+
   ggtitle("Tocantins State")+
-  xlab("Temperature (C)")+ ylab("Wing length (mm)") +
+  xlab("Temperature (???C)")+ ylab("Wing length (mm)") +
   scale_y_continuous(breaks = c(0:6))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
 wing.rj <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.AL, group=Fam_new))+
   geom_line(aes(colour=Fam_new), subset(adult.sum.nosex, State=="Rio de Janeiro"))+
   ggtitle("Rio de Janeiro State")+
-  xlab("Temperature (C)")+ ylab("Wing length (mm)") +
+  xlab("Temperature (???C)")+ ylab("Wing length (mm)") +
   scale_y_continuous(breaks = c(0:6))+ theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 ##prob survival
 surv.state.line<-
@@ -248,17 +248,68 @@ surv.state.line<-
   ggtitle("Average probability of survival")+
   theme_classic() + 
   theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
-  labs(x="Temperature (C)", y="Probability of survival", linetype="Latitude group" )
+  labs(x="Temperature (???C)", y="Probability of survival", linetype="Latitude group" )
 #arrange plots
 grid.arrange(wing.am, wing.ro, wing.to, wing.rj, ncol=2, nrow=2, top="Average Wing length (mm) by Temperature and Family")
 
+
+####bar graphs####
+library(psych)
+larvp.sum<-describeBy(adult$sLL, list(adult$Temp_fac, adult$State),mat=TRUE, digits=2)
+colnames(larvp.sum)[3]<-"State"
+colnames(larvp.sum)[2]<-"Temp_fac"
+larvp.sum$State<-factor(larvp.sum$State, levels= c("Amazonas", "Rondonia","Tocantins", "Rio de Janeiro" ))
+lar_bar<-merge(larvp.sum, lar_cld, by=c("State", "Temp_fac"), all.x=TRUE)
+
+al.sum<-describeBy(adult$AL, list(adult$Temp_fac, adult$State),mat=TRUE, digits=2)
+colnames(al.sum)[3]<-"State"
+colnames(al.sum)[2]<-"Temp_fac"
+al.sum$State<-factor(al.sum$State, levels= c("Amazonas", "Rondonia","Tocantins", "Rio de Janeiro" ))
+al_bar<-merge(al.sum, al_cld, by=c("State", "Temp_fac"), all.x=TRUE)
+
+wing.sum<-describeBy(adult$Wing.length..mm., list(adult$Temp_fac, adult$State),mat=TRUE, digits=2)
+colnames(wing.sum)[3]<-"State"
+colnames(wing.sum)[2]<-"Temp_fac"
+wing.sum$State<-factor(wing.sum$State, levels= c("Amazonas", "Rondonia","Tocantins", "Rio de Janeiro" ))
+wing_bar<-merge(wing.sum, wing_cld, by=c("State", "Temp_fac"), all.x=TRUE)
+
+
+### bar graphs
+#https://stackoverflow.com/questions/35090883/remove-all-of-x-axis-labels-in-ggplot
+larv.hist.temp<-ggplot(lar_bar, aes(x=State, y=mean, fill=State, group=Temp_fac))+ 
+  geom_point()+theme_minimal()+ geom_bar(aes(fill=State),stat="identity",colour="black")+
+  scale_fill_manual("State", values = c("Amazonas" = "black", "Rondonia" = "dark grey", "Tocantins" = "light grey", "Rio de Janeiro" = "white"))+  facet_grid(.~Temp_fac) +theme(plot.title = element_text(hjust = 0.5),strip.text.x = element_text(size = 16), axis.text.x = element_text(angle = 45, hjust = 1), axis.title.x= element_text(size=18),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+ xlab("State")+ylab("Days as larvae")+ geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.5)+coord_cartesian(ylim = c(12, 28)) +labs (fill="State") + geom_text(aes(label=.group), position=position_dodge(width=0.9), vjust=-0.9)
+
+al.hist.temp<-ggplot(al_bar, aes(x=State, y=mean, fill=State, group=Temp_fac))+ 
+  geom_point()+theme_minimal()+ geom_bar(aes(fill=State),stat="identity",colour="black")+
+  scale_fill_manual("State", values = c("Amazonas" = "black", "Rondonia" = "dark grey", "Tocantins" = "light grey", "Rio de Janeiro" = "white"))+  facet_grid(.~Temp_fac)+theme(plot.title = element_text(hjust = 0.5),strip.text.x = element_text(size = 16), axis.text.x = element_text(angle = 45, hjust = 1), axis.title.x= element_text(size=18),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+ xlab("State")+ylab("Adult life (days)")+ geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.5)+coord_cartesian(ylim = c(0, 5)) +labs (fill="State")+ geom_text(aes(label=.group), position=position_dodge(width=0.9), vjust=-0.8)
+
+wing.hist.temp<-ggplot(wing_bar, aes(x=State, y=mean, fill=State, group=Temp_fac))+
+  geom_point()+theme_minimal()+ 
+  geom_bar(aes(fill=State),stat="identity",colour="black")+
+  scale_fill_manual("State", values = c("Amazonas" = "black", "Rondonia" = "dark grey", "Tocantins" = "light grey", "Rio de Janeiro" = "white"))+ 
+  facet_grid(.~Temp_fac)+
+  theme(plot.title = element_text(hjust = 0.5),strip.text.x = element_text(size = 16), axis.text.x = element_text(angle = 45, hjust = 1), axis.title.x= element_text(size=18),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+ 
+  xlab("State")+ylab("Wing length (mm)")+ geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.5)+coord_cartesian(ylim = c(2.5, 3.1)) +
+  labs (fill="State")+ geom_text(aes(label=.group), position=position_dodge(width=0.9), vjust=-0.8)
+
 ###Arrange line graphs for figure 1
-ggarrange(larv.state.line, adult.state.line, ncol=1, nrow=2,  common.legend = TRUE, legend="bottom")
+#line.leg<- get_legend(larv.state.line  + theme(legend.position="right"))
+#fig.1<-plot_grid(larv.state.line +theme(legend.position="none"), 
+              #   adult.state.line +theme(legend.position="none"),
+              #   align="vh",
+              #   labels= c("A","B"),
+              #   hjust=-1,
+               #  nrow=1)
+#fig.1.leg<-plot_grid(fig.1, line.leg, ncol=1, rel_heights=c(1,.2))
+ggarrange(larv.state.line, adult.state.line,labels= c("A","B"), ncol=2, nrow=1,  common.legend = TRUE, legend="right")
+ggarrange(larv.hist.temp, al.hist.temp,labels= c("A","B"), ncol=2, nrow=1,  common.legend = TRUE, legend="right")
 
 ##GLMM models
 #redid with state instead of pop for SPH poster
 PQL_meth_sLL<- glmmPQL(sLL~Temp_fac*State, ~1|Locality/Family, family=gaussian(link="log"), data=adult, verbose=FALSE)
 summary(PQL_meth_sLL)
+#test1<-glmm()
 #comparing interactions
 lar_ls<- lsmeans(PQL_meth_sLL, pairwise ~Temp_fac:State, adjust="tukey")
 lar_cld<- cld(lar_ls, alpha=0.5, Letters=letters, adjust="tukey")
@@ -266,12 +317,12 @@ lar_cld<- cld(lar_ls, alpha=0.5, Letters=letters, adjust="tukey")
 
 #pretty table for sLL
 stargazer(PQL_meth_sLL,  title= "GLMM results for temperature and state on larvae development", digits=2, align=TRUE)
-
+texreg(PQL_meth_sLL)
 larv_tab<- summary(PQL_meth_sLL)
 pander(PQL_meth_sLL)
 pandoc.table(larv_tab,style = 'rmarkdown')
 
-pander(relabel(mtable(PQL_meth_sLL
+pander(relabel(mtable(PQL_meth_sLL,
          summary.stats=c('N', 'R-squared', 'F')),
   '(Intercept)'       = 'Constant',
   'hp'                = 'Gross horsepower',
@@ -292,10 +343,11 @@ wing_ls<- lsmeans(PQL_meth_wing, pairwise ~Temp_fac:State, adjust="tukey")
 wing_cld<- cld(wing_ls, alpha=0.5, Letters=letters, adjust="tukey")
 
 ##ANOVA tables for gen var, phen plast and G by E of traits
+#overall
 #Larvae
 larv_mod<-lmer(sLL~Temp_let*State+(1|Fam_new)+(1|State:Temp_let:Fam_new), data=adult)
 anova(larv_mod) #both Treatment and State sig as well as interaction
-  difflsmeans(larv_mod, test.effs="State") #all state comparisons except rio and tocantins significant
+difflsmeans(larv_mod, test.effs="State") #all state comparisons except rio and tocantins significant
 difflsmeans(larv_mod, test.effs="Temp_let") #all temp comparisons significant
 l.vc<-VarCorr(larv_mod)
 print(l.vc, comp=c("Variance"))
@@ -313,6 +365,8 @@ rand(wing_mod)#get random effects table
 difflsmeans(wing_mod, test.effs="State") #Wing.length..mm.all state comparisons except amazonas and rondonia significant
 difflsmeans(wing_mod, test.effs="Temp_let") #Wing.length..mm.all temp comparisons significant
 
+##stargazer anova tables
+stargazer(larv_mod, adult_mod, wing_mod, type="text", title= "ANOVA tables across states", digits=2)
 surv_mod<-lmer(surv~Temp_let*State+(1|Fam_new)+(1|State:Temp_let:Fam_new), data=adult)
 anova(surv_mod) #both Treatment and State sig as well as interaction
 rand(surv_mod)#get random effects table
