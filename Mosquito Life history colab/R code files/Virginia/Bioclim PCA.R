@@ -134,6 +134,7 @@ library(cowplot)
 
 present<-ggplot(data = comb.points.env, aes(x = PC1, y = PC2, color = state, fill = state))+
   geom_point(size = 4)+
+  xlab("PC1- 51.21%")+ ylab("PC2-27.7%")+
   ggtitle("Present (1960-1990) bioclimatic PCA")+
   stat_ellipse(geom = "polygon", alpha = 0.5)
 
@@ -208,6 +209,7 @@ library(cowplot)
 
 future<-ggplot(data = fut.comb.points.env, aes(x = PC1, y = PC2, color = state, fill = state))+
   geom_point(size = 4)+
+  xlab("PC1- 47.46%")+ ylab("PC2-32.63%")+
   ggtitle("Future (2070) bioclimatic PCA")+
   stat_ellipse(geom = "polygon", alpha = 0.5)
 
@@ -231,7 +233,12 @@ all<-ggplot(data = all.points.env, aes(x = PC1all, y = PC2all, color = state.x, 
   xlab("PC1- 48.46%")+ ylab("PC2-30.32%")+labs(colour="State", fill="State")+
   stat_ellipse(geom = "polygon", alpha = 0.5)
 
+ggarrange(present, future, all,labels= c("A","B","C"), ncol=1,nrow=3, common.legend = TRUE, legend="bottom")
 #get pca values
 #https://www.youtube.com/watch?v=CTSbxU6KLbM&list=PLnZgp6epRBbTsZEFXi_p6W48HhNyqwxIu&index=3
 summary(all.pca)
 #PC1= 48.457%, PC2=30.318%
+summary(fut.res.pca)
+#PC1= 47.456%, PC2=32.633%
+summary(res.pca)
+#PC1= 51.205%, PC2=27.7%

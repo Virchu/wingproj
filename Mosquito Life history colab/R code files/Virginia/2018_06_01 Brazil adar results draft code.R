@@ -161,7 +161,7 @@ larv.state.line<-
   ggtitle("Average larvae development (days)")+
   scale_y_continuous(breaks = c(13: 24))+ theme_classic() +
   theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
-  labs(x="Temperature (???C)", y="Larvae development (days)", linetype="Latitude group" )
+  labs(x="Temperature (°C)", y="Larvae development (days)", linetype="Latitude group" )
 
 #Adult longevity#
 #sup b.1
@@ -207,9 +207,19 @@ adult.state.line<-
   ggtitle("Average adult life (days)")+
   scale_y_continuous(breaks = c(1: 6))+ theme_classic() +
   theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
-  labs(x="Temperature (???C)", y="Adult time (days)", linetype="Latitude group" )
+  labs(x="Temperature (°C)", y="Adult time (days)", linetype="Latitude group" )
 
 #Wing length#
+wing.state.line<-
+  ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.wing, group=interaction(Biome,Lat_group),colour=State, shape=Biome, linetype = Lat_group))+
+  geom_line(aes(linetype = Lat_group),size=1,position=position_dodge(0.5), stat="summary", fun.y="mean")+
+  geom_errorbar(aes(ymin=mean.wing-se.wing, ymax=mean.wing+se.wing),stat="summary", colour="black",linetype=1,size=.8,width=.6, position=position_dodge(0.5))+
+  geom_point(colour="black", size=4,position=position_dodge(0.5), stat="summary", fun.y="mean")+
+  geom_point(aes(shape = Biome), size=2.1, position=position_dodge(0.5), stat="summary", fun.y="mean")+
+  ggtitle("Average wing length (mm)")+
+  scale_y_continuous(breaks = c(2.5: 3.1))+ theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
+  labs(x="Temperature (°C)", y="Wing length (mm)", linetype="Latitude group" )
 #sup c.1
 wing.am <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.AL, group=Fam_new))+
@@ -278,17 +288,27 @@ wing_bar<-merge(wing.sum, wing_cld, by=c("State", "Temp_fac"), all.x=TRUE)
 #https://stackoverflow.com/questions/35090883/remove-all-of-x-axis-labels-in-ggplot
 larv.hist.temp<-ggplot(lar_bar, aes(x=State, y=mean, fill=State, group=Temp_fac))+ 
   geom_point()+theme_minimal()+ geom_bar(aes(fill=State),stat="identity",colour="black")+
-  scale_fill_manual("State", values = c("Amazonas" = "black", "Rondonia" = "dark grey", "Tocantins" = "light grey", "Rio de Janeiro" = "white"))+  facet_grid(.~Temp_fac) +theme(plot.title = element_text(hjust = 0.5),strip.text.x = element_text(size = 16), axis.text.x = element_text(angle = 45, hjust = 1), axis.title.x= element_text(size=18),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+ xlab("State")+ylab("Days as larvae")+ geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.5)+coord_cartesian(ylim = c(12, 28)) +labs (fill="State") + geom_text(aes(label=.group), position=position_dodge(width=0.9), vjust=-0.9)
+  scale_fill_manual("State", values = c("Amazonas" = "black", "Rondonia" = "dark grey", "Tocantins" = "light grey", "Rio de Janeiro" = "white"))+  
+  facet_grid(.~Temp_fac, switch="x") +
+  theme(plot.title = element_text(hjust = 0.5),strip.text.x = element_text(size = 16), axis.text.x = element_blank(), axis.title.x= element_blank(),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+ 
+  xlab("Temperature (C)")+ylab("Days as larvae")+ 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.5)+coord_cartesian(ylim = c(12, 25)) +labs (fill="State") +
+  geom_text(aes(label=.group), position=position_dodge(width=0.9), vjust=-0.9)
 
 al.hist.temp<-ggplot(al_bar, aes(x=State, y=mean, fill=State, group=Temp_fac))+ 
   geom_point()+theme_minimal()+ geom_bar(aes(fill=State),stat="identity",colour="black")+
-  scale_fill_manual("State", values = c("Amazonas" = "black", "Rondonia" = "dark grey", "Tocantins" = "light grey", "Rio de Janeiro" = "white"))+  facet_grid(.~Temp_fac)+theme(plot.title = element_text(hjust = 0.5),strip.text.x = element_text(size = 16), axis.text.x = element_text(angle = 45, hjust = 1), axis.title.x= element_text(size=18),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+ xlab("State")+ylab("Adult life (days)")+ geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.5)+coord_cartesian(ylim = c(0, 5)) +labs (fill="State")+ geom_text(aes(label=.group), position=position_dodge(width=0.9), vjust=-0.8)
+  scale_fill_manual("State", values = c("Amazonas" = "black", "Rondonia" = "dark grey", "Tocantins" = "light grey", "Rio de Janeiro" = "white"))+  
+  facet_grid(.~Temp_fac, switch="x")+
+  theme(plot.title = element_text(hjust = 0.5),strip.text.x = element_text(size = 16), axis.text.x = element_blank(), axis.title.x= element_blank(),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+ 
+  xlab("Temperature (C)")+ylab("Adult life (days)")+ geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.5)+
+  coord_cartesian(ylim = c(0, 5)) +labs (fill="State")+ 
+  geom_text(aes(label=.group), position=position_dodge(width=0.9), vjust=-0.8)
 
 wing.hist.temp<-ggplot(wing_bar, aes(x=State, y=mean, fill=State, group=Temp_fac))+
   geom_point()+theme_minimal()+ 
   geom_bar(aes(fill=State),stat="identity",colour="black")+
   scale_fill_manual("State", values = c("Amazonas" = "black", "Rondonia" = "dark grey", "Tocantins" = "light grey", "Rio de Janeiro" = "white"))+ 
-  facet_grid(.~Temp_fac)+
+  facet_grid(.~Temp_fac, switch="x")+
   theme(plot.title = element_text(hjust = 0.5),strip.text.x = element_text(size = 16), axis.text.x = element_text(angle = 45, hjust = 1), axis.title.x= element_text(size=18),axis.title.y= element_text(size=20),legend.text = element_text(size=15), axis.text = element_text(size = 15))+ 
   xlab("State")+ylab("Wing length (mm)")+ geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.5)+coord_cartesian(ylim = c(2.5, 3.1)) +
   labs (fill="State")+ geom_text(aes(label=.group), position=position_dodge(width=0.9), vjust=-0.8)
@@ -303,8 +323,15 @@ wing.hist.temp<-ggplot(wing_bar, aes(x=State, y=mean, fill=State, group=Temp_fac
                #  nrow=1)
 #fig.1.leg<-plot_grid(fig.1, line.leg, ncol=1, rel_heights=c(1,.2))
 ggarrange(larv.state.line, adult.state.line,labels= c("A","B"), ncol=2, nrow=1,  common.legend = TRUE, legend="right")
-ggarrange(larv.hist.temp, al.hist.temp,labels= c("A","B"), ncol=2, nrow=1,  common.legend = TRUE, legend="right")
+ggarrange(larv.state.line, adult.state.line, wing.state.line,labels= c("A","B", "C"), ncol=3, nrow=1,  common.legend = TRUE, legend="right")
 
+#grobs... did not work
+larv.hist.temp.g<-ggplotGrob(larv.hist.temp)
+al.hist.temp.g<-ggplotGrob(al.hist.temp)
+ggarrange(larv.hist.temp, al.hist.temp,labels= c("A","B"), ncol=2, nrow=1,  common.legend = TRUE, legend="bottom")
+
+#wing 
+ggarrange(wing)
 ##GLMM models
 #redid with state instead of pop for SPH poster
 PQL_meth_sLL<- glmmPQL(sLL~Temp_fac*State, ~1|Locality/Family, family=gaussian(link="log"), data=adult, verbose=FALSE)
@@ -396,7 +423,8 @@ ggcorr(adult.sum.corsub1,
        hjust=0.4)
 
 #smaller graph
-cor1<-ggcorr(adult.sum.corsub1[,c(4,6:11)],
+#removed sex (7) and surv (11)
+cor1<-ggcorr(adult.sum.corsub1[,c(4,6, 8:10)],
        label=TRUE,
        label_alpha=0.75,
        hjust=0.65,
