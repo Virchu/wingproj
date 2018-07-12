@@ -1,0 +1,24 @@
+Login
+
+Running stacks
+
+1. create screen
+
+2. Already cleaned data, so no need to process_radtags (double check to see where things got put)
+Align (only life history samples)
+
+ref_map.pl -o adar_stacks2 -O adar_popmap_locbio.txt -T 30 -b 1 --samples adar_alignments -B Adar_S2_radtags -D stacks_default --create_db 
+
+
+3.  make popmap and run pipeline (latitude and biome=pop)
+/usr/local/bin/populations -b 1 -P adar_stacks2 -s -M adar_popmap_locbio.txt -t 30 2>&1
+
+
+4. rxstacks, then cstacks and sstacks
+rxstacks -b 1 -P adar_stacks2 -o adar_rxstack
+
+ cstacks -P adar_rxstack -M adar_popmap_locbio.txt -b 1 -p 30
+ 
+ sstacks -P adar_rxstack -M adar_popmap_locbio.txt -b 1
+ 
+5. run structure from populations program

@@ -1,0 +1,31 @@
+genome virchu_code > ./adar_combo_stacks.sh
+Unknown command line option: '-b'
+ref_map.pl 2.0b
+ref_map.pl --samples dir --popmap path [-s spacer] [--paired] -o dir [-X prog:"opts" ...]
+
+  Input/Output files:
+    --samples: path to the directory containing the samples BAM (or SAM) alignment files.
+    --popmap: path to a population map file (format is "<name> TAB <pop>", one sample per line).
+    s: spacer for file names: by default this is empty and the program looks for files
+       named 'SAMPLE_NAME.bam'; if this option is given the program looks for files
+       named 'SAMPLE_NAME.SPACER.bam'.
+    o: path to an output directory.
+    --unpaired: ignore read pairing (for ddRAD; treat READ2's as if they were READ1's)
+    --ignore-pe-reads: ignore paired-end reads even if present in the input
+
+  General options:
+    X: additional options for specific pipeline components, e.g. -X "populations: -p 3 -r 0.50"
+    T: the number of threads/CPUs to use (default: 1).
+    d: Dry run. Do not actually execute anything, just print the individual pipeline commands
+       that would be executed.
+
+  SNP model options:
+    --var-alpha: significance level at which to call variant sites (for gstacks; default: 0.05).
+    --gt-alpha: significance level at which to call genotypes (for gstacks; default: 0.05).
+
+  Miscellaneous:
+    --time-components (for benchmarking)
+	
+	DBI connect('adar_combo_2015_16_radtags:mysql_read_default_file=/home/vchu/.my.cnf','',...) failed: Unknown database 'adar_combo_2015_16_radtags' at /usr/local/bin/index_radtags.pl line 578.
+Unable to connect to the adar_combo_2015_16_radtags MySQL Database!
+Unknown database 'adar_combo_2015_16_radtags' at /usr/local/bin/index_radtags.pl line 578.

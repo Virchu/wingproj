@@ -8,3 +8,22 @@ cd ~ 	go back to home directory
 pwd		get directory location
 
 rm -rf mydir		remove directory
+
+
+
+What's in Vchu@genome.smcm.edu
+adar_new_lifehist- directory, bam files of all Anice and Vchu samples, n=190
+adar_read_summary- file
+adar_stacks2- directory, STACKS result from all samples (Anice and Vchu) of Brazil 2016, n=190
+adar_stacks4- directory, LH samples Brazil 2016, n=95
+analysis2-     
+bin-
+#cpi#-
+kevin_source_code-
+popmaps-
+practest- directory,            
+rad_alignments_plos_2015- directory, bam and bam.bai files from Plos paper
+rmate-        
+strauto_1-  
+vcstructure-
+virchu_code-

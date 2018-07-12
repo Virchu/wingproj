@@ -47,6 +47,8 @@ ron.points$state  <- "Rondonia"
 comb.points <- rbind(am.points, toc.points, rio.points, ron.points)
 write.csv(comb.points, file = "LH regional PCA data points.csv",row.names=FALSE)
 
+#used saved points from initial PCA from June 3, 2018
+comb.points<- read.csv("C:\\Users\\virgc\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\R code files\\Virginia\\LH regional PCA data points.csv")
 plot(states)
 plot(states.sub, col = "purple" ,add = TRUE)
 points(am.points)
@@ -212,14 +214,23 @@ future<-ggplot(data = fut.comb.points.env, aes(x = PC1, y = PC2, color = state, 
   xlab("PC1- 47.46%")+ ylab("PC2-32.63%")+
   ggtitle("Future (2070) bioclimatic PCA")+
   stat_ellipse(geom = "polygon", alpha = 0.5)
-
+#renaming so same variable
+library(data.table)
+setnames(fut.comb.points.env, old=c("gs85bi701" , "gs85bi702" , "gs85bi703" , "gs85bi704",  "gs85bi705" , "gs85bi706" ,
+                                    "gs85bi707" , "gs85bi708" , "gs85bi709" , "gs85bi7010", "gs85bi7011", "gs85bi7012",
+                                    "gs85bi7013", "gs85bi7014", "gs85bi7015",
+                                    "gs85bi7016", "gs85bi7017", "gs85bi7018" ,"gs85bi7019"),new=c("bio_1" , "bio_2" ,
+                                                                                                  "bio_3" , "bio_4" , "bio_5"  ,"bio_6",  "bio_7",  "bio_8",  "bio_9",  "bio_10",
+                                                                                                  "bio_11" ,"bio_12", "bio_13", "bio_14", "bio_15", "bio_16", "bio_17", "bio_18" ,"bio_19"))
 
 ###composite PCA
+comb.points.env$year<- 1990
+fut.comb.points.env$year<-2070
 all.points.env<- merge(comb.points.env, fut.comb.points.env, by="x")
 #remove extra columns
 
 head(all.points.env)
-all.pca <- PCA(all.points.env[, c(3:22,27:45)], quali.sup = 1)
+all.pca <- PCA(all.points.env[, c(3:22,28:46)], quali.sup = 1)
 plot(all.pca)
 
 all.pca.data <- all.pca$ind$coord %>% data.frame
@@ -234,6 +245,59 @@ all<-ggplot(data = all.points.env, aes(x = PC1all, y = PC2all, color = state.x, 
   stat_ellipse(geom = "polygon", alpha = 0.5)
 
 ggarrange(present, future, all,labels= c("A","B","C"), ncol=1,nrow=3, common.legend = TRUE, legend="bottom")
+
+
+#reshaping data from all.points.env into new pca per Tim (7/3) suggestions
+#adding year
+comb.copy<-comb.points.env
+fut.copy<-fut.comb.points.env
+
+new.1990.comb.points<-melt(comb.copy, id=c("x", "y", "state","year", "PC1", "PC2"))
+new.2070.comb.points<-melt(fut.copy, id=c("x", "y", "state","year", "PC1", "PC2"))
+new.all.comb.points<-rbind(new.1990.comb.points, new.2070.comb.points, by=c("x", "y", "variable", "state", "PC1", "PC2"))
+#trim off bottom row
+new.all.comb.points<-new.all.comb.points[c(1:15200),c(1:8)]
+
+#long to wide?
+library(tidyr)
+new.all.comb.points.wide<- spread(new.all.comb.points, variable, value)
+
+#change from character to numeric
+new.all.comb.points.wide [,c(1:2, 5:25)]<-sapply(new.all.comb.points.wide [,c(1:2, 5:25)], as.numeric)
+new.all.comb.points.wide$label<-paste(new.all.comb.points.wide$state, new.all.comb.points.wide$year, sep=" ")
+new.all.comb.points.wide$label<-factor(new.all.comb.points.wide$label, levels=c("Amazonas 1990", "Rondonia 1990", "Tocantins 1990", 
+                                                                                "Rio de Janeiro 1990","Amazonas 2070", 
+                                                                                "Rondonia 2070", "Tocantins 2070", 
+                                                                                "Rio de Janeiro 2070" ))
+new.all.comb.points.wide$state<-factor(new.all.comb.points.wide$state, levels=c("Amazonas", "Rondonia", "Tocantins", "Rio de Janeiro"))
+new.all.pca <- PCA(new.all.comb.points.wide[, 7:25], quali.sup = 1)
+plot(new.all.pca)
+
+new.all.pca.data <- new.all.pca$ind$coord %>% data.frame
+
+new.all.comb.points.wide$PC1all <- all.pca.data$Dim.1
+new.all.comb.points.wide$PC2all <- all.pca.data$Dim.2
+
+new.all2<-ggplot(data = new.all.comb.points.wide, aes(x = PC1, y = PC2, color = state, fill = year))+
+  geom_point(size = 4)+
+  geom_text(aes(label=year), nudge_y=.4)+
+  ggtitle("Bioclimatic PCA (1990 and 2070)")+
+  xlab("PC1- 48.46%")+ ylab("PC2-30.32%")+
+  stat_ellipse(geom = "polygon", alpha = 0.5)
+
+new.all4<-ggplot(data = new.all.comb.points.wide, aes(x = PC1, y = PC2, fill = state , shape = year ))+
+  geom_point(size = 2.5,  aes(color = state ))+
+  #geom_text(aes(label=year), nudge_y=.4)+
+  ggtitle("Bioclimatic PCA (1990 and 2070)")+
+  xlab("PC1- 48.46%")+ ylab("PC2-30.32%")+
+  stat_ellipse(geom = "polygon", alpha = 0.5)
+
+new.all5<-ggplot(data = new.all.comb.points.wide, aes(x = PC1all, y = PC2all, fill = state , shape = year ))+
+  geom_point(size = 2.5,  aes(color = state ))+
+  #geom_text(aes(label=label), nudge_y=.4)+
+  ggtitle("Bioclimatic PCA (1990 and 2070)")+
+  xlab("PC1- 41.262%")+ ylab("PC2-32.352%")+
+  stat_ellipse(geom = "polygon", alpha = 0.5)
 #get pca values
 #https://www.youtube.com/watch?v=CTSbxU6KLbM&list=PLnZgp6epRBbTsZEFXi_p6W48HhNyqwxIu&index=3
 summary(all.pca)
@@ -242,3 +306,39 @@ summary(fut.res.pca)
 #PC1= 47.456%, PC2=32.633%
 summary(res.pca)
 #PC1= 51.205%, PC2=27.7%
+summary(new.all.pca)
+#PC1= 41.262%, PC2=32.352%
+
+#make impressive color variable factor
+library(factoextra)
+all.coord<-all.points.env[,c(1:3, 48,49)]
+all.pca.cos2<- all.coord^2
+fviz_pca_var(all.pca, col.var="contrib") +
+  scale_color_gradient2(low="yellow", mid="blue", 
+                        high="red", midpoint=2.4) + theme_minimal()
+fviz_pca_biplot(all.pca, label="var", habillage=all.points.env$state.x,
+                addEllipses = TRUE, ellipes.level=0.9)
+
+#new 7/3/18
+new.all.coord<-new.all.comb.points.wide[,c(1:3, 48,49)]
+comb.pca <- PCA(comb.copy[, c(3:22)], quali.sup = 1)
+fut.pca <- PCA(fut.copy[, c(3:22)], quali.sup = 1)
+
+fviz_pca_var(comb.pca, col.var="contrib") +
+  scale_color_gradient2(low="yellow", mid="blue", 
+                        high="red", midpoint=2.4) + theme_minimal()
+fviz_pca_biplot(comb.pca, label="var", habillage=all.points.env$state.x,
+                addEllipses = TRUE, ellipes.level=0.9)
+fviz_pca_biplot(fut.pca, label="var", habillage=all.points.env$state.x,
+                addEllipses = TRUE, ellipes.level=0.9)
+
+#new 7/5/18
+fviz_pca_var(new.all.pca, col.var="contrib") +
+  scale_color_gradient2(low="yellow", mid="blue", 
+                        high="red", midpoint=2.4) + theme_minimal()
+fviz_pca_ind(new.all.pca, label="none", habillage=new.all.comb.points.wide$label,
+             addEllipses = TRUE, ellipes.level=0.9)
+fviz_pca_biplot(new.all.pca, label="var", habillage=new.all.comb.points.wide$label,
+                addEllipses = TRUE, ellipes.level=0.9)
+
+               

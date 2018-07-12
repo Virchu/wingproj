@@ -16,13 +16,13 @@ library(survminer)
 library(stargazer)
 ##Datafiles
 #complete data set
-all_data <- read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
+all_data <- read.csv("C:\\Users\\virgc\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_03_28 Brazil adar16 Life history full.csv")
 #add survival prob
 #all_data$surv<- 1-(1/all_data$AL)
 #create dataframe of survived to adult data
 adult<-subset(all_data, all_data$Death_stat==1 & !is.na(all_data$Sex1))
 #field wing data
-field_wing<-read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_04_20 Field wing length 13 18 cs scaled.csv")
+field_wing<-read.csv("C:\\Users\\virgc\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\Data files\\2018_04_20 Field wing length 13 18 cs scaled.csv")
 
 #factor
 all_data$State<-factor(all_data$State, levels=c("Amazonas", "Rondonia", "Tocantins", "Rio de Janeiro"))
@@ -220,6 +220,56 @@ wing.state.line<-
   scale_y_continuous(breaks = c(2.5: 3.1))+ theme_classic() +
   theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
   labs(x="Temperature (°C)", y="Wing length (mm)", linetype="Latitude group" )
+
+#Wing length#
+wing20<-subset(adult.sum.nosex, Temp_fac==20)
+wing24<-subset(adult.sum.nosex, Temp_fac==24)
+wing28<-subset(adult.sum.nosex, Temp_fac==28)
+lm20<-lm(mean.wing~mean.Lat, data=subset(adult.sum.nosex, Temp_fac==20))
+#lm 20 2.7075, -0.012230
+#r2= .5527
+wing.state.line.20<-
+  ggplot(wing20, aes(x=abs(mean.Lat), y=mean.wing))+
+  geom_errorbar(aes(ymin=mean.wing-se.wing, ymax=mean.wing+se.wing),stat="summary", colour="black",linetype=1,size=.8,width=.6)+
+  geom_point(aes(colour=State), size=2, stat="summary", fun.y="mean")+
+  ggtitle("Average wing length (mm) at 20C")+ theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
+  labs(x="Latitude (S)", y="Wing length (mm)")+
+  geom_smooth(colour="red",method="lm")
+  #geom_abline( intercept = 2.707527,slope= -0.01223)
+
+ # text(5, 2.8, "y=2.708-0.0122x, R^2=0.553")
+
+lm24<-lm(mean.wing~mean.Lat, data=subset(adult.sum.nosex, Temp_fac==24))
+#lm 20 2.576580, -.00951
+#r2= .445
+wing.state.line.24<-
+  ggplot(wing24, aes(x=abs(mean.Lat), y=mean.wing))+
+  geom_errorbar(aes(ymin=mean.wing-se.wing, ymax=mean.wing+se.wing),stat="summary", colour="black",linetype=1,size=.8,width=.6)+
+  geom_point(aes(colour=State), size=2, stat="summary", fun.y="mean")+
+  ggtitle("Average wing length (mm) at 24C")+ theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
+  labs(x="Latitude (S)", y="Wing length (mm)")+
+  geom_smooth(colour="red",method="lm")
+
+ # geom_abline( intercept = 2.57658,slope= -0.00951)
+
+lm28<-lm(mean.wing~mean.Lat, data=subset(adult.sum.nosex, Temp_fac==28))
+
+#lm 20 2.493399, -.005682
+#r2= .445
+wing.state.line.28<-
+  ggplot(wing28, aes(x=abs(mean.Lat), y=mean.wing))+
+  geom_errorbar(aes(ymin=mean.wing-se.wing, ymax=mean.wing+se.wing),stat="summary", colour="black",linetype=1,size=.8,width=.6)+
+  geom_point(aes(colour=State), size=2, stat="summary", fun.y="mean")+
+  ggtitle("Average wing length (mm) at 28C")+ theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=10))+
+  labs(x="Latitude (S)", y="Wing length (mm)")+
+  geom_smooth(colour="red",method="lm")
+  #geom_abline( intercept = 2.493399,slope= -0.005682)
+
+grid.arrange(wing.state.line.20, wing.state.line.24, wing.state.line.28, ncol=1, nrow=3)
+
 #sup c.1
 wing.am <-
   ggplot(adult.sum.nosex, aes(x=Temp_fac, y=mean.AL, group=Fam_new))+
@@ -339,7 +389,7 @@ summary(PQL_meth_sLL)
 #test1<-glmm()
 #comparing interactions
 lar_ls<- lsmeans(PQL_meth_sLL, pairwise ~Temp_fac:State, adjust="tukey")
-lar_cld<- cld(lar_ls, alpha=0.5, Letters=letters, adjust="tukey")
+lar_cld<- cld(lar_ls, alpha=0.5, Letters=letters, adjust="tukey", reverse=TRUE)
 
 
 #pretty table for sLL
@@ -361,13 +411,13 @@ PQL_meth_al<- glmmPQL(AL~Temp_fac*State, ~1|Locality/Family, family=poisson, dat
 summary(PQL_meth_al)
 #comparing interactions
 al_ls<- lsmeans(PQL_meth_al, pairwise ~Temp_fac:State, adjust="tukey")
-al_cld<- cld(al_ls, alpha=0.5, Letters=letters, adjust="tukey")
+al_cld<- cld(al_ls, alpha=0.5, Letters=letters, adjust="tukey", reverse=TRUE)
 
 PQL_meth_wing<- glmmPQL(Wing.length..mm.~Temp_fac*State, ~1|Locality/Family, family=gaussian(link="log"), data=adult, verbose=FALSE)
 summary(PQL_meth_wing)
 #comparing interactions
 wing_ls<- lsmeans(PQL_meth_wing, pairwise ~Temp_fac:State, adjust="tukey")
-wing_cld<- cld(wing_ls, alpha=0.5, Letters=letters, adjust="tukey")
+wing_cld<- cld(wing_ls, alpha=0.5, Letters=letters, adjust="tukey", reverse=TRUE)
 
 ##ANOVA tables for gen var, phen plast and G by E of traits
 #overall
@@ -378,6 +428,12 @@ difflsmeans(larv_mod, test.effs="State") #all state comparisons except rio and t
 difflsmeans(larv_mod, test.effs="Temp_let") #all temp comparisons significant
 l.vc<-VarCorr(larv_mod)
 print(l.vc, comp=c("Variance"))
+
+larv_mod_am<-lmer(sLL~Temp_let+(1|Fam_new), data=subset(adult, State=="Amazonas"))
+anova(larv_mod_am) #both Treatment and State sig as well as interaction
+difflsmeans(larv_mod_am, test.effs="Temp_let") #all temp comparisons significant
+l.vc.am<-VarCorr(larv_mod)
+print(l.vc.am, comp=c("Variance"))
 #adult
 adult_mod<-lmer(AL~Temp_let*State+(1|Fam_new)+(1|State:Temp_let:Fam_new), data=adult)
 anova(adult_mod) #both Treatment and State sig as well as interaction
@@ -463,8 +519,7 @@ wingadult.cor <-
   xlab("Average wing length (mm)")+ ylab("Average adult life (days)") +
   theme_classic() +theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size=7))
 
-grid.arrange(cor1,  wingadult.cor,larvadult.cor, larvwing.cor, ncol=2,nrow=2,top="Correlation between larvae development, wing length and adult lifespan")
-
+grid.arrange(cor1,  larvadult.cor,wingadult.cor, larvwing.cor, ncol=2,nrow=2,top="Correlation between larvae development, wing length and adult lifespan")
 
 ##by state instead of temp
 larvwing.cor1 <-
