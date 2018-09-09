@@ -1,6 +1,5 @@
 #Virginia bioclim PCA
 
-adult <- read.csv
 # do PCA on env for each state
 
 #get state shapefile
@@ -83,41 +82,15 @@ bio18 <- raster("C:\\Users\\virgc\\Desktop\\Bioclim 30secbil\\bio_18.bil")
 bio19 <- raster("C:\\Users\\virgc\\Desktop\\Bioclim 30secbil\\bio_19.bil")
 
 #work comp
-bio1 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_1.bil")
-bio2 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_2.bil")
-bio3 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_3.bil")
-bio4 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_4.bil")
-bio5 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_5.bil")
-bio6 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_6.bil")
-bio7 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_7.bil")
-bio8 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_8.bil")
-bio9 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_9.bil")
-
-bio10 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_10.bil")
-bio11 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_11.bil")
-bio12 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_12.bil")
-bio13 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_13.bil")
-bio14 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_14.bil")
-bio15 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_15.bil")
-bio16 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_16.bil")
-bio17 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_17.bil")
-bio18 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_18.bil")
-bio19 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_19.bil")
+#bio1 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_1.bil")
 
 bioclim.stack <- stack(bio1, bio2, bio3, bio4, bio5, bio6, bio7, bio8, bio9, bio10, bio11, bio12, bio13, bio14, bio15, 
                        bio16, bio17, bio18, bio19)
 
 
-
 env.data <- raster::extract(bioclim.stack, comb.points[, c("x", "y")])
 env.data.s <-env.data
 
-# scale environmental data prior to PCA  -probably not necessary
-# for (i in 1:19){
-#   
-#   env.data.s[, i] <-  as.numeric(scale(env.data.s[, i]))
-#   
-# }
 
 comb.points.env <- cbind(comb.points, env.data)
 
@@ -166,26 +139,7 @@ fut_bio18 <- raster("C:\\Users\\virgc\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi701
 fut_bio19 <- raster("C:\\Users\\virgc\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7019.tif")
 
 #lab comp
-fut_bio1 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi701.tif")
-fut_bio2 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi702.tif")
-fut_bio3 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi703.tif")
-fut_bio4 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi704.tif")
-fut_bio5 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi705.tif")
-fut_bio6 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi706.tif")
-fut_bio7 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi707.tif")
-fut_bio8 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi708.tif")
-fut_bio9 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi709.tif")
-
-fut_bio10 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7010.tif")
-fut_bio11 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7011.tif")
-fut_bio12 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7012.tif")
-fut_bio13 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7013.tif")
-fut_bio14 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7014.tif")
-fut_bio15 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7015.tif")
-fut_bio16 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7016.tif")
-fut_bio17 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7017.tif")
-fut_bio18 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7018.tif")
-fut_bio19 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7019.tif")
+#fut_bio1 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi701.tif")
 
 future.stack <- stack(fut_bio1, fut_bio2, fut_bio3, fut_bio4, fut_bio5, fut_bio6, fut_bio7, fut_bio8, fut_bio9, fut_bio10, fut_bio11, fut_bio12, fut_bio13, fut_bio14, fut_bio15, 
                       fut_bio16, fut_bio17, fut_bio18, fut_bio19)
@@ -270,6 +224,8 @@ new.all.comb.points.wide$label<-factor(new.all.comb.points.wide$label, levels=c(
                                                                                 "Rondonia 2070", "Tocantins 2070", 
                                                                                 "Rio de Janeiro 2070" ))
 new.all.comb.points.wide$state<-factor(new.all.comb.points.wide$state, levels=c("Amazonas", "Rondonia", "Tocantins", "Rio de Janeiro"))
+write.csv(new.all.comb.points.wide, file = "2018_08 LH regional PCA data points.csv",row.names=FALSE)
+
 new.all.pca <- PCA(new.all.comb.points.wide[, 7:25], quali.sup = 1)
 plot(new.all.pca)
 
@@ -341,4 +297,29 @@ fviz_pca_ind(new.all.pca, label="none", habillage=new.all.comb.points.wide$label
 fviz_pca_biplot(new.all.pca, label="var", habillage=new.all.comb.points.wide$label,
                 addEllipses = TRUE, ellipes.level=0.9)
 
-               
+##new 8/2/18
+#utilizing http://huboqiang.cn/2016/03/03/RscatterPlotPCA
+eig.val <- get_eigenvalue(new.all.pca)
+head(eig.val)
+updated_pca<-prcomp(new.all.comb.points.wide[, 7:25])
+plot(updated_pca$x[,1], updated_pca$x[,2])
+library(ggplot2)
+library(grid)
+library(gridExtra)
+
+updated_df<- as.data.frame(updated_pca$x)
+updated_df$state<- new.all.comb.points.wide$state
+updated_df$year<- new.all.comb.points.wide$year
+head(updated_df)
+
+percentage<- round(updated_pca$sdev / sum(updated_pca$sdev) * 100, 2)
+percentage <- paste( colnames(updated_df), "(", paste( as.character(percentage), "%", ")", sep="") )
+
+test_p<- ggplot(updated_df, aes(x=PC1, y=PC2, colour=state, shape=year))+geom_point()+
+  xlab(percentage[1]) + ylab(percentage[2])
+
+
+#http://rstudio-pubs-static.s3.amazonaws.com/53162_cd16ee63c24747459ccd180f69f07810.html
+library(ggfortify)
+autoplot(updated_pca, data=new.all.comb.points.wide, colour= 'year', shape='state', loadings=TRUE, 
+         loadings.label=TRUE, loadings.label.size=3, frame=TRUE, frame.type='norm', frame.colour='label')
