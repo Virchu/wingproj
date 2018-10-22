@@ -1,6 +1,6 @@
 #Virginia bioclim PCA
 
-# do PCA on env for each state
+# do PCA on env variables for each state
 
 #get state shapefile
 library(rgdal)
@@ -178,29 +178,6 @@ setnames(fut.comb.points.env, old=c("gs85bi701" , "gs85bi702" , "gs85bi703" , "g
                                                                                                   "bio_11" ,"bio_12", "bio_13", "bio_14", "bio_15", "bio_16", "bio_17", "bio_18" ,"bio_19"))
 
 ###composite PCA
-comb.points.env$year<- 1990
-fut.comb.points.env$year<-2070
-all.points.env<- merge(comb.points.env, fut.comb.points.env, by="x")
-#remove extra columns
-
-head(all.points.env)
-all.pca <- PCA(all.points.env[, c(3:22,28:46)], quali.sup = 1)
-plot(all.pca)
-
-all.pca.data <- all.pca$ind$coord %>% data.frame
-
-all.points.env$PC1all <- all.pca.data$Dim.1
-all.points.env$PC2all <- all.pca.data$Dim.2
-
-all<-ggplot(data = all.points.env, aes(x = PC1all, y = PC2all, color = state.x, fill = state.x))+
-  geom_point(size = 4)+
-  ggtitle("Bioclimatic PCA (1990 and 2070)")+
-  xlab("PC1- 48.46%")+ ylab("PC2-30.32%")+labs(colour="State", fill="State")+
-  stat_ellipse(geom = "polygon", alpha = 0.5)
-
-ggarrange(present, future, all,labels= c("A","B","C"), ncol=1,nrow=3, common.legend = TRUE, legend="bottom")
-
-
 #reshaping data from all.points.env into new pca per Tim (7/3) suggestions
 #adding year
 comb.copy<-comb.points.env
@@ -211,7 +188,6 @@ new.2070.comb.points<-melt(fut.copy, id=c("x", "y", "state","year", "PC1", "PC2"
 new.all.comb.points<-rbind(new.1990.comb.points, new.2070.comb.points, by=c("x", "y", "variable", "state", "PC1", "PC2"))
 #trim off bottom row
 new.all.comb.points<-new.all.comb.points[c(1:15200),c(1:8)]
-
 #long to wide?
 library(tidyr)
 new.all.comb.points.wide<- spread(new.all.comb.points, variable, value)
@@ -248,20 +224,8 @@ new.all4<-ggplot(data = new.all.comb.points.wide, aes(x = PC1, y = PC2, fill = s
   xlab("PC1- 48.46%")+ ylab("PC2-30.32%")+
   stat_ellipse(geom = "polygon", alpha = 0.5)
 
-new.all5<-ggplot(data = new.all.comb.points.wide, aes(x = PC1all, y = PC2all, fill = state , shape = year ))+
-  geom_point(size = 2.5,  aes(color = state ))+
-  #geom_text(aes(label=label), nudge_y=.4)+
-  ggtitle("Bioclimatic PCA (1990 and 2070)")+
-  xlab("PC1- 41.262%")+ ylab("PC2-32.352%")+
-  stat_ellipse(geom = "polygon", alpha = 0.5)
 #get pca values
 #https://www.youtube.com/watch?v=CTSbxU6KLbM&list=PLnZgp6epRBbTsZEFXi_p6W48HhNyqwxIu&index=3
-summary(all.pca)
-#PC1= 48.457%, PC2=30.318%
-summary(fut.res.pca)
-#PC1= 47.456%, PC2=32.633%
-summary(res.pca)
-#PC1= 51.205%, PC2=27.7%
 summary(new.all.pca)
 #PC1= 41.262%, PC2=32.352%
 
@@ -323,3 +287,21 @@ test_p<- ggplot(updated_df, aes(x=PC1, y=PC2, colour=state, shape=year))+geom_po
 library(ggfortify)
 autoplot(updated_pca, data=new.all.comb.points.wide, colour= 'year', shape='state', loadings=TRUE, 
          loadings.label=TRUE, loadings.label.size=3, frame=TRUE, frame.type='norm', frame.colour='label')
+
+#10/16/18 http://www.sthda.com/english/wiki/print.php?id=207
+#Tim comment-show 1st 2 components and show coordinates between each variable and pc1, pc2
+#using new.all.pca
+new.all.pca1 <- prcomp(new.all.comb.points.wide[, 7:25])
+
+# Helper function : 
+# Correlation between variables and principal components
+var_cor_func <- function(var.loadings, comp.sdev){
+  var.loadings*comp.sdev
+}
+
+# Variable correlation/coordinates
+loadings <- new.all.pca1$rotation
+sdev <- new.all.pca1$sdev
+
+var.coord <- var.cor <- t(apply(loadings, 1, var_cor_func, sdev))
+head(var.coord[, 1:4])
