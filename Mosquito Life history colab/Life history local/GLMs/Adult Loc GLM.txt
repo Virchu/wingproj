@@ -1,0 +1,545 @@
+[1] "Conducting GLM for Locality"
+[1] "ARS" "APR" "RPV" "RMO" "TLC" "TPN" "SJU"
+[1] "ARS" "APR" "RPV" "RMO" "TLC" "TPN" "SJU"
+[1] "ARS"
+     Fam_new Temp_let AL
+2997     A23        A  5
+2998     A23        A  5
+2999     A23        A  5
+3000     A23        A  4
+3001     A23        A  5
+3002     A23        A  6
+     subcol trt out
+2997    A23   A   5
+2998    A23   A   5
+2999    A23   A   5
+3000    A23   A   4
+3001    A23   A   5
+3002    A23   A   6
+     subcol    trt          out       
+ A23    : 44   A:134   Min.   :0.000  
+ A19    : 41   B:135   1st Qu.:2.000  
+ A24    : 41   C:130   Median :3.000  
+ A25    : 41           Mean   :3.236  
+ A20    : 40           3rd Qu.:4.000  
+ A17    : 39           Max.   :6.000  
+ (Other):153                          
+
+Call:
+glm(formula = out ~ trt * subcol, data = dataSubFin)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.5333  -0.3333   0.0000   0.3333   1.6667  
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     4.80000    0.20813  23.062  < 2e-16 ***
+trtB           -1.87143    0.27251  -6.867 2.78e-11 ***
+trtC           -2.72857    0.27251 -10.013  < 2e-16 ***
+subcolA17      -0.33846    0.27684  -1.223   0.2223    
+subcolA18      -0.13333    0.26870  -0.496   0.6200    
+subcolA19      -0.15714    0.27251  -0.577   0.5645    
+subcolA20      -0.01429    0.27251  -0.052   0.9582    
+subcolA21       0.28333    0.28181   1.005   0.3154    
+subcolA22      -0.46667    0.28181  -1.656   0.0986 .  
+subcolA23      -0.26667    0.26870  -0.992   0.3216    
+subcolA24       0.20000    0.26870   0.744   0.4571    
+subcolA25      -0.44286    0.27251  -1.625   0.1050    
+trtB:subcolA17 -0.12344    0.36941  -0.334   0.7384    
+trtC:subcolA17 -0.09660    0.38336  -0.252   0.8012    
+trtB:subcolA18  0.38658    0.37752   1.024   0.3065    
+trtC:subcolA18  0.24372    0.37752   0.646   0.5189    
+trtB:subcolA19  0.22857    0.36898   0.619   0.5360    
+trtC:subcolA19  0.23956    0.37219   0.644   0.5202    
+trtB:subcolA20  0.93187    0.37219   2.504   0.0127 *  
+trtC:subcolA20  0.17363    0.37219   0.467   0.6411    
+trtB:subcolA21 -0.35476    0.37590  -0.944   0.3459    
+trtC:subcolA21 -0.43168    0.37905  -1.139   0.2555    
+trtB:subcolA22  0.92271    0.37905   2.434   0.0154 *  
+trtC:subcolA22  0.39524    0.37590   1.051   0.2937    
+trtB:subcolA23  0.05238    0.36617   0.143   0.8863    
+trtC:subcolA23  0.12857    0.36334   0.354   0.7236    
+trtB:subcolA24 -0.28242    0.36941  -0.765   0.4450    
+trtC:subcolA24 -0.27143    0.36941  -0.735   0.4629    
+trtB:subcolA25  0.30000    0.36898   0.813   0.4167    
+trtC:subcolA25  0.44835    0.37219   1.205   0.2291    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.4331836)
+
+    Null deviance: 661.85  on 398  degrees of freedom
+Residual deviance: 159.84  on 369  degrees of freedom
+AIC: 829.32
+
+Number of Fisher Scoring iterations: 2
+
+[1] "APR"
+     Fam_new Temp_let AL
+2351      A1        A  6
+2352      A1        A  4
+2353      A1        A  5
+2354      A1        A  4
+2355      A1        A  5
+2356      A1        A  6
+     subcol trt out
+2351     A1   A   6
+2352     A1   A   4
+2353     A1   A   5
+2354     A1   A   4
+2355     A1   A   5
+2356     A1   A   6
+     subcol    trt          out       
+ A8     : 42   A:198   Min.   :0.000  
+ A7     : 41   B:198   1st Qu.:2.000  
+ A12    : 40   C:179   Median :3.000  
+ A13    : 40           Mean   :3.238  
+ A2     : 40           3rd Qu.:4.000  
+ A5     : 40           Max.   :8.000  
+ (Other):332                          
+
+Call:
+glm(formula = out ~ trt * subcol, data = dataSubFin)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-3.8667  -0.2500   0.0000   0.3333   2.5833  
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     5.000e+00  2.128e-01  23.492  < 2e-16 ***
+trtB           -1.923e+00  3.010e-01  -6.389 3.66e-10 ***
+trtC           -2.727e+00  3.144e-01  -8.675  < 2e-16 ***
+subcolA10      -5.385e-01  3.010e-01  -1.789 0.074199 .  
+subcolA11       7.723e-15  3.010e-01   0.000 1.000000    
+subcolA12      -5.833e-01  3.072e-01  -1.899 0.058129 .  
+subcolA13       8.462e-01  3.010e-01   2.811 0.005119 ** 
+subcolA14       1.500e+00  3.228e-01   4.647 4.25e-06 ***
+subcolA15      -4.667e-01  2.908e-01  -1.605 0.109131    
+subcolA2       -1.143e+00  2.956e-01  -3.867 0.000124 ***
+subcolA3       -2.143e-01  2.956e-01  -0.725 0.468784    
+subcolA4        1.667e-01  3.072e-01   0.543 0.587685    
+subcolA5       -1.333e-01  2.908e-01  -0.459 0.646769    
+subcolA6        7.017e-15  3.072e-01   0.000 1.000000    
+subcolA7       -1.133e+00  2.908e-01  -3.897 0.000110 ***
+subcolA8       -1.133e+00  2.908e-01  -3.897 0.000110 ***
+subcolA9        8.333e-02  3.072e-01   0.271 0.786295    
+trtB:subcolA10  3.615e-01  4.414e-01   0.819 0.413061    
+trtC:subcolA10 -1.343e-01  4.506e-01  -0.298 0.765834    
+trtB:subcolA11 -5.769e-01  4.219e-01  -1.368 0.172025    
+trtC:subcolA11 -2.727e-01  4.396e-01  -0.620 0.535224    
+trtB:subcolA12  3.731e-01  4.230e-01   0.882 0.378197    
+trtC:subcolA12  3.106e-01  4.396e-01   0.707 0.480106    
+trtB:subcolA13 -1.066e+00  4.219e-01  -2.527 0.011802 *  
+trtC:subcolA13 -9.650e-01  4.352e-01  -2.217 0.027031 *  
+trtB:subcolA14 -1.423e+00  4.414e-01  -3.224 0.001340 ** 
+trtC:subcolA14 -1.773e+00  4.470e-01  -3.966 8.31e-05 ***
+trtB:subcolA15 -5.470e-02  4.419e-01  -0.124 0.901537    
+trtC:subcolA15  4.439e-01  4.601e-01   0.965 0.335067    
+trtB:subcolA2   9.121e-01  4.219e-01   2.162 0.031060 *  
+trtC:subcolA2   7.932e-01  4.315e-01   1.838 0.066591 .  
+trtB:subcolA3   6.044e-02  4.219e-01   0.143 0.886132    
+trtC:subcolA3  -3.312e-01  4.410e-01  -0.751 0.452966    
+trtB:subcolA4  -1.667e-01  4.301e-01  -0.388 0.698528    
+trtC:subcolA4  -5.108e-01  4.359e-01  -1.172 0.241731    
+trtB:subcolA5  -3.007e-01  4.146e-01  -0.725 0.468594    
+trtC:subcolA5   4.242e-02  4.378e-01   0.097 0.922833    
+trtB:subcolA6  -7.692e-02  4.263e-01  -0.180 0.856876    
+trtC:subcolA6  -2.727e-01  4.438e-01  -0.614 0.539160    
+trtB:subcolA7   7.897e-01  4.112e-01   1.920 0.055346 .  
+trtC:subcolA7   8.606e-01  4.378e-01   1.966 0.049828 *  
+trtB:subcolA8   7.231e-01  4.112e-01   1.758 0.079278 .  
+trtC:subcolA8   1.111e+00  4.326e-01   2.567 0.010529 *  
+trtB:subcolA9  -5.449e-01  4.301e-01  -1.267 0.205753    
+trtC:subcolA9  -4.989e-01  4.359e-01  -1.145 0.252863    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.5889012)
+
+    Null deviance: 1180.36  on 574  degrees of freedom
+Residual deviance:  312.12  on 530  degrees of freedom
+AIC: 1372.5
+
+Number of Fisher Scoring iterations: 2
+
+[1] "RPV"
+  Fam_new Temp_let AL
+1     R16        A  6
+2     R16        A  5
+3     R16        A  0
+6     R16        A  5
+7     R16        A  5
+8     R16        A  5
+  subcol trt out
+1    R16   A   6
+2    R16   A   5
+3    R16   A   0
+6    R16   A   5
+7    R16   A   5
+8    R16   A   5
+     subcol    trt          out       
+ R29    : 44   A:181   Min.   :0.000  
+ R30    : 42   B:184   1st Qu.:2.000  
+ R22    : 40   C:141   Median :3.000  
+ R26    : 40           Mean   :2.968  
+ R19    : 39           3rd Qu.:4.000  
+ R18    : 38           Max.   :6.000  
+ (Other):263                          
+
+Call:
+glm(formula = out ~ trt * subcol, data = dataSubFin)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-4.1818  -0.4444   0.0000   0.4000   1.8571  
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     4.18182    0.23607  17.715  < 2e-16 ***
+trtB           -1.34848    0.32682  -4.126 4.38e-05 ***
+trtC           -2.78182    0.42229  -6.587 1.22e-10 ***
+subcolR17      -1.18182    0.42229  -2.799  0.00535 ** 
+subcolR18      -0.58182    0.31080  -1.872  0.06184 .  
+subcolR19      -0.46753    0.31546  -1.482  0.13900    
+subcolR20      -0.36364    0.33385  -1.089  0.27662    
+subcolR21       0.27972    0.32075   0.872  0.38362    
+subcolR22      -0.25325    0.31546  -0.803  0.42251    
+subcolR23       0.17532    0.31546   0.556  0.57863    
+subcolR24       0.06818    0.36380   0.187  0.85142    
+subcolR25      -0.46753    0.37855  -1.235  0.21744    
+subcolR26       0.01818    0.31080   0.059  0.95338    
+subcolR27      -0.28182    0.34209  -0.824  0.41048    
+subcolR28      -0.04848    0.31080  -0.156  0.87610    
+subcolR29       0.81818    0.31080   2.633  0.00876 ** 
+subcolR30       0.31818    0.31546   1.009  0.31368    
+trtB:subcolR17  1.09848    0.55321   1.986  0.04766 *  
+trtC:subcolR17  1.53182    0.67393   2.273  0.02349 *  
+trtB:subcolR18  0.31991    0.43757   0.731  0.46508    
+trtC:subcolR18  0.84848    0.53601   1.583  0.11412    
+trtB:subcolR19  0.23420    0.43757   0.535  0.59275    
+trtC:subcolR19  0.56753    0.53237   1.066  0.28696    
+trtB:subcolR20  0.24459    0.45423   0.538  0.59051    
+trtC:subcolR20  0.63030    0.53399   1.180  0.23846    
+trtB:subcolR21 -0.42075    0.44846  -0.938  0.34864    
+trtC:subcolR21  0.32028    0.54964   0.583  0.56038    
+trtB:subcolR22  0.63420    0.44089   1.438  0.15098    
+trtC:subcolR22  0.68658    0.52268   1.314  0.18965    
+trtB:subcolR23 -0.64502    0.45423  -1.420  0.15627    
+trtC:subcolR23 -0.12078    0.52711  -0.229  0.81887    
+trtB:subcolR24  0.09848    0.53442   0.184  0.85387    
+trtC:subcolR24  0.03182    0.74930   0.042  0.96615    
+trtB:subcolR25  0.07864    0.51234   0.153  0.87807    
+trtC:subcolR25  0.61299    0.56712   1.081  0.28032    
+trtB:subcolR26  0.21991    0.43757   0.503  0.61550    
+trtC:subcolR26  0.67273    0.52433   1.283  0.20013    
+trtB:subcolR27 -0.38485    0.46818  -0.822  0.41150    
+trtC:subcolR27  0.38182    0.56237   0.679  0.49751    
+trtB:subcolR28  0.28658    0.43757   0.655  0.51283    
+trtC:subcolR28  0.42626    0.53601   0.795  0.42688    
+trtB:subcolR29 -0.50866    0.43757  -1.162  0.24565    
+trtC:subcolR29 -0.21818    0.50996  -0.428  0.66897    
+trtB:subcolR30 -0.29437    0.44089  -0.668  0.50467    
+trtC:subcolR30  0.21039    0.51566   0.408  0.68346    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.613005)
+
+    Null deviance: 793.49  on 505  degrees of freedom
+Residual deviance: 282.60  on 461  degrees of freedom
+AIC: 1233.2
+
+Number of Fisher Scoring iterations: 2
+
+[1] "RMO"
+    Fam_new Temp_let AL
+667      R7        A  4
+668      R7        A  3
+669      R7        A  5
+670      R7        A  4
+672      R7        A  5
+673      R7        A  5
+    subcol trt out
+667     R7   A   4
+668     R7   A   3
+669     R7   A   5
+670     R7   A   4
+672     R7   A   5
+673     R7   A   5
+     subcol    trt          out      
+ R3     : 43   A:192   Min.   :0.00  
+ R14    : 42   B:197   1st Qu.:2.00  
+ R5     : 42   C:160   Median :3.00  
+ R2     : 41           Mean   :3.02  
+ R10    : 40           3rd Qu.:4.00  
+ R12    : 38           Max.   :7.00  
+ (Other):303                         
+
+Call:
+glm(formula = out ~ trt * subcol, data = dataSubFin)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-3.00000  -0.38462   0.07143   0.42857   2.69231  
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     4.000e+00  2.225e-01  17.975  < 2e-16 ***
+trtB           -7.857e-01  3.033e-01  -2.591  0.00985 ** 
+trtC           -2.300e+00  3.301e-01  -6.968 1.01e-11 ***
+subcolR10       3.077e-01  3.086e-01   0.997  0.31920    
+subcolR11       1.538e-01  3.086e-01   0.499  0.61832    
+subcolR12       7.143e-02  3.033e-01   0.236  0.81389    
+subcolR13       2.857e-01  3.666e-01   0.779  0.43615    
+subcolR14      -5.714e-01  3.033e-01  -1.884  0.06010 .  
+subcolR15       2.471e-14  3.147e-01   0.000  1.00000    
+subcolR2        5.333e-01  2.986e-01   1.786  0.07464 .  
+subcolR3       -7.143e-02  3.033e-01  -0.236  0.81389    
+subcolR4        2.308e-01  3.086e-01   0.748  0.45492    
+subcolR5       -3.333e-01  2.986e-01  -1.116  0.26474    
+subcolR6        7.500e-01  3.147e-01   2.383  0.01753 *  
+subcolR7        4.167e-01  3.147e-01   1.324  0.18610    
+subcolR8        6.154e-01  3.086e-01   1.994  0.04667 *  
+subcolR9       -4.615e-01  3.086e-01  -1.496  0.13538    
+trtB:subcolR10 -4.505e-01  4.244e-01  -1.062  0.28892    
+trtC:subcolR10 -3.923e-01  4.476e-01  -0.876  0.38121    
+trtB:subcolR11 -4.451e-01  4.282e-01  -1.039  0.29917    
+trtC:subcolR11 -1.538e-01  4.627e-01  -0.333  0.73964    
+trtB:subcolR12 -2.857e-01  4.172e-01  -0.685  0.49372    
+trtC:subcolR12  6.349e-03  4.663e-01   0.014  0.98914    
+trtB:subcolR13 -3.571e-01  5.116e-01  -0.698  0.48545    
+trtC:subcolR13 -1.107e-01  5.178e-01  -0.214  0.83077    
+trtB:subcolR14 -2.747e-02  4.244e-01  -0.065  0.94841    
+trtC:subcolR14  4.048e-01  4.370e-01   0.926  0.35481    
+trtB:subcolR15 -4.643e-01  4.370e-01  -1.062  0.28859    
+trtC:subcolR15 -2.000e-01  4.824e-01  -0.415  0.67864    
+trtB:subcolR2  -5.333e-01  4.172e-01  -1.278  0.20167    
+trtC:subcolR2  -4.000e-01  4.451e-01  -0.899  0.36921    
+trtB:subcolR3  -6.762e-01  4.172e-01  -1.621  0.10566    
+trtC:subcolR3  -5.714e-02  4.403e-01  -0.130  0.89678    
+trtB:subcolR4  -1.593e-01  4.244e-01  -0.375  0.70749    
+trtC:subcolR4   6.923e-02  4.627e-01   0.150  0.88112    
+trtB:subcolR5  -2.143e-01  4.138e-01  -0.518  0.60475    
+trtC:subcolR5   5.000e-02  4.451e-01   0.112  0.91059    
+trtB:subcolR6  -8.929e-01  4.289e-01  -2.082  0.03786 *  
+trtC:subcolR6  -5.409e-01  4.610e-01  -1.173  0.24117    
+trtB:subcolR7  -3.810e-01  4.370e-01  -0.872  0.38380    
+trtC:subcolR7  -2.076e-01  4.610e-01  -0.450  0.65268    
+trtB:subcolR8  -4.451e-01  4.282e-01  -1.039  0.29917    
+trtC:subcolR8  -5.154e-01  4.627e-01  -1.114  0.26585    
+trtB:subcolR9   4.139e-01  4.327e-01   0.957  0.33918    
+trtC:subcolR9   7.615e-01  4.894e-01   1.556  0.12034    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.594229)
+
+    Null deviance: 844.78  on 548  degrees of freedom
+Residual deviance: 299.49  on 504  degrees of freedom
+AIC: 1317.3
+
+Number of Fisher Scoring iterations: 2
+
+[1] "TLC"
+     Fam_new Temp_let AL
+1819      T5        A  4
+1820      T5        A  5
+1821      T5        A  3
+1824      T5        A  3
+1825      T5        A  3
+1826      T5        A  4
+     subcol trt out
+1819     T5   A   4
+1820     T5   A   5
+1821     T5   A   3
+1824     T5   A   3
+1825     T5   A   3
+1826     T5   A   4
+     subcol   trt         out       
+ T12    :35   A:92   Min.   :0.000  
+ T10    :34   B:84   1st Qu.:2.000  
+ T11    :34   C:71   Median :2.000  
+ T8     :32          Mean   :2.583  
+ T9     :29          3rd Qu.:3.000  
+ T5     :28          Max.   :5.000  
+ (Other):55                         
+
+Call:
+glm(formula = out ~ trt * subcol, data = dataSubFin)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.2222  -0.4546   0.0000   0.4000   1.8000  
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     3.357e+00  1.738e-01  19.321  < 2e-16 ***
+trtB           -1.157e+00  2.692e-01  -4.299 2.57e-05 ***
+trtC           -1.757e+00  2.692e-01  -6.528 4.44e-10 ***
+subcolT11      -1.429e-01  2.457e-01  -0.581    0.562    
+subcolT12      -2.849e-15  2.457e-01   0.000    1.000    
+subcolT5        1.429e-01  2.692e-01   0.531    0.596    
+subcolT6        2.262e-01  2.558e-01   0.884    0.377    
+subcolT7        3.095e-01  2.778e-01   1.114    0.266    
+subcolT8        3.429e-01  2.692e-01   1.274    0.204    
+subcolT9        1.984e-01  2.778e-01   0.714    0.476    
+trtB:subcolT11  1.929e-01  3.713e-01   0.519    0.604    
+trtC:subcolT11  5.429e-01  3.943e-01   1.377    0.170    
+trtB:subcolT12 -1.231e-01  3.676e-01  -0.335    0.738    
+trtC:subcolT12  1.500e-01  3.943e-01   0.380    0.704    
+trtB:subcolT5  -2.429e-01  3.962e-01  -0.613    0.541    
+trtC:subcolT5   7.143e-03  4.093e-01   0.017    0.986    
+trtB:subcolT6   2.881e-01  4.100e-01   0.703    0.483    
+trtC:subcolT6  -1.595e-01  3.932e-01  -0.406    0.685    
+trtB:subcolT7  -2.873e-01  4.079e-01  -0.704    0.482    
+trtC:subcolT7  -2.063e-02  4.079e-01  -0.051    0.960    
+trtB:subcolT8  -8.831e-02  3.913e-01  -0.226    0.822    
+trtC:subcolT8  -2.156e-01  3.913e-01  -0.551    0.582    
+trtB:subcolT9   1.016e-01  3.932e-01   0.258    0.796    
+trtC:subcolT9   7.659e-02  4.150e-01   0.185    0.854    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.4226672)
+
+    Null deviance: 226.049  on 246  degrees of freedom
+Residual deviance:  94.255  on 223  degrees of freedom
+AIC: 513
+
+Number of Fisher Scoring iterations: 2
+
+[1] "TPN"
+     Fam_new Temp_let AL
+2177      T2        A  4
+2178      T2        A  4
+2179      T2        A  2
+2180      T2        A  4
+2182      T2        A  4
+2183      T2        A  3
+     subcol trt out
+2177     T2   A   4
+2178     T2   A   4
+2179     T2   A   2
+2180     T2   A   4
+2182     T2   A   4
+2183     T2   A   3
+     subcol   trt         out       
+ T2     :28   A:32   Min.   :1.000  
+ T3     :27   B:35   1st Qu.:2.000  
+ T4     :23   C:24   Median :3.000  
+ T1     :13          Mean   :2.736  
+ A1     : 0          3rd Qu.:3.000  
+ A10    : 0          Max.   :5.000  
+ (Other): 0                         
+
+Call:
+glm(formula = out ~ trt * subcol, data = dataSubFin)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.4286  -0.4286   0.0000   0.5385   1.2222  
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    3.80000    0.27271  13.934  < 2e-16 ***
+trtB          -1.00000    0.38567  -2.593  0.01134 *  
+trtC          -1.46667    0.44534  -3.293  0.00148 ** 
+subcolT2      -0.43636    0.32890  -1.327  0.18842    
+subcolT3      -0.37143    0.35706  -1.040  0.30141    
+subcolT4      -0.02222    0.34013  -0.065  0.94807    
+trtB:subcolT2  0.09790    0.45952   0.213  0.83183    
+trtC:subcolT2  0.35303    0.57017   0.619  0.53759    
+trtB:subcolT3 -0.22857    0.48893  -0.467  0.64143    
+trtC:subcolT3  0.03810    0.53725   0.071  0.94365    
+trtB:subcolT4 -0.34921    0.49314  -0.708  0.48095    
+trtC:subcolT4 -0.31111    0.54108  -0.575  0.56694    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.371861)
+
+    Null deviance: 67.670  on 90  degrees of freedom
+Residual deviance: 29.377  on 79  degrees of freedom
+AIC: 181.36
+
+Number of Fisher Scoring iterations: 2
+
+[1] "SJU"
+     Fam_new Temp_let AL
+1335      S6        A  5
+1336      S6        A  5
+1337      S6        A  5
+1338      S6        A  5
+1339      S6        A  7
+1340      S6        A  4
+     subcol trt out
+1335     S6   A   5
+1336     S6   A   5
+1337     S6   A   5
+1338     S6   A   5
+1339     S6   A   7
+1340     S6   A   4
+     subcol    trt          out       
+ S3     : 33   A:129   Min.   :0.000  
+ S1     : 31   B:123   1st Qu.:2.000  
+ S5     : 31   C: 33   Median :3.000  
+ S6     : 31           Mean   :3.505  
+ S9     : 28           3rd Qu.:4.000  
+ S11    : 24           Max.   :8.000  
+ (Other):107                          
+
+Call:
+glm(formula = out ~ trt * subcol, data = dataSubFin)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.5000  -0.5714   0.0000   0.5000   3.4286  
+
+Coefficients: (2 not defined because of singularities)
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     4.333333   0.261323  16.582  < 2e-16 ***
+trtB           -1.866667   0.350602  -5.324 2.23e-07 ***
+trtC           -2.333333   0.522647  -4.464 1.21e-05 ***
+subcolS10       0.777778   0.399178   1.948  0.05246 .  
+subcolS11      -0.833333   0.387605  -2.150  0.03250 *  
+subcolS2        0.238095   0.356124   0.669  0.50437    
+subcolS3        0.205128   0.362390   0.566  0.57186    
+subcolS4        0.250000   0.369567   0.676  0.49936    
+subcolS5        0.589744   0.362390   1.627  0.10490    
+subcolS6        0.733333   0.350602   2.092  0.03746 *  
+subcolS7        1.000000   0.452625   2.209  0.02804 *  
+subcolS8        1.030303   0.377873   2.727  0.00685 ** 
+subcolS9        0.738095   0.356124   2.073  0.03922 *  
+trtB:subcolS10 -0.844444   0.543988  -1.552  0.12183    
+trtC:subcolS10 -1.777778   1.087976  -1.634  0.10349    
+trtB:subcolS11  0.950000   0.522647   1.818  0.07029 .  
+trtC:subcolS11  0.333333   0.874555   0.381  0.70341    
+trtB:subcolS2  -0.038095   0.563947  -0.068  0.94620    
+trtC:subcolS2  -0.238095   0.732505  -0.325  0.74542    
+trtB:subcolS3  -0.005128   0.490500  -0.010  0.99167    
+trtC:subcolS3  -0.205128   0.707172  -0.290  0.77200    
+trtB:subcolS4  -0.443939   0.515470  -0.861  0.38992    
+trtC:subcolS4         NA         NA      NA       NA    
+trtB:subcolS5  -0.270696   0.494462  -0.547  0.58455    
+trtC:subcolS5  -0.589744   0.735572  -0.802  0.42345    
+trtB:subcolS6  -0.200000   0.490500  -0.408  0.68380    
+trtC:subcolS6  -0.733333   0.775210  -0.946  0.34506    
+trtB:subcolS7  -0.895238   0.613653  -1.459  0.14584    
+trtC:subcolS7  -0.857143   0.725815  -1.181  0.23873    
+trtB:subcolS8  -1.052525   0.537097  -1.960  0.05113 .  
+trtC:subcolS8         NA         NA      NA       NA    
+trtB:subcolS9  -0.386580   0.505919  -0.764  0.44551    
+trtC:subcolS9  -1.071429   0.777723  -1.378  0.16952    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.8194789)
+
+    Null deviance: 623.24  on 284  degrees of freedom
+Residual deviance: 208.15  on 254  degrees of freedom
+AIC: 783.24
+
+Number of Fisher Scoring iterations: 2
+

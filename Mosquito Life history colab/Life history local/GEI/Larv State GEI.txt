@@ -1,0 +1,49 @@
+[1] "Getting levels for State"
+[1] "Amazonas"
+ subcol    trt          out       
+ ARS:399   A:332   Min.   :10.00  
+ APR:575   B:333   1st Qu.:14.00  
+ RPV:  0   C:309   Median :16.00  
+ RMO:  0           Mean   :16.02  
+ TLC:  0           3rd Qu.:18.00  
+ TPN:  0           Max.   :24.00  
+ SJU:  0                          
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+subcol        1    207   207.0  58.383 5.18e-14 ***
+trt           2   3533  1766.7 498.215  < 2e-16 ***
+subcol:trt    2      2     1.1   0.322    0.725    
+Residuals   968   3433     3.5                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "Rondonia"
+ subcol    trt          out       
+ ARS:  0   A:373   Min.   :10.00  
+ APR:  0   B:381   1st Qu.:16.00  
+ RPV:506   C:301   Median :18.00  
+ RMO:549           Mean   :17.98  
+ TLC:  0           3rd Qu.:20.00  
+ TPN:  0           Max.   :31.00  
+ SJU:  0                          
+              Df Sum Sq Mean Sq F value   Pr(>F)    
+subcol         1     62    62.2  12.545 0.000415 ***
+trt            2   5231  2615.4 527.216  < 2e-16 ***
+subcol:trt     2     79    39.7   7.996 0.000358 ***
+Residuals   1049   5204     5.0                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "Tocantins"
+ subcol    trt          out       
+ ARS:  0   A:124   Min.   :12.00  
+ APR:  0   B:119   1st Qu.:18.00  
+ RPV:  0   C: 95   Median :20.00  
+ RMO:  0           Mean   :19.55  
+ TLC:247           3rd Qu.:21.00  
+ TPN: 91           Max.   :27.00  
+ SJU:  0                          
+             Df Sum Sq Mean Sq F value Pr(>F)    
+subcol        1   37.1    37.1   6.665 0.0103 *  
+trt           2  755.7   377.9  67.930 <2e-16 ***
+subcol:trt    2   16.1     8.0   1.443 0.2376    
+Residuals   332 1846.7     5.6                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

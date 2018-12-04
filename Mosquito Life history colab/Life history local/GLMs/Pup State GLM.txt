@@ -1,0 +1,156 @@
+[1] "Conducting GLM for State"
+[1] "Amazonas"       "Rondonia"       "Tocantins"      "Rio de Janeiro"
+[1] "Amazonas"  "Rondonia"  "Tocantins"
+[1] "Amazonas"
+     Locality Temp_let PL
+2351      APR        A  3
+2352      APR        A  3
+2353      APR        A  3
+2354      APR        A  4
+2355      APR        A  2
+2356      APR        A  2
+     subcol trt out
+2351    APR   A   3
+2352    APR   A   3
+2353    APR   A   3
+2354    APR   A   4
+2355    APR   A   2
+2356    APR   A   2
+ subcol    trt          out       
+ ARS:399   A:332   Min.   :1.000  
+ APR:575   B:333   1st Qu.:2.000  
+ RPV:  0   C:309   Median :2.000  
+ RMO:  0           Mean   :2.159  
+ TLC:  0           3rd Qu.:3.000  
+ TPN:  0           Max.   :5.000  
+ SJU:  0                          
+
+Call:
+glm(formula = out ~ trt * subcol, family = gaussian(link = "log"), 
+    data = dataSubFin)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-0.93333   0.06667   0.11111   0.11940   2.11940  
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     1.057998   0.013141  80.514   <2e-16 ***
+trtB           -0.398752   0.023520 -16.954   <2e-16 ***
+trtC           -0.554894   0.026695 -20.787   <2e-16 ***
+subcolAPR       0.002874   0.016996   0.169    0.866    
+trtB:subcolAPR -0.026131   0.030678  -0.852    0.395    
+trtC:subcolAPR -0.006388   0.034981  -0.183    0.855    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.1919974)
+
+    Null deviance: 462.33  on 973  degrees of freedom
+Residual deviance: 185.85  on 968  degrees of freedom
+AIC: 1164.7
+
+Number of Fisher Scoring iterations: 4
+
+[1] "Rondonia"
+  Locality Temp_let PL
+1      RPV        A  3
+2      RPV        A  3
+3      RPV        A  4
+6      RPV        A  3
+7      RPV        A  4
+8      RPV        A  3
+  subcol trt out
+1    RPV   A   3
+2    RPV   A   3
+3    RPV   A   4
+6    RPV   A   3
+7    RPV   A   4
+8    RPV   A   3
+ subcol    trt          out       
+ ARS:  0   A:373   Min.   :1.000  
+ APR:  0   B:381   1st Qu.:2.000  
+ RPV:506   C:301   Median :2.000  
+ RMO:549           Mean   :2.155  
+ TLC:  0           3rd Qu.:3.000  
+ TPN:  0           Max.   :5.000  
+ SJU:  0                          
+
+Call:
+glm(formula = out ~ trt * subcol, family = gaussian(link = "log"), 
+    data = dataSubFin)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-1.05525  -0.05525  -0.02083   0.08122   1.97917  
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     1.116861   0.009767 114.347   <2e-16 ***
+trtB           -0.462500   0.018223 -25.380   <2e-16 ***
+trtC           -0.856135   0.027822 -30.772   <2e-16 ***
+subcolRMO      -0.011328   0.013689  -0.828   0.4081    
+trtB:subcolRMO  0.008658   0.025422   0.341   0.7335    
+trtC:subcolRMO  0.091529   0.037087   2.468   0.0137 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.1611845)
+
+    Null deviance: 673.82  on 1054  degrees of freedom
+Residual deviance: 169.08  on 1049  degrees of freedom
+AIC: 1076.4
+
+Number of Fisher Scoring iterations: 5
+
+[1] "Tocantins"
+     Locality Temp_let PL
+1819      TLC        A  2
+1820      TLC        A  2
+1821      TLC        A  3
+1824      TLC        A  3
+1825      TLC        A  3
+1826      TLC        A  2
+     subcol trt out
+1819    TLC   A   2
+1820    TLC   A   2
+1821    TLC   A   3
+1824    TLC   A   3
+1825    TLC   A   3
+1826    TLC   A   2
+ subcol    trt          out       
+ ARS:  0   A:124   Min.   :1.000  
+ APR:  0   B:119   1st Qu.:1.000  
+ RPV:  0   C: 95   Median :2.000  
+ RMO:  0           Mean   :1.905  
+ TLC:247           3rd Qu.:2.000  
+ TPN: 91           Max.   :3.000  
+ SJU:  0                          
+
+Call:
+glm(formula = out ~ trt * subcol, family = gaussian(link = "log"), 
+    data = dataSubFin)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.5217  -0.1549   0.1548   0.3241   1.1548  
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     0.92495    0.01820  50.821   <2e-16 ***
+trtB           -0.31234    0.03176  -9.834   <2e-16 ***
+trtC           -0.78091    0.04876 -16.016   <2e-16 ***
+subcolTPN       0.04013    0.03479   1.154    0.249    
+trtB:subcolTPN -0.04921    0.05953  -0.827    0.409    
+trtC:subcolTPN -0.06639    0.09816  -0.676    0.499    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.1937899)
+
+    Null deviance: 170.970  on 337  degrees of freedom
+Residual deviance:  64.337  on 332  degrees of freedom
+AIC: 412.49
+
+Number of Fisher Scoring iterations: 4
+

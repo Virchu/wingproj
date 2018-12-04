@@ -1,0 +1,113 @@
+[1] "Getting levels for Locality"
+[1] "ARS"
+     subcol    trt          out       
+ A23    : 44   A:134   Min.   :10.00  
+ A19    : 41   B:135   1st Qu.:13.00  
+ A24    : 41   C:130   Median :15.00  
+ A25    : 41           Mean   :15.47  
+ A20    : 40           3rd Qu.:17.00  
+ A17    : 39           Max.   :24.00  
+ (Other):153                          
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+subcol        9  229.8    25.5   7.129 1.53e-09 ***
+trt           2 1523.2   761.6 212.685  < 2e-16 ***
+subcol:trt   18   93.2     5.2   1.446    0.107    
+Residuals   369 1321.3     3.6                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "APR"
+     subcol    trt          out       
+ A8     : 42   A:198   Min.   :11.00  
+ A7     : 41   B:198   1st Qu.:14.00  
+ A12    : 40   C:179   Median :16.00  
+ A13    : 40           Mean   :16.41  
+ A2     : 40           3rd Qu.:18.00  
+ A5     : 40           Max.   :24.00  
+ (Other):332                          
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+subcol       14  239.0    17.1   6.234 1.37e-11 ***
+trt           2 1970.1   985.1 359.653  < 2e-16 ***
+subcol:trt   28  140.2     5.0   1.828  0.00641 ** 
+Residuals   530 1451.6     2.7                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "RPV"
+     subcol    trt          out       
+ R29    : 44   A:181   Min.   :11.00  
+ R30    : 42   B:184   1st Qu.:16.00  
+ R22    : 40   C:141   Median :18.00  
+ R26    : 40           Mean   :17.72  
+ R19    : 39           3rd Qu.:20.00  
+ R18    : 38           Max.   :26.00  
+ (Other):263                          
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+subcol       14  250.7    17.9   4.708 4.43e-08 ***
+trt           2 1907.0   953.5 250.725  < 2e-16 ***
+subcol:trt   28  144.5     5.2   1.357    0.108    
+Residuals   461 1753.2     3.8                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "RMO"
+     subcol    trt          out       
+ R3     : 43   A:192   Min.   :10.00  
+ R14    : 42   B:197   1st Qu.:16.00  
+ R5     : 42   C:160   Median :18.00  
+ R2     : 41           Mean   :18.21  
+ R10    : 40           3rd Qu.:21.00  
+ R12    : 38           Max.   :31.00  
+ (Other):303                          
+             Df Sum Sq Mean Sq F value Pr(>F)    
+subcol       14    157    11.2   2.075 0.0119 *  
+trt           2   3375  1687.3 312.373 <2e-16 ***
+subcol:trt   28    205     7.3   1.355 0.1079    
+Residuals   504   2722     5.4                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "TLC"
+     subcol   trt         out       
+ T12    :35   A:92   Min.   :12.00  
+ T10    :34   B:84   1st Qu.:17.00  
+ T11    :34   C:71   Median :19.00  
+ T8     :32          Mean   :19.35  
+ T9     :29          3rd Qu.:21.00  
+ T5     :28          Max.   :27.00  
+ (Other):55                         
+             Df Sum Sq Mean Sq F value  Pr(>F)    
+subcol        7   58.1     8.3   1.461 0.18253    
+trt           2  665.1   332.6  58.532 < 2e-16 ***
+subcol:trt   14  180.1    12.9   2.265 0.00666 ** 
+Residuals   223 1267.0     5.7                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "TPN"
+     subcol   trt         out      
+ T2     :28   A:32   Min.   :15.0  
+ T3     :27   B:35   1st Qu.:19.0  
+ T4     :23   C:24   Median :20.0  
+ T1     :13          Mean   :20.1  
+ A1     : 0          3rd Qu.:21.5  
+ A10    : 0          Max.   :25.0  
+ (Other): 0                        
+            Df Sum Sq Mean Sq F value  Pr(>F)    
+subcol       3   2.09    0.70   0.183   0.907    
+trt          2 123.64   61.82  16.287 1.2e-06 ***
+subcol:trt   6  22.54    3.76   0.990   0.438    
+Residuals   79 299.85    3.80                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "SJU"
+     subcol    trt          out       
+ S3     : 33   A:129   Min.   :11.00  
+ S1     : 31   B:123   1st Qu.:19.00  
+ S5     : 31   C: 33   Median :21.00  
+ S6     : 31           Mean   :20.91  
+ S9     : 28           3rd Qu.:23.00  
+ S11    : 24           Max.   :35.00  
+ (Other):107                          
+             Df Sum Sq Mean Sq F value Pr(>F)    
+subcol       10  107.3    10.7   1.461  0.154    
+trt           2 1778.2   889.1 121.046 <2e-16 ***
+subcol:trt   18  189.8    10.5   1.435  0.115    
+Residuals   254 1865.6     7.3                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
