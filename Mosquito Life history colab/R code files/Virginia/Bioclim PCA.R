@@ -1,6 +1,4 @@
 #Virginia bioclim PCA
-
-adult <- read.csv
 # do PCA on env for each state
 
 #get state shapefile
@@ -49,6 +47,9 @@ write.csv(comb.points, file = "LH regional PCA data points.csv",row.names=FALSE)
 
 #used saved points from initial PCA from June 3, 2018
 comb.points<- read.csv("C:\\Users\\virgc\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\R code files\\Virginia\\LH regional PCA data points.csv")
+#lab
+comb.points<- read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\R code files\\Virginia\\LH regional PCA data points.csv")
+
 plot(states)
 plot(states.sub, col = "purple" ,add = TRUE)
 points(am.points)
@@ -228,7 +229,7 @@ comb.points.env$year<- 1990
 fut.comb.points.env$year<-2070
 all.points.env<- merge(comb.points.env, fut.comb.points.env, by="x")
 #remove extra columns
-
+set.seed(082018)
 head(all.points.env)
 all.pca <- PCA(all.points.env[, c(3:22,28:46)], quali.sup = 1)
 plot(all.pca)
@@ -341,4 +342,14 @@ fviz_pca_ind(new.all.pca, label="none", habillage=new.all.comb.points.wide$label
 fviz_pca_biplot(new.all.pca, label="var", habillage=new.all.comb.points.wide$label,
                 addEllipses = TRUE, ellipes.level=0.9)
 
-               
+##8/20/18
+#get var coordinates
+# Coordinates of variables
+library(factoextra)
+var<- get_pca_var(new.all.pca)
+head(var$coord)
+write.table(var$contrib, "clipboard",sep="\t")
+write.table(var$coord, "clipboard",sep="\t")
+
+#revisit eigenvectors 
+#https://support.minitab.com/en-us/minitab/18/help-and-how-to/modeling-statistics/multivariate/how-to/principal-components/interpret-the-results/all-statistics-and-graphs/
