@@ -1,0 +1,52 @@
+[1] "Getting levels for State"
+[1] "Amazonas"
+ subcol    trt          out       
+ ARS:399   A:332   Min.   :2.256  
+ APR:575   B:333   1st Qu.:2.514  
+ RPV:  0   C:309   Median :2.638  
+ RMO:  0           Mean   :2.636  
+ TLC:  0           3rd Qu.:2.753  
+ TPN:  0           Max.   :3.172  
+ SJU:  0           NA's   :28     
+             Df Sum Sq Mean Sq F value  Pr(>F)    
+subcol        1  0.032   0.032   2.106 0.14706    
+trt           2  8.649   4.325 287.165 < 2e-16 ***
+subcol:trt    2  0.184   0.092   6.095 0.00234 ** 
+Residuals   940 14.156   0.015                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+28 observations deleted due to missingness
+[1] "Rondonia"
+ subcol    trt          out       
+ ARS:  0   A:373   Min.   :2.120  
+ APR:  0   B:381   1st Qu.:2.540  
+ RPV:506   C:301   Median :2.657  
+ RMO:549           Mean   :2.664  
+ TLC:  0           3rd Qu.:2.789  
+ TPN:  0           Max.   :3.175  
+ SJU:  0           NA's   :26     
+              Df Sum Sq Mean Sq F value Pr(>F)    
+subcol         1  0.017   0.017   0.967  0.326    
+trt            2 14.437   7.219 415.442 <2e-16 ***
+subcol:trt     2  0.022   0.011   0.620  0.538    
+Residuals   1023 17.776   0.017                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+26 observations deleted due to missingness
+[1] "Tocantins"
+ subcol    trt          out       
+ ARS:  0   A:124   Min.   :2.305  
+ APR:  0   B:119   1st Qu.:2.603  
+ RPV:  0   C: 95   Median :2.704  
+ RMO:  0           Mean   :2.713  
+ TLC:247           3rd Qu.:2.824  
+ TPN: 91           Max.   :3.195  
+ SJU:  0           NA's   :12     
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+subcol        1  0.502  0.5023  33.557 1.66e-08 ***
+trt           2  2.333  1.1666  77.937  < 2e-16 ***
+subcol:trt    2  0.031  0.0157   1.047    0.352    
+Residuals   320  4.790  0.0150                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+12 observations deleted due to missingness
