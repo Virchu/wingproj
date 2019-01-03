@@ -1,6 +1,5 @@
 #Virginia bioclim PCA
-
-# do PCA on env variables for each state
+# do PCA on env for each state
 
 #get state shapefile
 library(rgdal)
@@ -48,6 +47,9 @@ write.csv(comb.points, file = "LH regional PCA data points.csv",row.names=FALSE)
 
 #used saved points from initial PCA from June 3, 2018
 comb.points<- read.csv("C:\\Users\\virgc\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\R code files\\Virginia\\LH regional PCA data points.csv")
+#lab
+comb.points<- read.csv("C:\\Users\\vmc04\\Documents\\GitHub\\wingproj\\Mosquito Life history colab\\R code files\\Virginia\\LH regional PCA data points.csv")
+
 plot(states)
 plot(states.sub, col = "purple" ,add = TRUE)
 points(am.points)
@@ -82,15 +84,41 @@ bio18 <- raster("C:\\Users\\virgc\\Desktop\\Bioclim 30secbil\\bio_18.bil")
 bio19 <- raster("C:\\Users\\virgc\\Desktop\\Bioclim 30secbil\\bio_19.bil")
 
 #work comp
-#bio1 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_1.bil")
+bio1 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_1.bil")
+bio2 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_2.bil")
+bio3 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_3.bil")
+bio4 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_4.bil")
+bio5 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_5.bil")
+bio6 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_6.bil")
+bio7 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_7.bil")
+bio8 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_8.bil")
+bio9 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_9.bil")
+
+bio10 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_10.bil")
+bio11 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_11.bil")
+bio12 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_12.bil")
+bio13 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_13.bil")
+bio14 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_14.bil")
+bio15 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_15.bil")
+bio16 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_16.bil")
+bio17 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_17.bil")
+bio18 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_18.bil")
+bio19 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim 30secbil\\bio_19.bil")
 
 bioclim.stack <- stack(bio1, bio2, bio3, bio4, bio5, bio6, bio7, bio8, bio9, bio10, bio11, bio12, bio13, bio14, bio15, 
                        bio16, bio17, bio18, bio19)
 
 
+
 env.data <- raster::extract(bioclim.stack, comb.points[, c("x", "y")])
 env.data.s <-env.data
 
+# scale environmental data prior to PCA  -probably not necessary
+# for (i in 1:19){
+#   
+#   env.data.s[, i] <-  as.numeric(scale(env.data.s[, i]))
+#   
+# }
 
 comb.points.env <- cbind(comb.points, env.data)
 
@@ -139,7 +167,26 @@ fut_bio18 <- raster("C:\\Users\\virgc\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi701
 fut_bio19 <- raster("C:\\Users\\virgc\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7019.tif")
 
 #lab comp
-#fut_bio1 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi701.tif")
+fut_bio1 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi701.tif")
+fut_bio2 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi702.tif")
+fut_bio3 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi703.tif")
+fut_bio4 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi704.tif")
+fut_bio5 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi705.tif")
+fut_bio6 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi706.tif")
+fut_bio7 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi707.tif")
+fut_bio8 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi708.tif")
+fut_bio9 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi709.tif")
+
+fut_bio10 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7010.tif")
+fut_bio11 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7011.tif")
+fut_bio12 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7012.tif")
+fut_bio13 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7013.tif")
+fut_bio14 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7014.tif")
+fut_bio15 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7015.tif")
+fut_bio16 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7016.tif")
+fut_bio17 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7017.tif")
+fut_bio18 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7018.tif")
+fut_bio19 <- raster("C:\\Users\\vmc04\\Desktop\\Bioclim70 gs85bi GISS\\gs85bi7019.tif")
 
 future.stack <- stack(fut_bio1, fut_bio2, fut_bio3, fut_bio4, fut_bio5, fut_bio6, fut_bio7, fut_bio8, fut_bio9, fut_bio10, fut_bio11, fut_bio12, fut_bio13, fut_bio14, fut_bio15, 
                       fut_bio16, fut_bio17, fut_bio18, fut_bio19)
@@ -178,6 +225,29 @@ setnames(fut.comb.points.env, old=c("gs85bi701" , "gs85bi702" , "gs85bi703" , "g
                                                                                                   "bio_11" ,"bio_12", "bio_13", "bio_14", "bio_15", "bio_16", "bio_17", "bio_18" ,"bio_19"))
 
 ###composite PCA
+comb.points.env$year<- 1990
+fut.comb.points.env$year<-2070
+all.points.env<- merge(comb.points.env, fut.comb.points.env, by="x")
+#remove extra columns
+set.seed(082018)
+head(all.points.env)
+all.pca <- PCA(all.points.env[, c(3:22,28:46)], quali.sup = 1)
+plot(all.pca)
+
+all.pca.data <- all.pca$ind$coord %>% data.frame
+
+all.points.env$PC1all <- all.pca.data$Dim.1
+all.points.env$PC2all <- all.pca.data$Dim.2
+
+all<-ggplot(data = all.points.env, aes(x = PC1all, y = PC2all, color = state.x, fill = state.x))+
+  geom_point(size = 4)+
+  ggtitle("Bioclimatic PCA (1990 and 2070)")+
+  xlab("PC1- 48.46%")+ ylab("PC2-30.32%")+labs(colour="State", fill="State")+
+  stat_ellipse(geom = "polygon", alpha = 0.5)
+
+ggarrange(present, future, all,labels= c("A","B","C"), ncol=1,nrow=3, common.legend = TRUE, legend="bottom")
+
+
 #reshaping data from all.points.env into new pca per Tim (7/3) suggestions
 #adding year
 comb.copy<-comb.points.env
@@ -188,6 +258,7 @@ new.2070.comb.points<-melt(fut.copy, id=c("x", "y", "state","year", "PC1", "PC2"
 new.all.comb.points<-rbind(new.1990.comb.points, new.2070.comb.points, by=c("x", "y", "variable", "state", "PC1", "PC2"))
 #trim off bottom row
 new.all.comb.points<-new.all.comb.points[c(1:15200),c(1:8)]
+
 #long to wide?
 library(tidyr)
 new.all.comb.points.wide<- spread(new.all.comb.points, variable, value)
@@ -200,8 +271,6 @@ new.all.comb.points.wide$label<-factor(new.all.comb.points.wide$label, levels=c(
                                                                                 "Rondonia 2070", "Tocantins 2070", 
                                                                                 "Rio de Janeiro 2070" ))
 new.all.comb.points.wide$state<-factor(new.all.comb.points.wide$state, levels=c("Amazonas", "Rondonia", "Tocantins", "Rio de Janeiro"))
-write.csv(new.all.comb.points.wide, file = "2018_08 LH regional PCA data points.csv",row.names=FALSE)
-
 new.all.pca <- PCA(new.all.comb.points.wide[, 7:25], quali.sup = 1)
 plot(new.all.pca)
 
@@ -224,8 +293,20 @@ new.all4<-ggplot(data = new.all.comb.points.wide, aes(x = PC1, y = PC2, fill = s
   xlab("PC1- 48.46%")+ ylab("PC2-30.32%")+
   stat_ellipse(geom = "polygon", alpha = 0.5)
 
+new.all5<-ggplot(data = new.all.comb.points.wide, aes(x = PC1all, y = PC2all, fill = state , shape = year ))+
+  geom_point(size = 2.5,  aes(color = state ))+
+  #geom_text(aes(label=label), nudge_y=.4)+
+  ggtitle("Bioclimatic PCA (1990 and 2070)")+
+  xlab("PC1- 41.262%")+ ylab("PC2-32.352%")+
+  stat_ellipse(geom = "polygon", alpha = 0.5)
 #get pca values
 #https://www.youtube.com/watch?v=CTSbxU6KLbM&list=PLnZgp6epRBbTsZEFXi_p6W48HhNyqwxIu&index=3
+summary(all.pca)
+#PC1= 48.457%, PC2=30.318%
+summary(fut.res.pca)
+#PC1= 47.456%, PC2=32.633%
+summary(res.pca)
+#PC1= 51.205%, PC2=27.7%
 summary(new.all.pca)
 #PC1= 41.262%, PC2=32.352%
 
@@ -261,47 +342,14 @@ fviz_pca_ind(new.all.pca, label="none", habillage=new.all.comb.points.wide$label
 fviz_pca_biplot(new.all.pca, label="var", habillage=new.all.comb.points.wide$label,
                 addEllipses = TRUE, ellipes.level=0.9)
 
-##new 8/2/18
-#utilizing http://huboqiang.cn/2016/03/03/RscatterPlotPCA
-eig.val <- get_eigenvalue(new.all.pca)
-head(eig.val)
-updated_pca<-prcomp(new.all.comb.points.wide[, 7:25])
-plot(updated_pca$x[,1], updated_pca$x[,2])
-library(ggplot2)
-library(grid)
-library(gridExtra)
+##8/20/18
+#get var coordinates
+# Coordinates of variables
+library(factoextra)
+var<- get_pca_var(new.all.pca)
+head(var$coord)
+write.table(var$contrib, "clipboard",sep="\t")
+write.table(var$coord, "clipboard",sep="\t")
 
-updated_df<- as.data.frame(updated_pca$x)
-updated_df$state<- new.all.comb.points.wide$state
-updated_df$year<- new.all.comb.points.wide$year
-head(updated_df)
-
-percentage<- round(updated_pca$sdev / sum(updated_pca$sdev) * 100, 2)
-percentage <- paste( colnames(updated_df), "(", paste( as.character(percentage), "%", ")", sep="") )
-
-test_p<- ggplot(updated_df, aes(x=PC1, y=PC2, colour=state, shape=year))+geom_point()+
-  xlab(percentage[1]) + ylab(percentage[2])
-
-
-#http://rstudio-pubs-static.s3.amazonaws.com/53162_cd16ee63c24747459ccd180f69f07810.html
-library(ggfortify)
-autoplot(updated_pca, data=new.all.comb.points.wide, colour= 'year', shape='state', loadings=TRUE, 
-         loadings.label=TRUE, loadings.label.size=3, frame=TRUE, frame.type='norm', frame.colour='label')
-
-#10/16/18 http://www.sthda.com/english/wiki/print.php?id=207
-#Tim comment-show 1st 2 components and show coordinates between each variable and pc1, pc2
-#using new.all.pca
-new.all.pca1 <- prcomp(new.all.comb.points.wide[, 7:25])
-
-# Helper function : 
-# Correlation between variables and principal components
-var_cor_func <- function(var.loadings, comp.sdev){
-  var.loadings*comp.sdev
-}
-
-# Variable correlation/coordinates
-loadings <- new.all.pca1$rotation
-sdev <- new.all.pca1$sdev
-
-var.coord <- var.cor <- t(apply(loadings, 1, var_cor_func, sdev))
-head(var.coord[, 1:4])
+#revisit eigenvectors 
+#https://support.minitab.com/en-us/minitab/18/help-and-how-to/modeling-statistics/multivariate/how-to/principal-components/interpret-the-results/all-statistics-and-graphs/
