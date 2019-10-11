@@ -1,0 +1,17 @@
+ID	Biome	Locality 
+APR 001	Amazon	APR
+APR 002	Amazon	APR
+APR 003	Amazon	APR
+APR 004	Amazon	APR
+ARS 002	Amazon	ARS
+ARS 003	Amazon	ARS
+ARS 004	Amazon	ARS
+ARS 005	Amazon	ARS
+RMO 001	Amazon	RMO
+RMO 002	Amazon	RMO
+RMO 003	Amazon	RMO
+RMO 004	Amazon	RMO
+RPV 001	Amazon	RPV
+RPV 002	Amazon	RPV
+RPV 003	Amazon	RPV
+RPV 004	Amazon	RPV
